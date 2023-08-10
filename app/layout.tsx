@@ -4,7 +4,7 @@ import { Barlow } from "next/font/google";
 
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["500", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={barlow.className}>{children}</body>
     </html>
   );

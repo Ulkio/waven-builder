@@ -4,13 +4,22 @@ import Image from "next/image";
 import data from "@/api/data.json";
 import { Compagnon, CaracteristiqueCompagnons, DonCompagnons, Couts } from "@/types/index.ts";
 
-const CompagnonsDialog = () => {
+interface CompagnonsDialogProps {
+  onSelectedCompagnonChange: (selectedCompagnon: Compagnon) => void;
+  onClickCompagnon: () => void;
+}
+const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: CompagnonsDialogProps) => {
   const compagnons: Compagnon[] = data.compagnons.compagnons;
   const COMPAGNON_BASE_URL = "/img/compagnons";
 
   const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
   const [displayedCompagnon, setDisplayedCompagnon] = useState<Compagnon | null>(null);
 
+  const handleCompagnonClick = (compagnon: Compagnon) => {
+    setSelectedCompagnon(compagnon);
+    onSelectedCompagnonChange(compagnon);
+    onClickCompagnon();
+  };
   return (
     <div className="flex h-[80vh]">
       <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
@@ -21,7 +30,7 @@ const CompagnonsDialog = () => {
               <div className="flex flex-col  items-center w-32 h-32 " key={compagnon.nom}>
                 <Image
                   onMouseEnter={() => setDisplayedCompagnon(compagnon)}
-                  onClick={() => setSelectedCompagnon(compagnon)}
+                  onClick={() => handleCompagnonClick(compagnon)}
                   src={`${COMPAGNON_BASE_URL}/${compagnon.image}.jpg`}
                   alt={compagnon.nom}
                   width={80}
@@ -48,7 +57,7 @@ const CompagnonsDialog = () => {
                 <div className="flex flex-col gap-2">
                   {Object.entries(displayedCompagnon.patchs[0].couts).map((cout) => {
                     return (
-                      <div className="flex items-center ">
+                      <div key={cout[0] + cout[1]} className="flex items-center ">
                         <Image src={`/img/utils/${cout[0]}.png`} width={30} height={30} alt="cout" />
                         <p className="font-bold ">{cout[1]}</p>
                       </div>

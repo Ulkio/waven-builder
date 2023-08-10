@@ -4,17 +4,29 @@ import Image from "next/image";
 import data from "@/api/data.json";
 import { Brassard, CaracteristiqueBrassards, DonBrassards } from "@/types/index.ts";
 
-const BrassardsDialog = () => {
-  const armbands: Brassard[] = data.equipements.brassards;
+interface BrassardsDialogProps {
+  onSelectedBrassardChange: (selectedBrassard: Brassard) => void;
+  onClickBrassard: () => void;
+}
+const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: BrassardsDialogProps) => {
+  const brassards: Brassard[] = data.equipements.brassards;
   const ARMBAND_BASE_URL = "/img/brassards";
 
+  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
+  const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(null);
+
+  const handleBrassardClick = (brassard: Brassard) => {
+    setSelectedBrassard(brassard);
+    onSelectedBrassardChange(brassard);
+    onClickBrassard();
+  };
   const rarityOrder: { [key: string]: number } = {
     Commun: 1,
     Rare: 2,
     Krosmique: 3,
     Infinite: 4,
   };
-  const sortedArmbandsRarity = armbands.sort((a, b): any => {
+  const sortedBrassardsRarity = brassards.sort((a, b): any => {
     const rarityA = a.rarete;
     const rarityB = b.rarete;
 
@@ -24,30 +36,29 @@ const BrassardsDialog = () => {
     return orderA - orderB;
   });
 
-  const [selectedArmband, setSelectedArmband] = useState<Brassard | null>(null);
-  const [displayedArmband, setDisplayedArmband] = useState<Brassard | null>(null);
-
   return (
     <div className="flex h-[80vh]">
       <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
         <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
         <div className="flex flex-wrap gap-8 justify-center px-2">
-          {sortedArmbandsRarity.map((armband) => {
-            const rarityBorder = `border-${armband.rarete.toLowerCase()}`;
+          {sortedBrassardsRarity.map((brassard) => {
+            const rarityBorder = `border-${brassard.rarete.toLowerCase()}`;
             return (
               <div
-                onMouseEnter={() => setDisplayedArmband(armband)}
-                onClick={() => setSelectedArmband(armband)}
-                className={`hover:cursor-pointer flex flex-col  items-center w-36 h-36 border-2 ${rarityBorder}`}
-                key={armband.nom}>
-                <Image
-                  src={`${ARMBAND_BASE_URL}/${armband.image}.png`}
-                  alt={armband.nom}
-                  width={80}
-                  height={80}
-                  className=""
-                />
-                <p className="text-sm text-center">{armband.nom}</p>
+                onMouseEnter={() => setDisplayedBrassard(brassard)}
+                onClick={() => handleBrassardClick(brassard)}
+                className={`hover:cursor-pointer flex flex-col  items-center w-36 h-36  border-4 ${
+                  brassard.rarete.toLowerCase() === "commun"
+                    ? "border-commun"
+                    : brassard.rarete.toLowerCase() === "rare"
+                    ? "border-rare"
+                    : brassard.rarete.toLowerCase() === "krosmique"
+                    ? "border-krosmique"
+                    : "border-infinite"
+                }`}
+                key={brassard.nom}>
+                <Image src={`${ARMBAND_BASE_URL}/${brassard.image}.png`} alt={brassard.nom} width={80} height={80} />
+                <p className="text-center leading-5 text-sm">{brassard.nom}</p>
               </div>
             );
           })}
@@ -55,18 +66,18 @@ const BrassardsDialog = () => {
       </div>
       <div className="flex flex-col gap-4 border-l-2 p-4 bg-overlaySide basis-1/2  ">
         <div className="flex flex-col w-full items-center gap-2 ">
-          {displayedArmband && (
+          {displayedBrassard && (
             <>
               <Image
-                src={`${ARMBAND_BASE_URL}/${displayedArmband.image}.png`}
+                src={`${ARMBAND_BASE_URL}/${displayedBrassard.image}.png`}
                 width={120}
                 height={120}
-                alt={displayedArmband.nom}
+                alt={displayedBrassard.nom}
               />
-              <p className="font-black text-2xl">{displayedArmband.nom}</p>
-              <p className="text-center">{displayedArmband.patchs[0].pouvoir}</p>
+              <p className="font-black text-2xl">{displayedBrassard.nom}</p>
+              <p className="text-center">{displayedBrassard.patchs[0].pouvoir}</p>
               <div className="flex flex-wrap gap-2">
-                {displayedArmband.patchs[0].caracteristiques.map((carac: CaracteristiqueBrassards) => {
+                {displayedBrassard.patchs[0].caracteristiques.map((carac: CaracteristiqueBrassards) => {
                   return (
                     <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
                       {carac.taux + carac.effet}
@@ -79,9 +90,9 @@ const BrassardsDialog = () => {
         </div>
 
         <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8">
-          {displayedArmband && (
+          {displayedBrassard && (
             <>
-              {displayedArmband.patchs[0].dons.map((don: DonBrassards, key) => {
+              {displayedBrassard.patchs[0].dons.map((don: DonBrassards, key) => {
                 return (
                   <div
                     key={key}

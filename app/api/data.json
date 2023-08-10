@@ -6038,7 +6038,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat +2 point d'action.",
+            "pouvoir": "GRIMOIRE (12). Début du combat : +2 point d'action.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6189,7 +6189,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat Piochez 2 sorts. Ils coûtent -1 point d'action.",
+            "pouvoir": "GRIMOIRE (12). Début du combat : Piochez 2 sorts. Ils coûtent -1 point d'action.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6351,7 +6351,7 @@
               {
                 "nom": "EFFET AMELIORE",
                 "cout": "80",
-                "effet": "Début du combat +1 point d'action supplémentaire.",
+                "effet": "Début du combat : +1 point d'action supplémentaire.",
                 "sort": ""
               },
               {
@@ -6425,7 +6425,7 @@
               {
                 "nom": "EFFET AMELIORE",
                 "cout": "80",
-                "effet": "Début du combat Confère à votre héros +5% de sa Vie en armure supplémentaire.",
+                "effet": "Début du combat : Confère à votre héros +5% de sa Vie en armure supplémentaire.",
                 "sort": ""
               },
               {
@@ -6503,7 +6503,7 @@
               {
                 "nom": "EFFET AMELIORE",
                 "cout": "80",
-                "effet": "Début du combat Confère à votre héros 50% de son attaque en armure supplémentaire.",
+                "effet": "Début du combat : Confère à votre héros 50% de son attaque en armure supplémentaire.",
                 "sort": ""
               },
               {
@@ -6779,7 +6779,7 @@
         ]
       },
       {
-        "nom": "Anneau limit",
+        "nom": "Anneau Limit",
         "rarete": "Commun",
         "image": "limit",
         "iles": [
@@ -6788,11 +6788,11 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Votre héros perd -30% de sa VIE.",
+            "pouvoir": "Début du combat : Votre héros perd -30% de sa VIE.",
             "caracteristiques": [
               {
                 "taux": 5,
-                "effet": "+% aux GAINS DE KAMAS."
+                "effet": "% aux GAINS DE KAMAS."
               }
             ],
             "dons": [
@@ -6904,7 +6904,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). Début du combat +30% d'attaque à votre héros.",
+            "pouvoir": "GRIMOIRE (15). Début du combat : +30% d'attaque à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6993,7 +6993,7 @@
               },
               {
                 "taux": 30,
-                "effet": "+% à tous vos SOINS."
+                "effet": "% à tous vos SOINS."
               }
             ],
             "dons": [
@@ -7293,7 +7293,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Confère son attaque en armure à votre héros.",
+            "pouvoir": "Apparition d'un compagnon : Confère son attaque en armure à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7371,7 +7371,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Piochez 1 sort.",
+            "pouvoir": "Apparition d'un compagnon : Piochez 1 sort.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7448,7 +7448,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Lui confère BOUCLIER.",
+            "pouvoir": "Apparition d'un compagnon : Lui confère BOUCLIER.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -8410,7 +8410,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat -1 point d'action au coût des sorts de votre main.",
+            "pouvoir": "GRIMOIRE (12). Début du combat : -1 point d'action au coût des sorts de votre main.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -8483,7 +8483,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat +1.",
+            "pouvoir": "GRIMOIRE (12). Début du combat : +1.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -9048,7 +9048,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Mort du compagnon Déclenche PLUIE (5) sur les adversaires adjacents",
+            "pouvoir": "Mort du compagnon : Déclenche PLUIE (5) sur les adversaires adjacents",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -9447,7 +9447,7 @@
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "+% DÉGÂTS à vos sorts Air."
+                "effet": "% DÉGÂTS à vos sorts Air."
               }
             ],
             "dons": [
@@ -10155,7 +10155,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Confère BOUCLIER à votre héros.",
+            "pouvoir": "Apparition d'un compagnon : Confère BOUCLIER à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10213,7 +10213,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Confère BOUCLIER à votre héros.",
+            "pouvoir": "Apparition d'un compagnon : Confère BOUCLIER à votre héros.",
             "caracteristiques": [
               {
                 "taux": 20,
@@ -10275,7 +10275,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). Apparition d'un compagnion +30% à sa Vie.",
+            "pouvoir": "GRIMOIRE (15). Apparition d'un compagnon : +30% à sa Vie.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10449,7 +10449,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Apparition d'un compagnion Lui confère l'attaque de votre héros en armure.",
+            "pouvoir": "Apparition d'un compagnon : Lui confère l'attaque de votre héros en armure.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10528,7 +10528,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Mort d'un compagnon Déclenche FOUDRE (5) sur les adversaires adjacents.",
+            "pouvoir": "Mort d'un compagnon : Déclenche FOUDRE (5) sur les adversaires adjacents.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10539,7 +10539,7 @@
               {
                 "nom": "NOUVELLE COMPETENCE",
                 "cout": "55",
-                "effet": "Mort d'un compagnon -1 point d'action au coût de votre prochain sort AIR.",
+                "effet": "Mort d'un compagnon : -1 point d'action au coût de votre prochain sort AIR.",
                 "sort": ""
               },
               {
@@ -10586,7 +10586,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Mort du compagnon Déclenche FLAMME (5) sur les adversaires adjacents.",
+            "pouvoir": "Mort du compagnon : Déclenche FLAMME (5) sur les adversaires adjacents.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10597,7 +10597,7 @@
               {
                 "nom": "NOUVELLE COMPETENCE",
                 "cout": "55",
-                "effet": "Mort d'un compagnon -1 point d'action le coût de votre prochain sort Feu.",
+                "effet": "Mort d'un compagnon : -1 point d'action le coût de votre prochain sort Feu.",
                 "sort": ""
               },
               {
@@ -10644,7 +10644,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Mort d'un compagnon +1",
+            "pouvoir": "Mort d'un compagnon : +1",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10713,7 +10713,7 @@
               {
                 "nom": "NOUVELLE COMPETENCE",
                 "cout": "55",
-                "effet": "Mort d'un compagnon -1 point d'action au coût de votre prochain sort Terre.",
+                "effet": "Mort d'un compagnon : -1 point d'action au coût de votre prochain sort Terre.",
                 "sort": ""
               },
               {
@@ -11108,7 +11108,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe de Terre à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe de Terre à votre pioche.",
             "sort": "Orbe de Terre",
             "caracteristiques": [
               {
@@ -11167,7 +11167,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe d'Eau' à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe d'Eau' à votre pioche.",
             "sort": "Orbe d'Eau'",
             "caracteristiques": [
               {
@@ -11226,7 +11226,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe d'Air à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe d'Air à votre pioche.",
             "sort": "Orbe d'Air",
             "caracteristiques": [
               {
@@ -11285,7 +11285,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe de Feu à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe de Feu à votre pioche.",
             "sort": "Orbe de Feu",
             "caracteristiques": [
               {
@@ -11344,7 +11344,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe de Mort à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe de Mort à votre pioche.",
             "sort": "Orbe de Mort",
             "caracteristiques": [
               {
@@ -11403,7 +11403,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat Ajoute le sort Orbe de Sang à votre pioche.",
+            "pouvoir": "Début du combat : Ajoute le sort Orbe de Sang à votre pioche.",
             "sort": "Orbe de Sang",
             "caracteristiques": [
               {
@@ -11582,7 +11582,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Début du combat : Ajoute le sort Invocation du Kamard dans votre pioche.",
+            "pouvoir": "Début du combat : : Ajoute le sort Invocation du Kamard dans votre pioche.",
             "sort": "Invocation du Kamard",
             "caracteristiques": [
               {
@@ -11702,7 +11702,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Attaque Touche les 2 cases devant votre héros. Début du combat -25% d'attaque à votre héros.",
+            "pouvoir": "Attaque Touche les 2 cases devant votre héros. Début du combat : -25% d'attaque à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -12399,7 +12399,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "ATTAQUE: Touche les 3 cases devant votre héros. Début du combat -50% d'attaque à votre héros.",
+            "pouvoir": "ATTAQUE: Touche les 3 cases devant votre héros. Début du combat : -50% d'attaque à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -14637,6 +14637,570 @@
             "effet": "Soigne un allié de 30 PV + 7 PV pour chacun de vos personnages en jeu.",
             "dons": [],
             "gains": {}
+          }
+        ]
+      }
+    ]
+  },
+  "armes": {
+    "armes": [
+      {
+        "nom": "Shiru Shaden",
+        "dieu": "crâ",
+        "image": "shiru_shaden",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros se téléporte : -1 point d'action au coût de votre prochain sort.",
+            "passifs": [],
+            "pv": 383,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Bunelame",
+        "dieu": "crâ",
+        "image": "bunelame",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "FIN DU TOUR : Piochez 1 sorts supplémentaire si vous avez 2 sorts ou moins en main.",
+            "passifs": [],
+            "pv": 392,
+            "at": 20,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Arc Piven",
+        "dieu": "crâ",
+        "image": "arc_piven",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros libère une AURA MIRE : Inflige 50% de son attaque à la cible.",
+            "passifs": [],
+            "pv": 385,
+            "at": 20,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Voldorak Vo",
+        "dieu": "crâ",
+        "image": "voldorak_vo",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous effectuez un Combo : +1 AURA Mire Puissante à votre héros.",
+            "passifs": [],
+            "pv": 380,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Expingole",
+        "dieu": "crâ",
+        "image": "expingole",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Les gains d'AURA MIRE de votre héros augmentent de 1.",
+            "passifs": [],
+            "pv": 385,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Gemme Déphasante",
+        "dieu": "eniripsa",
+        "image": "gemme_dephasante",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous appliquez un état élémentaire : Confère DÉPHASAGE et +1 point de mouvement à votre héros pour le tour. Limité à 1 fois par tour.",
+            "passifs": [],
+            "pv": 401,
+            "at": 30,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Lame Voracius",
+        "dieu": "eniripsa",
+        "image": "lame_voracius",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Apparition +50% DRAIN à votre héros.",
+            "passifs": [],
+            "pv": 380,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Ambre Tamashi",
+        "dieu": "eniripsa",
+        "image": "ambre_tamashi",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Début du tour : Ajoute le sort Nocturien à votre main.",
+            "passifs": [],
+            "pv": 388,
+            "at": 18,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Scalpel de l'Apostruker",
+        "dieu": "eniripsa",
+        "image": "scalpel_apostruker",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros est soigné : Inflige 50% de son attaque à l'adversaire ayant le plus de vies.",
+            "passifs": [],
+            "pv": 396,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Pinceau Kokoro",
+        "dieu": "eniripsa",
+        "image": "pinceau_kokoro",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous déclenchez SOUTIEN : Votre héros gagne 50% de son attaque en armure.",
+            "passifs": [],
+            "pv": 398,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Lamarguedon Spectral",
+        "dieu": "iop",
+        "image": "lamarguedon_spectral",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Début du combat : Ajoute le sort Âme Spectrale à votre main.",
+            "passifs": [],
+            "pv": 396,
+            "at": 26,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Bouvaloir Orok",
+        "dieu": "iop",
+        "image": "bouvaloir_orok",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros CHARGE : Inflige 50 de son attaque à la cible.",
+            "passifs": [],
+            "pv": 401,
+            "at": 30,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Flamboyante Kasaï",
+        "dieu": "iop",
+        "image": "flamboyante_kasai",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous appliquez un état élémentaire : +1 Aura épée du même élément à votre héros.",
+            "passifs": [],
+            "pv": 399,
+            "at": 32,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Glaive Stalaktoss",
+        "dieu": "iop",
+        "image": "glaive_stalaktoss",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "FIN DU TOUR : Confère DÉPHASAGE à votre héros jusqu'à la fin de son prochain tour s'il a au moins 1 adversaire autour de lui.",
+            "passifs": [],
+            "pv": 401,
+            "at": 32,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Justelame Brutale",
+        "dieu": "iop",
+        "image": "justelame_brutale",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous déclenchez MÊLÉE : Votre héros gagne 50% de son attaque en armures. Limité à 1 fois par tour.",
+            "passifs": [],
+            "pv": 387,
+            "at": 32,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "L'Assomoir Craqueleur",
+        "dieu": "osamodas",
+        "image": "assomoir_craqueleur",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Début du combat : Ajoute le sort Œuf de Craqueleur à votre main.",
+            "passifs": [],
+            "pv": 393,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Pâtre Laineux",
+        "dieu": "osamodas",
+        "image": "patre_laineux",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "FIN DU TOUR : Devient GARDE DU CORPS des invocations alliées autour  de lui.",
+            "passifs": [],
+            "pv": 415,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Éleveur Froussard",
+        "dieu": "osamodas",
+        "image": "eleveur_froussard",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "ATTAQUE : Piochez votre prochain sort d'invocation de bête.",
+            "passifs": [],
+            "pv": 388,
+            "at": 25,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Dompteur d'épines",
+        "dieu": "osamodas",
+        "image": "dompteur_epines",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Elimination Piochez votre prochain sort d'invocation de bête. Votre héros gagne 1 AURA Pierre d'élevage.",
+            "passifs": [],
+            "pv": 370,
+            "at": 25,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Brindille",
+        "dieu": "osamodas",
+        "image": "brindille",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "MORT d'une Invocation alliée : Piochez 1 sorts.",
+            "passifs": [],
+            "pv": 400,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Pilobouli",
+        "dieu": "sacrieur",
+        "image": "pilobouli",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "AGONIE Lorsque vous infligez des dégâts à votre héros : Inflige 50% de son attaque à l'adversaire ayant le plus de points de vie.",
+            "passifs": [],
+            "pv": 390,
+            "at": 18,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Darde Kan",
+        "dieu": "sacrieur",
+        "image": "darde_kan",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "AGONIE Lorsque vous invoquez un compagnon : Votre héros en devient GARDE DU CORPS pour le tour.",
+            "passifs": [],
+            "pv": 420,
+            "at": 23,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Bâton Tonfavik",
+        "dieu": "sacrieur",
+        "image": "baton_tonfavik",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "AGONIE ATTAQUE : Subit 1% de sa points de vie max et gagne 50% de son attaque en armures.",
+            "passifs": [],
+            "pv": 405,
+            "at": 26,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Gantares des Cendres",
+        "dieu": "sacrieur",
+        "image": "gantares_cendres",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "AGONIE FIN DU TOUR : Inflige 50% de son attaque aux adversaires autour  de lui s'il est mutilé",
+            "passifs": [],
+            "pv": 400,
+            "at": 28,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Ombraden",
+        "dieu": "sacrieur",
+        "image": "ombraden",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "AGONIE Lorsque vous déplacez votre héros avec un sort : +1 point d'action.",
+            "passifs": [],
+            "pv": 430,
+            "at": 23,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Écorcheur Shugen",
+        "dieu": "sram",
+        "image": "ecorcheur_shugen",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA TRAPPER du même élément à votre héros.",
+            "passifs": [],
+            "pv": 397,
+            "at": 30,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Ken Kartana",
+        "dieu": "sram",
+        "image": "ken_kartana",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros déclenche un piège SRAM allié : Inflige 50% de son attaque aux adversaires autour",
+            "passifs": [],
+            "pv": 392,
+            "at": 22,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Cisaille Orishi",
+        "dieu": "sram",
+        "image": "cisaille_orishi",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsqu'un adversaire déclenche un de vos ASSEMBLAGES : Lui inflige 100 de l'attaque de votre héros.",
+            "passifs": [],
+            "pv": 398,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Lame Ouraï",
+        "dieu": "sram",
+        "image": "lame_ourai",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque l'un de vos pièges est déclenché : Votre héros se soigne de 50% de son attaque.",
+            "passifs": [],
+            "pv": 374,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Surin Sourokan",
+        "dieu": "sram",
+        "image": "surin_sourokan",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous déclenchez MACHINATION : Ajoute le sort Trappe Sourokan à votre main.",
+            "passifs": [],
+            "pv": 398,
+            "at": 28,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Régulant Gurpapa",
+        "dieu": "xélor",
+        "image": "regulant_gurpapa",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "FIN DU TOUR : Inflige 50% de son attaque aux adversaires autour  de chacun de vos SINISTROS.",
+            "passifs": [],
+            "pv": 389,
+            "at": 26,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Sabliaton Jikan",
+        "dieu": "xélor",
+        "image": "sabliaton_jikan",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA HIBOU du même élément à votre héros.",
+            "passifs": [],
+            "pv": 392,
+            "at": 28,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Synchronisateur Tako",
+        "dieu": "xélor",
+        "image": "synchronisateur_tako",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "FIN DU TOUR : Ajoute vos points d'action non consommés en réserve. Limité à 6|3 point d'action.",
+            "passifs": [],
+            "pv": 391,
+            "at": 24,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Catalysateur Pramium",
+        "dieu": "xélor",
+        "image": "catalysateur_pramium",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "ATTAQUE : Ajoute le sort Activation à votre main.",
+            "passifs": [],
+            "pv": 392,
+            "at": 28,
+            "cc": 5,
+            "pm": 3
+          }
+        ]
+      },
+      {
+        "nom": "Aiguille Pikuxala",
+        "dieu": "xélor",
+        "image": "aiguille_pikuxala",
+        "patchs": [
+          {
+            "version": "0.10",
+            "effet": "Lorsque votre héros se téléporte : Inflige 50% de son attaque à l'adversaire ayant le plus de VIE.",
+            "passifs": [],
+            "pv": 394,
+            "at": 28,
+            "cc": 5,
+            "pm": 3
           }
         ]
       }

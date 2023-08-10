@@ -2,6 +2,7 @@ export interface Root {
   compagnons: Compagnons;
   equipements: Equipements;
   sorts: Sorts;
+  armes: Armes;
 }
 
 export interface Compagnons {
@@ -49,11 +50,11 @@ export interface Couts {
 }
 
 export interface Equipements {
-  anneaux: Anneaux[];
+  anneaux: Anneau[];
   brassards: Brassard[];
 }
 
-export interface Anneaux {
+export interface Anneau {
   nom: string;
   rarete: string;
   image: string;
@@ -142,4 +143,23 @@ export interface Gains {
   ether?: number;
   eau?: number;
   neutre?: number;
+}
+export interface Armes {
+  armes: Arme[];
+}
+
+export interface Arme {
+  nom: string;
+  dieu: string;
+  image: string;
+  patchs: PatchArmes[];
+}
+export interface PatchArmes {
+  version: string;
+  effet: string;
+  passifs: any[];
+  pv: number;
+  at: number;
+  cc: number;
+  pm: number;
 }

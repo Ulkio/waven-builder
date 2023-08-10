@@ -2,19 +2,31 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import data from "@/api/data.json";
-import { Anneaux, CaracteristiqueAnneaux, DonAnneaux } from "@/types/index.ts";
+import { Anneau, CaracteristiqueAnneaux, DonAnneaux } from "@/types/index.ts";
 
-const AnneauxDialog = () => {
-  const rings: Anneaux[] = data.equipements.anneaux;
+interface AnneauxDialogProps {
+  onSelectedAnneauChange: (selectedAnneau: Anneau) => void;
+  onClickAnneau: () => void;
+}
+const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogProps) => {
+  const rings: Anneau[] = data.equipements.anneaux;
   const RING_BASE_URL = "/img/anneaux";
 
+  const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
+  const [displayedAnneau, setDisplayedAnneau] = useState<Anneau | null>(null);
+
+  const handleAnneauClick = (anneau: Anneau) => {
+    setSelectedAnneau(anneau);
+    onSelectedAnneauChange(anneau);
+    onClickAnneau();
+  };
   const rarityOrder: { [key: string]: number } = {
     Commun: 1,
     Rare: 2,
     Krosmique: 3,
     Infinite: 4,
   };
-  const sortedRingsRarity = rings.sort((a, b): any => {
+  const sortedAnneauxRarity = rings.sort((a, b): any => {
     const rarityA = a.rarete;
     const rarityB = b.rarete;
 
@@ -24,51 +36,55 @@ const AnneauxDialog = () => {
     return orderA - orderB;
   });
 
-  const [selectedRing, setSelectedRing] = useState<Anneaux | null>(null);
-  const [displayedRing, setDisplayedRing] = useState<Anneaux | null>(null);
-
   return (
     <div className="flex h-[80vh]">
       <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
         <h2 className="text-center font-extrabold text-3xl">Anneaux</h2>
         <div className=" flex flex-wrap gap-8 justify-center">
-          {sortedRingsRarity.map((ring) => {
-            const rarityBorder = `border-${ring.rarete.toLowerCase()}`;
+          {sortedAnneauxRarity.map((ring) => {
             return (
               <div
-                onMouseEnter={() => setDisplayedRing(ring)}
-                onClick={() => setSelectedRing(ring)}
-                className={`hover:cursor-pointer flex flex-col  items-center w-32 h-32 border-2 ${rarityBorder}`}
-                key={ring.nom}>
+                key={ring.nom}
+                onMouseEnter={() => setDisplayedAnneau(ring)}
+                onClick={() => handleAnneauClick(ring)}
+                className={`hover:cursor-pointer flex flex-col  items-center w-32 h-32 border-4 ${
+                  ring.rarete.toLowerCase() === "commun"
+                    ? "border-commun"
+                    : ring.rarete.toLowerCase() === "rare"
+                    ? "border-rare"
+                    : ring.rarete.toLowerCase() === "krosmique"
+                    ? "border-krosmique"
+                    : "border-infinite"
+                }`}>
                 <Image
                   src={`${RING_BASE_URL}/${ring.image}.png`}
                   alt={ring.nom}
-                  width={80}
-                  height={80}
+                  width={70}
+                  height={70}
                   className="hover:cursor-pointer"
                 />
-                <p className="text-sm">{ring.nom}</p>
+                <p className="text-center leading-5">{ring.nom}</p>
               </div>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 p-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center gap-2 ">
-          {displayedRing && (
+      <div className="flex flex-col gap-4 border-l-2 px-4 bg-overlaySide basis-1/2  ">
+        <div className="flex flex-col w-full items-center ">
+          {displayedAnneau && (
             <>
               <Image
-                src={`${RING_BASE_URL}/${displayedRing.image}.png`}
-                width={120}
-                height={120}
-                alt={displayedRing.nom}
+                src={`${RING_BASE_URL}/${displayedAnneau.image}.png`}
+                width={150}
+                height={150}
+                alt={displayedAnneau.nom}
               />
-              <p className="font-black text-2xl">{displayedRing.nom}</p>
-              <p className="text-center">{displayedRing.patchs[0].pouvoir}</p>
+              <p className="font-black text-2xl">{displayedAnneau.nom}</p>
+              <p className="text-center w-1/2">{displayedAnneau.patchs[0].pouvoir}</p>
               <div className="flex flex-wrap gap-2">
-                {displayedRing.patchs[0].caracteristiques.map((carac: CaracteristiqueAnneaux) => {
+                {displayedAnneau.patchs[0].caracteristiques.map((carac: CaracteristiqueAnneaux, key) => {
                   return (
-                    <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
+                    <p key={key + carac.effet} className="bg-attribute rounded-lg px-4 py-2">
                       {carac.taux + carac.effet}
                     </p>
                   );
@@ -79,12 +95,12 @@ const AnneauxDialog = () => {
         </div>
 
         <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8">
-          {displayedRing && (
+          {displayedAnneau && (
             <>
-              {displayedRing.patchs[0].dons.map((don: DonAnneaux, key) => {
+              {displayedAnneau.patchs[0].dons.map((don: DonAnneaux, key) => {
                 return (
                   <div
-                    key={key}
+                    key={key + don.effet}
                     className="bg-attribute rounded-lg py-2 w-1/4 px-2  h-44  flex flex-col justify-between hover:cursor-pointer">
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-sm text-center">{don.effet}</p>
