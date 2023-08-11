@@ -12,16 +12,16 @@ import ArmesDialog from "@/components/modals/ArmesDialog";
 import { Anneau, Arme, Brassard, Compagnon, Sort } from "@/types";
 
 const Build = () => {
-////////////////////////////////TODO////////////////////////////////
-// Afficher les stats de la classe sous le nom
-// Sorts dans le json
-// Sorts modal
-// Sorts handlers
-// Sauvegarder
-
+  ////////////////////////////////TODO////////////////////////////////
+  // Afficher les stats de la classe sous le nom
+  // Sorts dans le json
+  // Sorts modal
+  // Sorts handlers
+  // Sauvegarder
 
   // STYLE VARIANTS
   const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
+  const companionSquareVariants = `h-24 w-24 lg:w-32 lg:h-32 hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
   const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80`;
 
@@ -229,6 +229,24 @@ const Build = () => {
                     className="hover:cursor-pointer"
                   />
                   <p className="font-black text-3xl">{selectedArme?.nom}</p>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                      <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
+                      <p>{selectedArme.patchs[0].pv}</p>
+                    </div>
+                    <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                      <Image src="/img/utils/at.png" width={30} height={30} alt="pv" />
+                      <p>{selectedArme.patchs[0].at}</p>
+                    </div>
+                    <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                      <Image src="/img/utils/cc.png" width={30} height={30} alt="pv" />
+                      <p>{selectedArme.patchs[0].cc}</p>
+                    </div>
+                    <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                      <Image src="/img/utils/pm.png" width={30} height={30} alt="pv" />
+                      <p>{selectedArme.patchs[0].pm}</p>
+                    </div>
+                  </div>
                   <p className="text-center">{selectedArme?.patchs[0].effet}</p>
                   <div className="flex flex-row items-center gap-8 pt-12">
                     <Hexagon content="(wip)" size={100} />
@@ -244,40 +262,48 @@ const Build = () => {
             <div className="flex flex-col gap-2 px-4">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row gap-4">
-                <div className={squareVariants} onClick={onOpenModalCompagnon1}>
+                <div
+                  className={`${selectedCompagnon1 ? companionSquareVariants : squareVariants}`}
+                  onClick={onOpenModalCompagnon1}>
                   {selectedCompagnon1 && (
                     <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon1.image}.jpg`}
+                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon1.image}.png`}
                       width={300}
                       height={300}
                       alt={`${selectedCompagnon1.nom}`}
                     />
                   )}
                 </div>
-                <div className={squareVariants} onClick={onOpenModalCompagnon2}>
+                <div
+                  className={`${selectedCompagnon2 ? companionSquareVariants : squareVariants}`}
+                  onClick={onOpenModalCompagnon2}>
                   {selectedCompagnon2 && (
                     <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon2.image}.jpg`}
+                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon2.image}.png`}
                       width={300}
                       height={300}
                       alt={`${selectedCompagnon2.nom}`}
                     />
                   )}
                 </div>
-                <div className={squareVariants} onClick={onOpenModalCompagnon3}>
+                <div
+                  className={`${selectedCompagnon3 ? companionSquareVariants : squareVariants}`}
+                  onClick={onOpenModalCompagnon3}>
                   {selectedCompagnon3 && (
                     <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon3.image}.jpg`}
+                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon3.image}.png`}
                       width={300}
                       height={300}
                       alt={`${selectedCompagnon3.nom}`}
                     />
                   )}
                 </div>
-                <div className={squareVariants} onClick={onOpenModalCompagnon4}>
+                <div
+                  className={`${selectedCompagnon4 ? companionSquareVariants : squareVariants}`}
+                  onClick={onOpenModalCompagnon4}>
                   {selectedCompagnon4 && (
                     <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon4.image}.jpg`}
+                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon4.image}.png`}
                       width={300}
                       height={300}
                       alt={`${selectedCompagnon4.nom}`}

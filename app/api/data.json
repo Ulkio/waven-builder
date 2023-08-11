@@ -1723,7 +1723,7 @@
       {
         "nom": "Duelliste spectral",
         "rarete": "Rare",
-        "image": "duelist_spectral",
+        "image": "duelliste_spectral",
         "iles": [
           "Bonta"
         ],
@@ -3590,7 +3590,7 @@
       {
         "nom": "M. Looter King",
         "rarete": "Commun",
-        "image": "m_looter_king",
+        "image": "m._looter_king",
         "iles": [
           "Île des Bworks",
           "Île des Tofus"

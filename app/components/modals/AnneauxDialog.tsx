@@ -38,7 +38,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
 
   return (
     <div className="flex h-[80vh]">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
+      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Anneaux</h2>
         <div className=" flex flex-wrap gap-8 justify-center">
           {sortedAnneauxRarity.map((ring) => {

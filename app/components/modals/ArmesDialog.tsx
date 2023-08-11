@@ -29,7 +29,7 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
     onClickArme();
   };
   return (
-    <div className="flex flex-wrap justify-center h-[90vh] px-8 gap-4">
+    <div className="flex flex-wrap justify-center h-[90vh] px-8 gap-4 py-4">
       <h2 className="text-center w-full font-extrabold text-3xl">Arme</h2>
       <div className="flex flex-col">
         <p className="text-2xl font-extrabold italic text-center">Crâ</p>
