@@ -14070,388 +14070,210 @@
   "sorts": {
     "sorts": [
       {
-        "nom": "Bombe smisse",
+        "nom": "Brûlure Spectrale",
         "element": "Feu",
-        "source": "Compagnon",
-        "image": "bombe_smisse",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "brulure_spectrale",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 2,
-            "effet": "Construit une BOMBE SMISSE (1) sur une case adjacente à un allié.",
-            "dons": [],
-            "gains": {}
-          }
-        ]
-      },
-      {
-        "nom": "Folie du Dark Vlad",
-        "element": "Feu",
-        "source": "Compagnon",
-        "image": "folie_du_dark_vlad",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques aux personnages autour du DARK VLAD.",
-            "dons": [],
-            "gains": {
-              "feu": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Surcharge de Bakara",
-        "element": "Feu",
-        "source": "Compagnon",
-        "image": "surcharge_de_bakara",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques.",
-            "dons": [],
-            "gains": {
-              "feu": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Fouet de Lou",
-        "element": "Feu",
-        "source": "Compagnon",
-        "image": "fouet_de_lou",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 4,
-            "effet": "Inflige 0 dégâts magiques aux adversaires sur les 3 cases devant LOU.",
-            "dons": [],
-            "gains": {
-              "feu": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Boom",
-        "element": "Feu",
-        "source": "Accessoire",
-        "image": "boom",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Si la cible est HUILÉE: Déclenche EXPLOSION(0) et applique HUILÉ.",
-            "dons": [],
-            "gains": {
-              "feu": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Ctane",
-        "element": "Feu",
-        "source": "Accessoire",
-        "image": "ctane",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Quand vous jouez un sort FEU: +20% aux dégâts de base du sort. Ce sort est détruit quand il est joué.",
-            "dons": [],
-            "gains": {
-              "feu": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Petite furie",
-        "element": "Feu",
-        "source": "Compagnon",
-        "image": "petite_furie",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "+2 PM et +100% d'AT à ELELY pour le tour.",
-            "dons": [],
-            "gains": {
-              "feu": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Saut de Goultard",
-        "element": "Feu",
-        "source": "Compagnon",
-        "image": "saut_de_goultard",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 7,
-            "effet": "Téléporte GOULTARD (169 PV, 30 AT, 4 PM) jusqu'à 3 cases. Il déclenche EXPLOSION(0) par adversaire en jeu.",
-            "dons": [],
-            "gains": {
-              "feu": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Trait d'Évangelyne",
-        "element": "Air",
-        "source": "Compagnon",
-        "image": "trait_d_evangelyne",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques.",
-            "dons": [],
-            "gains": {
-              "air": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Nuée de corbacs",
-        "element": "Air",
-        "source": "Compagnon",
-        "image": "nuee_de_corbacs",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 4,
-            "effet": "Inflige 0 dégâts magiques aux adversaires dans la zone ciblée.",
-            "dons": [],
-            "gains": {
-              "air": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Toucher de Coqueline",
-        "element": "Air",
-        "source": "Compagnon",
-        "image": "toucher_de_coqueline",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 4,
-            "effet": "Transforme la cible en TOFU pour le tour.",
-            "dons": [],
-            "gains": {
-              "air": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Caracole",
-        "element": "Air",
-        "source": "Accessoire",
-        "image": "caracole",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Si la cible est ÉVENTÉE: Déclenche REBOND(0) et applique ÉVENTÉ.",
-            "dons": [],
-            "gains": {
-              "air": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Jalousie d'Atcham",
-        "element": "Air",
-        "source": "Compagnon",
-        "image": "jalousie_d_atcham",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Téléporte ATCHAM sur une case adjacente à l'adversaire ayant le plus de PV. Il inflige 0 dégâts magiques aux adversaires autour de lui.",
-            "dons": [],
-            "gains": {
-              "air": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Ragan",
-        "element": "Air",
-        "source": "Accessoire",
-        "image": "ragan",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. +20% aux dégâts quand vous jouez un sort AIR. Ce sort est détruit quand il est joué.",
-            "dons": [],
-            "gains": {
-              "air": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Morsure de Lilotte",
-        "element": "Terre",
-        "source": "Compagnon",
-        "image": "morsure_de_lilotte",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques et applique BOUEUX.",
-            "dons": [],
-            "gains": {
-              "terre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Pelle de Ruel",
-        "element": "Terre",
-        "source": "Compagnon",
-        "image": "pelle_de_ruel",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques. Si la cible est BOUEUSE: Déclenche TOURBE(0).",
-            "dons": [],
-            "gains": {
-              "terre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Reflet d'heurt de gloire",
-        "element": "Terre",
-        "source": "Compagnon",
-        "image": "reflet_d_heurt_de_gloire",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 3,
-            "effet": "Inflige 0 dégâts magiques. MÊLÉE: +7 AR à votre héros.",
-            "dons": [],
-            "gains": {
-              "terre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Hypnose de Toxine",
-        "element": "Terre",
-        "source": "Compagnon",
-        "image": "hypnose_de_toxine",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 4,
-            "effet": "TOXINE CHARGE un adversaire aligné jusqu'à 5 cases. Elle lui inflige 10 dégâts magiques et l'ASSOMME.",
-            "dons": [],
-            "gains": {
-              "terre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Broyage",
-        "element": "Terre",
-        "source": "Accessoire",
-        "image": "broyage",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Si la cible est BOUEUSE: Déclenche TOURBE(0) et applique BOUEUX.",
-            "dons": [],
-            "gains": {
-              "terre": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Cypres",
-        "element": "Terre",
-        "source": "Accessoire",
-        "image": "cypres",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. +20% aux dégâts quand vous jouez un sort TERRE. Ce sort est détruit quand il est joué.",
-            "dons": [],
-            "gains": {
-              "terre": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Ronces d'Amalia",
-        "element": "Terre",
-        "source": "Compagnon",
-        "image": "ronces_d_amalia",
-        "patchs": [
-          {
-            "version": "0.10",
+            "version": "0.11",
             "cout": 6,
-            "effet": "Inflige 0 dégâts magiques aux adversaires autout d'AMALIA. Invoque une POUPÉE D'AMALIA (58 PV, 13 AT, 2 PM) jusqu'à  cases de votre héros. Détruit votre POUPÉE déjà en jeu.",
-            "dons": [],
+            "effet": "Téléporte votre Âmes Spectrales sur une case autour  de votre héros. Inflige 13 dégâts magique aux adversaires autour  d'elle.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": "120",
+                "effet": "+30% aux DÉGÂTS de ce sort"
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": "80",
+                "effet": "CRITIQUE : +25% à votre héros pour le tour."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": "50",
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
-              "terre": 2
+              "feu": 2
             }
           }
         ]
       },
       {
-        "nom": "Eliacube de Nox",
-        "element": "Eau",
-        "source": "Compagnon",
-        "image": "eliacube_de_nox",
+        "nom": "Fièvre",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Bouvaloir Orok",
+        "image": "fievre.png",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 2,
-            "effet": "Téléporte la cible jusqu'à 2 cases autour d'une NOXINE (1 PV, 2 AT, 5 PM).",
-            "dons": [],
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 17 dégâts magique. +50% aux DÉGÂTS de votre prochain sort de CHARGE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Piochez votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
-              "ether": 1
+              "feu": 1
             }
           }
         ]
       },
       {
-        "nom": "Gel d'Harebourg",
-        "element": "Eau",
-        "source": "Compagnon",
-        "image": "gel_d_harebourg",
+        "nom": "Estoc Détonant",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "estoc_detonant",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 2,
-            "effet": "GÈLE la cible.",
-            "dons": [],
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 26 dégâts magique. Déclenche EXPLOSION (13) autour de la cible si elle est HUILÉE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Applique huilé."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 1,
+              "neutre": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Brûlure Revigorante",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "brulure_revigorante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 19 dégâts magique. +50% à votre héros pour le tour s'il est DÉPHASÉ.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+50% à votre héros pour le tour s'il est DÉPHASÉ."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : +50% aux DÉGÂTS CRITIQUES de ce sort."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Touche Enflammée",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Justelame Brutale",
+        "image": "touche_enflammee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 12 dégâts magique. MÊLÉE : Inflige 2 dégâts magique autour de votre héros.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Votre héros déclenche 8."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Onde Spectrale",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "onde_spectrale",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Sacrifie une Âmes Spectrales alliée. Inflige 35 dégâts magique à un adversaire.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : -1 PA au coût de votre prochain sort Âme Spectrale."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
               "eau": 1
             }
@@ -14459,184 +14281,4996 @@
         ]
       },
       {
-        "nom": "Répit d'Albert",
-        "element": "Eau",
-        "source": "Compagnon",
-        "image": "repit_d_albert",
+        "nom": "Attaque Spectrale",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "attaque_spectrale",
         "patchs": [
           {
-            "version": "0.10",
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Sacrifie une Âmes Spectrales alliée. Inflige 14 dégâts magique aux adversaires alignés avec elle.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Confère BOUCLIER à votre héros."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Prise Spectrale",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "prise_spectrale",
+        "patchs": [
+          {
+            "version": "0.11",
             "cout": 3,
-            "effet": "Soigne un allié de 19 PV.",
-            "dons": [],
-            "gains": {}
-          }
-        ]
-      },
-      {
-        "nom": "Céan",
-        "element": "Eau",
-        "source": "Accessoire",
-        "image": "cean",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Quand vous jouez un sort EAU: +20% aux dégâts de base du sort. Ce sort est détruit quand il est joué.",
-            "dons": [],
+            "effet": "Inflige 11 dégâts magique aux adversaires autour de votre héros. Échange sa position avec celle d'une Âmes Spectrales.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Inflige 50 de l'attaque de votre Âmes Spectrales aux adversaires autour d'elle."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
-              "eau": 2
+              "air": 1
             }
           }
         ]
       },
       {
-        "nom": "Flot",
+        "nom": "Remous Favorable",
         "element": "Eau",
-        "source": "Accessoire",
-        "image": "flot",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "remous_favorable",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 0 dégâts magiques. Si la cible est MOUILLÉE: Déclenche GRÊLE(0) et applique MOUILLÉ.",
-            "dons": [],
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 19 dégâts magique. -1 point d'action au coût de votre prochain sort de CHARGE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "-1 point d'action à votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Piochez votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
-              "eau": 2
+              "eau": 1
             }
           }
         ]
       },
       {
-        "nom": "Frappe de Percimol",
-        "element": "Eau",
-        "source": "Compagnon",
-        "image": "frappe_de_percimol",
+        "nom": "Bourbier",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "bourbier",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Téléporte PERCIMOL (110 PV, 25 AT, 3 PM) jusqu'à 3 cases. Il inflige 26 dégâts magiques à ses adversaires adjacents.",
-            "dons": [],
-            "gains": {
-              "eau": 1,
-              "ether": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Souffle de Phaeris",
-        "element": "Eau",
-        "source": "Compagnon",
-        "image": "souffle_de_phaeris",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Inflige 20 dégâts magiques à la cible et échange sa position avec celle de PHAERIS.",
-            "dons": [],
-            "gains": {
-              "eau": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Bouclier de Bump",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "bouclier_de_bump",
-        "patchs": [
-          {
-            "version": "0.10",
+            "version": "0.11",
             "cout": 2,
-            "effet": "Confère BOUCLIER à un personnage allié.",
-            "dons": [],
-            "gains": {}
+            "effet": "Votre héros CHARGE un personnage aligné jusqu'à 2 cases et lui inflige 19 dégâts magique.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Piochez votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 1
+            }
           }
         ]
       },
       {
-        "nom": "Course de Joris",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "course_de_joris",
+        "nom": "Accalmie",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Cra",
+        "arme": "Bouvaloir Orok",
+        "image": "accalmie",
         "patchs": [
           {
-            "version": "0.10",
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Votre héros CHARGE un personnage aligné avec lui jusqu’à 3 cases. Inflige 16 dégâts à la cible et la REPOUSSE de 2 cases.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Piochez votre prochain sort de CHARGE."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "air": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Estoc Givré",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "estoc_givre",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 8,
+            "effet": "Inflige 50 dégâts magique. +1 point d'action si la cible est MOUILLÉE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Applique mouillée."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 3
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Estoc Tellurique",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "estoc_tellurique",
+        "patchs": [
+          {
+            "version": "0.11",
             "cout": 3,
-            "effet": "+3 PM à un allié pour le tour. Piochez 1 sort.",
-            "dons": [],
+            "effet": "Inflige 15 dégâts magique. +12 POINTS D'ARMURE à votre héros si la cible est BOUEUSE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Applique tourbe."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
-              "neutre": 1
+              "terre": 1
             }
           }
         ]
       },
       {
-        "nom": "Essai de Khan Karkass",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "essai_de_khan_karkass",
+        "nom": "Estoc Tonnerre",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "estoc_tonnerre",
         "patchs": [
           {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Téléporte KHAN KARKASS jusqu'à 3 cases. Il inflige son AT aux adversaires adjacents.",
-            "dons": [],
-            "gains": {
-              "neutre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Vengeance de KATAR",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "vengeance_de_katar",
-        "patchs": [
-          {
-            "version": "0.10",
-            "cout": 5,
-            "effet": "Attire de 3 cases les premiers adversaires alignés à KATAR. Il inflige son AT aux adversaires adjacents.",
-            "dons": [],
-            "gains": {
-              "neutre": 1
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Folie de Qilby",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "folie_de_qilby",
-        "patchs": [
-          {
-            "version": "0.10",
+            "version": "0.11",
             "cout": 6,
-            "effet": "Téléporte QILBY jusqu'à 3 cases. Il inflige son AT aux personnages autour de lui et se soigne de la moitié de son AT par personnage touché.",
-            "dons": [],
+            "effet": "Inflige 30 dégâts magique à un adversaire adjacent à votre héros. Déclenche REBOND (10) si la cible est ÉVENTÉE.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Applique ventilée."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
             "gains": {
+              "air": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Givrure",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "givrure",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 24 dégâts magique. -1 point d'action au coût de ce sort si votre héros est DÉPHASÉ.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "-1 PA au coût de ce sort si votre héros est DÉPHASÉ."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : +50% aux DÉGÂTS CRITIQUES de ce sort."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Brèche",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "breche",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Inflige 5 dégâts magique. +4 POINTS D'ARMURE si votre héros est DÉPHASÉ.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% d'armure si votre héros est DÉPHASÉ."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : +1 à votre héros pour le tour."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Trouble",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "trouble",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Inflige 8 dégâts magique. REPOUSSE de 1 si votre héros est DÉPHASÉ.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "REPOUSSE de 1 supplémentaire."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Ce sort revient dans votre main."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "air": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Touche Aqueuse",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Justelame Brutale",
+        "image": "touche_aqueuse",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 19 dégâts magique. MÊLÉE : Soigne votre héros de 3 points de vie.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Déclenche GRELE (8)."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Touche Terrestre",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Justelame Brutale",
+        "image": "touche_terrestre",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 28 dégâts magique. MÊLÉE : +4 POINTS D'ARMURE à votre héros.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Déclenche TOURBE (6)."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 1,
               "neutre": 1
             }
           }
         ]
       },
       {
-        "nom": "Soin des démons",
-        "element": "Neutre",
-        "source": "Compagnon",
-        "image": "soin_des_demons",
+        "nom": "Touche Venteuse",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "iop",
+        "arme": "Justelame Brutale",
+        "image": "touche_venteuse",
         "patchs": [
           {
-            "version": "0.10",
+            "version": "0.11",
             "cout": 6,
-            "effet": "Soigne un allié de 30 PV + 7 PV pour chacun de vos personnages en jeu.",
-            "dons": [],
+            "effet": "Inflige 20 dégâts magique. MÊLÉE : +3 dégâts magique.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Déclenche REBOND (10)."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "air": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Shiruken Ardent",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "shiruken_ardent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Téléporte votre héros sur une case adjacente à un adversaire jusqu'à 2 cases et lui inflige 11 dégâts magique. Combo : Votre héros déclenche EXPLOSION (13).",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : archer."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Shiruken Glacé",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "shiruken_glace",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 21 dégâts magique à un adversaire et téléporte votre héros jusqu'à 2 cases. Combo : Soigne votre héros de 7 points de vie.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : archer."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Shiruken Graveleux",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "shiruken_graveleux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Téléporte votre héros jusqu'à 2 cases et inflige 15 dégâts magique aux adversaires alignés. Combo : +1 point de mouvement à votre héros pour le tour.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : archer."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Shiruken Nébuleux",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "crâ",
+        "arme": "Shiru Shaden",
+        "image": "shiruken_nebuleux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 30 dégâts magique à un adversaire adjacent à votre héros. Combo : Téléporte votre héros derrière la cible.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : archer."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "air": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Brasero",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Bunelame",
+        "image": "brasero",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 20 dégâts magique. Vol de vie si vous avez 2 sorts ou moins en main.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Votre héros déclenche 8."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Ondulation",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Bunelame",
+        "image": "ondulation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 21 dégâts magique. +2 point d'action si vous avez 2 sorts ou moins en main.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 120,
+                "effet": "+30% aux DÉGÂTS de ce sort."
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": 80,
+                "effet": "CRITIQUE : Déclenche GRELE (8)."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Bumbon",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Bunelame",
+        "image": "bumbon",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 17 dégâts magique. Déclenche 10 si vous avez 2 sorts ou moins en main.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": "120",
+                "effet": "+30% aux DÉGÂTS de ce sort"
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": "80",
+                "effet": "CRITIQUE : Déclenche 10."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": "50",
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "air": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Impact Ardent",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "impact_ardent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 21 dégâts magique aux adversaires autour de votre héros. archer",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": "120",
+                "effet": "+30% aux DÉGÂTS de ce sort"
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": "80",
+                "effet": "CRITIQUE : Votre héros déclenche EXPLOSION (6)."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": "50",
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "feu": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Impact Glacé",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "impact_glace",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 14 dégâts magique. +1 point d'action si aucun adversaire ne se trouve autour de votre héros.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": "120",
+                "effet": "+30% aux DÉGÂTS de ce sort"
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": "80",
+                "effet": "CRITIQUE : Gèle la cible pour le tour."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": "50",
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "eau": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Impact Graveleux",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "impact_graveleux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 18 dégâts magique à la cible et 8 dégâts magique aux adversaires alignés à elle. -1 point de mouvement à la cible pour le tour.",
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": "120",
+                "effet": "+30% aux DÉGÂTS de ce sort"
+              },
+              {
+                "nom": "EFFET CRITIQUE",
+                "cout": "80",
+                "effet": "CRITIQUE : Fracture la cible pour le tour."
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": "50",
+                "effet": "+15% de COUP CRITIQUE de ce sort."
+              }
+            ],
+            "gains": {
+              "terre": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Impact Nébuleux",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "impact_nebuleux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 32 dégâts magique aux adversaires adjacents à votre héros et les pousée de 1 case."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": "120",
+            "effet": "+30% aux DÉGÂTS de ce sort"
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": "80",
+            "effet": "CRITIQUE : Ce sort revient dans votre main. Il coûte -1 point d'action."
+          },
+          {
+            "nom": "BONUS COUP CRITIQUE",
+            "cout": "50",
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Poing Fulgurant",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "poing_fulgurant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 25 dégâts magique à un adversaire aligné. Combo : +10 dégâts magique."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": "120",
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": "80",
+            "effet": "CRITIQUE : Votre héros déclenche EXPLOSION (6)."
+          },
+          {
+            "nom": "BONUS COUP CRITIQUE",
+            "cout": "50",
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Poing Frétillant",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "poing_fretillant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 12 dégâts magique à un adversaire aligné. Combo : +1 point d'action."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": "120",
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": "80",
+            "effet": "CRITIQUE : Déclenche GRELE (8)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": "50",
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Poing Jugulant",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "poing_jugulant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 19 dégâts magique à un adversaire aligné. Combo : +1 point de mouvement à votre héros pour le tour."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Déclenche TOURBE (6)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Poing Turbulent",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "poing_turbulent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 30 dégâts magique à un adversaire aligné. Combo : REPOUSSE la cible de 2 cases."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Déclenche REBOND (10)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Crémation",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Expingole",
+        "image": "cremation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 9 dégâts magique à un adversaire et 3 dégâts magique autour de lui par AURA MIRE que possède votre héros."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Mire Ardente à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Expiation",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Enutrof",
+        "arme": "Expingole",
+        "image": "expiation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 20 dégâts magique. Soigne votre héros de 4 points de vie par AURA MIRE qu'il possède."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Mire Glacée à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Impulsion",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Enutrof",
+        "arme": "Expingole",
+        "image": "impulsion",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 33 dégâts magique. -1 point de mouvement à la cible pour le tour si votre héros possède 3 AURAS MIRE ou plus."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Mire Graveleuse à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 2
+        }
+      },
+      {
+        "nom": "Altération",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Enutrof",
+        "arme": "Expingole",
+        "image": "alteration",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 21 dégâts magique. +3 dégâts magique par AURA MIRE que possède votre héros."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Mire Nébuleuse à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Phase Enivrante",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme déphasante",
+        "image": "phase_enivrante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 20 dégâts magique. Inflige 8 dégâts magique aux adversaires autour de la cible si votre héros est DÉPHASÉ."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Pose un Cœur D'Esprit autour de la cible."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 2
+        }
+      },
+      {
+        "nom": "Phase Régénérante",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme déphasante",
+        "image": "phase_regenerante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Soigne votre héros de 17 points de vie. Jusqu'à la fin du tour, soigne les alliés traversés de 8 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Pose un Cœur D'Esprit autour de la cible."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Phase Armurée",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme déphasante",
+        "image": "phase_armuree",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 22 dégâts magique. Jusqu'à la fin du tour, +6 POINTS D'ARMURE à votre héros par adversaire traversé."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Pose un Cœur D'Esprit autour de la cible."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Phase Pétulante",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme déphasante",
+        "image": "phase_petulante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 14 dégâts magique. Échange la position de votre héros avec celle de la cible s'il est DÉPHASÉ."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "Phase Pétulante 2",
+            "cout": 80,
+            "effet": "CRITIQUE : Pose un Cœur D'Esprit autour de la cible."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Aiguillon Perforant",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Lame Voracius",
+        "image": "aiguillon_perforant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 24 dégâts magique. +15 dégâts magique si la cible est HUILÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vol de vie"
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Aiguillon Frémissant",
+        "element": "Eau",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Lame Voracius",
+        "image": "aiguillon_fremissant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 24 dégâts magique. Gèle la cible si elle est MOUILLÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vol de vie"
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1,
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Aiguillon Lancinant",
+        "element": "Terre",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Lame Voracius",
+        "image": "aiguillon_lancinant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 29 dégâts magique à un adversaire aligné. Immobilise la cible si elle est BOUEUSE ."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vol de vie"
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 2
+        }
+      },
+      {
+        "nom": "Aiguillon Turbulent",
+        "element": "Air",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Lame Voracius",
+        "image": "aiguillon_turbulent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 34 dégâts magique à un adversaire adjacent  à votre héros. REPOUSSE la cible de 3 cases si elle est ÉVENTÉE "
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vol de vie"
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Faveur Nocturne",
+        "element": "Feu",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Ambre Tamashi",
+        "image": "faveur_nocturne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Sacrifie l'un de vos Nocturiens.\nInflige 20 dégâts magique aux adversaires adjacents."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute le sort Nocturien à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 2
+        }
+      },
+      {
+        "nom": "Soin Nocturne",
+        "element": "Eau",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Ambre Tamashi",
+        "image": "soin_nocturne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Sacrifie l'un de vos Nocturiens.\nSoigne les alliés adjacents de 15 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute le sort Nocturien à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Défense Nocturne",
+        "element": "Terre",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Ambre Tamashi",
+        "image": "defense_nocturne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Sacrifie l'un de vos Nocturiens.\n+6 POINTS D'ARMURE aux alliés autour."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% d'armure à ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute le sort Nocturien à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Liaison Nocturne",
+        "element": "Air",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Ambre Tamashi",
+        "image": "liaison_nocturne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Sacrifie l'un de vos Nocturiens.\nInflige 21 dégâts magiques aux adversaires adjacents et les REPOUSSE de 2 cases."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute le sort Nocturien à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Coupe Saignante",
+        "element": "Feu",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "coupe_saignante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 9 dégâts magiques.\nVol de vie"
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Soigne votre héros de 7."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Coupe Cinglante",
+        "element": "Eau",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "coupe_cinglante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Soigne un allié de 16 points de vie.\nInflige 11 dégâts magiques aux adversaires autour de lui."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Soigne votre héros de 7."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 2
+        }
+      },
+      {
+        "nom": "Coupe Rutilante",
+        "element": "Terre",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "coupe_rutilante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 17 dégâts magiques à l'adversaire ayant le plus de VIE.\nSoigne de 11 points de vie les alliés alignés à lui."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Soigne votre héros de 7."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Coupe Mordante",
+        "element": "Air",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "coupe_mordante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 27 dégâts magiques à l'adversaire ayant le plus de VIE.\nSoigne de 7 points de vie les alliés adjacents à lui."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Soigne votre héros de 7."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1,
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Kokoro Brûlant",
+        "element": "Feu",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Pinceau Kokoro",
+        "image": "kokoro_brule",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 12 dégâts magiques aux adversaires autour d'un allié.\nSOUTIEN : +6 dégâts magiques."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 jauge Feu."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Kokoro Givré",
+        "element": "Eau",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Pinceau Kokoro",
+        "image": "kokoro_givre",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Soigne un allié de 22 points de vie.\nSOUTIEN : +9 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 jauge Eau."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 2
+        }
+      },
+      {
+        "nom": "Kokoro Renforcé",
+        "element": "Terre",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Pinceau Kokoro",
+        "image": "kokoro_renforce",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 8 dégâts magique aux adversaires alignés à un allié.\nSOUTIEN : +4"
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 jauge Terre."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Kokoro Vaporeux",
+        "element": "Air",
+        "dieu": "Eniripsa",
+        "source": "Joueur",
+        "arme": "Pinceau Kokoro",
+        "image": "kokoro_vaporeux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 28 dégâts magique à un adversaire adjacent <img class=\"text-icon\" src=\"/img/cell_around.png\"> à un allié. \nSOUTIEN : +14"
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 jauge Air."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Traque Dévorante",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "traque_devorante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 10 dégâts magique à un personnage aligné avec votre héros.\nVotre héros traverse la ligne si la cible est HUILÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique HUILÉE."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Traque Fanatique",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "traque_fanatique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 25 dégâts magique.\nSoigne votre héros d'autant si la cible est MOUILLÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique MOUILLÉE."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 2
+        }
+      },
+      {
+        "nom": "Traque Contrôlée",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "traque_controlee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 15 dégâts magique.\n+10 POINTS D'ARMURE si la cible est BOUEUSE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique BOUEUX."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Traque Sournoise",
+        "element": "Air",
+        "dieu": "Sram",
+        "source": "Joueur",
+        "arme": "Pinceau Kokoro",
+        "image": "traque_sournoise",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 20 dégâts magique et Repoussé de 2 cases.\nÉchange la position de votre héros avec la cible si elle est ÉVENTÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique ÉVENTÉ."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Frappe Frénétique",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "frappe_frenetique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Téléporte votre héros sur un de vos pièges.\nInflige 10 dégâts magique autour de sa case d'arrivée."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Trappeur des Flammes à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Frappe Thérapeutique",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "frappe_therapeutique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Téléporte votre héros sur un de vos pièges.\nInflige 26 dégâts magique à un adversaire adjacent et soigne votre héros de 10 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS et SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Trappeur des Glaces à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1,
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Frappe Fracassante",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "frappe_fracassante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 17 dégâts magique aux adversaires alignés à un de vos pièges puis téléporte votre héros dessus."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Trappeur des Pierres à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 2
+        }
+      },
+      {
+        "nom": "Frappe Balayante",
+        "element": "Air",
+        "dieu": "Sram",
+        "source": "Joueur",
+        "arme": "Ken Kartana",
+        "image": "frappe_balayante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Téléporte votre héros sur un de vos pièges.\nAttire les adversaires alignés jusqu'à 2 cases et leur inflige 17 dégâts magique."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : +1 AURA Trappeur des Vents à votre héros."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Cisaille Huilée",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "cisaille_huilee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Construit 2 Pièges Sram (20) jusqu'à 5|3 cases de votre héros.\nPiochez 1 sort par adversaire situé entre eux."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+2 cases à la portée de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Piochez votre prochain sort de piège."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Cisaille Mouillée",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "cisaille_mouillee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Construit 2 Pièges Sram (20) jusqu'à 5|3 cases de votre héros.\n-1 point d'action au coût de votre prochain sort par adversaire situé entre eux."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+2 cases à la portée de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Piochez votre prochain sort de piège."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Double-Cisaille Boueuse",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "double-cisaille_boueuse",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Construit 2 Pièges Sram (20) jusqu'à 5|3 cases de votre héros.\n-1 point de mouvement pour le tour aux adversaires situés entre ces pièges."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 50,
+            "effet": "+2 cases à la portée de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Piochez votre prochain sort de piège."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 2
+        }
+      },
+      {
+        "nom": "Double-Cisaille Venteuse",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "double-cisaille_venteuse",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Construit 2 Pièges Sram (20) jusqu'à 3 de votre héros.\n\npousée de 2|1 cases les personnages adjacents."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 50,
+            "effet": "pousée de 1 supplémentaire."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Piochez votre prochain sort de piège."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Amorce Furieuse",
+        "element": "Feu",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "amorce_furieuse",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 12 dégâts magique aux adversaires autour d'un de vos pièges.\nMACHINATION : Vol de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Poussette à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "neutre": 1,
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Amorce Enivrante",
+        "element": "Eau",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "amorce_enivrante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 25 dégâts magique à un adversaire autour d'un de vos pièges.\nMACHINATION : Soigne votre héros de 11 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS et SOINS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Poussette à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Amorce Turbulente",
+        "element": "Terre",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "amorce_turbulente",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 20 dégâts magique aux adversaires alignés à votre héros.\nMACHINATION : Attire vos premiers pièges alignés jusqu'à 7 cases de votre héros."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Poussette à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Amorce Électrique",
+        "element": "Air",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "amorce_electrique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 24 dégâts magique aux adversaires adjacents à votre héros.\nMACHINATION : Les poussent de 1 case."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Poussette à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Malédiction du Sourokan",
+        "element": "Feu",
+        "source": "Joueur",
+        "arme": "Surin Sourokan",
+        "dieu": "Sram",
+        "image": "malediction_du_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 28 dégâts magique.\nMACHINATION : +-25% d'attaque à la cible pour le tour."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Votre héros déclenche EXPLOSION (6)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1,
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Sourokan a des yeux",
+        "element": "Eau",
+        "source": "Joueur",
+        "arme": "Surin Sourokan",
+        "image": "sourokan_a_des_yeux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 25 dégâts magique.\nMACHINATION : -1 point d'action au coût du prochain sort que vous jouez."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : -1 PA au coût de votre prochain sort."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 2
+        }
+      },
+      {
+        "nom": "Sourokan a des yeux",
+        "element": "Eau",
+        "dieu": "Sram",
+        "source": "Joueur",
+        "arme": "Surin Sourokan",
+        "image": "sourokan_a_des_yeux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 25 dégâts magique.\nMACHINATION : -1 point d'action au coût du prochain sort que vous jouez."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : -1 PA au coût de votre prochain sort."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 2
+        }
+      },
+      {
+        "nom": "Silence du Sourokan",
+        "element": "Terre",
+        "dieu": "Sram",
+        "source": "Joueur",
+        "arme": "Surin Sourokan",
+        "image": "silence_du_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 20 dégâts magique.\nMACHINATION : +1 point de mouvement à votre héros pour le tour."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Fracture la cible pour le tour."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Huitième Sourokan",
+        "element": "Air",
+        "dieu": "Sram",
+        "source": "Joueur",
+        "arme": "Surin Sourokan",
+        "image": "huitieme_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 16 dégâts magique aux adversaires autour de votre héros.\nMACHINATION : +9 dégâts magique."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Déclenche REBOND (10)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Protocole : Explosion",
+        "element": "Feu",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "protocole_explosion",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 15 dégâts magique autour de votre héros ou d'un de vos SINISTROS.\n+5 dégâts magique si vous avez au moins 2 SINISTROS en jeu."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vos Mécanismes déclenchent EXPLOSION (8)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Protocole : Annihilation",
+        "element": "Eau",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "protocole_annihilation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 8,
+            "effet": "Inflige 32 dégâts magique.\n-1 point d'action au coût de ce sort pour chacun de vos SINISTROS en jeu."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vos Mécanismes déclenchent GRELE (8)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 3
+        }
+      },
+      {
+        "nom": "Protocole : Destruction",
+        "element": "Terre",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "protocole_destruction",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 13 dégâts magique aux adversaires alignés à votre héros et vos SINISTROS."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vos Mécanismes déclenchent TOURBE (8)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 2
+        }
+      },
+      {
+        "nom": "Protocole : Régulation",
+        "element": "Air",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "protocole_regulation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 19 dégâts magique. +6 dégâts magique si vous avez au moins 2 SINISTROS en jeu."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Vos Mécanismes déclenchent REBOND (10)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Sablier Ardent",
+        "element": "Feu",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "sablier_ardent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 24 dégâts magique +16 dégâts magique si la cible est HUILÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique huilé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Sablier Cinglant",
+        "element": "Eau",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "sablier_cinglant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 19 dégâts magique. +1 point d'action si la cible est MOUILLÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique mouillé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Sablier Mécanique",
+        "element": "Terre",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "sablier_mecanique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 26 dégâts magique. -1 point de mouvement à la cible pour le tour si elle est BOUEUSE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique TOURBE."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Sablier Électrique",
+        "element": "Air",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "sablier_electrique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 32 dégâts magique. REPOUSSE la cible de 2 cases si elle est ÉVENTÉE."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique ventilé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Style Flamme",
+        "element": "Feu",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "style_flamme",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 14 dégâts magique. CHRONO : Inflige 10 dégâts magique autour  de la cible."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique huilé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 2
+        }
+      },
+      {
+        "nom": "Style Goutte",
+        "element": "Eau",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "style_goutte",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 17 dégâts magique. CHRONO : Soigne votre héros de 11 points de vie."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique mouillé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 2
+        }
+      },
+      {
+        "nom": "Style Feuille",
+        "element": "Terre",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "style_feuille",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 18 dégâts magique. CHRONO : Inflige 10 dégâts magique aux adversaires alignés à la cible."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique Boueux."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Style Vent",
+        "element": "Air",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "style_vent",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 23 dégâts magique. CHRONO : REPOUSSE la cible de 2 cases."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Applique Éventé."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Déclic Enflammé",
+        "element": "Feu",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "declic_enflamme",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 14 dégâts magique aux adversaires autour  de votre héros et d'un de vos SINISTROS."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Activation à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Déclic Orageux",
+        "element": "Eau",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "declic_orageux",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 14 dégâts magique. +1 point d'action si vous avez au moins 1 SINISTRO en jeu."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Activation à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1
+        }
+      },
+      {
+        "nom": "Déclic Mécanique",
+        "element": "Terre",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "declic_mecanique",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige 18 dégâts magique aux adversaires alignés à votre héros. +11 armure à votre héros si vous avez au moins 1 SINISTRO en jeu."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Activation à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Déclic Aérien",
+        "element": "Air",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "declic_aerien",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Échange la position de votre héros avec celle d'un de vos SINISTROS et inflige 7 dégâts magique autour d'eux."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Ajoute une Activation à votre main."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Téléport Compulsif",
+        "element": "Feu",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "teleport_compulsif",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige 16 dégâts magique et téléporte votre héros jusqu'à 2 cases."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Votre héros déclenche EXPLOSION (6)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "feu": 1
+        }
+      },
+      {
+        "nom": "Téléport Collaboratif",
+        "element": "Eau",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "teleport_collaboratif",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 25 dégâts magique aux adversaires autour  de votre héros. Échange la position de votre héros avec celle d'un allié."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Déclenche GRELE (8)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "eau": 1,
+          "neutre": 1
+        }
+      },
+      {
+        "nom": "Téléport Furtif",
+        "element": "Terre",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "teleport_furtif",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Téléporte votre héros jusqu'à 2 cases et inflige 18 dégâts magique aux adversaires adjacents ."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Déclenche REBOND (10)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "terre": 1
+        }
+      },
+      {
+        "nom": "Téléport Offensif",
+        "element": "Air",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "teleport_offensif",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Téléporte votre héros jusqu'à 2 cases et inflige 18 dégâts magique aux adversaires adjacents ."
+          }
+        ],
+        "dons": [
+          {
+            "nom": "EFFET AMELIORE",
+            "cout": 120,
+            "effet": "+30% aux DÉGÂTS de ce sort."
+          },
+          {
+            "nom": "EFFET CRITIQUE",
+            "cout": 80,
+            "effet": "CRITIQUE : Votre héros déclenche REBOND (10)."
+          },
+          {
+            "nom": "Bonus Coup Critique",
+            "cout": 50,
+            "effet": "+15% de COUP CRITIQUE de ce sort."
+          }
+        ],
+        "gains": {
+          "air": 1
+        }
+      },
+      {
+        "nom": "Le chant du cygne",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "chant_du_cygne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "+%100 d'attaque à un allié. Il meurt à la fin du tour.",
             "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Désigné Volontaire",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "designe_volontaire",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "Sacrifie un allié. Votre héros gagne son attaque en armure.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Requiem",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "requiem",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Vos compagnons morts sont REINVOCABLES. Ce sort est détruit lorsqu'il est joué.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Sacrifice Spectral",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Lamarguedon Spectral",
+        "image": "sacrifice_spectral",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Sacrifie un allié. Inflige l'attaque de votre héros à un adversaire adjacent.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Repositionnement",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "repositionnement",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Déplace votre héros jusqu'à 2 cases en ligne. Piochez votre prochain sort de CHARGE.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Charge Temporelle",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "charge_temporelle",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Votre héros CHARGE un personnage aligné jusqu’à 5 cases et lui inflige son attaque. Il revient ensuite sur sa case de début de tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Charge Motivante",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "charge_motivante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Votre héros CHARGE un personnage aligné jusqu’à 3 cases et lui inflige son attaque. Vos compagnons adjacents à la cible déclenchent leur attaque.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Double Charge Orok",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Bouvaloir Orok",
+        "image": "double_charge_orok",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 8,
+            "effet": "Votre héros CHARGE un personnage aligné jusqu’à 5 cases et lui inflige son attaque. Ajoute le sort Charge Fantome à votre main.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Tranchant Kasaï",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "tranchant_kasai",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Consomme une AURA EPEE et inflige l'attaque de votre héros à un adversaire.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Mouvement Flamboyant",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "mouvement_flamboyant",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Téléporte votre héros de 1 case. 1 case par AURA EPEE qu’il possède.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Kasaï",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "repousse_kasai",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l’attaque de votre héros et repousse de 1 case pour chaque AURA EPEE qu’il possède.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Frappe Flamboyante",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Flamboyante Kasaï",
+        "image": "frappe_flamboyante",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 8,
+            "effet": "Inflige l’attaque de votre héros  +%30 pour chaque AURA EPEE qu’il possède. -1 point d'action au coût de ce sort par adversaire ayant un état.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Tous Stalaktoss",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "tous_stalaktoss",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 1,
+            "effet": "Tous vos personnages gagnent DÉPHASAGE pour le tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Glaive Déphasé",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "glaive_dephase",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Confère DÉPHASAGE et %25+ d'attaque à votre héros pour le tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Maître Déphasé",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "maitre_dephase",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige l'attaque de votre héros à un adversaire. Confère DÉPHASAGE pour le tour à votre héros ou +1 point de mouvement pour le tour s'il est déjà DÉPHASÉ.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Traversée Spirituelle",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Glaive Stalaktoss",
+        "image": "traversee_spirituelle",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Votre héros traverse une ligne  et déclenche FLUX SPIRITUEL sur chaque adversaire traversés.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Adrénaline Brutale",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Justelame Brutale",
+        "image": "adrenaline_brutale",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 1,
+            "effet": "+1 point de mouvement à votre héros pour le tour. Piochez votre prochain sort de MÊLÉE.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Armure Brutale",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Justelame Brutale",
+        "image": "armure_brutale",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige l'armure de votre héros à la cible,  puis la consomme.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Démonstration Brutale",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Justelame Brutale",
+        "image": "demonstration_brutale",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l’attaque de votre héros. MÊLÉE : -1 PA au coût de ce sort.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Soutien Justifié",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Iop",
+        "arme": "Justelame Brutale",
+        "image": "soutien_justifie",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Confère 50 de l’armure de votre héros à vos compagnons.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Énergie Shaden",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "energie_shaden",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "+30% aux DÉGÂTS des sorts de votre main. +1 point d'action à leurs coûts.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Aliénation Shaden",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "alienation_shaden",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Piochez 1 sorts. Combo : ARCHER.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Transfert Shaden",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "transfert_shaden",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige l'attaque de votre héros à un adversaire et échange leurs positions.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Aller-Retour Shaden",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "aller_retour_shaden",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Téléporte votre héros jusqu'à 2 cases.  Inflige 50% de son attaque aux adversaires autour de sa case d'arrivée, puis le téléporte à sa position initiale.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Discernement",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "discernement",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige l'attaque de votre héros à la cible. Ajoute le sort Archer à votre main si vous avez 2 sorts ou moins en main.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Sagesse Bunelame",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "sagesse_bunelame",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Inflige l'attaque de votre héros à la cible. +2 point d'action si vous avez 2 sorts ou moins en main.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Recharge Bunelame",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "recharge_bunelame",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros à la cible. Piochez 2 sorts si vous en avez 2 ou moins en main.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Déchainement Bunelame",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Shiru Shaden",
+        "image": "dechainement_bunelame",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Défausse tous les sorts de votre main et inflige l'attaque de votre héros à la cible. +50% de DÉGÂTS par sort défaussé.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Virevolte Piven",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "virevolte_piven",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Inflige 10% de l'attaque de votre héros à la cible. Combo : +1 AURA MIRE à votre héros s'il en possède déjà",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Piven",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "repousse_piven",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "REPOUSSE de 3 cases un personnage aligné avec votre héros. Votre héros recule de 1 case par COLLISION.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Recharge Piven",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "recharge_piven",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Piochez 1 sort. {value:a,+} AURA MIRE à votre héros s'il en possède déjà.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Mur de Mires Piven",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Arc Piven",
+        "image": "mur_de_mires_piven",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige 30% d'attaque autour de votre héros par AURA MIRE qu'il possède.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Méthode Voldorak",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "methode_voldorak",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Piochez votre prochain sort Combo. -1 point d'action au coût du sort pioché.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Recharge Voldorak",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "recharge_voldorak",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Piochez 1 sorts. Combo : ARCHER.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Fulguro Poing Voldorak",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "fulguro_poing_voldorak",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros à la cible. Combo : Ce sort revient dans votre main.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Ciblage Voldorak",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Voldorak Vo",
+        "image": "ciblage_voldorak",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Inflige l'attaque de votre héros à la cible. -1 point d'action au coût de ce sort par AURA MIRE que possède votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Puissance Expingole",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Expingole",
+        "image": "puissance_expingole",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "+ d'attaque à votre héros par AURA MIRE qu'il possède jusqu'à la fin du tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Retenue Expingole",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Expingole",
+        "image": "retenue_expingole",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Durant ce tour, vos AURAS MIRE libérées ne sont pas consommées.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Canon Expingole",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Expingole",
+        "image": "canon_expingole",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Construit un undefined jusqu'à 3 cases de votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Cartouche Expingole",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Crâ",
+        "arme": "Expingole",
+        "image": "cartouche_expingole",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Piochez votre prochain sort de gain de AURA MIRE. Combo : Ce sort revient dans votre main. Limité à 1 fois par tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Course Déphasée",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme Déphasante",
+        "image": "course_dephasee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Confère DÉPHASAGE à votre héros et 2 PM jusqu'à la fin du tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Mutation Déphasée",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme Déphasante",
+        "image": "mutation_dephasee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Confère 3 AURA Coeur de Phase à un de vos compagnons et le transforme en Arcone Mortis.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Maître du Déphasage",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme Déphasante",
+        "image": "maitre_du_dephasage",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros aux adversaires autour s'il est DÉPHASÉ. Sinon, lui confère DÉPHASAGE et +1 point de mouvement pour le tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Puissance Déphasée",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Gemme Déphasante",
+        "image": "puissance_dephasee",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "+100% à l’attaque de votre héros pour le tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Bond Vorace",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Lame Voracius",
+        "image": "bond_vorace",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Téléporte votre héros jusqu’à 2 cases. Ce sort revient dans votre main s'il possède au moins une AURA COEUR.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Voracité",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Lame Voracius",
+        "image": "voracite",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros. Vol de vie",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Cœur Voracius",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Lame Voracius",
+        "image": "coeur_voracius",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Libère vos AURAS COEUR. Pose autant de Cœur Voracius jusqu’à 3 cases autour de votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Traversée Voracius",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Lame Voracius",
+        "image": "traversee_voracius",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Votre héros traverse une ligne et inflige son attaque aux adversaires traversés.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Transformation Nocturne",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Ambre Tamashi",
+        "image": "transformation_nocturne",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 1,
+            "effet": "Transforme l’un de vos compagnons en Nocturiens.",
+            "gains": {
+              "astral": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Pour l'Ambre",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Ambre Tamashi",
+        "image": "pour_ambre",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Sacrifie un Nocturiens. Il inflige l’attaque de votre héros autour de lui.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Nocturancie",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Ambre Tamashi",
+        "image": "nocturancie",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l’attaque de votre héros. Téléporte vos Nocturiens sur une case adjacente à la cible, déclenche leur attaque et les téléporte jusqu'à 3 cases.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Nocturien Majeur",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Ambre Tamashi",
+        "image": "nocturien_majeur",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Échange la place de votre héros avec celle d’un de vos Nocturiens. Votre héros rejoue son tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Alignement Apostruker",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "alignement_apostruker",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Fixe la vie de l’adversaire ciblé (si ça ne dépasse pas sa Vie) sur l’adversaire ayant le plus de VIE. Puis soigne votre héros de 20% de son attaque.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Soin Curatif",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "soin_curatif",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Soigne un allié de l'attaque de votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Scalpel Apostruker",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "scalpel_apostruker",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l'attaque de votre héros aux adversaires ayant le plus et le moins de VIE.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Soins Rapide",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Scalpel de l'Apostruker",
+        "image": "soins_rapide",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Soigne deux fois un allié de 10% de l’attaque de votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Sacrifice Kokoro",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Pinceau Kokoro",
+        "image": "sacrifice_kokoro",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "Sacrifiez un compagnon allié.",
+            "gains": {
+              "astral": 3
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Urgences",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Pinceau Kokoro",
+        "image": "urgences",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Téléporte un allié jusqu'à 3 cases et lui confère l'attaque de votre héros en armure.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Frappe du Pinceau",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Pinceau Kokoro",
+        "image": "frappe_du_pinceau",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Consomme l'armure de vos personnages et inflige autant de dégâts à un adversaire.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Rufus",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Eniripsa",
+        "arme": "Pinceau Kokoro",
+        "image": "rufus",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Invoque Rufus sur une case autour de votre héros. Début du combat Place ce sort dans votre main. EPHEMERE",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Shugen",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "repousse_shugen",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l’attaque de votre héros. MACHINATION : REPOUSSE de 3 cases.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Écorchement Astral",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "ecorchement_astral",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l’attaque de votre héros. MACHINATION : Applique ASTRAL.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Attaque Shugen",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "attaque_shugen",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Votre héros déclenche son attaque sur un adversaire adjacent. +50% de DÉGÂTS si la cible a un état élémentaire.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Libération Shugen",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Écorcheur Shugen",
+        "image": "liberation_shugen",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Libère vos AURAS TRAPPEUR. Inflige 50 de l’attaque de votre héros par AURA TRAPPER libérée.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Fureur Kartana",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "fureur_kartana",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "+20% à l’attaque de votre héros par adversaire en jeu pour le tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Jouer les Gros Bras",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "jouer_les_gros_bras",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Téléporte votre héros sur une case adjacente à un adversaire et le REPOUSSE de 1 case.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Charge Kartana",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "charge_kartana",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Votre héros CHARGE un personnage aligné  et lui inflige son attaque.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Kenavo",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Ken Kartana",
+        "image": "kenavo",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Votre héros CHARGE un adversaire aligné avec lui jusqu’à 5 cases et lui inflige son attaque. Il se téléporte ensuite sur le piège SRAM allié le plus proche.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Poussette Orishi",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "poussette_orishi",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Repoussé la cible jusqu’à 3 cases.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Échange Orishi",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "echange_orishi",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l’attaque de votre héros. MACHINATION : Échange la place de votre héros avec la cible.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Orishi",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "repousse_orishi",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige 50% de l’attaque de votre héros. MACHINATION : Repousse de 1 case pour chacun de vos pièges SRAM en jeu.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Sanglade",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Cisaille Orishi",
+        "image": "sanglade",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige l’attaque de votre héros autour d’un de vos pièges.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Mouvement Ouraï",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "mouvement_ourai",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Téléporte votre héros sur l’un de vos pièges.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Lame Ouraï",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "lame_ourai",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Invoque une Lame Ouraï jusqu'à 3 cases de votre héros.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Le Bal des Vampyres",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "le_bal_des_vampyres",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "+100% de DRAIN : à votre héros pour le tour.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Vol de vie Ouraï",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Lame Ouraï",
+        "image": "vol_de_vie_ourai",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Inflige l’ATTAQUE de votre héros à un adversaire adjacent. MACHINATION : Vol de vie",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "La Nuit des Trappes",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Surin Sourokan",
+        "image": "la_nuit_des_trappes",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Piochez votre prochain sort de MACHINATION. Libère une de vos AURAS TRAPPEUR.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Recharge Sourokan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Surin Sourokan",
+        "image": "recharge_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Piochez 1 sort. MACHINATION : Réduit son coût de 1 point d'action.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Sourokan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Surin Sourokan",
+        "image": "repousse_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros. MACHINATION : Repoussé de 2 cases.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Frappe Sourokan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Sram",
+        "arme": "Surin Sourokan",
+        "image": "frappe_sourokan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Inflige l’attaque de votre héros. MACHINATION : Inflige l’attaque de votre héros.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Sacrifice Gurpapa",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "sacrifice_gurpapa",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 1,
+            "effet": "Détruit vos SINISTROS. +2 point d'action par SINISTRO détruit.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Xélorisation",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "xelorisation",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Piochez vos 2 prochains sorts de SINISTRO.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Evolution Gurpapa",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "evolution_gurpapa",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 5,
+            "effet": "Transforme vos SINISTROS en jeu.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Explosion Gurpapa",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Régulant Gurpapa",
+        "image": "explosion_gurpapa",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l’attaque de votre héros autour de vos SINISTROS.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Coalition Jikan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "coalition_jikan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Inflige 20 de l'attaque de votre héros. +20% de DÉGÂTS par AURA HIBOU que possède votre héros.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Paradoxe Jikan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "paradoxe_jikan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Libère une AURA HIBOU. Piochez 1 sort.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Ciblage Jikan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "ciblage_jikan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l'attaque de votre héros aux adversaires ayant un état. +1 point d'action par état retiré.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Envol Jikan",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Sabliaton Jikan",
+        "image": "envol_jikan",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Inflige 50 de l'attaque de votre héros par AURA HIBOU qu'il possède. Libère ses AURAS HIBOU.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Accélérateur",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "accelerateur",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "Consomme -2 points d'action. Piochez 2 sorts.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Réserve Tako",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "reserve_tako",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros. +10% de DÉGÂTS par POINT D'ACTION en réserve.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Repousse Tako",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "repousse_tako",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros. REPOUSSE de 1 case par POINT D'ACTION en réserve.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Téléportation Tako",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Synchronisateur Tako",
+        "image": "teleportation_tako",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Téléporte votre héros jusqu’à un nombre de cases égal à vos POINTS D'ACTION en réserve. Inflige son attaque aux adversaires autour de sa case d’arrivée.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Tactique Pramium",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "tactique_pramium",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 0,
+            "effet": "+1 point d'action pour chacun de vos SINISTROS en jeu.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Protection Pramium",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "protection_pramium",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Confère BOUCLIER à vos SINISTROS.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Recyclage",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "recyclage",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 3,
+            "effet": "Piochez votre prochain sort de SINISTRO. -1 point d'action au coût du sort pioché.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Onde Pramium",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Catalysateur Pramium",
+        "image": "onde_pramium",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 6,
+            "effet": "Inflige l’attaque de votre héros autour de vos SINISTROS.",
+            "gains": {
+              "astral": 1
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Saut Pikuxala",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "saut_pikuxala",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "Téléporte un de vos personnages de 1 case puis le téléporte sur sa case de début de tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Pouvoir Pikuxala",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "pouvoir_pikuxala",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 2,
+            "effet": "%50+ d'attaque à votre héros pour le tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Fuite Pikuxala",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "fuite_pikuxala",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 4,
+            "effet": "Inflige l'attaque de votre héros à un adversaire. Téléporte votre héros sur sa case de début de tour.",
+            "gains": {}
+          }
+        ]
+      },
+      {
+        "nom": "Téléportation Pikuxala",
+        "element": "Astral",
+        "source": "Joueur",
+        "dieu": "Xélor",
+        "arme": "Aiguille Pikuxala",
+        "image": "teleportation_pikuxala",
+        "patchs": [
+          {
+            "version": "0.11",
+            "cout": 7,
+            "effet": "Téléporte votre héros jusqu'à 3 cases et inflige 50% de son attaque aux adversaires autour de lui. Ensuite, téléporte votre héros sur sa position de début de tour.",
+            "gains": {
+              "astral": 1
+            }
           }
         ]
       }
