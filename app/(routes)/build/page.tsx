@@ -21,7 +21,8 @@ const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
   // Sorts modal
   // Sorts handlers
-  // Sauvegarder
+  // dons, afficher dons a coté des items/sous le build?
+
   const buildKey = "importKey";
 
   //#region STATES
@@ -331,7 +332,7 @@ const Build = () => {
                   {selectedCompagnon1 && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon1.rarete}.png`}
+                        src={`/img/utils/cadre_${selectedCompagnon1.rarete.toLowerCase()}.png`}
                         alt={selectedCompagnon1.nom}
                         width={200}
                         height={200}
@@ -354,7 +355,7 @@ const Build = () => {
                   {selectedCompagnon2 && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon2.rarete}.png`}
+                        src={`/img/utils/cadre_${selectedCompagnon2.rarete.toLowerCase()}.png`}
                         alt={selectedCompagnon2.nom}
                         width={200}
                         height={200}
@@ -377,7 +378,7 @@ const Build = () => {
                   {selectedCompagnon3 && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon3.rarete}.png`}
+                        src={`/img/utils/cadre_${selectedCompagnon3.rarete.toLowerCase()}.png`}
                         alt={selectedCompagnon3.nom}
                         width={200}
                         height={200}
@@ -400,7 +401,7 @@ const Build = () => {
                   {selectedCompagnon4 && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon4.rarete}.png`}
+                        src={`/img/utils/cadre_${selectedCompagnon4.rarete.toLowerCase()}.png`}
                         alt={selectedCompagnon4.nom}
                         width={200}
                         height={200}

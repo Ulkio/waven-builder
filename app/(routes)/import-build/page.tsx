@@ -422,7 +422,7 @@ const ImportedBuild = () => {
                       {build.compagnons[0] && (
                         <div className="flex items-center relative">
                           <Image
-                            src={`/img/utils/cadre_${build.compagnons[0].rarete}.png`}
+                            src={`/img/utils/cadre_${build.compagnons[0].rarete.toLowerCase()}.png`}
                             alt={build.compagnons[0].nom}
                             width={200}
                             height={200}
@@ -445,7 +445,7 @@ const ImportedBuild = () => {
                       {build.compagnons[1] && (
                         <div className="flex items-center relative">
                           <Image
-                            src={`/img/utils/cadre_${build.compagnons[1].rarete}.png`}
+                            src={`/img/utils/cadre_${build.compagnons[1].rarete.toLowerCase()}.png`}
                             alt={build.compagnons[1].nom}
                             width={200}
                             height={200}
@@ -468,7 +468,7 @@ const ImportedBuild = () => {
                       {build.compagnons[2] && (
                         <div className="flex items-center relative">
                           <Image
-                            src={`/img/utils/cadre_${build.compagnons[2].rarete}.png`}
+                            src={`/img/utils/cadre_${build.compagnons[2].rarete.toLowerCase()}.png`}
                             alt={build.compagnons[2].nom}
                             width={200}
                             height={200}
@@ -491,7 +491,7 @@ const ImportedBuild = () => {
                       {build.compagnons[3] && (
                         <div className="flex items-center relative">
                           <Image
-                            src={`/img/utils/cadre_${build.compagnons[3].rarete}.png`}
+                            src={`/img/utils/cadre_${build.compagnons[3].rarete.toLowerCase()}.png`}
                             alt={build.compagnons[3].nom}
                             width={200}
                             height={200}
