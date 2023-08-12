@@ -16,7 +16,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StringBuildDialog from "@/components/modals/StringBuildDialog";
 import Link from "next/link";
-import { useSelectableItem } from "@/hooks/useSelectableItem";
 
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
@@ -58,19 +57,32 @@ const Build = () => {
 
   const numberOfCompagnons = 4;
   const selectableCompagnons = Array.from({ length: numberOfCompagnons }, (_, index) => {
-    const { selectedItem, handleSelectedItemChange } = useSelectableItem<Compagnon>();
+    const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
+    const handleSelectedCompagnonChange = (selected: Compagnon) => {
+      setSelectedCompagnon(selected);
+    };
     return {
-      value: selectedItem,
-      handler: handleSelectedItemChange,
+      value: selectedCompagnon,
+      handler: handleSelectedCompagnonChange,
     };
   });
 
   const numberOfAnneaux = 4;
   const selectableAnneaux = Array.from({ length: numberOfAnneaux }, (_, index) => {
-    const { selectedItem, handleSelectedItemChange } = useSelectableItem<Anneau>();
+    const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
+    const handleSelectedAnneauChange = (selected: Anneau) => {
+      setSelectedAnneau((prevSelectedAnneau) => {
+        // Ensure that you're updating based on the previous state
+        if (prevSelectedAnneau === selected) {
+          return null; // Deselect if the same item is clicked again
+        } else {
+          return selected; // Otherwise, select the new item
+        }
+      });
+    };
     return {
-      value: selectedItem,
-      handler: handleSelectedItemChange,
+      value: selectedAnneau,
+      handler: handleSelectedAnneauChange,
     };
   });
   // const numberOfSorts = 15;

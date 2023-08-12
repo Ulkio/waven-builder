@@ -28,7 +28,7 @@ const StringBuildDialog = ({ stringBuild }: StringBuildDialogProps) => {
         onClick={handleClickCopy}
         width="32"
         height="32"
-        src="/img/left-arrow.png"
+        src="/img/copy.png"
         alt="copy"
         className=" rounded-lg invert hover:cursor-pointer self-start"
       />
