@@ -3,6 +3,7 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Tooltip } from "react-tooltip";
+import Image from "next/image";
 
 interface StringBuildDialogProps {
   stringBuild: string;
@@ -20,7 +21,7 @@ const StringBuildDialog = ({ stringBuild }: StringBuildDialogProps) => {
         Copiez cette suite de caractères pour partager votre build :
       </p>
 
-      <img
+      <Image
         data-tooltip-id="my-tooltip"
         data-tooltip-content={`Copier le texte`}
         data-tooltip-place="right"

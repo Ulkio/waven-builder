@@ -21,7 +21,6 @@ const ImportedBuild = () => {
   ////////////////////////////////TODO////////////////////////////////
   // Sorts modal
   // Sorts handlers
-  // Sauvegarder
   const buildKey = "importKey";
 
   //#region STATES
@@ -230,10 +229,10 @@ const ImportedBuild = () => {
             root: "scrollbar-none",
           }}>
           <Link href="/" className="absolute top-2 left-4 invert z-10">
-            <img
-              width="50"
-              height="50"
-              src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
+            <Image
+              width={50}
+              height={50}
+              src="https://Image.icons8.com/ios-filled/50/long-arrow-left.png"
               alt="long-arrow-left"
               className="z-10"
             />
@@ -244,8 +243,8 @@ const ImportedBuild = () => {
         <>
           <Link href="/">
             <img
-              width="50"
-              height="50"
+              width={50}
+              height={50}
               src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
               alt="long-arrow-left"
               className="absolute top-2 left-20 invert"

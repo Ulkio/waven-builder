@@ -205,9 +205,9 @@ const Build = () => {
   return (
     <main className="h-screen">
       <Link href="/">
-        <img
-          width="50"
-          height="50"
+        <Image
+          width={50}
+          height={50}
           src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
           alt="long-arrow-left"
           className="absolute top-2 left-20 invert"

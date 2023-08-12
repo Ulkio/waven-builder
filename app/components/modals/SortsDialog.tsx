@@ -48,7 +48,7 @@ const SortsDialog = () => {
                 <div className="flex flex-col gap-2">
                   {Object.entries(displayedSort.patchs[0].cout).map((cout) => {
                     return (
-                      <div className="flex items-center ">
+                      <div key={cout[0] + cout[1]} className="flex items-center ">
                         <Image src={`/img/utils/${cout[0]}.png`} width={30} height={30} alt="cout" />
                         <p className="font-bold ">{cout[1]}</p>
                       </div>
