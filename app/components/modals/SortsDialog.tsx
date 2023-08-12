@@ -66,7 +66,7 @@ const SortsDialog = () => {
         <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll">
           {displayedSort && (
             <>
-              {displayedSort.patchs[0].dons.map((don: DonSorts, key) => {
+              {displayedSort.patchs[0].dons!.map((don: DonSorts, key) => {
                 return (
                   <div
                     key={key}

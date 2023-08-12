@@ -46,7 +46,7 @@ export interface CaracteristiqueCompagnons {
 
 export interface DonCompagnons {
   nom: string;
-  cout: any;
+  cout: number;
   effet: string;
   sort?: string;
 }
@@ -88,7 +88,7 @@ export interface CaracteristiqueAnneaux {
 
 export interface DonAnneaux {
   nom: string;
-  cout: string;
+  cout: number;
   effet: string;
   sort: string;
 }
@@ -116,9 +116,9 @@ export interface CaracteristiqueBrassards {
 
 export interface DonBrassards {
   nom: string;
-  cout: string;
+  cout: number;
   effet: string;
-  sort: string;
+  sort?: string;
 }
 
 export interface Sorts {
@@ -129,28 +129,30 @@ export interface Sort {
   nom: string;
   element: string;
   source: string;
+  dieu: string;
+  arme: string;
   image: string;
   patchs: PatchSorts[];
-}
-export interface DonSorts {
-  nom: string;
-  cout: string;
-  effet: string;
-  sort: string;
 }
 export interface PatchSorts {
   version: string;
   cout: number;
   effet: string;
-  dons: any[];
-  gains: Gains;
+  dons?: DonSorts[];
+  gains?: Gains;
+}
+
+export interface DonSorts {
+  nom: string;
+  cout: number;
+  effet: string;
 }
 
 export interface Gains {
   feu?: number;
   air?: number;
   terre?: number;
-  ether?: number;
+  astral?: number;
   eau?: number;
   neutre?: number;
 }
