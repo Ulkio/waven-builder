@@ -16,6 +16,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StringBuildDialog from "@/components/modals/StringBuildDialog";
 import Link from "next/link";
+import { useSelectableItem } from "@/hooks/useSelectableItem";
 
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
@@ -57,39 +58,19 @@ const Build = () => {
 
   const numberOfCompagnons = 4;
   const selectableCompagnons = Array.from({ length: numberOfCompagnons }, (_, index) => {
-    const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
-    const handleSelectedCompagnonChange = (selected: Compagnon) => {
-      setSelectedCompagnon((prevSelectedCompagnon) => {
-        // Ensure that you're updating based on the previous state
-        if (prevSelectedCompagnon === selected) {
-          return null; // Deselect if the same item is clicked again
-        } else {
-          return selected; // Otherwise, select the new item
-        }
-      });
-    };
+    const { selectedItem, handleSelectedItemChange } = useSelectableItem<Compagnon>();
     return {
-      value: selectedCompagnon,
-      handler: handleSelectedCompagnonChange,
+      value: selectedItem,
+      handler: handleSelectedItemChange,
     };
   });
 
   const numberOfAnneaux = 4;
   const selectableAnneaux = Array.from({ length: numberOfAnneaux }, (_, index) => {
-    const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
-    const handleSelectedAnneauChange = (selected: Anneau) => {
-      setSelectedAnneau((prevSelectedAnneau) => {
-        // Ensure that you're updating based on the previous state
-        if (prevSelectedAnneau === selected) {
-          return null; // Deselect if the same item is clicked again
-        } else {
-          return selected; // Otherwise, select the new item
-        }
-      });
-    };
+    const { selectedItem, handleSelectedItemChange } = useSelectableItem<Anneau>();
     return {
-      value: selectedAnneau,
-      handler: handleSelectedAnneauChange,
+      value: selectedItem,
+      handler: handleSelectedItemChange,
     };
   });
   // const numberOfSorts = 15;
@@ -222,7 +203,7 @@ const Build = () => {
         <Image
           width={50}
           height={50}
-          src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
+          src="/img/left-arrow.png"
           alt="long-arrow-left"
           className="absolute top-2 left-20 invert"
         />

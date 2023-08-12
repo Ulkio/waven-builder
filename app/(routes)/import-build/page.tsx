@@ -229,13 +229,7 @@ const ImportedBuild = () => {
             root: "scrollbar-none",
           }}>
           <Link href="/" className="absolute top-2 left-4 invert z-10">
-            <Image
-              width={50}
-              height={50}
-              src="https://Image.icons8.com/ios-filled/50/long-arrow-left.png"
-              alt="long-arrow-left"
-              className="z-10"
-            />
+            <Image width={50} height={50} src="/img/left-arrow.png" alt="long-arrow-left" className="z-10" />
           </Link>
           <ImportModal onClickButton={handleImportButtonClick} />
         </Modal>
@@ -245,7 +239,7 @@ const ImportedBuild = () => {
             <Image
               width={50}
               height={50}
-              src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
+              src="/img/left-arrow.png"
               alt="long-arrow-left"
               className="absolute top-2 left-20 invert"
             />

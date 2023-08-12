@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { hostname } = require("os");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["img.icons8.com", "image.icons8.com"],
+  },
+};
+
+module.exports = nextConfig;
