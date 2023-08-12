@@ -14073,7 +14073,7 @@
         "nom": "Brûlure Spectrale",
         "element": "Feu",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "brulure_spectrale",
         "patchs": [
@@ -14108,7 +14108,7 @@
         "nom": "Fièvre",
         "element": "Feu",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "fievre.png",
         "patchs": [
@@ -14143,7 +14143,7 @@
         "nom": "Estoc Détonant",
         "element": "Feu",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "estoc_detonant",
         "patchs": [
@@ -14179,7 +14179,7 @@
         "nom": "Brûlure Revigorante",
         "element": "Feu",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "brulure_revigorante",
         "patchs": [
@@ -14214,7 +14214,7 @@
         "nom": "Touche Enflammée",
         "element": "Feu",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "touche_enflammee",
         "patchs": [
@@ -14249,7 +14249,7 @@
         "nom": "Onde Spectrale",
         "element": "Eau",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "onde_spectrale",
         "patchs": [
@@ -14284,7 +14284,7 @@
         "nom": "Attaque Spectrale",
         "element": "Terre",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "attaque_spectrale",
         "patchs": [
@@ -14319,7 +14319,7 @@
         "nom": "Prise Spectrale",
         "element": "Air",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "prise_spectrale",
         "patchs": [
@@ -14354,7 +14354,7 @@
         "nom": "Remous Favorable",
         "element": "Eau",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "remous_favorable",
         "patchs": [
@@ -14389,7 +14389,7 @@
         "nom": "Bourbier",
         "element": "Terre",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "bourbier",
         "patchs": [
@@ -14459,7 +14459,7 @@
         "nom": "Estoc Givré",
         "element": "Eau",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "estoc_givre",
         "patchs": [
@@ -14494,7 +14494,7 @@
         "nom": "Estoc Tellurique",
         "element": "Terre",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "estoc_tellurique",
         "patchs": [
@@ -14529,7 +14529,7 @@
         "nom": "Estoc Tonnerre",
         "element": "Air",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "estoc_tonnerre",
         "patchs": [
@@ -14564,7 +14564,7 @@
         "nom": "Givrure",
         "element": "Eau",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "givrure",
         "patchs": [
@@ -14599,7 +14599,7 @@
         "nom": "Brèche",
         "element": "Terre",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "breche",
         "patchs": [
@@ -14634,7 +14634,7 @@
         "nom": "Trouble",
         "element": "Air",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "trouble",
         "patchs": [
@@ -14669,7 +14669,7 @@
         "nom": "Touche Aqueuse",
         "element": "Eau",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "touche_aqueuse",
         "patchs": [
@@ -14704,7 +14704,7 @@
         "nom": "Touche Terrestre",
         "element": "Terre",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "touche_terrestre",
         "patchs": [
@@ -14740,7 +14740,7 @@
         "nom": "Touche Venteuse",
         "element": "Air",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "touche_venteuse",
         "patchs": [
@@ -17581,7 +17581,7 @@
         "nom": "Le chant du cygne",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "chant_du_cygne",
         "patchs": [
@@ -17597,7 +17597,7 @@
         "nom": "Désigné Volontaire",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "designe_volontaire",
         "patchs": [
@@ -17615,7 +17615,7 @@
         "nom": "Requiem",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "requiem",
         "patchs": [
@@ -17633,7 +17633,7 @@
         "nom": "Sacrifice Spectral",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Lamarguedon Spectral",
         "image": "sacrifice_spectral",
         "patchs": [
@@ -17651,7 +17651,7 @@
         "nom": "Repositionnement",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "repositionnement",
         "patchs": [
@@ -17667,7 +17667,7 @@
         "nom": "Charge Temporelle",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "charge_temporelle",
         "patchs": [
@@ -17683,7 +17683,7 @@
         "nom": "Charge Motivante",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "charge_motivante",
         "patchs": [
@@ -17699,7 +17699,7 @@
         "nom": "Double Charge Orok",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Bouvaloir Orok",
         "image": "double_charge_orok",
         "patchs": [
@@ -17717,7 +17717,7 @@
         "nom": "Tranchant Kasaï",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "tranchant_kasai",
         "patchs": [
@@ -17733,7 +17733,7 @@
         "nom": "Mouvement Flamboyant",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "mouvement_flamboyant",
         "patchs": [
@@ -17751,7 +17751,7 @@
         "nom": "Repousse Kasaï",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "repousse_kasai",
         "patchs": [
@@ -17769,7 +17769,7 @@
         "nom": "Frappe Flamboyante",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Flamboyante Kasaï",
         "image": "frappe_flamboyante",
         "patchs": [
@@ -17787,7 +17787,7 @@
         "nom": "Tous Stalaktoss",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "tous_stalaktoss",
         "patchs": [
@@ -17803,7 +17803,7 @@
         "nom": "Glaive Déphasé",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "glaive_dephase",
         "patchs": [
@@ -17821,7 +17821,7 @@
         "nom": "Maître Déphasé",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "maitre_dephase",
         "patchs": [
@@ -17839,7 +17839,7 @@
         "nom": "Traversée Spirituelle",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Glaive Stalaktoss",
         "image": "traversee_spirituelle",
         "patchs": [
@@ -17857,7 +17857,7 @@
         "nom": "Adrénaline Brutale",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "adrenaline_brutale",
         "patchs": [
@@ -17873,7 +17873,7 @@
         "nom": "Armure Brutale",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "armure_brutale",
         "patchs": [
@@ -17889,7 +17889,7 @@
         "nom": "Démonstration Brutale",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "demonstration_brutale",
         "patchs": [
@@ -17907,7 +17907,7 @@
         "nom": "Soutien Justifié",
         "element": "Astral",
         "source": "Joueur",
-        "dieu": "Iop",
+        "dieu": "iop",
         "arme": "Justelame Brutale",
         "image": "soutien_justifie",
         "patchs": [
@@ -19461,7 +19461,7 @@
       },
       {
         "nom": "Lamarguedon Spectral",
-        "dieu": "Iop",
+        "dieu": "iop",
         "image": "lamarguedon_spectral",
         "patchs": [
           {
@@ -19477,7 +19477,7 @@
       },
       {
         "nom": "Bouvaloir Orok",
-        "dieu": "Iop",
+        "dieu": "iop",
         "image": "bouvaloir_orok",
         "patchs": [
           {
@@ -19493,7 +19493,7 @@
       },
       {
         "nom": "Flamboyante Kasaï",
-        "dieu": "Iop",
+        "dieu": "iop",
         "image": "flamboyante_kasai",
         "patchs": [
           {
@@ -19509,7 +19509,7 @@
       },
       {
         "nom": "Glaive Stalaktoss",
-        "dieu": "Iop",
+        "dieu": "iop",
         "image": "glaive_stalaktoss",
         "patchs": [
           {
@@ -19525,7 +19525,7 @@
       },
       {
         "nom": "Justelame Brutale",
-        "dieu": "Iop",
+        "dieu": "iop",
         "image": "justelame_brutale",
         "patchs": [
           {
