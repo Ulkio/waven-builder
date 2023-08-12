@@ -2,6 +2,7 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import Image from "next/image";
 import { Arme } from "@/types";
+import "../styles/tooltip.css";
 
 interface WeaponProps {
   arme: Arme;
@@ -18,7 +19,6 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
       data-tooltip-place="bottom"
       className="flex flex-col justify-center items-center w-32 h-32 "
       key={arme.nom}>
-      <Tooltip id="my-tooltip" className="border-4 border-white/20 transition ease-in-out duration-200 z-10" />
       <Image
         onMouseEnter={onMouseEnter}
         onClick={onClick}
@@ -28,7 +28,8 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
         height={50}
         className="hover:cursor-pointer w-auto"
       />
-      <p className="text-sm text-center font-bold w-1/2 ">{arme.nom}</p>
+      <Tooltip id="my-tooltip" className="tooltip" />
+      <p className="text-sm text-center font-bold ">{arme.nom}</p>
     </div>
   );
 };

@@ -64,22 +64,22 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 p-4 bg-overlaySide basis-1/2 ">
-        <div className="flex flex-col w-full items-center gap-4 ">
+      <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2 ">
+        <div className="flex flex-col w-full items-center  ">
           {displayedCompagnon && (
             <>
               <div className="flex items-center relative">
                 <Image
                   src={`/img/utils/cadre_${displayedCompagnon.rarete.toLowerCase()}.png`}
                   alt={displayedCompagnon.nom}
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   className="absolute hover:cursor-pointer"
                 />
                 <Image
                   src={`${COMPAGNON_BASE_URL}/${displayedCompagnon.image}.png`}
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   alt={displayedCompagnon.nom}
                 />
                 <div className="flex flex-col gap-2 absolute -right-6">
@@ -113,8 +113,8 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                   <p className="font-bold">{displayedCompagnon.patchs[0].pm}</p>
                 </div>
               </div>
-              <p>{displayedCompagnon.patchs[0].effet}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-center">{displayedCompagnon.patchs[0].effet}</p>
+              <div className="flex flex-wrap justify-center gap-2">
                 {displayedCompagnon.patchs[0].caracteristiques.map((carac: CaracteristiqueCompagnons) => {
                   return (
                     <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
@@ -127,14 +127,14 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           )}
         </div>
 
-        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-hidden pt-8 h-auto">
+        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8 h-auto">
           {displayedCompagnon && (
             <>
               {displayedCompagnon.patchs[0].dons.map((don: DonCompagnons, key) => {
                 return (
                   <div
                     key={key}
-                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-52 flex flex-col justify-between hover:cursor-pointer gap-2">
+                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
                     <p className="text-sm text-center">{don.effet}</p>
                     <div className="flex justify-center ">

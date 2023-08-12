@@ -265,7 +265,7 @@ const ImportedBuild = () => {
   }, [build]);
 
   return (
-    <main className="h-screen">
+    <main className="h-screen w-screen">
       {!build.arme ? (
         <Modal
           open={!!openModalImport}
@@ -294,12 +294,12 @@ const ImportedBuild = () => {
               className="absolute top-2 left-20 invert"
             />
           </Link>
-          <div className="flex flex-col p-12 gap-4 justify-between h-full pt-32">
-            <div className="flex">
-              <div className="flex flex-col basis-1/6 px-4">
-                <div className="flex flex-col h-full  items-center">
+          <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
+            <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
+              <div className="flex xl:flex-col xl:basis-1/6 px-4">
+                <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                   <p className={titleVariants}>Anneaux</p>
-                  <div className="flex flex-col gap-2 ">
+                  <div className="flex xl:flex-col gap-2 ">
                     <div className={squareVariants} onClick={onOpenModalAnneau1}>
                       {build.anneaux[0] && (
                         <Image
@@ -343,9 +343,9 @@ const ImportedBuild = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col basis-1/6 px-4  ">
-                <div className="flex flex-col h-full lg:justify-between  items-center  ">
-                  <div className="flex flex-col items-center">
+              <div className="flex xl:flex-col justify-between">
+                <div className="flex xl:flex-col xl:basis-1/6  h-full w-full ">
+                  <div className="flex flex-col xl:h-full  justify-center  items-center w-full">
                     <p className={titleVariants}>Brassard</p>
                     <div className={squareVariants} onClick={onOpenModalBrassard}>
                       {build.brassard && (
@@ -358,18 +358,18 @@ const ImportedBuild = () => {
                       )}
                     </div>
                   </div>
-                  {/* <div className="flex flex-col items-center">
-                <p className={titleVariants}>Broche</p>
-                <div className={squareVariants}></div>
-              </div>
-              <div className="flex flex-col items-center">
-                <p className={titleVariants}>Familier</p>
-                <div className={squareVariants}></div>
-              </div> */}
+                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                    <p className={titleVariants}>Bientôt</p>
+                    <div className={squareVariants}></div>
+                  </div>
+                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                    <p className={titleVariants}>Bientôt</p>
+                    <div className={squareVariants}></div>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col basis-2/6 px-4 ">
-                <div className="flex flex-col h-full w-auto items-center gap-2">
+              <div className="flex flex-col xl:basis-2/6 px-4 ">
+                <div className="flex flex-col xl:h-full w-auto items-center gap-2">
                   {build.arme ? (
                     <>
                       <Image
@@ -410,8 +410,8 @@ const ImportedBuild = () => {
                   )}
                 </div>
               </div>
-              <div className="flex flex-col basis-2/6 px-4  h-full gap-8">
-                <div className="flex flex-col gap-2 px-4">
+              <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
+                <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
                   <p className={titleVariants}>Compagnons</p>
                   <div className="flex flex-row gap-4">
                     <div
@@ -530,20 +530,20 @@ const ImportedBuild = () => {
                 </div>
               </div>
             </div>
-            <div onClick={handleClickSaveBuild} className="absolute right-0 bottom-0 p-8">
-              <p>Sauvegarder</p>
-              <ToastContainer
-                position="bottom-right"
-                autoClose={2000}
-                hideProgressBar={true}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                pauseOnHover={false}
-                theme="dark"
-              />
-            </div>
+          </div>
+          <div onClick={handleClickSaveBuild} className="xl:absolute xl:right-0 xl:bottom-0 py-4 xl:p-8">
+            <p className="font-bold text-2xl">Sauvegarder</p>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={2000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              pauseOnHover={false}
+              theme="dark"
+            />
           </div>
           <div>
             <Modal

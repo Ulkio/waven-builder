@@ -35,7 +35,7 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
       {weaponCategories.map((weaponCategory) => (
         <div className="flex flex-col" key={weaponCategory.category}>
           <p className="text-2xl font-extrabold italic text-center">{weaponCategory.category}</p>
-          <div className="flex gap-2 bg-overlaySide rounded-lg">
+          <div className="flex flex-wrap justify-center gap-2 bg-overlaySide rounded-lg">
             {armes
               .filter((arme) => arme.dieu === weaponCategory.filter)
               .map((arme) => (

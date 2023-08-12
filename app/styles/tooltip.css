@@ -1,0 +1,5 @@
+.tooltip {
+  width: auto !important;
+  border: solid white 1px;
+  font-weight: bold;
+}

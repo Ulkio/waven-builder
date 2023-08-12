@@ -145,19 +145,19 @@ const Build = () => {
   const onCloseModalSort = () => setOpenSortModal(false);
 
   const handleClickAnneau = () => {
-    onCloseModalAnneau();
+    // onCloseModalAnneau();
   };
   const handleClickBrassard = () => {
-    onCloseModalBrassard();
+    // onCloseModalBrassard();
   };
   const handleClickCompagnon = () => {
-    onCloseModalCompagnon();
+    // onCloseModalCompagnon();
   };
   const handleClickArme = () => {
-    onCloseModalArme();
+    // onCloseModalArme();
   };
   const handleClickSort = () => {
-    onCloseModalSort();
+    // onCloseModalSort();
   };
   const closeModalStringBuild = () => {
     setOpenModalStringBuild(false);
@@ -205,12 +205,12 @@ const Build = () => {
           className="absolute top-2 left-20 invert"
         />
       </Link>
-      <div className="flex flex-col p-12 gap-4 justify-between h-full pt-32">
-        <div className="flex">
-          <div className="flex flex-col basis-1/6 px-4">
-            <div className="flex flex-col h-full  items-center">
+      <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
+        <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
+          <div className="flex xl:flex-col xl:basis-1/6 px-4">
+            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex flex-col gap-2 ">
+              <div className="flex xl:flex-col gap-2 ">
                 <div className={squareVariants} onClick={onOpenModalAnneau1}>
                   {selectedAnneau1 && (
                     <Image
@@ -254,9 +254,9 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col basis-1/6 px-4  ">
-            <div className="flex flex-col h-full lg:justify-between  items-center  ">
-              <div className="flex flex-col items-center">
+          <div className="flex xl:flex-col justify-between">
+            <div className="flex xl:flex-col xl:basis-1/6  h-full w-full ">
+              <div className="flex flex-col xl:h-full  justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
                 <div className={squareVariants} onClick={onOpenModalBrassard}>
                   {selectedBrassard && (
@@ -269,18 +269,18 @@ const Build = () => {
                   )}
                 </div>
               </div>
-              {/* <div className="flex flex-col items-center">
-                <p className={titleVariants}>Broche</p>
-                <div className={squareVariants}></div>
-              </div>
-              <div className="flex flex-col items-center">
-                <p className={titleVariants}>Familier</p>
-                <div className={squareVariants}></div>
-              </div> */}
+            </div>
+            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+              <p className={titleVariants}>Bientôt</p>
+              <div className={squareVariants}></div>
+            </div>
+            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+              <p className={titleVariants}>Bientôt</p>
+              <div className={squareVariants}></div>
             </div>
           </div>
-          <div className="flex flex-col basis-2/6 px-4 ">
-            <div className="flex flex-col h-full w-auto items-center gap-2">
+          <div className="flex flex-col xl:basis-2/6 px-4 ">
+            <div className="flex flex-col xl:h-full w-auto items-center gap-2">
               {selectedArme ? (
                 <>
                   <Image
@@ -321,10 +321,10 @@ const Build = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-col basis-2/6 px-4  h-full gap-8">
-            <div className="flex flex-col gap-2 px-4">
+          <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
+            <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-4 justify-center">
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
                     selectedCompagnon1 ? companionSquareVariants : emptyCompanionVariants
@@ -441,22 +441,25 @@ const Build = () => {
             </div>
           </div>
         </div>
-        <div onClick={handleClickSaveBuild} className="absolute right-0 bottom-0 p-8">
-          <p>Sauvegarder</p>
-          <ToastContainer
-            position="bottom-right"
-            autoClose={2000}
-            hideProgressBar={true}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss={false}
-            pauseOnHover={false}
-            theme="dark"
-          />
-        </div>
-        <Link href="import-build" className="absolute left-0 bottom-0 p-8">
-          <p>Importer</p>
+      </div>
+
+      <div onClick={handleClickSaveBuild} className="xl:absolute xl:right-0 xl:bottom-0 py-4  xl:p-8">
+        <p className="font-bold text-2xl">Sauvegarder</p>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
+          theme="dark"
+        />
+      </div>
+      <div className="xl:absolute xl:left-0 xl:bottom-0 p-8">
+        <Link href="import-build">
+          <p className="font-bold text-2xl">Importer</p>
         </Link>
       </div>
       <div>
@@ -464,7 +467,8 @@ const Build = () => {
           open={!!openModalStringBuild}
           onClose={closeModalStringBuild}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
@@ -476,7 +480,8 @@ const Build = () => {
           open={openArmeModal}
           onClose={onCloseModalArme}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -488,7 +493,8 @@ const Build = () => {
           open={openAnneau1Modal}
           onClose={onCloseModalAnneau}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -500,7 +506,8 @@ const Build = () => {
           open={openAnneau2Modal}
           onClose={onCloseModalAnneau}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -512,7 +519,8 @@ const Build = () => {
           open={openAnneau3Modal}
           onClose={onCloseModalAnneau}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -524,7 +532,8 @@ const Build = () => {
           open={openAnneau4Modal}
           onClose={onCloseModalAnneau}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -536,7 +545,8 @@ const Build = () => {
           open={openBrassardModal}
           onClose={onCloseModalBrassard}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -551,7 +561,8 @@ const Build = () => {
           open={openCompagnon1Modal}
           onClose={onCloseModalCompagnon}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -566,7 +577,8 @@ const Build = () => {
           open={openCompagnon2Modal}
           onClose={onCloseModalCompagnon}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -581,7 +593,8 @@ const Build = () => {
           open={openCompagnon3Modal}
           onClose={onCloseModalCompagnon}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -596,7 +609,8 @@ const Build = () => {
           open={openCompagnon4Modal}
           onClose={onCloseModalCompagnon}
           center
-          showCloseIcon={false}
+          closeOnOverlayClick={false}
+          showCloseIcon={true}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",

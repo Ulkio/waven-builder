@@ -38,7 +38,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
 
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
+      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
         <h2 className="text-center font-extrabold text-3xl">Anneaux</h2>
         <div className=" flex flex-wrap gap-8 justify-center">
           {sortedAnneauxRarity.map((ring) => {
@@ -69,7 +69,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 px-4 bg-overlaySide basis-1/2  ">
+      <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2  ">
         <div className="flex flex-col w-full items-center ">
           {displayedAnneau && (
             <>
@@ -80,8 +80,8 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                 alt={displayedAnneau.nom}
               />
               <p className="font-black text-2xl">{displayedAnneau.nom}</p>
-              <p className="text-center w-1/2">{displayedAnneau.patchs[0].pouvoir}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-center">{displayedAnneau.patchs[0].pouvoir}</p>
+              <div className="flex flex-wrap justify-center gap-2">
                 {displayedAnneau.patchs[0].caracteristiques.map((carac: CaracteristiqueAnneaux, key) => {
                   return (
                     <p key={key + carac.effet} className="bg-attribute rounded-lg px-4 py-2">
@@ -94,14 +94,14 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
           )}
         </div>
 
-        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8">
+        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8 h-auto">
           {displayedAnneau && (
             <>
               {displayedAnneau.patchs[0].dons.map((don: DonAnneaux, key) => {
                 return (
                   <div
                     key={key + don.effet}
-                    className="bg-attribute rounded-lg py-2 w-1/4 px-2  h-44  flex flex-col justify-between hover:cursor-pointer">
+                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-sm text-center">{don.effet}</p>
                     <div className="flex justify-center ">
