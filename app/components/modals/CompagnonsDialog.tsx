@@ -46,7 +46,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                 <Image
                   onMouseEnter={() => setDisplayedCompagnon(compagnon)}
                   onClick={() => handleCompagnonClick(compagnon)}
-                  src={`/img/utils/cadre_${compagnon.rarete}.png`}
+                  src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                   alt={compagnon.nom}
                   width={100}
                   height={100}
@@ -70,7 +70,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
             <>
               <div className="flex items-center relative">
                 <Image
-                  src={`/img/utils/cadre_${displayedCompagnon.rarete}.png`}
+                  src={`/img/utils/cadre_${displayedCompagnon.rarete.toLowerCase()}.png`}
                   alt={displayedCompagnon.nom}
                   width={200}
                   height={200}

@@ -22,6 +22,7 @@ const Build = () => {
   // Sorts modal
   // Sorts handlers
   // dons, afficher dons a coté des items/sous le build?
+  // image optimizisation (skeleton, moins d'images par row...)
 
   const buildKey = "importKey";
 
@@ -333,7 +334,7 @@ const Build = () => {
                     <div className="flex items-center relative">
                       <Image
                         src={`/img/utils/cadre_${selectedCompagnon1.rarete.toLowerCase()}.png`}
-                        alt={selectedCompagnon1.nom}
+                        alt={selectedCompagnon1.rarete.toLowerCase()}
                         width={200}
                         height={200}
                         className="absolute"
