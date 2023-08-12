@@ -59,7 +59,14 @@ const Build = () => {
   const selectableCompagnons = Array.from({ length: numberOfCompagnons }, (_, index) => {
     const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
     const handleSelectedCompagnonChange = (selected: Compagnon) => {
-      setSelectedCompagnon(selected);
+      setSelectedCompagnon((prevSelectedCompagnon) => {
+        // Ensure that you're updating based on the previous state
+        if (prevSelectedCompagnon === selected) {
+          return null; // Deselect if the same item is clicked again
+        } else {
+          return selected; // Otherwise, select the new item
+        }
+      });
     };
     return {
       value: selectedCompagnon,
@@ -71,25 +78,32 @@ const Build = () => {
   const selectableAnneaux = Array.from({ length: numberOfAnneaux }, (_, index) => {
     const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
     const handleSelectedAnneauChange = (selected: Anneau) => {
-      setSelectedAnneau(selected);
+      setSelectedAnneau((prevSelectedAnneau) => {
+        // Ensure that you're updating based on the previous state
+        if (prevSelectedAnneau === selected) {
+          return null; // Deselect if the same item is clicked again
+        } else {
+          return selected; // Otherwise, select the new item
+        }
+      });
     };
     return {
       value: selectedAnneau,
       handler: handleSelectedAnneauChange,
     };
   });
-  const numberOfSorts = 15;
-  const selectableSorts = Array.from({ length: numberOfSorts }, (_, index) => {
-    const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
-    const handleSelectedSortChange = (selected: Sort) => {
-      setSelectedSort(selected);
-      // setBuild((prev) => ({ ...prev, sorts: selected }));
-    };
-    return {
-      value: selectedSort,
-      handler: handleSelectedSortChange,
-    };
-  });
+  // const numberOfSorts = 15;
+  // const selectableSorts = Array.from({ length: numberOfSorts }, (_, index) => {
+  //   const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
+  //   const handleSelectedSortChange = (selected: Sort) => {
+  //     setSelectedSort(selected);
+  //     // setBuild((prev) => ({ ...prev, sorts: selected }));
+  //   };
+  //   return {
+  //     value: selectedSort,
+  //     handler: handleSelectedSortChange,
+  //   };
+  // });
 
   const handleSelectedBrassardChange = (selectedBrassard: Brassard) => {
     setSelectedBrassard(selectedBrassard);
