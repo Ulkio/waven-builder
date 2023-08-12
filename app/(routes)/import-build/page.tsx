@@ -242,7 +242,7 @@ const ImportedBuild = () => {
       ) : (
         <>
           <Link href="/">
-            <img
+            <Image
               width={50}
               height={50}
               src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
