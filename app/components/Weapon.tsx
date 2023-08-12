@@ -11,7 +11,6 @@ interface WeaponProps {
 
 const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
   const ARME_BASE_URL = "/img/armes";
-
   return (
     <div
       data-tooltip-id="my-tooltip"
@@ -19,7 +18,7 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
       data-tooltip-place="bottom"
       className="flex flex-col justify-center items-center w-32 h-32 "
       key={arme.nom}>
-      <Tooltip id="my-tooltip" className="border border-white" />
+      <Tooltip id="my-tooltip" className="border-4 border-white/20 transition ease-in-out duration-200 z-10" />
       <Image
         onMouseEnter={onMouseEnter}
         onClick={onClick}
@@ -29,7 +28,7 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
         height={50}
         className="hover:cursor-pointer w-auto"
       />
-      <p className="text-sm text-center">{arme.nom}</p>
+      <p className="text-sm text-center font-bold w-1/2 ">{arme.nom}</p>
     </div>
   );
 };

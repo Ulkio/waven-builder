@@ -1,12 +1,21 @@
+export interface Build {
+  compagnons: Compagnon[] | [];
+  anneaux: Anneau[] | [];
+  brassard: Brassard | null;
+  sorts: Sort[] | [];
+  arme: Arme | null;
+}
+
 export interface Root {
   compagnons: Compagnons;
-  equipements: Equipements;
   sorts: Sorts;
   armes: Armes;
+  anneaux: Anneaux;
+  brassard: Brassard;
 }
 
 export interface Compagnons {
-  compagnons: Compagnon[];
+  compagnons: Compagnon[] | [];
 }
 
 export interface Compagnon {
@@ -49,17 +58,18 @@ export interface Couts {
   eau?: number;
 }
 
-export interface Equipements {
-  anneaux: Anneau[];
-  brassards: Brassard[];
-}
-
 export interface Anneau {
   nom: string;
   rarete: string;
   image: string;
   iles: string[];
   patchs: PatchAnneaux[];
+}
+export interface Anneaux {
+  anneau1: Anneau | null;
+  anneau2: Anneau | null;
+  anneau3: Anneau | null;
+  anneau4: Anneau | null;
 }
 
 export interface PatchAnneaux {

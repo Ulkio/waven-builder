@@ -1,0 +1,35 @@
+.customOverlay {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+.customModal {
+  padding: 0;
+  background-color: #1e1e1e;
+  border: solid white 2px;
+  border-radius: 10px;
+  max-width: 80vw;
+  width: 100%;
+  max-height: 90vh;
+  height: 100%;
+}
+.customModalImport {
+  z-index: 2;
+  padding: 0;
+  background-color: #1e1e1e;
+  border: solid white 2px;
+  border-radius: 10px;
+  max-width: 60vw;
+  width: 100%;
+  max-height: 60vh;
+  height: 100%;
+}
+
+@keyframes customLeaveModalAnimation {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

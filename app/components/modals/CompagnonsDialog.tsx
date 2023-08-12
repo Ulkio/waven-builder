@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import data from "@/api/data.json";
-import { Compagnon, CaracteristiqueCompagnons, DonCompagnons, Couts } from "@/types/index.ts";
+import { Compagnon, CaracteristiqueCompagnons, DonCompagnons } from "@/types/index.ts";
 
 interface CompagnonsDialogProps {
   onSelectedCompagnonChange: (selectedCompagnon: Compagnon) => void;
@@ -36,55 +36,58 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
     return orderA - orderB;
   });
   return (
-    <div className="flex h-[80vh]">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
-        <h2 className="text-center font-extrabold text-3xl">Compagnon</h2>
+    <div className="flex  h-full ">
+      <div className="flex flex-col  gap-8 basis-1/2  py-4 overflow-y-auto">
+        <h2 className="text-center font-extrabold text-3xl">Compagnons</h2>
         <div className="flex flex-wrap gap-2 justify-center">
           {sortedCompagnonsRarity.map((compagnon) => {
             return (
-              <div
-                className={`flex flex-col  items-center w-40 h-40 border-4 ${
-                  compagnon.rarete.toLowerCase() === "commun"
-                    ? "border-commun"
-                    : compagnon.rarete.toLowerCase() === "rare"
-                    ? "border-rare"
-                    : compagnon.rarete.toLowerCase() === "krosmique"
-                    ? "border-krosmique"
-                    : "border-infinite"
-                }`}
-                key={compagnon.nom}>
+              <div className={`flex flex-col  items-center w-36 h-36 relative`} key={compagnon.nom}>
                 <Image
                   onMouseEnter={() => setDisplayedCompagnon(compagnon)}
                   onClick={() => handleCompagnonClick(compagnon)}
+                  src={`/img/utils/cadre_${compagnon.rarete}.png`}
+                  alt={compagnon.nom}
+                  width={100}
+                  height={100}
+                  className="absolute hover:cursor-pointer"
+                />
+                <Image
                   src={`${COMPAGNON_BASE_URL}/${compagnon.image}.png`}
                   alt={compagnon.nom}
-                  width={120}
-                  height={120}
-                  className="hover:cursor-pointer"
+                  width={100}
+                  height={100}
                 />
-                <p className="text-sm text-center">{compagnon.nom}</p>
+                <p className="text-sm text-center font-bold">{compagnon.nom}</p>
               </div>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 p-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center gap-2 ">
+      <div className="flex flex-col gap-4 border-l-2 p-4 bg-overlaySide basis-1/2 ">
+        <div className="flex flex-col w-full items-center gap-4 ">
           {displayedCompagnon && (
             <>
-              <div className="flex items-center">
+              <div className="flex items-center relative">
+                <Image
+                  src={`/img/utils/cadre_${displayedCompagnon.rarete}.png`}
+                  alt={displayedCompagnon.nom}
+                  width={200}
+                  height={200}
+                  className="absolute hover:cursor-pointer"
+                />
                 <Image
                   src={`${COMPAGNON_BASE_URL}/${displayedCompagnon.image}.png`}
                   width={200}
                   height={200}
                   alt={displayedCompagnon.nom}
                 />
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 absolute -right-6">
                   {Object.entries(displayedCompagnon.patchs[0].couts).map((cout) => {
                     return (
-                      <div key={cout[0] + cout[1]} className="flex items-center ">
-                        <Image src={`/img/utils/${cout[0]}.png`} width={30} height={30} alt="cout" />
-                        <p className="font-bold ">{cout[1]}</p>
+                      <div key={cout[0] + cout[1]} className="h-full w-full relative">
+                        <Image src={`/img/utils/${cout[0]}.png`} width={50} height={50} alt="cout" />
+                        <p className="absolute top-4 left-5 font-bold text-xl  ">{cout[1]}</p>
                       </div>
                     );
                   })}
@@ -92,22 +95,22 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
               </div>
               <p className="font-black text-2xl">{displayedCompagnon.nom}</p>
 
-              <div className="flex flex-wrap gap-2">
-                <div className="flex bg-attribute rounded-lg px-2">
-                  <Image src="/img/utils/pv.png" width={20} height={20} alt="pv" />
-                  <p>{displayedCompagnon.patchs[0].pv}</p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
+                  <Image src="/img/utils/pv.png" width={25} height={25} alt="pv" />
+                  <p className="font-bold">{displayedCompagnon.patchs[0].pv}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg px-2">
-                  <Image src="/img/utils/at.png" width={20} height={20} alt="pv" />
-                  <p>{displayedCompagnon.patchs[0].at}</p>
+                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
+                  <Image src="/img/utils/at.png" width={25} height={25} alt="pv" />
+                  <p className="font-bold">{displayedCompagnon.patchs[0].at}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg px-2">
-                  <Image src="/img/utils/cc.png" width={20} height={20} alt="pv" />
-                  <p>{displayedCompagnon.patchs[0].cc}</p>
+                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
+                  <Image src="/img/utils/cc.png" width={25} height={25} alt="pv" />
+                  <p className="font-bold">{displayedCompagnon.patchs[0].cc}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg px-2">
-                  <Image src="/img/utils/pm.png" width={20} height={20} alt="pv" />
-                  <p>{displayedCompagnon.patchs[0].pm}</p>
+                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
+                  <Image src="/img/utils/pm.png" width={25} height={25} alt="pv" />
+                  <p className="font-bold">{displayedCompagnon.patchs[0].pm}</p>
                 </div>
               </div>
               <p>{displayedCompagnon.patchs[0].effet}</p>
@@ -124,14 +127,14 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           )}
         </div>
 
-        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll">
+        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-hidden pt-8 h-auto">
           {displayedCompagnon && (
             <>
               {displayedCompagnon.patchs[0].dons.map((don: DonCompagnons, key) => {
                 return (
                   <div
                     key={key}
-                    className="bg-attribute rounded-lg py-2 w-1/4 px-2  h-44  flex flex-col justify-between hover:cursor-pointer">
+                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-52 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
                     <p className="text-sm text-center">{don.effet}</p>
                     <div className="flex justify-center ">

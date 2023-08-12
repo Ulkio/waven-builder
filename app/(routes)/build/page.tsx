@@ -3,41 +3,47 @@ import Hexagon from "@/components/Hexagon";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import "react-responsive-modal/styles.css";
-import "./modal.css";
+import "../../styles/modal.css";
 import { Modal } from "react-responsive-modal";
 import AnneauxDialog from "@/components/modals/AnneauxDialog";
 import BrassardsDialog from "@/components/modals/BrassardsDialog";
 import CompagnonsDialog from "@/components/modals/CompagnonsDialog";
 import ArmesDialog from "@/components/modals/ArmesDialog";
-import { Anneau, Arme, Brassard, Compagnon, Sort } from "@/types";
+import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Compagnons, Sorts, Armes, Anneaux } from "@/types";
+import { AES, enc } from "crypto-js";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import StringBuildDialog from "@/components/modals/StringBuildDialog";
+import Link from "next/link";
 
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
-  // Afficher les stats de la classe sous le nom
-  // Sorts dans le json
   // Sorts modal
   // Sorts handlers
   // Sauvegarder
-
-  // STYLE VARIANTS
-  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
-  const companionSquareVariants = `h-24 w-24 lg:w-32 lg:h-32 hover:cursor-pointer`;
-  const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80`;
+  const buildKey = "importKey";
 
   //#region STATES
-  const [selectedArme, setSelectedArme] = useState<Arme | null>(null);
-  const [selectedAnneau1, setSelectedAnneau1] = useState<Anneau | null>(null);
-  const [selectedAnneau2, setSelectedAnneau2] = useState<Anneau | null>(null);
-  const [selectedAnneau3, setSelectedAnneau3] = useState<Anneau | null>(null);
-  const [selectedAnneau4, setSelectedAnneau4] = useState<Anneau | null>(null);
-  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
-  const [selectedCompagnon1, setSelectedCompagnon1] = useState<Compagnon | null>(null);
-  const [selectedCompagnon2, setSelectedCompagnon2] = useState<Compagnon | null>(null);
-  const [selectedCompagnon3, setSelectedCompagnon3] = useState<Compagnon | null>(null);
-  const [selectedCompagnon4, setSelectedCompagnon4] = useState<Compagnon | null>(null);
-  const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
+  const [build, setBuild] = useState<Build>({
+    compagnons: [],
+    anneaux: [],
+    brassard: null,
+    sorts: [],
+    arme: null,
+  });
+  const [encryptedBuild, setEncryptedBuild] = useState("");
+  //#endregion
 
+  //#region STYLE VARIANTS
+  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
+  const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
+  const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80`;
+  const emptyCompanionVariants = `bg-[url("/img/utils/cadre_commun.png")]`;
+  //#endregion
+
+  //#region URLs
   const ARME_BASE_URL = "/img/armes";
   const ANNEAU_BASE_URL = "/img/anneaux";
   const BRASSARD_BASE_URL = "/img/brassards";
@@ -45,149 +51,189 @@ const Build = () => {
   const SORT_BASE_URL = "/img/sorts";
   //#endregion
 
-  //#region MODAL
-  const [openAnneau1Modal, setOpenAnneau1Modal] = useState(false);
-  const [openAnneau2Modal, setOpenAnneau2Modal] = useState(false);
-  const [openAnneau3Modal, setOpenAnneau3Modal] = useState(false);
-  const [openAnneau4Modal, setOpenAnneau4Modal] = useState(false);
-  const [openCompagnon1Modal, setOpenCompagnon1Modal] = useState(false);
-  const [openCompagnon2Modal, setOpenCompagnon2Modal] = useState(false);
-  const [openCompagnon3Modal, setOpenCompagnon3Modal] = useState(false);
-  const [openCompagnon4Modal, setOpenCompagnon4Modal] = useState(false);
-  const [openBrassardModal, setOpenBrassardModal] = useState(false);
-  const [openArmeModal, setOpenArmeModal] = useState(false);
-  const [openSortModal, setOpenSortModal] = useState(false);
+  //#region SELECTABLES
+  const [selectedArme, setSelectedArme] = useState<Arme | null>(null);
+  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
 
-  const onOpenModalAnneau1 = () => setOpenAnneau1Modal(true);
-  const onOpenModalAnneau2 = () => setOpenAnneau2Modal(true);
-  const onOpenModalAnneau3 = () => setOpenAnneau3Modal(true);
-  const onOpenModalAnneau4 = () => setOpenAnneau4Modal(true);
-  const onOpenModalCompagnon1 = () => setOpenCompagnon1Modal(true);
-  const onOpenModalCompagnon2 = () => setOpenCompagnon2Modal(true);
-  const onOpenModalCompagnon3 = () => setOpenCompagnon3Modal(true);
-  const onOpenModalCompagnon4 = () => setOpenCompagnon4Modal(true);
-  const onOpenModalBrassard = () => setOpenBrassardModal(true);
-  const onOpenModalArmes = () => setOpenArmeModal(true);
-  const onOpenModalSort = () => setOpenSortModal(true);
+  const numberOfCompagnons = 4;
+  const selectableCompagnons = Array.from({ length: numberOfCompagnons }, (_, index) => {
+    const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
+    const handleSelectedCompagnonChange = (selected: Compagnon) => {
+      setSelectedCompagnon(selected);
+    };
+    return {
+      value: selectedCompagnon,
+      handler: handleSelectedCompagnonChange,
+    };
+  });
 
-  const onCloseModalAnneau = () => {
-    setOpenAnneau1Modal(false);
-    setOpenAnneau2Modal(false);
-    setOpenAnneau3Modal(false);
-    setOpenAnneau4Modal(false);
-  };
-  const onCloseModalBrassard = () => setOpenBrassardModal(false);
-  const onCloseModalCompagnon = () => {
-    setOpenCompagnon1Modal(false);
-    setOpenCompagnon2Modal(false);
-    setOpenCompagnon3Modal(false);
-    setOpenCompagnon4Modal(false);
-  };
-  const onCloseModalArme = () => setOpenArmeModal(false);
-  const onCloseModalSort = () => setOpenSortModal(false);
-  //#endregion
+  const numberOfAnneaux = 4;
+  const selectableAnneaux = Array.from({ length: numberOfAnneaux }, (_, index) => {
+    const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
+    const handleSelectedAnneauChange = (selected: Anneau) => {
+      setSelectedAnneau(selected);
+    };
+    return {
+      value: selectedAnneau,
+      handler: handleSelectedAnneauChange,
+    };
+  });
+  const numberOfSorts = 15;
+  const selectableSorts = Array.from({ length: numberOfSorts }, (_, index) => {
+    const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
+    const handleSelectedSortChange = (selected: Sort) => {
+      setSelectedSort(selected);
+      // setBuild((prev) => ({ ...prev, sorts: selected }));
+    };
+    return {
+      value: selectedSort,
+      handler: handleSelectedSortChange,
+    };
+  });
 
-  //#region FUNCTIONS
-  const handleSelectedAnneau1Change = (selectedAnneau: Anneau) => {
-    setSelectedAnneau1(selectedAnneau);
-  };
-  const handleSelectedAnneau2Change = (selectedAnneau: Anneau) => {
-    setSelectedAnneau2(selectedAnneau);
-  };
-  const handleSelectedAnneau3Change = (selectedAnneau: Anneau) => {
-    setSelectedAnneau3(selectedAnneau);
-  };
-  const handleSelectedAnneau4Change = (selectedAnneau: Anneau) => {
-    setSelectedAnneau4(selectedAnneau);
-  };
   const handleSelectedBrassardChange = (selectedBrassard: Brassard) => {
     setSelectedBrassard(selectedBrassard);
-  };
-  const handleSelectedCompagnon1Change = (selectedCompagnon: Compagnon) => {
-    setSelectedCompagnon1(selectedCompagnon);
-  };
-  const handleSelectedCompagnon2Change = (selectedCompagnon: Compagnon) => {
-    setSelectedCompagnon2(selectedCompagnon);
-  };
-  const handleSelectedCompagnon3Change = (selectedCompagnon: Compagnon) => {
-    setSelectedCompagnon3(selectedCompagnon);
-  };
-  const handleSelectedCompagnon4Change = (selectedCompagnon: Compagnon) => {
-    setSelectedCompagnon4(selectedCompagnon);
   };
   const handleSelectedArmeChange = (selectedArme: Arme) => {
     setSelectedArme(selectedArme);
   };
-  const handleSelectedSortChange = (selectedSort: Sort) => {
-    setSelectedSort(selectedSort);
+
+  //#endregion
+
+  //#region MODAL
+  const [openModal, setOpenModal] = useState<string | null>(null);
+  const [openModalStringBuild, setOpenModalStringBuild] = useState<boolean>(false);
+
+  const openEquipementModal = (modalType: string) => {
+    setOpenModal(modalType);
   };
-  const handleClickAnneau = () => {
-    onCloseModalAnneau();
+
+  const openCompagnonModal = (modalType: string) => {
+    setOpenModal(modalType);
   };
-  const handleClickBrassard = () => {
-    onCloseModalBrassard();
+  const openArmeModal = (modalType: string) => {
+    setOpenModal(modalType);
   };
-  const handleClickCompagnon = () => {
-    onCloseModalCompagnon();
+  const openSortModal = (modalType: string) => {
+    setOpenModal(modalType);
   };
-  const handleClickArme = () => {
-    onCloseModalArme();
+
+  const closeModal = () => {
+    setOpenModal(null);
   };
-  const handleClickSort = () => {
-    onCloseModalSort();
+  const closeModalStringBuild = () => {
+    setOpenModalStringBuild(false);
   };
   //#endregion
 
+  //#region FUNCTIONS
+  const handleClickSaveBuild = () => {
+    setOpenModalStringBuild(true);
+    const compagnonsArray = [
+      selectableCompagnons[0].value!,
+      selectableCompagnons[1].value!,
+      selectableCompagnons[2].value!,
+      selectableCompagnons[3].value!,
+    ];
+    const AnneauxArray = [
+      selectableAnneaux[0].value!,
+      selectableAnneaux[1].value!,
+      selectableAnneaux[2].value!,
+      selectableAnneaux[3].value!,
+    ];
+    setBuild({
+      arme: selectedArme,
+      anneaux: AnneauxArray,
+      brassard: selectedBrassard,
+      compagnons: compagnonsArray,
+      sorts: [],
+    });
+
+    // if (encryptedBuild.length < 200) {
+    //   toast("Erreur, veuillez vérifier votre build");
+    // } else {
+    //   navigator.clipboard.writeText(encryptedBuild);
+    //   toast("Build copié dans le presse-papier");
+    // }
+  };
+
+  // const handleClickImportBuild = () => {
+  //   navigate
+  //   const decryptedBytes = AES.decrypt(encryptedBuild, buildKey);
+  //   const decryptedJsonString = decryptedBytes.toString(enc.Utf8);
+  //   const JSONBuild = JSON.parse(decryptedJsonString);
+  //   setBuild(JSONBuild);
+  //   console.log(build);
+  // };
+  // const handleSelectedAnneau1Change = (selectedAnneau: Anneau) => {
+  //   setSelectedAnneau1(selectedAnneau);
+  // };
+  // const handleSelectedAnneau2Change = (selectedAnneau: Anneau) => {
+  //   setSelectedAnneau2(selectedAnneau);
+  // };
+  // const handleSelectedAnneau3Change = (selectedAnneau: Anneau) => {
+  //   setSelectedAnneau3(selectedAnneau);
+  // };
+  // const handleSelectedAnneau4Change = (selectedAnneau: Anneau) => {
+  //   setSelectedAnneau4(selectedAnneau);
+  // };
+
+  // const handleSelectedCompagnonChange = (selectedCompagnon: Compagnon) => {
+  //   setSelectedCompagnon(selectedCompagnon);
+  // };
+
+  // const handleSelectedSortChange = (selectedSort: Sort) => {
+  //   // setSelectedSort(selectedSort);
+  // };
+
+  //#endregion
+
   // USEEFFECTS
+  useEffect(() => {
+    if (build.arme) {
+      const stringBuild = JSON.stringify(build);
+      const encrypted = AES.encrypt(stringBuild, buildKey).toString();
+      setEncryptedBuild(encrypted);
+    }
+  }, [build]);
+
+  useEffect(() => {
+    if (encryptedBuild.length > 0) {
+    }
+  }, [encryptedBuild]);
 
   return (
     <main className="h-screen">
+      <Link href="/">
+        <img
+          width="50"
+          height="50"
+          src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
+          alt="long-arrow-left"
+          className="absolute top-2 left-20 invert"
+        />
+      </Link>
       <div className="flex flex-col p-12 gap-4 justify-between h-full pt-32">
         <div className="flex">
-          <div className="flex flex-col basis-1/6 px-4 ">
-            <div className="flex flex-col h-full  items-center ">
-              <p className={titleVariants}>Anneau</p>
+          <div className="flex flex-col basis-1/6 px-4">
+            <div className="flex flex-col h-full  items-center">
+              <p className={titleVariants}>Anneaux</p>
               <div className="flex flex-col gap-2 ">
-                <div className={squareVariants} onClick={onOpenModalAnneau1}>
-                  {selectedAnneau1 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau1.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau1.nom}`}
-                    />
-                  )}
-                </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau2}>
-                  {selectedAnneau2 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau2.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau2.nom}`}
-                    />
-                  )}
-                </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau3}>
-                  {selectedAnneau3 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau3.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau3.nom}`}
-                    />
-                  )}
-                </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau4}>
-                  {selectedAnneau4 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau4.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau4.nom}`}
-                    />
-                  )}
-                </div>
+                {selectableAnneaux.map((equipment, index) => (
+                  <div
+                    key={index}
+                    className={`${squareVariants}`}
+                    onClick={() => openEquipementModal(`anneau${index + 1}`)}>
+                    {equipment.value && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${equipment.value.image}.png`}
+                        width={300}
+                        height={300}
+                        alt={`${equipment.value.nom}`}
+                      />
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -195,7 +241,7 @@ const Build = () => {
             <div className="flex flex-col h-full lg:justify-between  items-center  ">
               <div className="flex flex-col items-center">
                 <p className={titleVariants}>Brassard</p>
-                <div className={squareVariants} onClick={onOpenModalBrassard}>
+                <div className={squareVariants} onClick={() => openEquipementModal("brassard")}>
                   {selectedBrassard && (
                     <Image
                       src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
@@ -225,7 +271,7 @@ const Build = () => {
                     alt="classe"
                     width={200}
                     height={200}
-                    onClick={onOpenModalArmes}
+                    onClick={() => openArmeModal("arme")}
                     className="hover:cursor-pointer"
                   />
                   <p className="font-black text-3xl">{selectedArme?.nom}</p>
@@ -254,7 +300,7 @@ const Build = () => {
                   </div>
                 </>
               ) : (
-                <Hexagon onClick={onOpenModalArmes} content="Choisis une classe" size={200} />
+                <Hexagon onClick={() => openArmeModal("arme")} content="Choisis une classe" size={200} />
               )}
             </div>
           </div>
@@ -262,54 +308,32 @@ const Build = () => {
             <div className="flex flex-col gap-2 px-4">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row gap-4">
-                <div
-                  className={`${selectedCompagnon1 ? companionSquareVariants : squareVariants}`}
-                  onClick={onOpenModalCompagnon1}>
-                  {selectedCompagnon1 && (
-                    <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon1.image}.png`}
-                      width={300}
-                      height={300}
-                      alt={`${selectedCompagnon1.nom}`}
-                    />
-                  )}
-                </div>
-                <div
-                  className={`${selectedCompagnon2 ? companionSquareVariants : squareVariants}`}
-                  onClick={onOpenModalCompagnon2}>
-                  {selectedCompagnon2 && (
-                    <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon2.image}.png`}
-                      width={300}
-                      height={300}
-                      alt={`${selectedCompagnon2.nom}`}
-                    />
-                  )}
-                </div>
-                <div
-                  className={`${selectedCompagnon3 ? companionSquareVariants : squareVariants}`}
-                  onClick={onOpenModalCompagnon3}>
-                  {selectedCompagnon3 && (
-                    <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon3.image}.png`}
-                      width={300}
-                      height={300}
-                      alt={`${selectedCompagnon3.nom}`}
-                    />
-                  )}
-                </div>
-                <div
-                  className={`${selectedCompagnon4 ? companionSquareVariants : squareVariants}`}
-                  onClick={onOpenModalCompagnon4}>
-                  {selectedCompagnon4 && (
-                    <Image
-                      src={`${COMPAGNON_BASE_URL}/${selectedCompagnon4.image}.png`}
-                      width={300}
-                      height={300}
-                      alt={`${selectedCompagnon4.nom}`}
-                    />
-                  )}
-                </div>
+                {selectableCompagnons.map((companion, index) => (
+                  <div
+                    key={index}
+                    className={`h-28 w-28 bg-contain hover:cursor-pointer ${
+                      companion.value ? companionSquareVariants : emptyCompanionVariants
+                    }`}
+                    onClick={() => openCompagnonModal(`compagnon${index + 1}`)}>
+                    {companion.value && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`/img/utils/cadre_${companion.value.rarete}.png`}
+                          alt={companion.value.nom}
+                          width={200}
+                          height={200}
+                          className="absolute"
+                        />
+                        <Image
+                          src={`${COMPAGNON_BASE_URL}/${companion.value.image}.png`}
+                          width={200}
+                          height={200}
+                          alt={companion.value.nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="flex flex-col gap-2 px-4 ">
@@ -334,26 +358,40 @@ const Build = () => {
             </div>
           </div>
         </div>
-        <div className="absolute right-0 bottom-0 p-8">
-          <Hexagon content="Sauvegarder(wip)" size={200} />
+        <div onClick={handleClickSaveBuild} className="absolute right-0 bottom-0 p-8">
+          <p>Sauvegarder</p>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={2000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            pauseOnHover={false}
+            theme="dark"
+          />
         </div>
+        <Link href="import-build" className="absolute left-0 bottom-0 p-8">
+          <p>Importer</p>
+        </Link>
       </div>
       <div>
         <Modal
-          open={openArmeModal}
-          onClose={onCloseModalArme}
+          open={!!openModalStringBuild}
+          onClose={closeModalStringBuild}
           center
           showCloseIcon={false}
           classNames={{
             overlay: "customOverlay",
-            modal: "customModal",
+            modal: "customModalImport",
             root: "scrollbar-none",
           }}>
-          <ArmesDialog onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
+          <StringBuildDialog stringBuild={encryptedBuild} />
         </Modal>
         <Modal
-          open={openAnneau1Modal}
-          onClose={onCloseModalAnneau}
+          open={!!openModal}
+          onClose={closeModal}
           center
           showCloseIcon={false}
           classNames={{
@@ -361,118 +399,28 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
-        </Modal>
-        <Modal
-          open={openAnneau2Modal}
-          onClose={onCloseModalAnneau}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
-        </Modal>
-        <Modal
-          open={openAnneau3Modal}
-          onClose={onCloseModalAnneau}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
-        </Modal>
-        <Modal
-          open={openAnneau4Modal}
-          onClose={onCloseModalAnneau}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
-        </Modal>
-        <Modal
-          open={openBrassardModal}
-          onClose={onCloseModalBrassard}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <BrassardsDialog
-            onClickBrassard={handleClickBrassard}
-            onSelectedBrassardChange={handleSelectedBrassardChange}
-          />
-        </Modal>
-        <Modal
-          open={openCompagnon1Modal}
-          onClose={onCloseModalCompagnon}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <CompagnonsDialog
-            onClickCompagnon={handleClickCompagnon}
-            onSelectedCompagnonChange={handleSelectedCompagnon1Change}
-          />
-        </Modal>
-        <Modal
-          open={openCompagnon2Modal}
-          onClose={onCloseModalCompagnon}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <CompagnonsDialog
-            onClickCompagnon={handleClickCompagnon}
-            onSelectedCompagnonChange={handleSelectedCompagnon2Change}
-          />
-        </Modal>
-        <Modal
-          open={openCompagnon3Modal}
-          onClose={onCloseModalCompagnon}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <CompagnonsDialog
-            onClickCompagnon={handleClickCompagnon}
-            onSelectedCompagnonChange={handleSelectedCompagnon3Change}
-          />
-        </Modal>
-        <Modal
-          open={openCompagnon4Modal}
-          onClose={onCloseModalCompagnon}
-          center
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModal",
-            root: "scrollbar-none",
-          }}>
-          <CompagnonsDialog
-            onClickCompagnon={handleClickCompagnon}
-            onSelectedCompagnonChange={handleSelectedCompagnon4Change}
-          />
+          {openModal === "arme" && (
+            <ArmesDialog onClickArme={closeModal} onSelectedArmeChange={handleSelectedArmeChange} />
+          )}
+          {openModal === "brassard" && (
+            <BrassardsDialog onClickBrassard={closeModal} onSelectedBrassardChange={handleSelectedBrassardChange} />
+          )}
+          {selectableAnneaux.map(
+            (anneau, index) =>
+              openModal === `anneau${index + 1}` && (
+                <AnneauxDialog key={index} onClickAnneau={closeModal} onSelectedAnneauChange={anneau.handler} />
+              )
+          )}
+          {selectableCompagnons.map(
+            (compagnon, index) =>
+              openModal === `compagnon${index + 1}` && (
+                <CompagnonsDialog
+                  key={index}
+                  onClickCompagnon={closeModal}
+                  onSelectedCompagnonChange={compagnon.handler}
+                />
+              )
+          )}
         </Modal>
       </div>
     </main>
