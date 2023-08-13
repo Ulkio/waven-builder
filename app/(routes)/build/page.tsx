@@ -21,10 +21,6 @@ import { Tooltip } from "react-tooltip";
 import "../../styles/tooltip.css";
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
-  // Sorts modal
-  // Sorts handlers
-  // dons, afficher dons a coté des items/sous le build?
-  // image optimizisation (skeleton, moins d'images par row...)
 
   //#region CONSTANTS
   const buildKey = "importKey";

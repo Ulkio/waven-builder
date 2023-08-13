@@ -16,8 +16,8 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
     { category: "Xélor", filter: "xélor" },
     { category: "Eniripsa", filter: "eniripsa" },
     { category: "Iop", filter: "iop" },
-    { category: "Osamodas", filter: "osamodas" },
-    { category: "Sacrieur", filter: "sacrieur" },
+    // { category: "Osamodas", filter: "osamodas" },
+    // { category: "Sacrieur", filter: "sacrieur" },
     { category: "Sram", filter: "sram" },
   ];
 
@@ -33,9 +33,9 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
     <div className="flex flex-wrap justify-center h-full px-8 gap-4 py-4">
       <h2 className="text-center w-full font-extrabold text-3xl">Arme</h2>
       {weaponCategories.map((weaponCategory) => (
-        <div className="flex flex-col" key={weaponCategory.category}>
+        <div className="flex flex-col w-full gap-2" key={weaponCategory.category}>
           <p className="text-2xl font-extrabold italic text-center">{weaponCategory.category}</p>
-          <div className="flex flex-wrap justify-center gap-2 bg-overlaySide rounded-lg">
+          <div className="flex flex-wrap justify-evenly bg-overlaySide rounded-lg p-8">
             {armes
               .filter((arme) => arme.dieu === weaponCategory.filter)
               .map((arme) => (
