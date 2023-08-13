@@ -14,6 +14,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
 
   const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
   const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(null);
+  const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
 
   const handleBrassardClick = (brassard: Brassard) => {
     setSelectedBrassard(brassard);
@@ -36,28 +37,60 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
     return orderA - orderB;
   });
 
+  const filteredBrassards = selectedRarityFilter
+    ? sortedBrassardsRarity.filter((brassard) => brassard.rarete.toLowerCase() === selectedRarityFilter)
+    : sortedBrassardsRarity;
+
+  const handleFilterClick = (rarity: string) => {
+    setSelectedRarityFilter(rarity);
+  };
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
+      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
+        <div className="flex justify-center gap-4">
+          <button
+            onClick={() => handleFilterClick("commun")}
+            className="btn-filter text-commun border border-commun px-2 rounded-md font-bold">
+            Commun
+          </button>
+          <button
+            onClick={() => handleFilterClick("rare")}
+            className="btn-filter text-rare border border-rare  px-2 rounded-md font-bold">
+            Rare
+          </button>
+          <button
+            onClick={() => handleFilterClick("krosmique")}
+            className="btn-filter text-krosmique border border-krosmique  px-2 rounded-md font-bold">
+            Krosmique
+          </button>
+          <button
+            onClick={() => handleFilterClick("infinite")}
+            className="btn-filter text-infinite border border-infinite  px-2 rounded-md font-bold">
+            Infinite
+          </button>
+        </div>
         <div className="flex flex-wrap gap-8 justify-center">
-          {sortedBrassardsRarity.map((brassard) => {
+          {filteredBrassards.map((brassard) => {
             return (
-              <div
-                onMouseEnter={() => setDisplayedBrassard(brassard)}
-                onClick={() => handleBrassardClick(brassard)}
-                className={`hover:cursor-pointer flex flex-col  items-center w-36 h-36  border-4 ${
-                  brassard.rarete.toLowerCase() === "commun"
-                    ? "border-commun"
-                    : brassard.rarete.toLowerCase() === "rare"
-                    ? "border-rare"
-                    : brassard.rarete.toLowerCase() === "krosmique"
-                    ? "border-krosmique"
-                    : "border-infinite"
-                }`}
-                key={brassard.nom}>
-                <Image src={`${ARMBAND_BASE_URL}/${brassard.image}.png`} alt={brassard.nom} width={80} height={80} />
-                <p className="text-center leading-5 text-sm">{brassard.nom}</p>
+              <div key={brassard.nom} className={`flex flex-col  items-center w-36 h-36 relative`}>
+                <Image
+                  onMouseEnter={() => setDisplayedBrassard(brassard)}
+                  onClick={() => handleBrassardClick(brassard)}
+                  src={`/img/utils/bg_${brassard.rarete.toLowerCase()}.png`}
+                  alt={brassard.nom}
+                  width={100}
+                  height={100}
+                  className="absolute hover:cursor-pointer"
+                />
+                <Image
+                  src={`${ARMBAND_BASE_URL}/${brassard.image}.png`}
+                  alt={brassard.nom}
+                  width={90}
+                  height={90}
+                  className="hover:cursor-pointer z-10"
+                />
+                <p className="text-center z-10 pt-4">{brassard.nom}</p>
               </div>
             );
           })}

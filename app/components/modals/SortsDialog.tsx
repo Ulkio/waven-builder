@@ -22,7 +22,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort }: SortsDialogProps) =>
   };
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
+      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Sort</h2>
         <div className="flex flex-wrap gap-2 justify-center">
           {sorts.map((sort) => {

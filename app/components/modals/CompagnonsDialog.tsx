@@ -14,6 +14,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
 
   const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
   const [displayedCompagnon, setDisplayedCompagnon] = useState<Compagnon | null>(null);
+  const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
 
   const handleCompagnonClick = (compagnon: Compagnon) => {
     setSelectedCompagnon(compagnon);
@@ -35,12 +36,42 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
 
     return orderA - orderB;
   });
+
+  const filteredCompagnons = selectedRarityFilter
+    ? sortedCompagnonsRarity.filter((compagnon) => compagnon.rarete.toLowerCase() === selectedRarityFilter)
+    : sortedCompagnonsRarity;
+
+  const handleFilterClick = (rarity: string) => {
+    setSelectedRarityFilter(rarity);
+  };
   return (
     <div className="flex  h-full ">
-      <div className="flex flex-col  gap-8 basis-1/2 overflow-y-auto">
+      <div className="flex flex-col  gap-8 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Compagnons</h2>
+        <div className="flex justify-center gap-4">
+          <button
+            onClick={() => handleFilterClick("commun")}
+            className="btn-filter text-commun border border-commun  px-2 rounded-md font-bold">
+            Commun
+          </button>
+          <button
+            onClick={() => handleFilterClick("rare")}
+            className="btn-filter text-rare border border-rare  px-2 rounded-md font-bold">
+            Rare
+          </button>
+          <button
+            onClick={() => handleFilterClick("krosmique")}
+            className="btn-filter text-krosmique border border-krosmique  px-2 rounded-md font-bold">
+            Krosmique
+          </button>
+          <button
+            onClick={() => handleFilterClick("infinite")}
+            className="btn-filter text-infinite border border-infinite  px-2 rounded-md font-bold">
+            Infinite
+          </button>
+        </div>
         <div className="flex flex-wrap gap-2 justify-center">
-          {sortedCompagnonsRarity.map((compagnon) => {
+          {filteredCompagnons.map((compagnon) => {
             return (
               <div className={`flex flex-col  items-center w-36 h-36 relative`} key={compagnon.nom}>
                 <Image

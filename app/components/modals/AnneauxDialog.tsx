@@ -14,6 +14,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
 
   const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
   const [displayedAnneau, setDisplayedAnneau] = useState<Anneau | null>(null);
+  const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
 
   const handleAnneauClick = (anneau: Anneau) => {
     setSelectedAnneau(anneau);
@@ -35,35 +36,60 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
 
     return orderA - orderB;
   });
+  const filteredAnneaux = selectedRarityFilter
+    ? sortedAnneauxRarity.filter((anneau) => anneau.rarete.toLowerCase() === selectedRarityFilter)
+    : sortedAnneauxRarity;
 
+  const handleFilterClick = (rarity: string) => {
+    setSelectedRarityFilter(rarity);
+  };
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto">
+      <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Anneaux</h2>
+        <div className="flex justify-center gap-4">
+          <button
+            onClick={() => handleFilterClick("commun")}
+            className="btn-filter text-commun border border-commun px-2 rounded-md font-bold">
+            Commun
+          </button>
+          <button
+            onClick={() => handleFilterClick("rare")}
+            className="btn-filter text-rare border border-rare  px-2 rounded-md font-bold">
+            Rare
+          </button>
+          <button
+            onClick={() => handleFilterClick("krosmique")}
+            className="btn-filter text-krosmique border border-krosmique  px-2 rounded-md font-bold">
+            Krosmique
+          </button>
+          <button
+            onClick={() => handleFilterClick("infinite")}
+            className="btn-filter text-infinite border border-infinite  px-2 rounded-md font-bold">
+            Infinite
+          </button>
+        </div>
         <div className=" flex flex-wrap gap-8 justify-center">
-          {sortedAnneauxRarity.map((ring) => {
+          {filteredAnneaux.map((ring) => {
             return (
-              <div
-                key={ring.nom}
-                onMouseEnter={() => setDisplayedAnneau(ring)}
-                onClick={() => handleAnneauClick(ring)}
-                className={`hover:cursor-pointer flex flex-col  items-center w-32 h-32 border-4 ${
-                  ring.rarete.toLowerCase() === "commun"
-                    ? "border-commun"
-                    : ring.rarete.toLowerCase() === "rare"
-                    ? "border-rare"
-                    : ring.rarete.toLowerCase() === "krosmique"
-                    ? "border-krosmique"
-                    : "border-infinite"
-                }`}>
+              <div key={ring.nom} className={`flex flex-col  items-center w-36 h-36 relative`}>
+                <Image
+                  onMouseEnter={() => setDisplayedAnneau(ring)}
+                  onClick={() => handleAnneauClick(ring)}
+                  src={`/img/utils/bg_${ring.rarete.toLowerCase()}.png`}
+                  alt={ring.nom}
+                  width={100}
+                  height={100}
+                  className="absolute hover:cursor-pointer"
+                />
                 <Image
                   src={`${RING_BASE_URL}/${ring.image}.png`}
                   alt={ring.nom}
-                  width={70}
-                  height={70}
-                  className="hover:cursor-pointer"
+                  width={90}
+                  height={90}
+                  className="hover:cursor-pointer z-10"
                 />
-                <p className="text-center leading-5">{ring.nom}</p>
+                <p className="text-center z-10 pt-4">{ring.nom}</p>
               </div>
             );
           })}
