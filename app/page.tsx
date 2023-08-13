@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { Analytics } from "@vercel/analytics/react";
 export default function Home() {
   return (
     <main className="flex justify-center items-center h-screen p-16 gap-16">
@@ -22,6 +22,7 @@ export default function Home() {
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out"
         />
       </Link>
+      <Analytics />
     </main>
   );
 }
