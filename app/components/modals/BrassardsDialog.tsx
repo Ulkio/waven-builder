@@ -46,7 +46,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
   };
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-8 basis-1/2 overflow-y-auto py-4">
+      <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
         <div className="flex justify-center gap-4">
           <button
@@ -73,10 +73,12 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
         <div className="flex flex-wrap gap-8 justify-center">
           {filteredBrassards.map((brassard) => {
             return (
-              <div key={brassard.nom} className={`flex flex-col  items-center w-36 h-36 relative`}>
+              <div
+                onMouseEnter={() => setDisplayedBrassard(brassard)}
+                onClick={() => handleBrassardClick(brassard)}
+                key={brassard.nom}
+                className={`flex flex-col  items-center w-36 h-36 relative`}>
                 <Image
-                  onMouseEnter={() => setDisplayedBrassard(brassard)}
-                  onClick={() => handleBrassardClick(brassard)}
                   src={`/img/utils/bg_${brassard.rarete.toLowerCase()}.png`}
                   alt={brassard.nom}
                   width={100}
@@ -90,7 +92,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                   height={90}
                   className="hover:cursor-pointer z-10"
                 />
-                <p className="text-center z-10 pt-4">{brassard.nom}</p>
+                <p className="text-center z-10 pt-4 font-bold">{brassard.nom}</p>
               </div>
             );
           })}

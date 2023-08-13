@@ -72,10 +72,12 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
         <div className=" flex flex-wrap gap-8 justify-center">
           {filteredAnneaux.map((ring) => {
             return (
-              <div key={ring.nom} className={`flex flex-col  items-center w-36 h-36 relative`}>
+              <div
+                onMouseEnter={() => setDisplayedAnneau(ring)}
+                onClick={() => handleAnneauClick(ring)}
+                key={ring.nom}
+                className={`flex flex-col  items-center w-36 h-36 relative`}>
                 <Image
-                  onMouseEnter={() => setDisplayedAnneau(ring)}
-                  onClick={() => handleAnneauClick(ring)}
                   src={`/img/utils/bg_${ring.rarete.toLowerCase()}.png`}
                   alt={ring.nom}
                   width={100}
@@ -89,7 +91,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                   height={90}
                   className="hover:cursor-pointer z-10"
                 />
-                <p className="text-center z-10 pt-4">{ring.nom}</p>
+                <p className="text-center z-10 pt-4 font-bold">{ring.nom}</p>
               </div>
             );
           })}

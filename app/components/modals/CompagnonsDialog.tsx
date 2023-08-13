@@ -46,7 +46,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   };
   return (
     <div className="flex  h-full ">
-      <div className="flex flex-col  gap-8 basis-1/2 overflow-y-auto py-4">
+      <div className="flex flex-col  gap-4 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Compagnons</h2>
         <div className="flex justify-center gap-4">
           <button
@@ -73,10 +73,12 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
         <div className="flex flex-wrap gap-2 justify-center">
           {filteredCompagnons.map((compagnon) => {
             return (
-              <div className={`flex flex-col  items-center w-36 h-36 relative`} key={compagnon.nom}>
+              <div
+                onMouseEnter={() => setDisplayedCompagnon(compagnon)}
+                onClick={() => handleCompagnonClick(compagnon)}
+                className={`flex flex-col  items-center w-36 h-36 relative`}
+                key={compagnon.nom}>
                 <Image
-                  onMouseEnter={() => setDisplayedCompagnon(compagnon)}
-                  onClick={() => handleCompagnonClick(compagnon)}
                   src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                   alt={compagnon.nom}
                   width={100}
