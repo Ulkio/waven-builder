@@ -94,7 +94,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
           )}
         </div>
 
-        <div className="flex flex-col px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4 overflow-y-scroll xl:pt-8 h-auto">
+        <div className="flex flex-col px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4  xl:pt-8 overflow-y-scroll xl:overflow-y-visible xl:justify-center h-full">
           {displayedAnneau && (
             <>
               {displayedAnneau.patchs[0].dons.map((don: DonAnneaux, key) => {

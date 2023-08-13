@@ -42,7 +42,6 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
         <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
         <div className="flex flex-wrap gap-8 justify-center">
           {sortedBrassardsRarity.map((brassard) => {
-            const rarityBorder = `border-${brassard.rarete.toLowerCase()}`;
             return (
               <div
                 onMouseEnter={() => setDisplayedBrassard(brassard)}
@@ -89,7 +88,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
           )}
         </div>
 
-        <div className="flex flex-col px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4 overflow-y-scroll xl:pt-8 h-auto">
+        <div className="flex flex-col xl:justify-center px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4 overflow-y-scroll xl:overflow-y-visible xl:pt-8 h-full">
           {displayedBrassard && (
             <>
               {displayedBrassard.patchs[0].dons.map((don: DonBrassards, key) => {

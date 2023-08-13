@@ -17,6 +17,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import StringBuildDialog from "@/components/modals/StringBuildDialog";
+import SortsDialog from "@/components/modals/SortsDialog";
 
 const ImportedBuild = () => {
   ////////////////////////////////TODO////////////////////////////////
@@ -51,7 +52,6 @@ const ImportedBuild = () => {
   const SORT_BASE_URL = "/img/sorts";
   //#endregion
 
-  //#region SELECTABLES
   //#region SELECTABLES
   const [selectedArme, setSelectedArme] = useState<Arme | null>(null);
   const handleSelectedArmeChange = (selectedArme: Arme) => {
@@ -132,24 +132,402 @@ const ImportedBuild = () => {
       anneaux: [prev.anneaux[0], prev.anneaux[1], prev.anneaux[2], selected],
     }));
   };
+  const [selectedSort1, setSelectedSort1] = useState<Sort | null>(null);
+  const handleSelectedSort1Change = (selected: Sort) => {
+    setSelectedSort1(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        selected,
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort2, setSelectedSort2] = useState<Sort | null>(null);
+  const handleSelectedSort2Change = (selected: Sort) => {
+    setSelectedSort2(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        selected,
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort3, setSelectedSort3] = useState<Sort | null>(null);
+  const handleSelectedSort3Change = (selected: Sort) => {
+    setSelectedSort3(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        selected,
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort4, setSelectedSort4] = useState<Sort | null>(null);
+  const handleSelectedSort4Change = (selected: Sort) => {
+    setSelectedSort4(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        selected,
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort5, setSelectedSort5] = useState<Sort | null>(null);
+  const handleSelectedSort5Change = (selected: Sort) => {
+    setSelectedSort5(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        selected,
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort6, setSelectedSort6] = useState<Sort | null>(null);
+  const handleSelectedSort6Change = (selected: Sort) => {
+    setSelectedSort6(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        selected,
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort7, setSelectedSort7] = useState<Sort | null>(null);
+  const handleSelectedSort7Change = (selected: Sort) => {
+    setSelectedSort7(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        selected,
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort8, setSelectedSort8] = useState<Sort | null>(null);
+  const handleSelectedSort8Change = (selected: Sort) => {
+    setSelectedSort8(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        selected,
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort9, setSelectedSort9] = useState<Sort | null>(null);
+  const handleSelectedSort9Change = (selected: Sort) => {
+    setSelectedSort9(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        selected,
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort10, setSelectedSort10] = useState<Sort | null>(null);
+  const handleSelectedSort10Change = (selected: Sort) => {
+    setSelectedSort10(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        selected,
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort11, setSelectedSort11] = useState<Sort | null>(null);
+  const handleSelectedSort11Change = (selected: Sort) => {
+    setSelectedSort11(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        selected,
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort12, setSelectedSort12] = useState<Sort | null>(null);
+  const handleSelectedSort12Change = (selected: Sort) => {
+    setSelectedSort12(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        selected,
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort13, setSelectedSort13] = useState<Sort | null>(null);
+  const handleSelectedSort13Change = (selected: Sort) => {
+    setSelectedSort13(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        selected,
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
+  };
+
+  const [selectedSort14, setSelectedSort14] = useState<Sort | null>(null);
+  const handleSelectedSort14Change = (selected: Sort) => {
+    setSelectedSort14(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        selected,
+        prev.sorts[14],
+      ],
+    }));
+  };
+  const [selectedSort15, setSelectedSort15] = useState<Sort | null>(null);
+  const handleSelectedSort15Change = (selected: Sort) => {
+    setSelectedSort15(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        selected,
+      ],
+    }));
+  };
 
   //#endregion
 
   const handleClickSaveBuild = () => {
     setOpenModalStringBuild(true);
+    const AnneauxArray = [build.anneaux[0], build.anneaux[1], build.anneaux[2], build.anneaux[3]] as Anneau[];
     const compagnonsArray = [
       build.compagnons[0],
       build.compagnons[1],
       build.compagnons[2],
       build.compagnons[3],
     ] as Compagnon[];
-    const AnneauxArray = [build.anneaux[0], build.anneaux[1], build.anneaux[2], build.anneaux[3]] as Anneau[];
+    const SortsArray = [
+      build.sorts[1],
+      build.sorts[1],
+      build.sorts[2],
+      build.sorts[3],
+      build.sorts[4],
+      build.sorts[5],
+      build.sorts[6],
+      build.sorts[7],
+      build.sorts[8],
+      build.sorts[9],
+      build.sorts[10],
+      build.sorts[12],
+      build.sorts[13],
+      build.sorts[14],
+      build.sorts[15],
+    ] as Sort[];
     setBuild({
       arme: build.arme,
-      anneaux: AnneauxArray,
       brassard: build.brassard,
+      anneaux: AnneauxArray,
       compagnons: compagnonsArray,
-      sorts: [],
+      sorts: SortsArray,
     });
   };
 
@@ -177,7 +555,21 @@ const ImportedBuild = () => {
   const [openCompagnon4Modal, setOpenCompagnon4Modal] = useState(false);
   const [openBrassardModal, setOpenBrassardModal] = useState(false);
   const [openArmeModal, setOpenArmeModal] = useState(false);
-  const [openSortModal, setOpenSortModal] = useState(false);
+  const [openSortModal1, setOpenSort1Modal] = useState(false);
+  const [openSortModal2, setOpenSort2Modal] = useState(false);
+  const [openSortModal3, setOpenSort3Modal] = useState(false);
+  const [openSortModal4, setOpenSort4Modal] = useState(false);
+  const [openSortModal5, setOpenSort5Modal] = useState(false);
+  const [openSortModal6, setOpenSort6Modal] = useState(false);
+  const [openSortModal7, setOpenSort7Modal] = useState(false);
+  const [openSortModal8, setOpenSort8Modal] = useState(false);
+  const [openSortModal9, setOpenSort9Modal] = useState(false);
+  const [openSortModal10, setOpenSort10Modal] = useState(false);
+  const [openSortModal11, setOpenSort11Modal] = useState(false);
+  const [openSortModal12, setOpenSort12Modal] = useState(false);
+  const [openSortModal13, setOpenSort13Modal] = useState(false);
+  const [openSortModal14, setOpenSort14Modal] = useState(false);
+  const [openSortModal15, setOpenSort15Modal] = useState(false);
 
   const onOpenModalAnneau1 = () => setOpenAnneau1Modal(true);
   const onOpenModalAnneau2 = () => setOpenAnneau2Modal(true);
@@ -189,7 +581,21 @@ const ImportedBuild = () => {
   const onOpenModalCompagnon4 = () => setOpenCompagnon4Modal(true);
   const onOpenModalBrassard = () => setOpenBrassardModal(true);
   const onOpenModalArmes = () => setOpenArmeModal(true);
-  const onOpenModalSort = () => setOpenSortModal(true);
+  const onOpenModalSort1 = () => setOpenSort1Modal(true);
+  const onOpenModalSort2 = () => setOpenSort2Modal(true);
+  const onOpenModalSort3 = () => setOpenSort3Modal(true);
+  const onOpenModalSort4 = () => setOpenSort4Modal(true);
+  const onOpenModalSort5 = () => setOpenSort5Modal(true);
+  const onOpenModalSort6 = () => setOpenSort6Modal(true);
+  const onOpenModalSort7 = () => setOpenSort7Modal(true);
+  const onOpenModalSort8 = () => setOpenSort8Modal(true);
+  const onOpenModalSort9 = () => setOpenSort9Modal(true);
+  const onOpenModalSort10 = () => setOpenSort10Modal(true);
+  const onOpenModalSort11 = () => setOpenSort11Modal(true);
+  const onOpenModalSort12 = () => setOpenSort12Modal(true);
+  const onOpenModalSort13 = () => setOpenSort13Modal(true);
+  const onOpenModalSort14 = () => setOpenSort14Modal(true);
+  const onOpenModalSort15 = () => setOpenSort15Modal(true);
 
   const onCloseModalAnneau = () => {
     setOpenAnneau1Modal(false);
@@ -205,7 +611,23 @@ const ImportedBuild = () => {
     setOpenCompagnon4Modal(false);
   };
   const onCloseModalArme = () => setOpenArmeModal(false);
-  const onCloseModalSort = () => setOpenSortModal(false);
+  const onCloseModalSort = () => {
+    setOpenSort1Modal(false);
+    setOpenSort2Modal(false);
+    setOpenSort3Modal(false);
+    setOpenSort4Modal(false);
+    setOpenSort5Modal(false);
+    setOpenSort6Modal(false);
+    setOpenSort7Modal(false);
+    setOpenSort8Modal(false);
+    setOpenSort9Modal(false);
+    setOpenSort10Modal(false);
+    setOpenSort11Modal(false);
+    setOpenSort12Modal(false);
+    setOpenSort13Modal(false);
+    setOpenSort14Modal(false);
+    setOpenSort15Modal(false);
+  };
 
   const handleClickAnneau = () => {
     onCloseModalAnneau();
@@ -257,451 +679,827 @@ const ImportedBuild = () => {
 
   // USEEFFECTS
   useEffect(() => {
-    if (build.arme) {
-      const stringBuild = JSON.stringify(build);
-      const encrypted = AES.encrypt(stringBuild, buildKey).toString();
-      setEncryptedBuild(encrypted);
-    }
+    console.log(build);
+    const stringBuild = JSON.stringify(build);
+    const encrypted = AES.encrypt(stringBuild, buildKey).toString();
+    setEncryptedBuild(encrypted);
   }, [build]);
 
   return (
     <main className="h-screen">
-      {!build.arme ? (
-        <Modal
-          open={!!openModalImport}
-          onClose={closeModalImport}
-          center
-          closeOnOverlayClick={false}
-          showCloseIcon={false}
-          classNames={{
-            overlay: "customOverlay",
-            modal: "customModalImport",
-            root: "scrollbar-none",
-          }}>
-          <Link href="/" className="absolute top-2 left-4 invert z-10">
-            <Image width={50} height={50} src="/img/left-arrow.png" alt="long-arrow-left" className="z-10" />
-          </Link>
-          <ImportModal onClickButton={handleImportButtonClick} />
-        </Modal>
-      ) : (
-        <>
-          <Link href="/">
-            <Image
-              width={50}
-              height={50}
-              src="/img/left-arrow.png"
-              alt="long-arrow-left"
-              className="absolute top-2 left-20 invert"
-            />
-          </Link>
-          <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
-            <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
-              <div className="flex xl:flex-col xl:basis-1/6 px-4">
-                <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                  <p className={titleVariants}>Anneaux</p>
-                  <div className="flex xl:flex-col gap-2 ">
-                    <div className={squareVariants} onClick={onOpenModalAnneau1}>
-                      {build.anneaux[0] && (
-                        <Image
-                          src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
-                          width={200}
-                          height={200}
-                          alt={`${build.anneaux[0].nom}`}
-                        />
-                      )}
-                    </div>
-                    <div className={squareVariants} onClick={onOpenModalAnneau2}>
-                      {build.anneaux[1] && (
-                        <Image
-                          src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
-                          width={200}
-                          height={200}
-                          alt={`${build.anneaux[1].nom}`}
-                        />
-                      )}
-                    </div>
-                    <div className={squareVariants} onClick={onOpenModalAnneau3}>
-                      {build.anneaux[2] && (
-                        <Image
-                          src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
-                          width={200}
-                          height={200}
-                          alt={`${build.anneaux[2].nom}`}
-                        />
-                      )}
-                    </div>
-                    <div className={squareVariants} onClick={onOpenModalAnneau4}>
-                      {build.anneaux[3] && (
-                        <Image
-                          src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
-                          width={200}
-                          height={200}
-                          alt={`${build.anneaux[3].nom}`}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex xl:flex-col justify-between  xl:basis-1/6">
-                <div className="flex xl:flex-col">
-                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                    <p className={titleVariants}>Brassard</p>
-                    <div className={squareVariants} onClick={onOpenModalBrassard}>
-                      {selectedBrassard && (
-                        <Image
-                          src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
-                          width={200}
-                          height={200}
-                          alt={`${selectedBrassard.nom}`}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className="flex xl:flex-col">
-                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                    <p className={titleVariants}>Bientôt</p>
-                    <div className={squareVariants}></div>
-                  </div>
-                </div>
-                <div className="flex xl:flex-col ">
-                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                    <p className={titleVariants}>Bientôt</p>
-                    <div className={squareVariants}></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col xl:basis-2/6 px-4 ">
-                <div className="flex flex-col xl:h-full w-auto items-center gap-2">
-                  {build.arme ? (
-                    <>
+      <Modal
+        open={!!openModalImport}
+        onClose={closeModalImport}
+        center
+        closeOnOverlayClick={false}
+        showCloseIcon={false}
+        classNames={{
+          overlay: "customOverlay",
+          modal: "customModalImport",
+          root: "scrollbar-none",
+        }}>
+        <Link href="/" className="absolute top-2 left-4 invert z-10">
+          <Image width={50} height={50} src="/img/left-arrow.png" alt="long-arrow-left" className="z-10" />
+        </Link>
+        <ImportModal onClickButton={handleImportButtonClick} />
+      </Modal>
+      <>
+        <Link href="/">
+          <Image
+            width={50}
+            height={50}
+            src="/img/left-arrow.png"
+            alt="long-arrow-left"
+            className="absolute top-2 left-20 invert"
+          />
+        </Link>
+        <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
+          <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
+            <div className="flex xl:flex-col xl:basis-1/6 px-4">
+              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                <p className={titleVariants}>Anneaux</p>
+                <div className="flex xl:flex-col gap-2 ">
+                  <div className={squareVariants} onClick={onOpenModalAnneau1}>
+                    {build.anneaux[0] && (
                       <Image
-                        src={`${ARME_BASE_URL}/${build.arme.image}.png`}
-                        alt="classe"
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
                         width={200}
                         height={200}
-                        onClick={onOpenModalArmes}
-                        className="hover:cursor-pointer"
+                        alt={`${build.anneaux[0].nom}`}
                       />
-                      <p className="font-black text-3xl">{build.arme?.nom}</p>
-                      <div className="flex flex-wrap gap-2">
-                        <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                          <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
-                          <p>{build.arme.patchs[0].pv}</p>
-                        </div>
-                        <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                          <Image src="/img/utils/at.png" width={30} height={30} alt="pv" />
-                          <p>{build.arme.patchs[0].at}</p>
-                        </div>
-                        <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                          <Image src="/img/utils/cc.png" width={30} height={30} alt="pv" />
-                          <p>{build.arme.patchs[0].cc}</p>
-                        </div>
-                        <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                          <Image src="/img/utils/pm.png" width={30} height={30} alt="pv" />
-                          <p>{build.arme.patchs[0].pm}</p>
-                        </div>
-                      </div>
-                      <p className="text-center">{build.arme?.patchs[0].effet}</p>
-                      <div className="flex flex-row items-center gap-8 pt-12">
-                        <Hexagon content="(wip)" size={100} />
-                        <Hexagon content="(wip)" size={100} />
-                      </div>
-                    </>
-                  ) : (
-                    <Hexagon onClick={onOpenModalArmes} content="Choisis une classe" size={200} />
-                  )}
-                </div>
-              </div>
-              <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
-                <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
-                  <p className={titleVariants}>Compagnons</p>
-                  <div className="flex flex-row gap-4 justify-center">
-                    <div
-                      className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                        build.compagnons[0] ? companionSquareVariants : emptyCompanionVariants
-                      }`}
-                      onClick={onOpenModalCompagnon1}>
-                      {build.compagnons[0] && (
-                        <div className="flex items-center relative">
-                          <Image
-                            src={`/img/utils/cadre_${build.compagnons[0].rarete.toLowerCase()}.png`}
-                            alt={build.compagnons[0].nom}
-                            width={200}
-                            height={200}
-                            className="absolute"
-                          />
-                          <Image
-                            src={`${COMPAGNON_BASE_URL}/${build.compagnons[0].image}.png`}
-                            width={200}
-                            height={200}
-                            alt={build.compagnons[0].nom}
-                          />
-                        </div>
-                      )}
-                    </div>
-                    <div
-                      className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                        build.compagnons[1] ? companionSquareVariants : emptyCompanionVariants
-                      }`}
-                      onClick={onOpenModalCompagnon2}>
-                      {build.compagnons[1] && (
-                        <div className="flex items-center relative">
-                          <Image
-                            src={`/img/utils/cadre_${build.compagnons[1].rarete.toLowerCase()}.png`}
-                            alt={build.compagnons[1].nom}
-                            width={200}
-                            height={200}
-                            className="absolute"
-                          />
-                          <Image
-                            src={`${COMPAGNON_BASE_URL}/${build.compagnons[1].image}.png`}
-                            width={200}
-                            height={200}
-                            alt={build.compagnons[1].nom}
-                          />
-                        </div>
-                      )}
-                    </div>
-                    <div
-                      className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                        build.compagnons[2] ? companionSquareVariants : emptyCompanionVariants
-                      }`}
-                      onClick={onOpenModalCompagnon3}>
-                      {build.compagnons[2] && (
-                        <div className="flex items-center relative">
-                          <Image
-                            src={`/img/utils/cadre_${build.compagnons[2].rarete.toLowerCase()}.png`}
-                            alt={build.compagnons[2].nom}
-                            width={200}
-                            height={200}
-                            className="absolute"
-                          />
-                          <Image
-                            src={`${COMPAGNON_BASE_URL}/${build.compagnons[2].image}.png`}
-                            width={200}
-                            height={200}
-                            alt={build.compagnons[2].nom}
-                          />
-                        </div>
-                      )}
-                    </div>
-                    <div
-                      className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                        build.compagnons[3] ? companionSquareVariants : emptyCompanionVariants
-                      }`}
-                      onClick={onOpenModalCompagnon4}>
-                      {build.compagnons[3] && (
-                        <div className="flex items-center relative">
-                          <Image
-                            src={`/img/utils/cadre_${build.compagnons[3].rarete.toLowerCase()}.png`}
-                            alt={build.compagnons[3].nom}
-                            width={200}
-                            height={200}
-                            className="absolute"
-                          />
-                          <Image
-                            src={`${COMPAGNON_BASE_URL}/${build.compagnons[3].image}.png`}
-                            width={200}
-                            height={200}
-                            alt={build.compagnons[3].nom}
-                          />
-                        </div>
-                      )}
-                    </div>
+                    )}
+                  </div>
+                  <div className={squareVariants} onClick={onOpenModalAnneau2}>
+                    {build.anneaux[1] && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.anneaux[1].nom}`}
+                      />
+                    )}
+                  </div>
+                  <div className={squareVariants} onClick={onOpenModalAnneau3}>
+                    {build.anneaux[2] && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.anneaux[2].nom}`}
+                      />
+                    )}
+                  </div>
+                  <div className={squareVariants} onClick={onOpenModalAnneau4}>
+                    {build.anneaux[3] && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.anneaux[3].nom}`}
+                      />
+                    )}
                   </div>
                 </div>
-                <div className="flex flex-col gap-2 px-4 ">
-                  <p className={titleVariants}>Sorts</p>
-                  <div className="flex flex-wrap gap-2 max-w-96">
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
-                    <div className={spellSquareVariants}></div>
+              </div>
+            </div>
+            <div className="flex xl:flex-col justify-between  xl:basis-1/6">
+              <div className="flex xl:flex-col">
+                <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                  <p className={titleVariants}>Brassard</p>
+                  <div className={squareVariants} onClick={onOpenModalBrassard}>
+                    {build.brassard && (
+                      <Image
+                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.brassard.nom}`}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="flex xl:flex-col">
+                <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                  <p className={titleVariants}>Bientôt</p>
+                  <div className={squareVariants}></div>
+                </div>
+              </div>
+              <div className="flex xl:flex-col ">
+                <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                  <p className={titleVariants}>Bientôt</p>
+                  <div className={squareVariants}></div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col xl:basis-2/6 px-4 ">
+              <div className="flex flex-col xl:h-full w-auto items-center gap-2">
+                {build.arme ? (
+                  <>
+                    <Image
+                      src={`${ARME_BASE_URL}/${build.arme.image}.png`}
+                      alt="classe"
+                      width={200}
+                      height={200}
+                      onClick={onOpenModalArmes}
+                      className="hover:cursor-pointer"
+                    />
+                    <p className="font-black text-3xl">{build.arme?.nom}</p>
+                    <div className="flex flex-wrap gap-2">
+                      <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                        <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
+                        <p>{build.arme.patchs[0].pv}</p>
+                      </div>
+                      <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                        <Image src="/img/utils/at.png" width={30} height={30} alt="pv" />
+                        <p>{build.arme.patchs[0].at}</p>
+                      </div>
+                      <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                        <Image src="/img/utils/cc.png" width={30} height={30} alt="pv" />
+                        <p>{build.arme.patchs[0].cc}</p>
+                      </div>
+                      <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+                        <Image src="/img/utils/pm.png" width={30} height={30} alt="pv" />
+                        <p>{build.arme.patchs[0].pm}</p>
+                      </div>
+                    </div>
+                    <p className="text-center">{build.arme?.patchs[0].effet}</p>
+                    <div className="flex flex-row items-center gap-8 pt-12">
+                      <Hexagon content="(wip)" size={100} />
+                      <Hexagon content="(wip)" size={100} />
+                    </div>
+                  </>
+                ) : (
+                  <Image
+                    src="/img/hexagon-chose-arm.png"
+                    alt="choisis une arme"
+                    width={200}
+                    height={200}
+                    onClick={onOpenModalArmes}
+                    className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out"
+                  />
+                )}
+              </div>
+            </div>
+            <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
+              <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
+                <p className={titleVariants}>Compagnons</p>
+                <div className="flex flex-row gap-4 justify-center">
+                  <div
+                    className={`bg-contain h-28 w-28 hover:cursor-pointer ${
+                      build.compagnons[0] ? companionSquareVariants : emptyCompanionVariants
+                    }`}
+                    onClick={onOpenModalCompagnon1}>
+                    {build.compagnons[0] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`/img/utils/cadre_${build.compagnons[0].rarete.toLowerCase()}.png`}
+                          alt={build.compagnons[0].nom}
+                          width={200}
+                          height={200}
+                          className="absolute"
+                        />
+                        <Image
+                          src={`${COMPAGNON_BASE_URL}/${build.compagnons[0].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.compagnons[0].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={`bg-contain h-28 w-28 hover:cursor-pointer ${
+                      build.compagnons[1] ? companionSquareVariants : emptyCompanionVariants
+                    }`}
+                    onClick={onOpenModalCompagnon2}>
+                    {build.compagnons[1] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`/img/utils/cadre_${build.compagnons[1].rarete.toLowerCase()}.png`}
+                          alt={build.compagnons[1].nom}
+                          width={200}
+                          height={200}
+                          className="absolute"
+                        />
+                        <Image
+                          src={`${COMPAGNON_BASE_URL}/${build.compagnons[1].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.compagnons[1].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={`bg-contain h-28 w-28 hover:cursor-pointer ${
+                      build.compagnons[2] ? companionSquareVariants : emptyCompanionVariants
+                    }`}
+                    onClick={onOpenModalCompagnon3}>
+                    {build.compagnons[2] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`/img/utils/cadre_${build.compagnons[2].rarete.toLowerCase()}.png`}
+                          alt={build.compagnons[2].nom}
+                          width={200}
+                          height={200}
+                          className="absolute"
+                        />
+                        <Image
+                          src={`${COMPAGNON_BASE_URL}/${build.compagnons[2].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.compagnons[2].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={`bg-contain h-28 w-28 hover:cursor-pointer ${
+                      build.compagnons[3] ? companionSquareVariants : emptyCompanionVariants
+                    }`}
+                    onClick={onOpenModalCompagnon4}>
+                    {build.compagnons[3] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`/img/utils/cadre_${build.compagnons[3].rarete.toLowerCase()}.png`}
+                          alt={build.compagnons[3].nom}
+                          width={200}
+                          height={200}
+                          className="absolute"
+                        />
+                        <Image
+                          src={`${COMPAGNON_BASE_URL}/${build.compagnons[3].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.compagnons[3].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 px-4 ">
+                <p className={titleVariants}>Sorts</p>
+                <div className="flex flex-wrap gap-2 max-w-96">
+                  <div onClick={onOpenModalSort1} className={build.sorts[0] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[0] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[0].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[0].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort2} className={build.sorts[1] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[1] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[1].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[1].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort3} className={build.sorts[2] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[2] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[2].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[2].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort4} className={build.sorts[3] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[3] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[3].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[3].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort5} className={build.sorts[4] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[4] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[4].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[4].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort6} className={build.sorts[5] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[5] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[5].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[5].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort7} className={build.sorts[6] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[6] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[6].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[6].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort8} className={build.sorts[7] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[7] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[7].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[7].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort9} className={build.sorts[8] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[8] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[8].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[8].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort10} className={build.sorts[9] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[9] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[9].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[9].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort11} className={build.sorts[10] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[10] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[10].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[10].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort12} className={build.sorts[11] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[11] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[11].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[11].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort13} className={build.sorts[12] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[12] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[12].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[12].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort14} className={build.sorts[13] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[13] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[13].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[13].nom}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div onClick={onOpenModalSort15} className={build.sorts[14] ? `w-16 h-16` : spellSquareVariants}>
+                    {build.sorts[14] && (
+                      <div className="flex items-center relative">
+                        <Image
+                          src={`${SORT_BASE_URL}/${build.sorts[14].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={build.sorts[14].nom}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            onClick={handleClickSaveBuild}
-            className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center">
-            <p className="font-bold text-2xl ">Sauvegarder</p>
-            <ToastContainer
-              position="bottom-right"
-              autoClose={2000}
-              hideProgressBar={true}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss={false}
-              pauseOnHover={false}
-              theme="dark"
+        </div>
+        <div
+          onClick={handleClickSaveBuild}
+          className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center hover:cursor-pointer">
+          <p className="font-bold text-2xl ">Sauvegarder</p>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={2000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            pauseOnHover={false}
+            theme="dark"
+          />
+        </div>
+        <div>
+          <Modal
+            open={!!openModalStringBuild}
+            onClose={closeModalStringBuild}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModalImport",
+              root: "scrollbar-none",
+            }}>
+            <StringBuildDialog stringBuild={encryptedBuild} />
+          </Modal>
+          <Modal
+            open={openArmeModal}
+            onClose={onCloseModalArme}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <ArmesDialog onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
+          </Modal>
+          <Modal
+            open={openAnneau1Modal}
+            onClose={onCloseModalAnneau}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
+          </Modal>
+          <Modal
+            open={openAnneau2Modal}
+            onClose={onCloseModalAnneau}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
+          </Modal>
+          <Modal
+            open={openAnneau3Modal}
+            onClose={onCloseModalAnneau}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
+          </Modal>
+          <Modal
+            open={openAnneau4Modal}
+            onClose={onCloseModalAnneau}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
+          </Modal>
+          <Modal
+            open={openBrassardModal}
+            onClose={onCloseModalBrassard}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <BrassardsDialog
+              onClickBrassard={handleClickBrassard}
+              onSelectedBrassardChange={handleSelectedBrassardChange}
             />
-          </div>
-          <div>
-            <Modal
-              open={!!openModalStringBuild}
-              onClose={closeModalStringBuild}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModalImport",
-                root: "scrollbar-none",
-              }}>
-              <StringBuildDialog stringBuild={encryptedBuild} />
-            </Modal>
-            <Modal
-              open={openArmeModal}
-              onClose={onCloseModalArme}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <ArmesDialog onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
-            </Modal>
-            <Modal
-              open={openAnneau1Modal}
-              onClose={onCloseModalAnneau}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
-            </Modal>
-            <Modal
-              open={openAnneau2Modal}
-              onClose={onCloseModalAnneau}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
-            </Modal>
-            <Modal
-              open={openAnneau3Modal}
-              onClose={onCloseModalAnneau}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
-            </Modal>
-            <Modal
-              open={openAnneau4Modal}
-              onClose={onCloseModalAnneau}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
-            </Modal>
-            <Modal
-              open={openBrassardModal}
-              onClose={onCloseModalBrassard}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <BrassardsDialog
-                onClickBrassard={handleClickBrassard}
-                onSelectedBrassardChange={handleSelectedBrassardChange}
-              />
-            </Modal>
-            <Modal
-              open={openCompagnon1Modal}
-              onClose={onCloseModalCompagnon}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <CompagnonsDialog
-                onClickCompagnon={handleClickCompagnon}
-                onSelectedCompagnonChange={handleSelectedCompagnon1Change}
-              />
-            </Modal>
-            <Modal
-              open={openCompagnon2Modal}
-              onClose={onCloseModalCompagnon}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <CompagnonsDialog
-                onClickCompagnon={handleClickCompagnon}
-                onSelectedCompagnonChange={handleSelectedCompagnon2Change}
-              />
-            </Modal>
-            <Modal
-              open={openCompagnon3Modal}
-              onClose={onCloseModalCompagnon}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <CompagnonsDialog
-                onClickCompagnon={handleClickCompagnon}
-                onSelectedCompagnonChange={handleSelectedCompagnon3Change}
-              />
-            </Modal>
-            <Modal
-              open={openCompagnon4Modal}
-              onClose={onCloseModalCompagnon}
-              center
-              showCloseIcon={false}
-              classNames={{
-                overlay: "customOverlay",
-                modal: "customModal",
-                root: "scrollbar-none",
-              }}>
-              <CompagnonsDialog
-                onClickCompagnon={handleClickCompagnon}
-                onSelectedCompagnonChange={handleSelectedCompagnon4Change}
-              />
-            </Modal>
-          </div>
-        </>
-      )}
+          </Modal>
+          <Modal
+            open={openCompagnon1Modal}
+            onClose={onCloseModalCompagnon}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <CompagnonsDialog
+              onClickCompagnon={handleClickCompagnon}
+              onSelectedCompagnonChange={handleSelectedCompagnon1Change}
+            />
+          </Modal>
+          <Modal
+            open={openCompagnon2Modal}
+            onClose={onCloseModalCompagnon}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <CompagnonsDialog
+              onClickCompagnon={handleClickCompagnon}
+              onSelectedCompagnonChange={handleSelectedCompagnon2Change}
+            />
+          </Modal>
+          <Modal
+            open={openCompagnon3Modal}
+            onClose={onCloseModalCompagnon}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <CompagnonsDialog
+              onClickCompagnon={handleClickCompagnon}
+              onSelectedCompagnonChange={handleSelectedCompagnon3Change}
+            />
+          </Modal>
+          <Modal
+            open={openCompagnon4Modal}
+            onClose={onCloseModalCompagnon}
+            center
+            showCloseIcon={false}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <CompagnonsDialog
+              onClickCompagnon={handleClickCompagnon}
+              onSelectedCompagnonChange={handleSelectedCompagnon4Change}
+            />
+          </Modal>
+          <Modal
+            open={openSortModal1}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort1Change} />
+          </Modal>
+          <Modal
+            open={openSortModal2}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort2Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal3}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort3Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal4}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort4Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal5}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort5Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal6}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort6Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal7}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort7Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal8}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort8Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal9}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort9Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal10}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort10Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal11}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort11Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal12}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort12Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal13}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort13Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal14}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort14Change} />
+          </Modal>
+
+          <Modal
+            open={openSortModal15}
+            onClose={onCloseModalSort}
+            center
+            closeOnOverlayClick={false}
+            showCloseIcon={true}
+            classNames={{
+              overlay: "customOverlay",
+              modal: "customModal",
+              root: "scrollbar-none",
+            }}>
+            <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort15Change} />
+          </Modal>
+        </div>
+      </>
     </main>
   );
 };

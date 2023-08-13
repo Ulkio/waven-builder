@@ -14110,7 +14110,7 @@
         "source": "Joueur",
         "dieu": "iop",
         "arme": "Bouvaloir Orok",
-        "image": "fievre.png",
+        "image": "fievre",
         "patchs": [
           {
             "version": "0.11",
@@ -16004,7 +16004,7 @@
         "dieu": "Eniripsa",
         "source": "Joueur",
         "arme": "Pinceau Kokoro",
-        "image": "kokoro_brule",
+        "image": "kokoro_brulant",
         "patchs": [
           {
             "version": "0.11",
@@ -16734,41 +16734,6 @@
         "gains": {
           "feu": 1,
           "neutre": 1
-        }
-      },
-      {
-        "nom": "Sourokan a des yeux",
-        "element": "Eau",
-        "dieu": "Sram",
-        "source": "Joueur",
-        "arme": "Surin Sourokan",
-        "image": "sourokan_a_des_yeux",
-        "patchs": [
-          {
-            "version": "0.11",
-            "cout": 5,
-            "effet": "Inflige 25 dégâts magique.\nMACHINATION : -1 point d'action au coût du prochain sort que vous jouez."
-          }
-        ],
-        "dons": [
-          {
-            "nom": "EFFET AMELIORE",
-            "cout": 120,
-            "effet": "+30% aux DÉGÂTS de ce sort."
-          },
-          {
-            "nom": "EFFET CRITIQUE",
-            "cout": 80,
-            "effet": "CRITIQUE : -1 PA au coût de votre prochain sort."
-          },
-          {
-            "nom": "Bonus Coup Critique",
-            "cout": 50,
-            "effet": "+15% de COUP CRITIQUE de ce sort."
-          }
-        ],
-        "gains": {
-          "air": 2
         }
       },
       {
@@ -17977,7 +17942,7 @@
         "source": "Joueur",
         "dieu": "Crâ",
         "arme": "Shiru Shaden",
-        "image": "aller_retour_shaden",
+        "image": "aller-retour_shaden",
         "patchs": [
           {
             "version": "0.11",

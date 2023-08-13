@@ -37,7 +37,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   });
   return (
     <div className="flex  h-full ">
-      <div className="flex flex-col  gap-8 basis-1/2  py-4 overflow-y-auto">
+      <div className="flex flex-col  gap-8 basis-1/2 overflow-y-auto">
         <h2 className="text-center font-extrabold text-3xl">Compagnons</h2>
         <div className="flex flex-wrap gap-2 justify-center">
           {sortedCompagnonsRarity.map((compagnon) => {
@@ -127,7 +127,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           )}
         </div>
 
-        <div className="flex flex-wrap px-4 xl:px-0 w-full justify-center gap-4 overflow-y-scroll xl:overflow-y-none pt-8 h-auto">
+        <div className="flex flex-wrap px-4 xl:px-0 w-full xl:justify-center gap-4 overflow-y-scroll xl:overflow-y-visible  pt-8 h-full">
           {displayedCompagnon && (
             <>
               {displayedCompagnon.patchs[0].dons.map((don: DonCompagnons, key) => {
