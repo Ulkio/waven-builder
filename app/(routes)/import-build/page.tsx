@@ -536,7 +536,6 @@ const ImportedBuild = () => {
     const decryptedBytes = AES.decrypt(build, buildKey);
     const decryptedJsonString = decryptedBytes.toString(enc.Utf8);
     const JSONBuild = JSON.parse(decryptedJsonString);
-    console.log(JSONBuild);
     setBuild(JSONBuild);
     closeModalImport();
   };
@@ -680,7 +679,6 @@ const ImportedBuild = () => {
 
   // USEEFFECTS
   useEffect(() => {
-    console.log(build);
     const stringBuild = JSON.stringify(build);
     const encrypted = AES.encrypt(stringBuild, buildKey).toString();
     setEncryptedBuild(encrypted);
