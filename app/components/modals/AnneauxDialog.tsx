@@ -94,14 +94,14 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
           )}
         </div>
 
-        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8 h-auto">
+        <div className="flex flex-col px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4 overflow-y-scroll xl:pt-8 h-auto">
           {displayedAnneau && (
             <>
               {displayedAnneau.patchs[0].dons.map((don: DonAnneaux, key) => {
                 return (
                   <div
                     key={key + don.effet}
-                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
+                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-sm text-center">{don.effet}</p>
                     <div className="flex justify-center ">

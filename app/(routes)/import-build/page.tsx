@@ -39,7 +39,7 @@ const ImportedBuild = () => {
   const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white`;
   const emptyCompanionVariants = `bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
@@ -265,7 +265,7 @@ const ImportedBuild = () => {
   }, [build]);
 
   return (
-    <main className="h-screen w-screen">
+    <main className="h-screen">
       {!build.arme ? (
         <Modal
           open={!!openModalImport}
@@ -343,25 +343,29 @@ const ImportedBuild = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex xl:flex-col justify-between">
-                <div className="flex xl:flex-col xl:basis-1/6  h-full w-full ">
-                  <div className="flex flex-col xl:h-full  justify-center  items-center w-full">
+              <div className="flex xl:flex-col justify-between  xl:basis-1/6">
+                <div className="flex xl:flex-col">
+                  <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                     <p className={titleVariants}>Brassard</p>
                     <div className={squareVariants} onClick={onOpenModalBrassard}>
-                      {build.brassard && (
+                      {selectedBrassard && (
                         <Image
-                          src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                          src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
                           width={200}
                           height={200}
-                          alt={`${build.brassard.nom}`}
+                          alt={`${selectedBrassard.nom}`}
                         />
                       )}
                     </div>
                   </div>
+                </div>
+                <div className="flex xl:flex-col">
                   <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                     <p className={titleVariants}>Bientôt</p>
                     <div className={squareVariants}></div>
                   </div>
+                </div>
+                <div className="flex xl:flex-col ">
                   <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                     <p className={titleVariants}>Bientôt</p>
                     <div className={squareVariants}></div>
@@ -413,7 +417,7 @@ const ImportedBuild = () => {
               <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
                 <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
                   <p className={titleVariants}>Compagnons</p>
-                  <div className="flex flex-row gap-4">
+                  <div className="flex flex-row gap-4 justify-center">
                     <div
                       className={`bg-contain h-28 w-28 hover:cursor-pointer ${
                         build.compagnons[0] ? companionSquareVariants : emptyCompanionVariants
@@ -531,8 +535,10 @@ const ImportedBuild = () => {
               </div>
             </div>
           </div>
-          <div onClick={handleClickSaveBuild} className="xl:absolute xl:right-0 xl:bottom-0 py-4 xl:p-8">
-            <p className="font-bold text-2xl">Sauvegarder</p>
+          <div
+            onClick={handleClickSaveBuild}
+            className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center">
+            <p className="font-bold text-2xl ">Sauvegarder</p>
             <ToastContainer
               position="bottom-right"
               autoClose={2000}

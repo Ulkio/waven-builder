@@ -19,8 +19,12 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/background.jpg");
+  @apply text-white;
 }
 
 *::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+}
+* {
+  /* border: dotted 1px white; */
 }

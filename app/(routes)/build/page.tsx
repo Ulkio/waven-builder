@@ -41,7 +41,7 @@ const Build = () => {
   const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white`;
   const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
@@ -254,9 +254,9 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-between">
-            <div className="flex xl:flex-col xl:basis-1/6  h-full w-full ">
-              <div className="flex flex-col xl:h-full  justify-center  items-center w-full">
+          <div className="flex xl:flex-col justify-between  xl:basis-1/6">
+            <div className="flex xl:flex-col">
+              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
                 <div className={squareVariants} onClick={onOpenModalBrassard}>
                   {selectedBrassard && (
@@ -270,13 +270,17 @@ const Build = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-              <p className={titleVariants}>Bientôt</p>
-              <div className={squareVariants}></div>
+            <div className="flex xl:flex-col">
+              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                <p className={titleVariants}>Bientôt</p>
+                <div className={squareVariants}></div>
+              </div>
             </div>
-            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-              <p className={titleVariants}>Bientôt</p>
-              <div className={squareVariants}></div>
+            <div className="flex xl:flex-col ">
+              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+                <p className={titleVariants}>Bientôt</p>
+                <div className={squareVariants}></div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 px-4 ">
@@ -443,8 +447,10 @@ const Build = () => {
         </div>
       </div>
 
-      <div onClick={handleClickSaveBuild} className="xl:absolute xl:right-0 xl:bottom-0 py-4  xl:p-8">
-        <p className="font-bold text-2xl">Sauvegarder</p>
+      <div
+        onClick={handleClickSaveBuild}
+        className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center">
+        <p className="font-bold text-2xl ">Sauvegarder</p>
         <ToastContainer
           position="bottom-right"
           autoClose={2000}
@@ -457,9 +463,9 @@ const Build = () => {
           theme="dark"
         />
       </div>
-      <div className="xl:absolute xl:left-0 xl:bottom-0 p-8">
+      <div className="mt-4 xl:absolute xl:left-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center">
         <Link href="import-build">
-          <p className="font-bold text-2xl">Importer</p>
+          <p className="font-bold text-2xl ">Importer</p>
         </Link>
       </div>
       <div>

@@ -95,7 +95,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
               </div>
               <p className="font-black text-2xl">{displayedCompagnon.nom}</p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
                   <Image src="/img/utils/pv.png" width={25} height={25} alt="pv" />
                   <p className="font-bold">{displayedCompagnon.patchs[0].pv}</p>
@@ -127,14 +127,14 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           )}
         </div>
 
-        <div className="flex flex-wrap w-full justify-center gap-4 overflow-y-scroll pt-8 h-auto">
+        <div className="flex flex-wrap px-4 xl:px-0 w-full justify-center gap-4 overflow-y-scroll xl:overflow-y-none pt-8 h-auto">
           {displayedCompagnon && (
             <>
               {displayedCompagnon.patchs[0].dons.map((don: DonCompagnons, key) => {
                 return (
                   <div
                     key={key}
-                    className="bg-attribute rounded-lg py-2 w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
+                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
                     <p className="text-sm text-center">{don.effet}</p>
                     <div className="flex justify-center ">

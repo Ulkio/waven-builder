@@ -16,7 +16,7 @@ const StringBuildDialog = ({ stringBuild }: StringBuildDialogProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-evenly h-full gap-4 py-8 px-32">
+    <div className="flex flex-col items-center justify-evenly h-full gap-4 p-8 xl:px-32">
       <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
         Copiez cette suite de caractères pour partager votre build :
       </p>
