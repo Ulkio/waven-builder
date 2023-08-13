@@ -12,7 +12,8 @@ import ArmesDialog from "@/components/modals/ArmesDialog";
 import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Compagnons, Sorts, Armes, Anneaux } from "@/types";
 import { AES, enc } from "crypto-js";
 import ImportModal from "@/components/modals/ImportDialog";
-
+import { Tooltip } from "react-tooltip";
+import "../../styles/tooltip.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
@@ -719,45 +720,58 @@ const ImportedBuild = () => {
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Anneaux</p>
                 <div className="flex xl:flex-col gap-2 ">
-                  <div className={squareVariants} onClick={onOpenModalAnneau1}>
-                    {build.anneaux[0] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[0].nom}`}
-                      />
-                    )}
+                  <div className="flex flex-col ">
+                    <div className={squareVariants} onClick={onOpenModalAnneau1}>
+                      {build.anneaux[0] && (
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={`${build.anneaux[0].nom}`}
+                        />
+                      )}
+                    </div>
+                    <p className="text-center">{build.anneaux[0]?.nom}</p>
                   </div>
-                  <div className={squareVariants} onClick={onOpenModalAnneau2}>
-                    {build.anneaux[1] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[1].nom}`}
-                      />
-                    )}
+                  <div className="flex flex-col ">
+                    <div className={squareVariants} onClick={onOpenModalAnneau2}>
+                      {build.anneaux[1] && (
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={`${build.anneaux[1].nom}`}
+                        />
+                      )}
+                    </div>
+
+                    <p className="text-center">{build.anneaux[1]?.nom}</p>
                   </div>
-                  <div className={squareVariants} onClick={onOpenModalAnneau3}>
-                    {build.anneaux[2] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[2].nom}`}
-                      />
-                    )}
+                  <div className="flex flex-col ">
+                    <div className={squareVariants} onClick={onOpenModalAnneau3}>
+                      {build.anneaux[2] && (
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={`${build.anneaux[2].nom}`}
+                        />
+                      )}
+                    </div>
+                    <p className="text-center">{build.anneaux[2]?.nom}</p>
                   </div>
-                  <div className={squareVariants} onClick={onOpenModalAnneau4}>
-                    {build.anneaux[3] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[3].nom}`}
-                      />
-                    )}
+                  <div className="flex flex-col ">
+                    <div className={squareVariants} onClick={onOpenModalAnneau4}>
+                      {build.anneaux[3] && (
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
+                          width={200}
+                          height={200}
+                          alt={`${build.anneaux[3].nom}`}
+                        />
+                      )}
+                      <p className="text-center">{build.anneaux[3]?.nom}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -766,15 +780,18 @@ const ImportedBuild = () => {
               <div className="flex xl:flex-col">
                 <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                   <p className={titleVariants}>Brassard</p>
-                  <div className={squareVariants} onClick={onOpenModalBrassard}>
-                    {build.brassard && (
-                      <Image
-                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.brassard.nom}`}
-                      />
-                    )}
+                  <div className="flex flex-col ">
+                    <div className={squareVariants} onClick={onOpenModalBrassard}>
+                      {build.brassard && (
+                        <Image
+                          src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                          width={200}
+                          height={200}
+                          alt={`${build.brassard.nom}`}
+                        />
+                      )}
+                      <p className="text-center">{build.brassard?.nom}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -866,6 +883,7 @@ const ImportedBuild = () => {
                         />
                       </div>
                     )}
+                    <p className="text-center">{build.compagnons[0]?.nom}</p>
                   </div>
                   <div
                     className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -889,6 +907,7 @@ const ImportedBuild = () => {
                         />
                       </div>
                     )}
+                    <p className="text-center">{build.compagnons[1]?.nom}</p>
                   </div>
                   <div
                     className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -912,6 +931,7 @@ const ImportedBuild = () => {
                         />
                       </div>
                     )}
+                    <p className="text-center">{build.compagnons[2]?.nom}</p>
                   </div>
                   <div
                     className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -935,6 +955,7 @@ const ImportedBuild = () => {
                         />
                       </div>
                     )}
+                    <p className="text-center">{build.compagnons[3]?.nom}</p>
                   </div>
                 </div>
               </div>
@@ -943,181 +964,256 @@ const ImportedBuild = () => {
                 <div className="flex flex-wrap gap-2 max-w-96">
                   <div onClick={onOpenModalSort1} className={build.sorts[0] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[0] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-1"
+                        data-tooltip-content={`${build.sorts[0].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[0].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[0].nom}
                         />
+                        <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort2} className={build.sorts[1] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[1] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-2"
+                        data-tooltip-content={`${build.sorts[1].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[1].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[1].nom}
                         />
+                        <Tooltip id="tooltip-sort-2" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort3} className={build.sorts[2] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[2] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-3"
+                        data-tooltip-content={`${build.sorts[2].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[2].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[2].nom}
                         />
+                        <Tooltip id="tooltip-sort-3" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort4} className={build.sorts[3] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[3] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-4"
+                        data-tooltip-content={`${build.sorts[3].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[3].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[3].nom}
                         />
+                        <Tooltip id="tooltip-sort-4" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort5} className={build.sorts[4] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[4] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-5"
+                        data-tooltip-content={`${build.sorts[4].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[4].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[4].nom}
                         />
+                        <Tooltip id="tooltip-sort-5" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort6} className={build.sorts[5] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[5] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-6"
+                        data-tooltip-content={`${build.sorts[5].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[5].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[5].nom}
                         />
+                        <Tooltip id="tooltip-sort-6" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort7} className={build.sorts[6] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[6] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-7"
+                        data-tooltip-content={`${build.sorts[6].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[6].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[6].nom}
                         />
+                        <Tooltip id="tooltip-sort-7" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort8} className={build.sorts[7] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[7] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-8"
+                        data-tooltip-content={`${build.sorts[7].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[7].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[7].nom}
                         />
+                        <Tooltip id="tooltip-sort-8" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort9} className={build.sorts[8] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[8] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-9"
+                        data-tooltip-content={`${build.sorts[8].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[8].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[8].nom}
                         />
+                        <Tooltip id="tooltip-sort-9" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort10} className={build.sorts[9] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[9] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-10"
+                        data-tooltip-content={`${build.sorts[9].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[9].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[9].nom}
                         />
+                        <Tooltip id="tooltip-sort-10" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort11} className={build.sorts[10] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[10] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-11"
+                        data-tooltip-content={`${build.sorts[10].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[10].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[10].nom}
                         />
+                        <Tooltip id="tooltip-sort-11" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort12} className={build.sorts[11] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[11] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-12"
+                        data-tooltip-content={`${build.sorts[11].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[11].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[11].nom}
                         />
+                        <Tooltip id="tooltip-sort-12" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort13} className={build.sorts[12] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[12] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-13"
+                        data-tooltip-content={`${build.sorts[12].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[12].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[12].nom}
                         />
+                        <Tooltip id="tooltip-sort-13" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort14} className={build.sorts[13] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[13] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-14"
+                        data-tooltip-content={`${build.sorts[13].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[13].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[13].nom}
                         />
+                        <Tooltip id="tooltip-sort-14" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>
                   <div onClick={onOpenModalSort15} className={build.sorts[14] ? `w-16 h-16` : spellSquareVariants}>
                     {build.sorts[14] && (
-                      <div className="flex items-center relative">
+                      <div
+                        data-tooltip-id="tooltip-sort-15"
+                        data-tooltip-content={`${build.sorts[14].nom}`}
+                        data-tooltip-place="bottom"
+                        className="flex items-center relative">
                         <Image
                           src={`${SORT_BASE_URL}/${build.sorts[14].image}.png`}
                           width={200}
                           height={200}
                           alt={build.sorts[14].nom}
                         />
+                        <Tooltip id="tooltip-sort-15" className="tooltip z-10 " />
                       </div>
                     )}
                   </div>

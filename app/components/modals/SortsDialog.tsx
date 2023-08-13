@@ -76,7 +76,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort }: SortsDialogProps) =>
                   <div
                     key={don.nom + key}
                     className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
-                    <p className="text-md text-center  font-black">{don.nom}</p>
+                    <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-md text-center">{don.effet}</p>
                     <div className="flex justify-center ">
                       <Image src="/img/utils/rune_de_sort.png" width={20} height={20} alt="cout_rune" />

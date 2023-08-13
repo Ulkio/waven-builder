@@ -17,16 +17,16 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
       data-tooltip-id="my-tooltip"
       data-tooltip-content={`${arme.patchs[0].effet}`}
       data-tooltip-place="bottom"
-      className="flex flex-col justify-center items-center w-32 h-32 "
+      className="flex flex-col justify-center items-center p-2 "
       key={arme.nom}>
       <Image
         onMouseEnter={onMouseEnter}
         onClick={onClick}
         src={`${ARME_BASE_URL}/${arme.image}.png`}
         alt={arme.nom}
-        width={50}
-        height={50}
-        className="hover:cursor-pointer w-auto"
+        width={100}
+        height={100}
+        className="hover:cursor-pointer "
       />
       <Tooltip id="my-tooltip" className="tooltip" />
       <p className="text-sm text-center font-bold ">{arme.nom}</p>

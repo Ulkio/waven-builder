@@ -17,7 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 import StringBuildDialog from "@/components/modals/StringBuildDialog";
 import Link from "next/link";
 import SortsDialog from "@/components/modals/SortsDialog";
-
+import { Tooltip } from "react-tooltip";
+import "../../styles/tooltip.css";
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
   // Sorts modal
@@ -349,46 +350,58 @@ const Build = () => {
           <div className="flex xl:flex-col xl:basis-1/6 px-4">
             <div className="flex flex-col xl:h-full justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex xl:flex-col gap-2 ">
-                <div className={squareVariants} onClick={onOpenModalAnneau1}>
-                  {selectedAnneau1 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau1.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau1.nom}`}
-                    />
-                  )}
+              <div className="flex  xl:flex-col gap-2">
+                <div className="flex flex-col ">
+                  <div className={squareVariants} onClick={onOpenModalAnneau1}>
+                    {selectedAnneau1 && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${selectedAnneau1.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${selectedAnneau1.nom}`}
+                      />
+                    )}
+                  </div>
+                  <p className="text-center">{selectedAnneau1?.nom}</p>
                 </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau2}>
-                  {selectedAnneau2 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau2.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau2.nom}`}
-                    />
-                  )}
+                <div className="flex flex-col ">
+                  <div className={squareVariants} onClick={onOpenModalAnneau2}>
+                    {selectedAnneau2 && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${selectedAnneau2.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${selectedAnneau2.nom}`}
+                      />
+                    )}
+                  </div>
+                  <p className="text-center">{selectedAnneau2?.nom}</p>
                 </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau3}>
-                  {selectedAnneau3 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau3.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau3.nom}`}
-                    />
-                  )}
+                <div className="flex flex-col ">
+                  <div className={squareVariants} onClick={onOpenModalAnneau3}>
+                    {selectedAnneau3 && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${selectedAnneau3.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${selectedAnneau3.nom}`}
+                      />
+                    )}
+                  </div>
+                  <p className="text-center">{selectedAnneau3?.nom}</p>
                 </div>
-                <div className={squareVariants} onClick={onOpenModalAnneau4}>
-                  {selectedAnneau4 && (
-                    <Image
-                      src={`${ANNEAU_BASE_URL}/${selectedAnneau4.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedAnneau4.nom}`}
-                    />
-                  )}
+                <div className="flex flex-col ">
+                  <div className={squareVariants} onClick={onOpenModalAnneau4}>
+                    {selectedAnneau4 && (
+                      <Image
+                        src={`${ANNEAU_BASE_URL}/${selectedAnneau4.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${selectedAnneau4.nom}`}
+                      />
+                    )}
+                  </div>
+                  <p className="text-center">{selectedAnneau4?.nom}</p>
                 </div>
               </div>
             </div>
@@ -397,15 +410,18 @@ const Build = () => {
             <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
-                <div className={squareVariants} onClick={onOpenModalBrassard}>
-                  {selectedBrassard && (
-                    <Image
-                      src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
-                      width={200}
-                      height={200}
-                      alt={`${selectedBrassard.nom}`}
-                    />
-                  )}
+                <div className="flex flex-col ">
+                  <div className={squareVariants} onClick={onOpenModalBrassard}>
+                    {selectedBrassard && (
+                      <Image
+                        src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${selectedBrassard.nom}`}
+                      />
+                    )}
+                    <p className="text-center">{selectedBrassard?.nom}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -465,6 +481,7 @@ const Build = () => {
                   alt="choisis une arme"
                   width={200}
                   height={200}
+                  loading="eager"
                   onClick={onOpenModalArmes}
                   className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out"
                 />
@@ -497,6 +514,7 @@ const Build = () => {
                       />
                     </div>
                   )}
+                  <p className="text-center">{selectedCompagnon1?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -520,6 +538,7 @@ const Build = () => {
                       />
                     </div>
                   )}
+                  <p className="text-center">{selectedCompagnon2?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -543,6 +562,7 @@ const Build = () => {
                       />
                     </div>
                   )}
+                  <p className="text-center">{selectedCompagnon3?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
@@ -566,6 +586,7 @@ const Build = () => {
                       />
                     </div>
                   )}
+                  <p className="text-center">{selectedCompagnon4?.nom}</p>
                 </div>
               </div>
             </div>
@@ -574,181 +595,256 @@ const Build = () => {
               <div className="flex flex-wrap gap-2 max-w-96">
                 <div onClick={onOpenModalSort1} className={selectedSort1 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort1 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-1"
+                      data-tooltip-content={`${selectedSort1.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort1.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort1.nom}
                       />
+                      <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort2} className={selectedSort2 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort2 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-2"
+                      data-tooltip-content={`${selectedSort2.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort2.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort2.nom}
                       />
+                      <Tooltip id="tooltip-sort-2" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort3} className={selectedSort3 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort3 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-1"
+                      data-tooltip-content={`${selectedSort3.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort3.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort3.nom}
                       />
+                      <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort4} className={selectedSort4 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort4 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-4"
+                      data-tooltip-content={`${selectedSort4.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort4.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort4.nom}
                       />
+                      <Tooltip id="tooltip-sort-4" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort5} className={selectedSort5 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort5 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-5"
+                      data-tooltip-content={`${selectedSort5.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort5.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort5.nom}
                       />
+                      <Tooltip id="tooltip-sort-5" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort6} className={selectedSort6 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort6 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-6"
+                      data-tooltip-content={`${selectedSort6.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort6.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort6.nom}
                       />
+                      <Tooltip id="tooltip-sort-6" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort7} className={selectedSort7 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort7 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-7"
+                      data-tooltip-content={`${selectedSort7.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort7.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort7.nom}
                       />
+                      <Tooltip id="tooltip-sort-7" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort8} className={selectedSort8 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort8 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-8"
+                      data-tooltip-content={`${selectedSort8.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort8.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort8.nom}
                       />
+                      <Tooltip id="tooltip-sort-8" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort9} className={selectedSort9 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort9 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-9"
+                      data-tooltip-content={`${selectedSort9.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort9.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort9.nom}
                       />
+                      <Tooltip id="tooltip-sort-9" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort10} className={selectedSort10 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort10 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-10"
+                      data-tooltip-content={`${selectedSort10.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort10.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort10.nom}
                       />
+                      <Tooltip id="tooltip-sort-10" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort11} className={selectedSort11 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort11 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-11"
+                      data-tooltip-content={`${selectedSort11.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort11.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort11.nom}
                       />
+                      <Tooltip id="tooltip-sort-11" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort12} className={selectedSort12 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort12 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-12"
+                      data-tooltip-content={`${selectedSort12.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort12.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort12.nom}
                       />
+                      <Tooltip id="tooltip-sort-12" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort13} className={selectedSort13 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort13 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-13"
+                      data-tooltip-content={`${selectedSort13.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort13.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort13.nom}
                       />
+                      <Tooltip id="tooltip-sort-13" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort14} className={selectedSort14 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort14 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-14"
+                      data-tooltip-content={`${selectedSort14.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort14.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort14.nom}
                       />
+                      <Tooltip id="tooltip-sort-14" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
                 <div onClick={onOpenModalSort15} className={selectedSort15 ? `w-16 h-16` : spellSquareVariants}>
                   {selectedSort15 && (
-                    <div className="flex items-center relative">
+                    <div
+                      data-tooltip-id="tooltip-sort-15"
+                      data-tooltip-content={`${selectedSort15.nom}`}
+                      data-tooltip-place="bottom"
+                      className="flex items-center relative">
                       <Image
                         src={`${SORT_BASE_URL}/${selectedSort15.image}.png`}
                         width={200}
                         height={200}
                         alt={selectedSort15.nom}
                       />
+                      <Tooltip id="tooltip-sort-15" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
