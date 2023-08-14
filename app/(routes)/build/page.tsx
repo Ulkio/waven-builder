@@ -555,21 +555,6 @@ const Build = () => {
     onCloseModalCompagnon();
   };
   const handleClickArme = () => {
-    setSelectedSort1(null);
-    setSelectedSort2(null);
-    setSelectedSort3(null);
-    setSelectedSort4(null);
-    setSelectedSort5(null);
-    setSelectedSort6(null);
-    setSelectedSort7(null);
-    setSelectedSort8(null);
-    setSelectedSort9(null);
-    setSelectedSort10(null);
-    setSelectedSort11(null);
-    setSelectedSort12(null);
-    setSelectedSort13(null);
-    setSelectedSort14(null);
-    setSelectedSort15(null);
     if (isTabletOrMobile) return;
     onCloseModalArme();
   };
@@ -664,7 +649,7 @@ const Build = () => {
   };
 
   return (
-    <main className="h-screen flex flex-col justify-between gap-12 ">
+    <main className="h-full w-screen xl:h-screen flex flex-col justify-between gap-6 ">
       {build.arme && (
         <motion.div
           key={build.arme.nom}
@@ -687,15 +672,15 @@ const Build = () => {
         />
       </Link>
 
-      <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
+      <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
           <div className="flex xl:flex-col xl:basis-1/6 px-4">
             <div className="flex flex-col xl:h-full justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex  xl:flex-col ">
+              <div className="flex gap-4 xl:gap-0  xl:flex-col ">
                 <div className="flex flex-col ">
                   <div
-                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    className={`flex items-center justify-center relative ${!build.anneaux[0] && squareVariants}`}
                     onClick={onOpenModalAnneau1}>
                     {!build.anneaux[0] && (
                       <Image
@@ -708,19 +693,29 @@ const Build = () => {
                     )}
 
                     {build.anneaux[0] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[0].nom}`}
-                      />
+                      <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+                        <Image
+                          src={`/img/utils/bg_${build.anneaux[0].rarete.toLowerCase()}.png`}
+                          alt={build.anneaux[0].nom}
+                          width={150}
+                          height={150}
+                          className="absolute hover:cursor-pointer"
+                        />
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
+                          alt={build.anneaux[0].nom}
+                          width={150}
+                          height={150}
+                          className="hover:cursor-pointer z-10"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="text-center py-2">{build.anneaux[0]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div
-                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    className={`flex items-center justify-center relative ${!build.anneaux[1] && squareVariants}`}
                     onClick={onOpenModalAnneau2}>
                     {!build.anneaux[1] && (
                       <Image
@@ -733,19 +728,29 @@ const Build = () => {
                     )}
 
                     {build.anneaux[1] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[1].nom}`}
-                      />
+                      <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+                        <Image
+                          src={`/img/utils/bg_${build.anneaux[1].rarete.toLowerCase()}.png`}
+                          alt={build.anneaux[1].nom}
+                          width={150}
+                          height={150}
+                          className="absolute hover:cursor-pointer"
+                        />
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
+                          alt={build.anneaux[1].nom}
+                          width={150}
+                          height={150}
+                          className="hover:cursor-pointer z-10"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="text-center py-2">{build.anneaux[1]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div
-                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    className={`flex items-center justify-center relative ${!build.anneaux[2] && squareVariants}`}
                     onClick={onOpenModalAnneau3}>
                     {!build.anneaux[2] && (
                       <Image
@@ -757,19 +762,29 @@ const Build = () => {
                       />
                     )}
                     {build.anneaux[2] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[2].nom}`}
-                      />
+                      <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+                        <Image
+                          src={`/img/utils/bg_${build.anneaux[2].rarete.toLowerCase()}.png`}
+                          alt={build.anneaux[2].nom}
+                          width={150}
+                          height={150}
+                          className="absolute hover:cursor-pointer"
+                        />
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
+                          alt={build.anneaux[2].nom}
+                          width={150}
+                          height={150}
+                          className="hover:cursor-pointer z-10"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="text-center py-2">{build.anneaux[2]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div
-                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    className={`flex items-center justify-center relative ${!build.anneaux[3] && squareVariants}`}
                     onClick={onOpenModalAnneau4}>
                     {!build.anneaux[3] && (
                       <Image
@@ -781,12 +796,22 @@ const Build = () => {
                       />
                     )}
                     {build.anneaux[3] && (
-                      <Image
-                        src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.anneaux[3].nom}`}
-                      />
+                      <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+                        <Image
+                          src={`/img/utils/bg_${build.anneaux[3].rarete.toLowerCase()}.png`}
+                          alt={build.anneaux[3].nom}
+                          width={150}
+                          height={150}
+                          className="absolute hover:cursor-pointer"
+                        />
+                        <Image
+                          src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
+                          alt={build.anneaux[3].nom}
+                          width={150}
+                          height={150}
+                          className="hover:cursor-pointer z-10"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="text-center py-2">{build.anneaux[3]?.nom}</p>
@@ -795,12 +820,12 @@ const Build = () => {
             </div>
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
-            <div className="flex xl:flex-col">
+            <div className="flex gap-4 xl:gap-0 xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
                 <div className="flex flex-col ">
                   <div
-                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    className={`flex items-center justify-center relative ${!build.brassard && squareVariants}`}
                     onClick={onOpenModalBrassard}>
                     {!build.brassard && (
                       <Image
@@ -812,57 +837,45 @@ const Build = () => {
                       />
                     )}
                     {build.brassard && (
-                      <Image
-                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.brassard.nom}`}
-                      />
+                      <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+                        <Image
+                          src={`/img/utils/bg_${build.brassard.rarete.toLowerCase()}.png`}
+                          alt={build.brassard.nom}
+                          width={150}
+                          height={150}
+                          className="absolute hover:cursor-pointer"
+                        />
+                        <Image
+                          src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                          alt={build.brassard.nom}
+                          width={150}
+                          height={150}
+                          className="hover:cursor-pointer z-10"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="text-center py-2">{build.brassard?.nom}</p>
                 </div>
               </div>
-            </div>
-            <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Broche</p>
                 <div className="flex flex-col ">
-                  <div className={squareVariants}>
-                    {/* {build.brassard && (
-                      <Image
-                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.brassard.nom}`}
-                      />
-                    )} */}
-                    <p className="text-center py-2"></p>
-                  </div>
+                  <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
+                  <p className="text-center py-2"></p>
                 </div>
               </div>
-            </div>
-            <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Familier</p>
                 <div className="flex flex-col ">
-                  <div className={squareVariants}>
-                    {/* {build.brassard && (
-                      <Image
-                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
-                        width={200}
-                        height={200}
-                        alt={`${build.brassard.nom}`}
-                      />
-                    )} */}
-                    <p className="text-center py-2"></p>
-                  </div>
+                  <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
+                  <p className="text-center py-2"></p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 px-4 ">
-            <div className="flex flex-col xl:h-full w-auto items-center gap-2">
+            <div className="flex flex-col xl:h-full  items-center gap-2">
               {build.arme ? (
                 <>
                   <Image
@@ -1277,9 +1290,11 @@ const Build = () => {
         </div>
       </div>
 
-      <div className="flex flex-row gap-20 self-center">
+      <div className="flex flex-col   xl:flex-row w-full xl:gap-20 xl:self-center justify-center">
         <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
+          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-full xl:w-48 text-center">
+            Sauvegarder
+          </p>
           <ToastContainer
             position="bottom-right"
             autoClose={2000}
@@ -1293,7 +1308,7 @@ const Build = () => {
           />
         </div>
         <div onClick={handleImportBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Importer</p>
+          <p className="font-bold text-2xl border border-white rounded-lg p-4  w-full xl:w-48  text-center">Importer</p>
         </div>
       </div>
       <div>
