@@ -628,7 +628,10 @@ const Build = () => {
   useEffect(() => {
     if (!params.get("import")) return;
     setOpenModalImport(!openModalImport);
-  }, [params, openModalImport]);
+    return () => {
+      setOpenModalImport(!openModalImport);
+    };
+  }, [params]);
   const variants = {
     show: {
       opacity: 0.5,

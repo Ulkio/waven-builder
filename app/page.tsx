@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Analytics } from "@vercel/analytics/react";
 export default function Home() {
   return (
     <main className="flex justify-center items-center h-screen p-16 gap-16 ">
@@ -32,7 +31,6 @@ export default function Home() {
           Certaines illustrations sont la propriété d&apos;Ankama Studio et de Waven - Tous droits réservés
         </p>
       </footer>
-      <Analytics />
     </main>
   );
 }

@@ -98,7 +98,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
         </div>
       </div>
       <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center gap-2">
+        <div className="flex flex-col w-full items-center gap-">
           {displayedAnneau && (
             <>
               <div className={`flex flex-col  items-center w-36 h-36 relative`}>
