@@ -649,7 +649,7 @@ const Build = () => {
   };
 
   return (
-    <main className="h-full w-screen xl:h-screen flex flex-col justify-between gap-6 ">
+    <main className="h-full w-fit flex flex-col items-stretch justify-between gap-6 ">
       {build.arme && (
         <motion.div
           key={build.arme.nom}
@@ -657,7 +657,12 @@ const Build = () => {
           animate={"show"}
           initial="hide"
           className="fixed bottom-0 right-0">
-          <Image src={`/img/splash/${build.arme.nom.replace(" ", "_")}.png`} width={400} height={400} alt="splash" />
+          <Image
+            src={`/img/splash/${build.arme.nom.toLowerCase().replace(" ", "_")}.png`}
+            width={400}
+            height={400}
+            alt="splash"
+          />
         </motion.div>
       )}
 
