@@ -685,7 +685,7 @@ const ImportedBuild = () => {
   }, [build]);
 
   return (
-    <main className="h-screen">
+    <main className="h-screen flex flex-col justify-between gap-12">
       <Modal
         open={!!openModalImport}
         onClose={closeModalImport}
@@ -709,7 +709,7 @@ const ImportedBuild = () => {
             height={50}
             src="/img/left-arrow.png"
             alt="long-arrow-left"
-            className="absolute top-2 left-20 invert"
+            className="fixed top-2 left-2 invert"
           />
         </Link>
         <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
@@ -1220,21 +1220,21 @@ const ImportedBuild = () => {
             </div>
           </div>
         </div>
-        <div
-          onClick={handleClickSaveBuild}
-          className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center hover:cursor-pointer">
-          <p className="font-bold text-2xl ">Sauvegarder</p>
-          <ToastContainer
-            position="bottom-right"
-            autoClose={2000}
-            hideProgressBar={true}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss={false}
-            pauseOnHover={false}
-            theme="dark"
-          />
+        <div className="flex flex-row gap-20 self-center">
+          <div onClick={handleClickSaveBuild} className="">
+            <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={2000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              pauseOnHover={false}
+              theme="dark"
+            />
+          </div>
         </div>
         <div>
           <Modal

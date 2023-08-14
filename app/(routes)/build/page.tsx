@@ -270,6 +270,21 @@ const Build = () => {
     onCloseModalCompagnon();
   };
   const handleClickArme = () => {
+    setSelectedSort1(null);
+    setSelectedSort2(null);
+    setSelectedSort3(null);
+    setSelectedSort4(null);
+    setSelectedSort5(null);
+    setSelectedSort6(null);
+    setSelectedSort7(null);
+    setSelectedSort8(null);
+    setSelectedSort9(null);
+    setSelectedSort10(null);
+    setSelectedSort11(null);
+    setSelectedSort12(null);
+    setSelectedSort13(null);
+    setSelectedSort14(null);
+    setSelectedSort15(null);
     if (isTabletOrMobile) return;
     onCloseModalArme();
   };
@@ -331,14 +346,14 @@ const Build = () => {
   }, [build]);
 
   return (
-    <main className="h-screen">
+    <main className="h-screen flex flex-col justify-between gap-12">
       <Link href="/">
         <Image
           width={50}
           height={50}
           src="/img/left-arrow.png"
           alt="long-arrow-left"
-          className="absolute top-2 left-20 invert"
+          className="fixed top-2 left-2 invert"
         />
       </Link>
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
@@ -402,7 +417,7 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-between  xl:basis-1/6">
+          <div className="flex xl:flex-col justify-center gap-8 xl:justify-between  xl:basis-1/6">
             <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
@@ -850,26 +865,26 @@ const Build = () => {
         </div>
       </div>
 
-      <div
-        onClick={handleClickSaveBuild}
-        className="mt-4 xl:absolute xl:right-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center hover:cursor-pointer">
-        <p className="font-bold text-2xl ">Sauvegarder</p>
-        <ToastContainer
-          position="bottom-right"
-          autoClose={2000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss={false}
-          pauseOnHover={false}
-          theme="dark"
-        />
-      </div>
-      <div className="mt-4 xl:absolute xl:left-0 xl:bottom-0 p-4 border border-white rounded-lg xl:w-fit w-full flex justify-center">
-        <Link href="import-build">
-          <p className="font-bold text-2xl ">Importer</p>
-        </Link>
+      <div className="flex flex-row gap-20 self-center">
+        <div onClick={handleClickSaveBuild} className="">
+          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={2000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            pauseOnHover={false}
+            theme="dark"
+          />
+        </div>
+        <div className=" ">
+          <Link href="import-build">
+            <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Importer</p>
+          </Link>
+        </div>
       </div>
       <div>
         <Modal
@@ -1053,7 +1068,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort1Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort1Change}
+          />
         </Modal>
         <Modal
           open={openSortModal2}
@@ -1067,7 +1087,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort2Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort2Change}
+          />
         </Modal>
 
         <Modal
@@ -1082,7 +1107,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort3Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort3Change}
+          />
         </Modal>
 
         <Modal
@@ -1097,7 +1127,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort4Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort4Change}
+          />
         </Modal>
 
         <Modal
@@ -1112,7 +1147,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort5Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort5Change}
+          />
         </Modal>
 
         <Modal
@@ -1127,7 +1167,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort6Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort6Change}
+          />
         </Modal>
 
         <Modal
@@ -1142,7 +1187,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort7Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort7Change}
+          />
         </Modal>
 
         <Modal
@@ -1157,7 +1207,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort8Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort8Change}
+          />
         </Modal>
 
         <Modal
@@ -1172,7 +1227,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort9Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort9Change}
+          />
         </Modal>
 
         <Modal
@@ -1187,7 +1247,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort10Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort10Change}
+          />
         </Modal>
 
         <Modal
@@ -1202,7 +1267,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort11Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort11Change}
+          />
         </Modal>
 
         <Modal
@@ -1217,7 +1287,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort12Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort12Change}
+          />
         </Modal>
 
         <Modal
@@ -1232,7 +1307,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort13Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort13Change}
+          />
         </Modal>
 
         <Modal
@@ -1247,7 +1327,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort14Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort14Change}
+          />
         </Modal>
 
         <Modal
@@ -1262,7 +1347,12 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog onClickSort={handleClickSort} onSelectedSortChange={handleSelectedSort15Change} />
+          <SortsDialog
+            dieu={selectedArme?.dieu}
+            arme={selectedArme?.nom}
+            onClickSort={handleClickSort}
+            onSelectedSortChange={handleSelectedSort15Change}
+          />
         </Modal>
       </div>
     </main>

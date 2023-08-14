@@ -130,7 +130,7 @@ export interface Sort {
   element: string;
   source: string;
   dieu: string;
-  arme: string;
+  arme?: string;
   image: string;
   patchs: PatchSorts[];
 }
