@@ -926,6 +926,7 @@ const Build = () => {
                   alt="choisis une arme"
                   width={200}
                   height={200}
+                  priority
                   onClick={onOpenModalArmes}
                   className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"
                 />
