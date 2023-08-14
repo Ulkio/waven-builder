@@ -867,14 +867,14 @@ const Build = () => {
                   <p className="text-center py-2">{build.brassard?.nom}</p>
                 </div>
               </div>
-              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+              <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Broche</p>
                 <div className="flex flex-col ">
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
               </div>
-              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+              <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Familier</p>
                 <div className="flex flex-col ">
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
