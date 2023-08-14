@@ -658,7 +658,11 @@ const Build = () => {
           initial="hide"
           className="fixed bottom-0 right-0">
           <Image
-            src={`/img/splash/${build.arme.nom.toLowerCase().replace(" ", "_")}.png`}
+            src={`/img/splash/${build.arme.nom
+              .toLowerCase()
+              .replace(" ", "_")
+              .replace("é", "e")
+              .replace("ï", "i")}.png`}
             width={400}
             height={400}
             alt="splash"
