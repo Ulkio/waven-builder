@@ -683,11 +683,11 @@ const Build = () => {
 
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
-          <div className="flex xl:flex-col xl:basis-1/6 px-4">
-            <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+          <div className="flex   xl:flex-col xl:basis-1/6 xl:px-4">
+            <div className="flex  flex-col xl:h-full justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex gap-4 xl:gap-0  xl:flex-col ">
-                <div className="flex flex-col ">
+              <div className="flex flex-wrap justify-center gap-4 xl:gap-0  xl:flex-col ">
+                <div className="flex  flex-col ">
                   <div
                     className={`flex items-center justify-center relative ${!build.anneaux[0] && squareVariants}`}
                     onClick={onOpenModalAnneau1}>
