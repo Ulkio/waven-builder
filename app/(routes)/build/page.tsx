@@ -649,7 +649,7 @@ const Build = () => {
   };
 
   return (
-    <main className="h-full w-fit flex flex-col items-stretch justify-between gap-6 ">
+    <main className=" flex flex-col items-stretch justify-center p-6 gap-6 ">
       {build.arme && (
         <motion.div
           key={build.arme.nom}
@@ -932,7 +932,7 @@ const Build = () => {
           <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
             <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
-              <div className="flex flex-row gap-4 justify-center">
+              <div className="flex flex-row flex-wrap gap-4 justify-center">
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
                     build.compagnons[0] ? companionSquareVariants : emptyCompanionVariants
