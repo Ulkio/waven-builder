@@ -829,8 +829,8 @@ const Build = () => {
             </div>
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
-            <div className="flex gap-4 xl:gap-0 xl:flex-col">
-              <div className="flex flex-col xl:h-full justify-center  items-center w-full">
+            <div className="flex flex-wrap xl:flex-nowrap gap-4 xl:gap-0 xl:flex-col">
+              <div className="flex flex-col xl:h-full justify-center  items-center ">
                 <p className={titleVariants}>Brassard</p>
                 <div className="flex flex-col ">
                   <div
