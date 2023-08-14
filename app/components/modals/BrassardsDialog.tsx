@@ -99,15 +99,25 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
         </div>
       </div>
       <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center ">
+        <div className="flex flex-col w-full items-center gap-2">
           {displayedBrassard && (
             <>
-              <Image
-                src={`${ARMBAND_BASE_URL}/${displayedBrassard.image}.png`}
-                width={120}
-                height={120}
-                alt={displayedBrassard.nom}
-              />
+              <div className={`flex flex-col  items-center w-36 h-36 relative`}>
+                <Image
+                  src={`/img/utils/bg_${displayedBrassard.rarete.toLowerCase()}.png`}
+                  alt={displayedBrassard.nom}
+                  width={150}
+                  height={150}
+                  className="absolute hover:cursor-pointer"
+                />
+                <Image
+                  src={`${ARMBAND_BASE_URL}/${displayedBrassard.image}.png`}
+                  alt={displayedBrassard.nom}
+                  width={150}
+                  height={150}
+                  className="hover:cursor-pointer z-10"
+                />
+              </div>
               <p className="font-black text-2xl text-center">{displayedBrassard.nom}</p>
               <p className="text-center">{displayedBrassard.patchs[0].pouvoir}</p>
               <div className="flex flex-wrap justify-center gap-2 text-center">

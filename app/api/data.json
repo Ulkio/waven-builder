@@ -10514,7 +10514,44 @@
                 "effet": "% de VIE à votre héros."
               }
             ],
-            "dons": []
+            "dons": [
+              {
+                "nom": "COLLISION",
+                "cout": 55,
+                "effet": "+20% DEGATS à toutes vos COLLISIONS",
+                "sort": ""
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 55,
+                "effet": "+5% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS PHYSIQUES CRITIQUES",
+                "cout": 55,
+                "effet": "+20 Dégâts critique",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE COMPAGNONS",
+                "cout": 55,
+                "effet": "+5% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS CRITIQUES COMPAGNONS",
+                "cout": 55,
+                "effet": "+20 Dégâts critique",
+                "sort": ""
+              },
+              {
+                "nom": "GAIN DE KAMAS",
+                "cout": 55,
+                "effet": "+50% aux Gain de Kamas",
+                "sort": ""
+              }
+            ]
           }
         ]
       },
@@ -14983,7 +15020,7 @@
       },
       {
         "nom": "Bumbon",
-        "element": "Feu",
+        "element": "Air",
         "source": "Joueur",
         "dieu": "Crâ",
         "arme": "Bunelame",
@@ -26698,7 +26735,7 @@
         "element": "Astral",
         "source": "Joueur",
         "dieu": "sram",
-        "image": "guetapens",
+        "image": "guet-apens",
         "patchs": [
           {
             "version": "0.11",

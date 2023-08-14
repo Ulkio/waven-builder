@@ -45,7 +45,7 @@ const Build = () => {
   //#endregion
 
   //#region STYLE VARIANTS
-  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer`;
+  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer `;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
   const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white`;
@@ -695,14 +695,17 @@ const Build = () => {
 
   return (
     <main className="h-screen flex flex-col justify-between gap-12">
-      <Image
-        onClick={closeModalImport}
-        width={50}
-        height={50}
-        src="/img/left-arrow.png"
-        alt="long-arrow-left"
-        className="fixed top-2 left-2 invert"
-      />
+      <Link href="/">
+        <Image
+          onClick={closeModalImport}
+          width={40}
+          height={40}
+          src="/img/left-arrow.png"
+          alt="long-arrow-left"
+          className="fixed top-2 left-4 invert"
+        />
+      </Link>
+
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
           <div className="flex xl:flex-col xl:basis-1/6 px-4">
@@ -710,7 +713,19 @@ const Build = () => {
               <p className={titleVariants}>Anneaux</p>
               <div className="flex  xl:flex-col ">
                 <div className="flex flex-col ">
-                  <div className={squareVariants} onClick={onOpenModalAnneau1}>
+                  <div
+                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    onClick={onOpenModalAnneau1}>
+                    {!build.anneaux[0] && (
+                      <Image
+                        src={`/img/utils/generic_ring.png`}
+                        width={100}
+                        height={100}
+                        alt="generic ring"
+                        className="object-scale-down opacity-50 "
+                      />
+                    )}
+
                     {build.anneaux[0] && (
                       <Image
                         src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
@@ -723,7 +738,19 @@ const Build = () => {
                   <p className="text-center py-2">{build.anneaux[0]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
-                  <div className={squareVariants} onClick={onOpenModalAnneau2}>
+                  <div
+                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    onClick={onOpenModalAnneau2}>
+                    {!build.anneaux[1] && (
+                      <Image
+                        src={`/img/utils/generic_ring.png`}
+                        width={100}
+                        height={100}
+                        alt="generic ring"
+                        className="object-scale-down opacity-50 "
+                      />
+                    )}
+
                     {build.anneaux[1] && (
                       <Image
                         src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
@@ -736,7 +763,18 @@ const Build = () => {
                   <p className="text-center py-2">{build.anneaux[1]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
-                  <div className={squareVariants} onClick={onOpenModalAnneau3}>
+                  <div
+                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    onClick={onOpenModalAnneau3}>
+                    {!build.anneaux[2] && (
+                      <Image
+                        src={`/img/utils/generic_ring.png`}
+                        width={100}
+                        height={100}
+                        alt="generic ring"
+                        className="object-scale-down opacity-50 "
+                      />
+                    )}
                     {build.anneaux[2] && (
                       <Image
                         src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
@@ -749,7 +787,18 @@ const Build = () => {
                   <p className="text-center py-2">{build.anneaux[2]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
-                  <div className={squareVariants} onClick={onOpenModalAnneau4}>
+                  <div
+                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    onClick={onOpenModalAnneau4}>
+                    {!build.anneaux[3] && (
+                      <Image
+                        src={`/img/utils/generic_ring.png`}
+                        width={100}
+                        height={100}
+                        alt="generic ring"
+                        className="object-scale-down opacity-50"
+                      />
+                    )}
                     {build.anneaux[3] && (
                       <Image
                         src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
@@ -764,12 +813,23 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center xl:justify-start gap-14 xl:basis-1/6">
+          <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
             <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
                 <div className="flex flex-col ">
-                  <div className={squareVariants} onClick={onOpenModalBrassard}>
+                  <div
+                    className={`flex items-center justify-center relative ${squareVariants}`}
+                    onClick={onOpenModalBrassard}>
+                    {!build.brassard && (
+                      <Image
+                        src={`/img/utils/generic_armband.png`}
+                        width={100}
+                        height={100}
+                        alt="generic armband"
+                        className="object-scale-down opacity-50"
+                      />
+                    )}
                     {build.brassard && (
                       <Image
                         src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
@@ -778,8 +838,8 @@ const Build = () => {
                         alt={`${build.brassard.nom}`}
                       />
                     )}
-                    <p className="text-center py-2">{build.brassard?.nom}</p>
                   </div>
+                  <p className="text-center py-2">{build.brassard?.nom}</p>
                 </div>
               </div>
             </div>
@@ -1262,7 +1322,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
@@ -1275,20 +1335,13 @@ const Build = () => {
           onClose={closeModalImport}
           center
           closeOnOverlayClick={true}
-          showCloseIcon={false}
+          showCloseIcon={true}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
             root: "scrollbar-none",
           }}>
-          <Image
-            onClick={closeModalImport}
-            width={50}
-            height={50}
-            src="/img/left-arrow.png"
-            alt="long-arrow-left"
-            className="hover:cursor-pointer absolute top-2 left-4 invert z-10"
-          />
           <ImportDialog onClickButton={handleImportButtonClick} />
         </Modal>
         <Modal
@@ -1297,7 +1350,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1311,7 +1364,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1325,7 +1378,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1339,7 +1392,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1353,7 +1406,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1367,7 +1420,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1384,7 +1437,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1401,7 +1454,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1418,7 +1471,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1435,7 +1488,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1452,7 +1505,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1471,7 +1524,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1491,7 +1544,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1511,7 +1564,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1531,7 +1584,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1551,7 +1604,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1571,7 +1624,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1591,7 +1644,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1611,7 +1664,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1631,7 +1684,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1651,7 +1704,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1671,7 +1724,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1691,7 +1744,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1711,7 +1764,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",
@@ -1731,7 +1784,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModal",

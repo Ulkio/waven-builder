@@ -41,3 +41,7 @@ body {
 * {
   /* border: dotted 1px white; */
 }
+
+.text-outline {
+  -webkit-text-stroke: 1px black;
+}

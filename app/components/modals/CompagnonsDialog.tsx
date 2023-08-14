@@ -12,6 +12,11 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   const compagnons: Compagnon[] = data.compagnons.compagnons;
   const COMPAGNON_BASE_URL = "/img/compagnons";
 
+  const fireVariants = `absolute top-3 left-[1rem] font-bold text-xl text-outline`;
+  const waterVariants = `absolute top-3 left-4 font-bold text-xl text-outline`;
+  const earthVariants = `absolute top-2 left-4 font-bold text-xl text-outline`;
+  const windVariants = `absolute top-3 left-4 font-bold text-xl text-outline`;
+
   const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
   const [displayedCompagnon, setDisplayedCompagnon] = useState<Compagnon | null>(null);
   const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
@@ -78,19 +83,33 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                 onClick={() => handleCompagnonClick(compagnon)}
                 className={`flex flex-col  items-center w-36 h-36 relative`}
                 key={compagnon.nom}>
-                <Image
-                  src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
-                  alt={compagnon.nom}
-                  width={100}
-                  height={100}
-                  className="absolute hover:cursor-pointer"
-                />
-                <Image
-                  src={`${COMPAGNON_BASE_URL}/${compagnon.image}.png`}
-                  alt={compagnon.nom}
-                  width={100}
-                  height={100}
-                />
+                <div className="flex items-center relative ">
+                  <Image
+                    src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
+                    alt={compagnon.nom}
+                    width={100}
+                    height={100}
+                    className="absolute hover:cursor-pointer"
+                  />
+                  <Image
+                    src={`${COMPAGNON_BASE_URL}/${compagnon.image}.png`}
+                    alt={compagnon.nom}
+                    width={100}
+                    height={100}
+                  />
+                  <div className="flex flex-col absolute -right-2">
+                    {Object.entries(compagnon.patchs[0].couts).map((cout) => {
+                      return (
+                        <div key={cout[0] + cout[1]} className="flex flex-col">
+                          <div className="relative flex flex-row  ">
+                            <Image src={`/img/utils/${cout[0]}.png`} width={30} height={30} alt="cout" className="" />
+                            <p className="absolute text-lg left-[0.7rem] top-1 font-bold text-outline ">{cout[1]}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
                 <p className="text-sm text-center font-bold">{compagnon.nom}</p>
               </div>
             );
@@ -98,7 +117,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
         </div>
       </div>
       <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2 ">
-        <div className="flex flex-col w-full items-center  ">
+        <div className="flex flex-col w-full items-center gap-2">
           {displayedCompagnon && (
             <>
               <div className="flex items-center relative">
@@ -119,8 +138,19 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                   {Object.entries(displayedCompagnon.patchs[0].couts).map((cout) => {
                     return (
                       <div key={cout[0] + cout[1]} className="h-full w-full relative">
-                        <Image src={`/img/utils/${cout[0]}.png`} width={50} height={50} alt="cout" />
-                        <p className="absolute top-4 left-5 font-bold text-xl  ">{cout[1]}</p>
+                        <Image src={`/img/utils/${cout[0]}.png`} width={40} height={40} alt="cout" />
+                        <p
+                          className={
+                            cout[0] === "feu"
+                              ? fireVariants
+                              : cout[0] === "eau"
+                              ? waterVariants
+                              : cout[0] === "terre"
+                              ? earthVariants
+                              : windVariants
+                          }>
+                          {cout[1]}
+                        </p>
                       </div>
                     );
                   })}

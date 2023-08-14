@@ -98,15 +98,26 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
         </div>
       </div>
       <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center ">
+        <div className="flex flex-col w-full items-center gap-2">
           {displayedAnneau && (
             <>
-              <Image
-                src={`${RING_BASE_URL}/${displayedAnneau.image}.png`}
-                width={150}
-                height={150}
-                alt={displayedAnneau.nom}
-              />
+              <div className={`flex flex-col  items-center w-36 h-36 relative`}>
+                <Image
+                  src={`/img/utils/bg_${displayedAnneau.rarete.toLowerCase()}.png`}
+                  alt={displayedAnneau.nom}
+                  width={150}
+                  height={150}
+                  className="absolute hover:cursor-pointer"
+                />
+                <Image
+                  src={`${RING_BASE_URL}/${displayedAnneau.image}.png`}
+                  alt={displayedAnneau.nom}
+                  width={150}
+                  height={150}
+                  className="hover:cursor-pointer z-10"
+                />
+              </div>
+
               <p className="font-black text-2xl text-center">{displayedAnneau.nom}</p>
               <p className="text-center">{displayedAnneau.patchs[0].pouvoir}</p>
               <div className="flex flex-wrap justify-center gap-2 text-center">
