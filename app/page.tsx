@@ -29,7 +29,7 @@ export default function Home() {
       <footer className="py-2 fixed flex text-center  w-1/2 bottom-0">
         <p className="text-xs opacity-50">
           © 2023 Waven est un jeu vidéo édité par Ankama. ce site est un site non-officiel sans affiliation avec Ankama.
-          Certaines illustrations sont la propriété d'Ankama Studio et de Waven - Tous droits réservés
+          Certaines illustrations sont la propriété d&apos;Ankama Studio et de Waven - Tous droits réservés
         </p>
       </footer>
       <Analytics />
