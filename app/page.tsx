@@ -13,7 +13,11 @@ export default function Home() {
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out"
         />
       </Link>
-      <Link href="import-build">
+      <Link
+        href={{
+          pathname: "build",
+          query: { import: true },
+        }}>
         <Image
           src="/img/hexagon-import-build.png"
           alt="importer un build"

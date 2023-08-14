@@ -47,7 +47,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
     <div className="flex h-full">
       <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Anneaux</h2>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => handleFilterClick("commun")}
             className="btn-filter text-commun border border-commun px-2 rounded-md font-bold">
@@ -107,9 +107,9 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                 height={150}
                 alt={displayedAnneau.nom}
               />
-              <p className="font-black text-2xl">{displayedAnneau.nom}</p>
+              <p className="font-black text-2xl text-center">{displayedAnneau.nom}</p>
               <p className="text-center">{displayedAnneau.patchs[0].pouvoir}</p>
-              <div className="flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-2 text-center">
                 {displayedAnneau.patchs[0].caracteristiques.map((carac: CaracteristiqueAnneaux, key) => {
                   return (
                     <p key={key + carac.effet} className="bg-attribute rounded-lg px-4 py-2">

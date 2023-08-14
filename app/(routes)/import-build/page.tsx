@@ -11,7 +11,7 @@ import CompagnonsDialog from "@/components/modals/CompagnonsDialog";
 import ArmesDialog from "@/components/modals/ArmesDialog";
 import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Compagnons, Sorts, Armes, Anneaux } from "@/types";
 import { AES, enc } from "crypto-js";
-import ImportModal from "@/components/modals/ImportDialog";
+import ImportDialog from "@/components/modals/ImportDialog";
 import { Tooltip } from "react-tooltip";
 import "../../styles/tooltip.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -34,7 +34,6 @@ const ImportedBuild = () => {
     sorts: [],
     arme: null,
   });
-  const [stringBuild, setStringBuild] = useState("");
   const [encryptedBuild, setEncryptedBuild] = useState("");
   //#endregion
   //#region STYLE VARIANTS
@@ -507,7 +506,7 @@ const ImportedBuild = () => {
       build.compagnons[3],
     ] as Compagnon[];
     const SortsArray = [
-      build.sorts[1],
+      build.sorts[0],
       build.sorts[1],
       build.sorts[2],
       build.sorts[3],
@@ -521,7 +520,6 @@ const ImportedBuild = () => {
       build.sorts[12],
       build.sorts[13],
       build.sorts[14],
-      build.sorts[15],
     ] as Sort[];
     setBuild({
       arme: build.arme,
@@ -700,7 +698,7 @@ const ImportedBuild = () => {
         <Link href="/" className="absolute top-2 left-4 invert z-10">
           <Image width={50} height={50} src="/img/left-arrow.png" alt="long-arrow-left" className="z-10" />
         </Link>
-        <ImportModal onClickButton={handleImportButtonClick} />
+        <ImportDialog onClickButton={handleImportButtonClick} />
       </Modal>
       <>
         <Link href="/">
@@ -822,19 +820,19 @@ const ImportedBuild = () => {
                     <div className="flex flex-wrap gap-2">
                       <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
                         <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
-                        <p>{build.arme.patchs[0].pv}</p>
+                        <p className="font-bold">{build.arme.patchs[0].pv}</p>
                       </div>
                       <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                        <Image src="/img/utils/at.png" width={30} height={30} alt="pv" />
-                        <p>{build.arme.patchs[0].at}</p>
+                        <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
+                        <p className="font-bold">{build.arme.patchs[0].at}</p>
                       </div>
                       <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                        <Image src="/img/utils/cc.png" width={30} height={30} alt="pv" />
-                        <p>{build.arme.patchs[0].cc}</p>
+                        <Image src="/img/utils/cc.png" width={30} height={30} alt="crit" />
+                        <p className="font-bold">{build.arme.patchs[0].cc}</p>
                       </div>
                       <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                        <Image src="/img/utils/pm.png" width={30} height={30} alt="pv" />
-                        <p>{build.arme.patchs[0].pm}</p>
+                        <Image src="/img/utils/pm.png" width={30} height={30} alt="pm" />
+                        <p className="font-bold">{build.arme.patchs[0].pm}</p>
                       </div>
                     </div>
                     <p className="text-center">{build.arme?.patchs[0].effet}</p>

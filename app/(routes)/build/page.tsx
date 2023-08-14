@@ -2,6 +2,7 @@
 import Hexagon from "@/components/Hexagon";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import "react-responsive-modal/styles.css";
 import "../../styles/modal.css";
 import { Modal } from "react-responsive-modal";
@@ -15,6 +16,7 @@ import { useMediaQuery } from "react-responsive";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StringBuildDialog from "@/components/modals/StringBuildDialog";
+import ImportDialog from "@/components/modals/ImportDialog";
 import Link from "next/link";
 import SortsDialog from "@/components/modals/SortsDialog";
 import { Tooltip } from "react-tooltip";
@@ -23,6 +25,8 @@ const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
 
   //#region CONSTANTS
+  const params = useSearchParams();
+  const importType = params.get("import");
   const buildKey = "importKey";
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
   //#endregion
@@ -36,6 +40,8 @@ const Build = () => {
     arme: null,
   });
   const [encryptedBuild, setEncryptedBuild] = useState("");
+  const [openModalImport, setOpenModalImport] = useState<boolean | null>(false);
+
   //#endregion
 
   //#region STYLE VARIANTS
@@ -58,115 +64,442 @@ const Build = () => {
   const [selectedArme, setSelectedArme] = useState<Arme | null>(null);
   const handleSelectedArmeChange = (selectedArme: Arme) => {
     setSelectedArme(selectedArme);
+    setBuild((prev) => ({ ...prev, arme: selectedArme }));
   };
   const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
   const handleSelectedBrassardChange = (selectedBrassard: Brassard) => {
     setSelectedBrassard(selectedBrassard);
+    setBuild((prev) => ({ ...prev, brassard: selectedBrassard }));
   };
   const [selectedCompagnon1, setSelectedCompagnon1] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon1Change = (selected: Compagnon) => {
     setSelectedCompagnon1(selected);
+    setBuild((prev) => ({
+      ...prev,
+      compagnons: [selected, prev.compagnons[1], prev.compagnons[2], prev.compagnons[3]],
+    }));
   };
 
   const [selectedCompagnon2, setSelectedCompagnon2] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon2Change = (selected: Compagnon) => {
     setSelectedCompagnon2(selected);
+    setBuild((prev) => ({
+      ...prev,
+      compagnons: [prev.compagnons[0], selected, prev.compagnons[2], prev.compagnons[3]],
+    }));
   };
 
   const [selectedCompagnon3, setSelectedCompagnon3] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon3Change = (selected: Compagnon) => {
     setSelectedCompagnon3(selected);
+    setBuild((prev) => ({
+      ...prev,
+      compagnons: [prev.compagnons[0], prev.compagnons[1], selected, prev.compagnons[3]],
+    }));
   };
 
   const [selectedCompagnon4, setSelectedCompagnon4] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon4Change = (selected: Compagnon) => {
     setSelectedCompagnon4(selected);
+    setBuild((prev) => ({
+      ...prev,
+      compagnons: [prev.compagnons[0], prev.compagnons[1], prev.compagnons[2], selected],
+    }));
   };
   const [selectedAnneau1, setSelectedAnneau1] = useState<Anneau | null>(null);
   const handleSelectedAnneau1Change = (selected: Anneau) => {
     setSelectedAnneau1(selected);
+    setBuild((prev) => ({
+      ...prev,
+      anneaux: [selected, prev.anneaux[1], prev.anneaux[2], prev.anneaux[3]],
+    }));
   };
   const [selectedAnneau2, setSelectedAnneau2] = useState<Anneau | null>(null);
   const handleSelectedAnneau2Change = (selected: Anneau) => {
     setSelectedAnneau2(selected);
+    setBuild((prev) => ({
+      ...prev,
+      anneaux: [prev.anneaux[0], selected, prev.anneaux[2], prev.anneaux[3]],
+    }));
   };
 
   const [selectedAnneau3, setSelectedAnneau3] = useState<Anneau | null>(null);
   const handleSelectedAnneau3Change = (selected: Anneau) => {
     setSelectedAnneau3(selected);
+    setBuild((prev) => ({
+      ...prev,
+      anneaux: [prev.anneaux[0], prev.anneaux[1], selected, prev.anneaux[3]],
+    }));
   };
 
   const [selectedAnneau4, setSelectedAnneau4] = useState<Anneau | null>(null);
   const handleSelectedAnneau4Change = (selected: Anneau) => {
     setSelectedAnneau4(selected);
+    setBuild((prev) => ({
+      ...prev,
+      anneaux: [prev.anneaux[0], prev.anneaux[1], prev.anneaux[2], selected],
+    }));
   };
   const [selectedSort1, setSelectedSort1] = useState<Sort | null>(null);
   const handleSelectedSort1Change = (selected: Sort) => {
     setSelectedSort1(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        selected,
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
   const [selectedSort2, setSelectedSort2] = useState<Sort | null>(null);
   const handleSelectedSort2Change = (selected: Sort) => {
     setSelectedSort2(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        selected,
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
   const [selectedSort3, setSelectedSort3] = useState<Sort | null>(null);
   const handleSelectedSort3Change = (selected: Sort) => {
     setSelectedSort3(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        selected,
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
   const [selectedSort4, setSelectedSort4] = useState<Sort | null>(null);
   const handleSelectedSort4Change = (selected: Sort) => {
     setSelectedSort4(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        selected,
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort5, setSelectedSort5] = useState<Sort | null>(null);
   const handleSelectedSort5Change = (selected: Sort) => {
     setSelectedSort5(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        selected,
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort6, setSelectedSort6] = useState<Sort | null>(null);
   const handleSelectedSort6Change = (selected: Sort) => {
     setSelectedSort6(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        selected,
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort7, setSelectedSort7] = useState<Sort | null>(null);
   const handleSelectedSort7Change = (selected: Sort) => {
     setSelectedSort7(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        selected,
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort8, setSelectedSort8] = useState<Sort | null>(null);
   const handleSelectedSort8Change = (selected: Sort) => {
     setSelectedSort8(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        selected,
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort9, setSelectedSort9] = useState<Sort | null>(null);
   const handleSelectedSort9Change = (selected: Sort) => {
     setSelectedSort9(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        selected,
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort10, setSelectedSort10] = useState<Sort | null>(null);
   const handleSelectedSort10Change = (selected: Sort) => {
     setSelectedSort10(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        selected,
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort11, setSelectedSort11] = useState<Sort | null>(null);
   const handleSelectedSort11Change = (selected: Sort) => {
     setSelectedSort11(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        selected,
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
-
   const [selectedSort12, setSelectedSort12] = useState<Sort | null>(null);
   const handleSelectedSort12Change = (selected: Sort) => {
     setSelectedSort12(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        selected,
+        prev.sorts[12],
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
   const [selectedSort13, setSelectedSort13] = useState<Sort | null>(null);
   const handleSelectedSort13Change = (selected: Sort) => {
     setSelectedSort13(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        selected,
+        prev.sorts[13],
+        prev.sorts[14],
+      ],
+    }));
   };
+
   const [selectedSort14, setSelectedSort14] = useState<Sort | null>(null);
   const handleSelectedSort14Change = (selected: Sort) => {
     setSelectedSort14(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        selected,
+        prev.sorts[14],
+      ],
+    }));
   };
   const [selectedSort15, setSelectedSort15] = useState<Sort | null>(null);
   const handleSelectedSort15Change = (selected: Sort) => {
     setSelectedSort15(selected);
+    setBuild((prev) => ({
+      ...prev,
+      sorts: [
+        prev.sorts[0],
+        prev.sorts[1],
+        prev.sorts[2],
+        prev.sorts[3],
+        prev.sorts[4],
+        prev.sorts[5],
+        prev.sorts[6],
+        prev.sorts[7],
+        prev.sorts[8],
+        prev.sorts[9],
+        prev.sorts[10],
+        prev.sorts[11],
+        prev.sorts[12],
+        prev.sorts[13],
+        selected,
+      ],
+    }));
   };
 
   //#endregion
@@ -295,192 +628,230 @@ const Build = () => {
   const closeModalStringBuild = () => {
     setOpenModalStringBuild(false);
   };
+  const closeModalImport = () => {
+    setOpenModalImport(false);
+  };
   //#endregion
 
   //#region FUNCTIONS
+  const handleImportBuild = () => {
+    setOpenModalImport(true);
+  };
   const handleClickSaveBuild = () => {
-    setOpenModalStringBuild(true);
+    const AnneauxArray = [build.anneaux[0], build.anneaux[1], build.anneaux[2], build.anneaux[3]] as Anneau[];
     const compagnonsArray = [
-      selectedCompagnon1,
-      selectedCompagnon2,
-      selectedCompagnon3,
-      selectedCompagnon4,
+      build.compagnons[0],
+      build.compagnons[1],
+      build.compagnons[2],
+      build.compagnons[3],
     ] as Compagnon[];
-    const AnneauxArray = [selectedAnneau1, selectedAnneau2, selectedAnneau3, selectedAnneau4] as Anneau[];
     const SortsArray = [
-      selectedSort1,
-      selectedSort2,
-      selectedSort3,
-      selectedSort4,
-      selectedSort5,
-      selectedSort6,
-      selectedSort7,
-      selectedSort8,
-      selectedSort9,
-      selectedSort10,
-      selectedSort11,
-      selectedSort12,
-      selectedSort13,
-      selectedSort14,
-      selectedSort15,
+      build.sorts[0],
+      build.sorts[1],
+      build.sorts[2],
+      build.sorts[3],
+      build.sorts[4],
+      build.sorts[5],
+      build.sorts[6],
+      build.sorts[7],
+      build.sorts[8],
+      build.sorts[9],
+      build.sorts[10],
+      build.sorts[12],
+      build.sorts[13],
+      build.sorts[14],
     ] as Sort[];
-
     setBuild({
-      arme: selectedArme,
+      arme: build.arme,
+      brassard: build.brassard,
       anneaux: AnneauxArray,
-      brassard: selectedBrassard,
       compagnons: compagnonsArray,
       sorts: SortsArray,
     });
-  };
 
+    if (build.arme) {
+      setOpenModalStringBuild(true);
+      const stringBuild = JSON.stringify(build);
+      const encrypted = AES.encrypt(stringBuild, buildKey).toString();
+      setEncryptedBuild(encrypted);
+    } else {
+      toast("Veuillez sélectionner une arme");
+    }
+  };
+  const handleImportButtonClick = (build: string) => {
+    const decryptedBytes = AES.decrypt(build, buildKey);
+    const decryptedJsonString = decryptedBytes.toString(enc.Utf8);
+    const JSONBuild = JSON.parse(decryptedJsonString);
+    setBuild(JSONBuild);
+    closeModalImport();
+  };
   //#endregion
 
   // USEEFFECTS
   useEffect(() => {
-    if (build.arme) {
-      const stringBuild = JSON.stringify(build);
-      const encrypted = AES.encrypt(stringBuild, buildKey).toString();
-      setEncryptedBuild(encrypted);
-    }
-  }, [build]);
+    if (!params.get("import")) return;
+    setOpenModalImport(!openModalImport);
+  }, [params]);
 
   return (
     <main className="h-screen flex flex-col justify-between gap-12">
-      <Link href="/">
-        <Image
-          width={50}
-          height={50}
-          src="/img/left-arrow.png"
-          alt="long-arrow-left"
-          className="fixed top-2 left-2 invert"
-        />
-      </Link>
+      <Image
+        onClick={closeModalImport}
+        width={50}
+        height={50}
+        src="/img/left-arrow.png"
+        alt="long-arrow-left"
+        className="fixed top-2 left-2 invert"
+      />
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-32">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
           <div className="flex xl:flex-col xl:basis-1/6 px-4">
             <div className="flex flex-col xl:h-full justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex  xl:flex-col gap-2">
+              <div className="flex  xl:flex-col ">
                 <div className="flex flex-col ">
                   <div className={squareVariants} onClick={onOpenModalAnneau1}>
-                    {selectedAnneau1 && (
+                    {build.anneaux[0] && (
                       <Image
-                        src={`${ANNEAU_BASE_URL}/${selectedAnneau1.image}.png`}
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[0].image}.png`}
                         width={200}
                         height={200}
-                        alt={`${selectedAnneau1.nom}`}
+                        alt={`${build.anneaux[0].nom}`}
                       />
                     )}
                   </div>
-                  <p className="text-center">{selectedAnneau1?.nom}</p>
+                  <p className="text-center py-2">{build.anneaux[0]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div className={squareVariants} onClick={onOpenModalAnneau2}>
-                    {selectedAnneau2 && (
+                    {build.anneaux[1] && (
                       <Image
-                        src={`${ANNEAU_BASE_URL}/${selectedAnneau2.image}.png`}
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[1].image}.png`}
                         width={200}
                         height={200}
-                        alt={`${selectedAnneau2.nom}`}
+                        alt={`${build.anneaux[1].nom}`}
                       />
                     )}
                   </div>
-                  <p className="text-center">{selectedAnneau2?.nom}</p>
+                  <p className="text-center py-2">{build.anneaux[1]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div className={squareVariants} onClick={onOpenModalAnneau3}>
-                    {selectedAnneau3 && (
+                    {build.anneaux[2] && (
                       <Image
-                        src={`${ANNEAU_BASE_URL}/${selectedAnneau3.image}.png`}
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[2].image}.png`}
                         width={200}
                         height={200}
-                        alt={`${selectedAnneau3.nom}`}
+                        alt={`${build.anneaux[2].nom}`}
                       />
                     )}
                   </div>
-                  <p className="text-center">{selectedAnneau3?.nom}</p>
+                  <p className="text-center py-2">{build.anneaux[2]?.nom}</p>
                 </div>
                 <div className="flex flex-col ">
                   <div className={squareVariants} onClick={onOpenModalAnneau4}>
-                    {selectedAnneau4 && (
+                    {build.anneaux[3] && (
                       <Image
-                        src={`${ANNEAU_BASE_URL}/${selectedAnneau4.image}.png`}
+                        src={`${ANNEAU_BASE_URL}/${build.anneaux[3].image}.png`}
                         width={200}
                         height={200}
-                        alt={`${selectedAnneau4.nom}`}
+                        alt={`${build.anneaux[3].nom}`}
                       />
                     )}
                   </div>
-                  <p className="text-center">{selectedAnneau4?.nom}</p>
+                  <p className="text-center py-2">{build.anneaux[3]?.nom}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center gap-8 xl:justify-between  xl:basis-1/6">
+          <div className="flex xl:flex-col justify-center xl:justify-start gap-14 xl:basis-1/6">
             <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
                 <p className={titleVariants}>Brassard</p>
                 <div className="flex flex-col ">
                   <div className={squareVariants} onClick={onOpenModalBrassard}>
-                    {selectedBrassard && (
+                    {build.brassard && (
                       <Image
-                        src={`${BRASSARD_BASE_URL}/${selectedBrassard.image}.png`}
+                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
                         width={200}
                         height={200}
-                        alt={`${selectedBrassard.nom}`}
+                        alt={`${build.brassard.nom}`}
                       />
                     )}
-                    <p className="text-center">{selectedBrassard?.nom}</p>
+                    <p className="text-center py-2">{build.brassard?.nom}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                <p className={titleVariants}>Bientôt</p>
-                <div className={squareVariants}></div>
+                <p className={titleVariants}>Broche</p>
+                <div className="flex flex-col ">
+                  <div className={squareVariants}>
+                    {/* {build.brassard && (
+                      <Image
+                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.brassard.nom}`}
+                      />
+                    )} */}
+                    <p className="text-center py-2"></p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex xl:flex-col ">
+            <div className="flex xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center w-full">
-                <p className={titleVariants}>Bientôt</p>
-                <div className={squareVariants}></div>
+                <p className={titleVariants}>Familier</p>
+                <div className="flex flex-col ">
+                  <div className={squareVariants}>
+                    {/* {build.brassard && (
+                      <Image
+                        src={`${BRASSARD_BASE_URL}/${build.brassard.image}.png`}
+                        width={200}
+                        height={200}
+                        alt={`${build.brassard.nom}`}
+                      />
+                    )} */}
+                    <p className="text-center py-2"></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 px-4 ">
             <div className="flex flex-col xl:h-full w-auto items-center gap-2">
-              {selectedArme ? (
+              {build.arme ? (
                 <>
                   <Image
-                    src={`${ARME_BASE_URL}/${selectedArme?.image}.png`}
+                    src={`${ARME_BASE_URL}/${build.arme?.image}.png`}
                     alt="classe"
                     width={200}
                     height={200}
                     onClick={onOpenModalArmes}
                     className="hover:cursor-pointer"
                   />
-                  <p className="font-black text-3xl">{selectedArme?.nom}</p>
+                  <p className="font-black text-3xl">{build.arme?.nom}</p>
                   <div className="flex flex-wrap gap-2">
                     <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
                       <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
-                      <p>{selectedArme.patchs[0].pv}</p>
+                      <p className="font-bold">{build.arme.patchs[0].pv}</p>
                     </div>
                     <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                      <Image src="/img/utils/at.png" width={30} height={30} alt="pv" />
-                      <p>{selectedArme.patchs[0].at}</p>
+                      <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
+                      <p className="font-bold">{build.arme.patchs[0].at}</p>
                     </div>
                     <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                      <Image src="/img/utils/cc.png" width={30} height={30} alt="pv" />
-                      <p>{selectedArme.patchs[0].cc}</p>
+                      <Image src="/img/utils/cc.png" width={30} height={30} alt="crit" />
+                      <p className="font-bold">{build.arme.patchs[0].cc}</p>
                     </div>
                     <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-                      <Image src="/img/utils/pm.png" width={30} height={30} alt="pv" />
-                      <p>{selectedArme.patchs[0].pm}</p>
+                      <Image src="/img/utils/pm.png" width={30} height={30} alt="pm" />
+                      <p className="font-bold">{build.arme.patchs[0].pm}</p>
                     </div>
                   </div>
-                  <p className="text-center">{selectedArme?.patchs[0].effet}</p>
+                  <p className="text-center">{build.arme.patchs[0].effet}</p>
                   <div className="flex flex-row items-center gap-8 pt-12">
                     <Hexagon content="(wip)" size={100} />
                     <Hexagon content="(wip)" size={100} />
@@ -505,355 +876,355 @@ const Build = () => {
               <div className="flex flex-row gap-4 justify-center">
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                    selectedCompagnon1 ? companionSquareVariants : emptyCompanionVariants
+                    build.compagnons[0] ? companionSquareVariants : emptyCompanionVariants
                   }`}
                   onClick={onOpenModalCompagnon1}>
-                  {selectedCompagnon1 && (
+                  {build.compagnons[0] && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon1.rarete.toLowerCase()}.png`}
-                        alt={selectedCompagnon1.rarete.toLowerCase()}
+                        src={`/img/utils/cadre_${build.compagnons[0].rarete.toLowerCase()}.png`}
+                        alt={build.compagnons[0].rarete.toLowerCase()}
                         width={200}
                         height={200}
                         className="absolute"
                       />
                       <Image
-                        src={`${COMPAGNON_BASE_URL}/${selectedCompagnon1.image}.png`}
+                        src={`${COMPAGNON_BASE_URL}/${build.compagnons[0].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedCompagnon1.nom}
+                        alt={build.compagnons[0].nom}
                       />
                     </div>
                   )}
-                  <p className="text-center">{selectedCompagnon1?.nom}</p>
+                  <p className="text-center">{build.compagnons[0]?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                    selectedCompagnon2 ? companionSquareVariants : emptyCompanionVariants
+                    build.compagnons[1] ? companionSquareVariants : emptyCompanionVariants
                   }`}
                   onClick={onOpenModalCompagnon2}>
-                  {selectedCompagnon2 && (
+                  {build.compagnons[1] && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon2.rarete.toLowerCase()}.png`}
-                        alt={selectedCompagnon2.nom}
+                        src={`/img/utils/cadre_${build.compagnons[1].rarete.toLowerCase()}.png`}
+                        alt={build.compagnons[1].nom}
                         width={200}
                         height={200}
                         className="absolute"
                       />
                       <Image
-                        src={`${COMPAGNON_BASE_URL}/${selectedCompagnon2.image}.png`}
+                        src={`${COMPAGNON_BASE_URL}/${build.compagnons[1].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedCompagnon2.nom}
+                        alt={build.compagnons[1].nom}
                       />
                     </div>
                   )}
-                  <p className="text-center">{selectedCompagnon2?.nom}</p>
+                  <p className="text-center">{build.compagnons[1]?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                    selectedCompagnon3 ? companionSquareVariants : emptyCompanionVariants
+                    build.compagnons[2] ? companionSquareVariants : emptyCompanionVariants
                   }`}
                   onClick={onOpenModalCompagnon3}>
-                  {selectedCompagnon3 && (
+                  {build.compagnons[2] && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon3.rarete.toLowerCase()}.png`}
-                        alt={selectedCompagnon3.nom}
+                        src={`/img/utils/cadre_${build.compagnons[2].rarete.toLowerCase()}.png`}
+                        alt={build.compagnons[2].nom}
                         width={200}
                         height={200}
                         className="absolute"
                       />
                       <Image
-                        src={`${COMPAGNON_BASE_URL}/${selectedCompagnon3.image}.png`}
+                        src={`${COMPAGNON_BASE_URL}/${build.compagnons[2].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedCompagnon3.nom}
+                        alt={build.compagnons[2].nom}
                       />
                     </div>
                   )}
-                  <p className="text-center">{selectedCompagnon3?.nom}</p>
+                  <p className="text-center">{build.compagnons[2]?.nom}</p>
                 </div>
                 <div
                   className={`bg-contain h-28 w-28 hover:cursor-pointer ${
-                    selectedCompagnon4 ? companionSquareVariants : emptyCompanionVariants
+                    build.compagnons[3] ? companionSquareVariants : emptyCompanionVariants
                   }`}
                   onClick={onOpenModalCompagnon4}>
-                  {selectedCompagnon4 && (
+                  {build.compagnons[3] && (
                     <div className="flex items-center relative">
                       <Image
-                        src={`/img/utils/cadre_${selectedCompagnon4.rarete.toLowerCase()}.png`}
-                        alt={selectedCompagnon4.nom}
+                        src={`/img/utils/cadre_${build.compagnons[3].rarete.toLowerCase()}.png`}
+                        alt={build.compagnons[3].nom}
                         width={200}
                         height={200}
                         className="absolute"
                       />
                       <Image
-                        src={`${COMPAGNON_BASE_URL}/${selectedCompagnon4.image}.png`}
+                        src={`${COMPAGNON_BASE_URL}/${build.compagnons[3].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedCompagnon4.nom}
+                        alt={build.compagnons[3].nom}
                       />
                     </div>
                   )}
-                  <p className="text-center">{selectedCompagnon4?.nom}</p>
+                  <p className="text-center">{build.compagnons[3]?.nom}</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-2 px-4 ">
               <p className={titleVariants}>Sorts</p>
               <div className="flex flex-wrap gap-2 max-w-96">
-                <div onClick={onOpenModalSort1} className={selectedSort1 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort1 && (
+                <div onClick={onOpenModalSort1} className={build.sorts[0] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[0] && (
                     <div
                       data-tooltip-id="tooltip-sort-1"
-                      data-tooltip-content={`${selectedSort1.nom}`}
+                      data-tooltip-content={`${build.sorts[0].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort1.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[0].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort1.nom}
+                        alt={build.sorts[0].nom}
                       />
                       <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort2} className={selectedSort2 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort2 && (
+                <div onClick={onOpenModalSort2} className={build.sorts[1] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[1] && (
                     <div
                       data-tooltip-id="tooltip-sort-2"
-                      data-tooltip-content={`${selectedSort2.nom}`}
+                      data-tooltip-content={`${build.sorts[1].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort2.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[1].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort2.nom}
+                        alt={build.sorts[1].nom}
                       />
                       <Tooltip id="tooltip-sort-2" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort3} className={selectedSort3 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort3 && (
+                <div onClick={onOpenModalSort3} className={build.sorts[2] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[2] && (
                     <div
                       data-tooltip-id="tooltip-sort-1"
-                      data-tooltip-content={`${selectedSort3.nom}`}
+                      data-tooltip-content={`${build.sorts[2].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort3.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[2].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort3.nom}
+                        alt={build.sorts[2].nom}
                       />
                       <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort4} className={selectedSort4 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort4 && (
+                <div onClick={onOpenModalSort4} className={build.sorts[3] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[3] && (
                     <div
                       data-tooltip-id="tooltip-sort-4"
-                      data-tooltip-content={`${selectedSort4.nom}`}
+                      data-tooltip-content={`${build.sorts[3].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort4.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[3].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort4.nom}
+                        alt={build.sorts[3].nom}
                       />
                       <Tooltip id="tooltip-sort-4" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort5} className={selectedSort5 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort5 && (
+                <div onClick={onOpenModalSort5} className={build.sorts[4] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[4] && (
                     <div
                       data-tooltip-id="tooltip-sort-5"
-                      data-tooltip-content={`${selectedSort5.nom}`}
+                      data-tooltip-content={`${build.sorts[4].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort5.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[4].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort5.nom}
+                        alt={build.sorts[4].nom}
                       />
                       <Tooltip id="tooltip-sort-5" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort6} className={selectedSort6 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort6 && (
+                <div onClick={onOpenModalSort6} className={build.sorts[5] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[5] && (
                     <div
                       data-tooltip-id="tooltip-sort-6"
-                      data-tooltip-content={`${selectedSort6.nom}`}
+                      data-tooltip-content={`${build.sorts[5].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort6.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[5].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort6.nom}
+                        alt={build.sorts[5].nom}
                       />
                       <Tooltip id="tooltip-sort-6" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort7} className={selectedSort7 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort7 && (
+                <div onClick={onOpenModalSort7} className={build.sorts[6] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[6] && (
                     <div
                       data-tooltip-id="tooltip-sort-7"
-                      data-tooltip-content={`${selectedSort7.nom}`}
+                      data-tooltip-content={`${build.sorts[6].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort7.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[6].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort7.nom}
+                        alt={build.sorts[6].nom}
                       />
                       <Tooltip id="tooltip-sort-7" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort8} className={selectedSort8 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort8 && (
+                <div onClick={onOpenModalSort8} className={build.sorts[7] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[7] && (
                     <div
                       data-tooltip-id="tooltip-sort-8"
-                      data-tooltip-content={`${selectedSort8.nom}`}
+                      data-tooltip-content={`${build.sorts[7].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort8.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[7].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort8.nom}
+                        alt={build.sorts[7].nom}
                       />
                       <Tooltip id="tooltip-sort-8" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort9} className={selectedSort9 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort9 && (
+                <div onClick={onOpenModalSort9} className={build.sorts[8] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[8] && (
                     <div
                       data-tooltip-id="tooltip-sort-9"
-                      data-tooltip-content={`${selectedSort9.nom}`}
+                      data-tooltip-content={`${build.sorts[8].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort9.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[8].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort9.nom}
+                        alt={build.sorts[8].nom}
                       />
                       <Tooltip id="tooltip-sort-9" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort10} className={selectedSort10 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort10 && (
+                <div onClick={onOpenModalSort10} className={build.sorts[9] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[9] && (
                     <div
                       data-tooltip-id="tooltip-sort-10"
-                      data-tooltip-content={`${selectedSort10.nom}`}
+                      data-tooltip-content={`${build.sorts[9].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort10.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[9].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort10.nom}
+                        alt={build.sorts[9].nom}
                       />
                       <Tooltip id="tooltip-sort-10" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort11} className={selectedSort11 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort11 && (
+                <div onClick={onOpenModalSort11} className={build.sorts[10] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[10] && (
                     <div
                       data-tooltip-id="tooltip-sort-11"
-                      data-tooltip-content={`${selectedSort11.nom}`}
+                      data-tooltip-content={`${build.sorts[10].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort11.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[10].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort11.nom}
+                        alt={build.sorts[10].nom}
                       />
                       <Tooltip id="tooltip-sort-11" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort12} className={selectedSort12 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort12 && (
+                <div onClick={onOpenModalSort12} className={build.sorts[11] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[11] && (
                     <div
                       data-tooltip-id="tooltip-sort-12"
-                      data-tooltip-content={`${selectedSort12.nom}`}
+                      data-tooltip-content={`${build.sorts[11].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort12.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[11].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort12.nom}
+                        alt={build.sorts[11].nom}
                       />
                       <Tooltip id="tooltip-sort-12" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort13} className={selectedSort13 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort13 && (
+                <div onClick={onOpenModalSort13} className={build.sorts[12] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[12] && (
                     <div
                       data-tooltip-id="tooltip-sort-13"
-                      data-tooltip-content={`${selectedSort13.nom}`}
+                      data-tooltip-content={`${build.sorts[12].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort13.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[12].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort13.nom}
+                        alt={build.sorts[12].nom}
                       />
                       <Tooltip id="tooltip-sort-13" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort14} className={selectedSort14 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort14 && (
+                <div onClick={onOpenModalSort14} className={build.sorts[13] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[13] && (
                     <div
                       data-tooltip-id="tooltip-sort-14"
-                      data-tooltip-content={`${selectedSort14.nom}`}
+                      data-tooltip-content={`${build.sorts[13].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort14.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[13].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort14.nom}
+                        alt={build.sorts[13].nom}
                       />
                       <Tooltip id="tooltip-sort-14" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
-                <div onClick={onOpenModalSort15} className={selectedSort15 ? `w-16 h-16` : spellSquareVariants}>
-                  {selectedSort15 && (
+                <div onClick={onOpenModalSort15} className={build.sorts[14] ? `w-16 h-16` : spellSquareVariants}>
+                  {build.sorts[14] && (
                     <div
                       data-tooltip-id="tooltip-sort-15"
-                      data-tooltip-content={`${selectedSort15.nom}`}
+                      data-tooltip-content={`${build.sorts[14].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
                       <Image
-                        src={`${SORT_BASE_URL}/${selectedSort15.image}.png`}
+                        src={`${SORT_BASE_URL}/${build.sorts[14].image}.png`}
                         width={200}
                         height={200}
-                        alt={selectedSort15.nom}
+                        alt={build.sorts[14].nom}
                       />
                       <Tooltip id="tooltip-sort-15" className="tooltip z-10 " />
                     </div>
@@ -866,7 +1237,7 @@ const Build = () => {
       </div>
 
       <div className="flex flex-row gap-20 self-center">
-        <div onClick={handleClickSaveBuild} className="">
+        <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
           <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
           <ToastContainer
             position="bottom-right"
@@ -880,10 +1251,8 @@ const Build = () => {
             theme="dark"
           />
         </div>
-        <div className=" ">
-          <Link href="import-build">
-            <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Importer</p>
-          </Link>
+        <div onClick={handleImportBuild} className="hover:cursor-pointer">
+          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Importer</p>
         </div>
       </div>
       <div>
@@ -891,7 +1260,7 @@ const Build = () => {
           open={!!openModalStringBuild}
           onClose={closeModalStringBuild}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -902,10 +1271,31 @@ const Build = () => {
           <StringBuildDialog stringBuild={encryptedBuild} />
         </Modal>
         <Modal
+          open={!!openModalImport}
+          onClose={closeModalImport}
+          center
+          closeOnOverlayClick={true}
+          showCloseIcon={false}
+          classNames={{
+            overlay: "customOverlay",
+            modal: "customModalImport",
+            root: "scrollbar-none",
+          }}>
+          <Image
+            onClick={closeModalImport}
+            width={50}
+            height={50}
+            src="/img/left-arrow.png"
+            alt="long-arrow-left"
+            className="hover:cursor-pointer absolute top-2 left-4 invert z-10"
+          />
+          <ImportDialog onClickButton={handleImportButtonClick} />
+        </Modal>
+        <Modal
           open={openArmeModal}
           onClose={onCloseModalArme}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -919,7 +1309,7 @@ const Build = () => {
           open={openAnneau1Modal}
           onClose={onCloseModalAnneau}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -933,7 +1323,7 @@ const Build = () => {
           open={openAnneau2Modal}
           onClose={onCloseModalAnneau}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -947,7 +1337,7 @@ const Build = () => {
           open={openAnneau3Modal}
           onClose={onCloseModalAnneau}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -961,7 +1351,7 @@ const Build = () => {
           open={openAnneau4Modal}
           onClose={onCloseModalAnneau}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -975,7 +1365,7 @@ const Build = () => {
           open={openBrassardModal}
           onClose={onCloseModalBrassard}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -992,7 +1382,7 @@ const Build = () => {
           open={openCompagnon1Modal}
           onClose={onCloseModalCompagnon}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1009,7 +1399,7 @@ const Build = () => {
           open={openCompagnon2Modal}
           onClose={onCloseModalCompagnon}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1026,7 +1416,7 @@ const Build = () => {
           open={openCompagnon3Modal}
           onClose={onCloseModalCompagnon}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1043,7 +1433,7 @@ const Build = () => {
           open={openCompagnon4Modal}
           onClose={onCloseModalCompagnon}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1060,7 +1450,7 @@ const Build = () => {
           open={openSortModal1}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1069,8 +1459,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort1Change}
           />
@@ -1079,7 +1469,7 @@ const Build = () => {
           open={openSortModal2}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1088,8 +1478,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort2Change}
           />
@@ -1099,7 +1489,7 @@ const Build = () => {
           open={openSortModal3}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1108,8 +1498,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort3Change}
           />
@@ -1119,7 +1509,7 @@ const Build = () => {
           open={openSortModal4}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1128,8 +1518,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort4Change}
           />
@@ -1139,7 +1529,7 @@ const Build = () => {
           open={openSortModal5}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1148,8 +1538,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort5Change}
           />
@@ -1159,7 +1549,7 @@ const Build = () => {
           open={openSortModal6}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1168,8 +1558,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort6Change}
           />
@@ -1179,7 +1569,7 @@ const Build = () => {
           open={openSortModal7}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1188,8 +1578,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort7Change}
           />
@@ -1199,7 +1589,7 @@ const Build = () => {
           open={openSortModal8}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1208,8 +1598,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort8Change}
           />
@@ -1219,7 +1609,7 @@ const Build = () => {
           open={openSortModal9}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1228,8 +1618,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort9Change}
           />
@@ -1239,7 +1629,7 @@ const Build = () => {
           open={openSortModal10}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1248,8 +1638,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort10Change}
           />
@@ -1259,7 +1649,7 @@ const Build = () => {
           open={openSortModal11}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1268,8 +1658,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort11Change}
           />
@@ -1279,7 +1669,7 @@ const Build = () => {
           open={openSortModal12}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1288,8 +1678,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort12Change}
           />
@@ -1299,7 +1689,7 @@ const Build = () => {
           open={openSortModal13}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1308,8 +1698,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort13Change}
           />
@@ -1319,7 +1709,7 @@ const Build = () => {
           open={openSortModal14}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1328,8 +1718,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort14Change}
           />
@@ -1339,7 +1729,7 @@ const Build = () => {
           open={openSortModal15}
           onClose={onCloseModalSort}
           center
-          closeOnOverlayClick={false}
+          closeOnOverlayClick={true}
           showCloseIcon={true}
           closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={20} height={20} />}
           classNames={{
@@ -1348,8 +1738,8 @@ const Build = () => {
             root: "scrollbar-none",
           }}>
           <SortsDialog
-            dieu={selectedArme?.dieu}
-            arme={selectedArme?.nom}
+            dieu={build.arme?.dieu}
+            arme={build.arme?.nom}
             onClickSort={handleClickSort}
             onSelectedSortChange={handleSelectedSort15Change}
           />

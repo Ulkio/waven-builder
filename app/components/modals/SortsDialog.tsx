@@ -117,7 +117,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                   height={120}
                   alt={displayedSort.nom}
                 />
-                <div className="flex flex-col gap-2 absolute -right-12">
+                <div className="flex flex-col gap-2 absolute -right-12 ">
                   <div key={displayedSort.patchs[0].cout} className="h-full w-full relative ">
                     <Image src={`/img/utils/${displayedSort.element}.png`} width={50} height={50} alt="cout" />
                     <p
@@ -137,21 +137,21 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                   </div>
                 </div>
               </div>
-              <p className="font-black text-2xl">{displayedSort.nom}</p>
+              <p className="font-black text-2xl text-center">{displayedSort.nom}</p>
 
-              <p>{displayedSort.patchs[0].effet}</p>
+              <p className="text-center">{displayedSort.patchs[0].effet}</p>
             </>
           )}
         </div>
 
-        <div className="flex flex-wrap  xl:px-0 w-full xl:justify-center gap-4 overflow-y-scroll xl:overflow-y-visible  pt-8 h-full">
+        <div className="flex flex-wrap  xl:px-0 w-full xl:justify-center gap-4 overflow-y-scroll xl:overflow-y-visible  pt-8 h-full ">
           {displayedSort?.patchs[0].dons && (
             <>
               {displayedSort.patchs[0].dons!.map((don: DonSorts, key) => {
                 return (
                   <div
                     key={don.nom + key}
-                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
+                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2 ">
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-md text-center">{don.effet}</p>
                     <div className="flex justify-center ">

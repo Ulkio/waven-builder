@@ -48,7 +48,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
     <div className="flex h-full">
       <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
         <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => handleFilterClick("commun")}
             className="btn-filter text-commun border border-commun px-2 rounded-md font-bold">
@@ -108,9 +108,9 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                 height={120}
                 alt={displayedBrassard.nom}
               />
-              <p className="font-black text-2xl">{displayedBrassard.nom}</p>
+              <p className="font-black text-2xl text-center">{displayedBrassard.nom}</p>
               <p className="text-center">{displayedBrassard.patchs[0].pouvoir}</p>
-              <div className="flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-2 text-center">
                 {displayedBrassard.patchs[0].caracteristiques.map((carac: CaracteristiqueBrassards) => {
                   return (
                     <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
