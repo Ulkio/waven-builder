@@ -1075,7 +1075,7 @@ const Build = () => {
                 <div onClick={onOpenModalSort3} className={build.sorts[2] ? `w-16 h-16` : spellSquareVariants}>
                   {build.sorts[2] && (
                     <div
-                      data-tooltip-id="tooltip-sort-1"
+                      data-tooltip-id="tooltip-sort-3"
                       data-tooltip-content={`${build.sorts[2].nom}`}
                       data-tooltip-place="bottom"
                       className="flex items-center relative">
@@ -1085,7 +1085,7 @@ const Build = () => {
                         height={200}
                         alt={build.sorts[2].nom}
                       />
-                      <Tooltip id="tooltip-sort-1" className="tooltip z-10 " />
+                      <Tooltip id="tooltip-sort-3" className="tooltip z-10 " />
                     </div>
                   )}
                 </div>
