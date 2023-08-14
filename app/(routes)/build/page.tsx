@@ -21,6 +21,8 @@ import Link from "next/link";
 import SortsDialog from "@/components/modals/SortsDialog";
 import { Tooltip } from "react-tooltip";
 import "../../styles/tooltip.css";
+import { motion } from "framer-motion";
+
 const Build = () => {
   ////////////////////////////////TODO////////////////////////////////
 
@@ -61,88 +63,66 @@ const Build = () => {
   //#endregion
 
   //#region SELECTABLES
-  const [selectedArme, setSelectedArme] = useState<Arme | null>(null);
   const handleSelectedArmeChange = (selectedArme: Arme) => {
-    setSelectedArme(selectedArme);
     setBuild((prev) => ({ ...prev, arme: selectedArme }));
   };
-  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
   const handleSelectedBrassardChange = (selectedBrassard: Brassard) => {
-    setSelectedBrassard(selectedBrassard);
     setBuild((prev) => ({ ...prev, brassard: selectedBrassard }));
   };
-  const [selectedCompagnon1, setSelectedCompagnon1] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon1Change = (selected: Compagnon) => {
-    setSelectedCompagnon1(selected);
     setBuild((prev) => ({
       ...prev,
       compagnons: [selected, prev.compagnons[1], prev.compagnons[2], prev.compagnons[3]],
     }));
   };
 
-  const [selectedCompagnon2, setSelectedCompagnon2] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon2Change = (selected: Compagnon) => {
-    setSelectedCompagnon2(selected);
     setBuild((prev) => ({
       ...prev,
       compagnons: [prev.compagnons[0], selected, prev.compagnons[2], prev.compagnons[3]],
     }));
   };
 
-  const [selectedCompagnon3, setSelectedCompagnon3] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon3Change = (selected: Compagnon) => {
-    setSelectedCompagnon3(selected);
     setBuild((prev) => ({
       ...prev,
       compagnons: [prev.compagnons[0], prev.compagnons[1], selected, prev.compagnons[3]],
     }));
   };
 
-  const [selectedCompagnon4, setSelectedCompagnon4] = useState<Compagnon | null>(null);
   const handleSelectedCompagnon4Change = (selected: Compagnon) => {
-    setSelectedCompagnon4(selected);
     setBuild((prev) => ({
       ...prev,
       compagnons: [prev.compagnons[0], prev.compagnons[1], prev.compagnons[2], selected],
     }));
   };
-  const [selectedAnneau1, setSelectedAnneau1] = useState<Anneau | null>(null);
   const handleSelectedAnneau1Change = (selected: Anneau) => {
-    setSelectedAnneau1(selected);
     setBuild((prev) => ({
       ...prev,
       anneaux: [selected, prev.anneaux[1], prev.anneaux[2], prev.anneaux[3]],
     }));
   };
-  const [selectedAnneau2, setSelectedAnneau2] = useState<Anneau | null>(null);
   const handleSelectedAnneau2Change = (selected: Anneau) => {
-    setSelectedAnneau2(selected);
     setBuild((prev) => ({
       ...prev,
       anneaux: [prev.anneaux[0], selected, prev.anneaux[2], prev.anneaux[3]],
     }));
   };
 
-  const [selectedAnneau3, setSelectedAnneau3] = useState<Anneau | null>(null);
   const handleSelectedAnneau3Change = (selected: Anneau) => {
-    setSelectedAnneau3(selected);
     setBuild((prev) => ({
       ...prev,
       anneaux: [prev.anneaux[0], prev.anneaux[1], selected, prev.anneaux[3]],
     }));
   };
 
-  const [selectedAnneau4, setSelectedAnneau4] = useState<Anneau | null>(null);
   const handleSelectedAnneau4Change = (selected: Anneau) => {
-    setSelectedAnneau4(selected);
     setBuild((prev) => ({
       ...prev,
       anneaux: [prev.anneaux[0], prev.anneaux[1], prev.anneaux[2], selected],
     }));
   };
-  const [selectedSort1, setSelectedSort1] = useState<Sort | null>(null);
   const handleSelectedSort1Change = (selected: Sort) => {
-    setSelectedSort1(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -164,9 +144,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort2, setSelectedSort2] = useState<Sort | null>(null);
   const handleSelectedSort2Change = (selected: Sort) => {
-    setSelectedSort2(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -188,9 +166,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort3, setSelectedSort3] = useState<Sort | null>(null);
   const handleSelectedSort3Change = (selected: Sort) => {
-    setSelectedSort3(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -212,9 +188,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort4, setSelectedSort4] = useState<Sort | null>(null);
   const handleSelectedSort4Change = (selected: Sort) => {
-    setSelectedSort4(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -236,9 +210,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort5, setSelectedSort5] = useState<Sort | null>(null);
   const handleSelectedSort5Change = (selected: Sort) => {
-    setSelectedSort5(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -260,9 +232,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort6, setSelectedSort6] = useState<Sort | null>(null);
   const handleSelectedSort6Change = (selected: Sort) => {
-    setSelectedSort6(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -284,9 +254,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort7, setSelectedSort7] = useState<Sort | null>(null);
   const handleSelectedSort7Change = (selected: Sort) => {
-    setSelectedSort7(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -308,9 +276,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort8, setSelectedSort8] = useState<Sort | null>(null);
   const handleSelectedSort8Change = (selected: Sort) => {
-    setSelectedSort8(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -332,9 +298,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort9, setSelectedSort9] = useState<Sort | null>(null);
   const handleSelectedSort9Change = (selected: Sort) => {
-    setSelectedSort9(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -356,9 +320,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort10, setSelectedSort10] = useState<Sort | null>(null);
   const handleSelectedSort10Change = (selected: Sort) => {
-    setSelectedSort10(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -380,9 +342,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort11, setSelectedSort11] = useState<Sort | null>(null);
   const handleSelectedSort11Change = (selected: Sort) => {
-    setSelectedSort11(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -404,9 +364,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort12, setSelectedSort12] = useState<Sort | null>(null);
   const handleSelectedSort12Change = (selected: Sort) => {
-    setSelectedSort12(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -428,9 +386,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort13, setSelectedSort13] = useState<Sort | null>(null);
   const handleSelectedSort13Change = (selected: Sort) => {
-    setSelectedSort13(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -453,9 +409,7 @@ const Build = () => {
     }));
   };
 
-  const [selectedSort14, setSelectedSort14] = useState<Sort | null>(null);
   const handleSelectedSort14Change = (selected: Sort) => {
-    setSelectedSort14(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -477,9 +431,7 @@ const Build = () => {
       ],
     }));
   };
-  const [selectedSort15, setSelectedSort15] = useState<Sort | null>(null);
   const handleSelectedSort15Change = (selected: Sort) => {
-    setSelectedSort15(selected);
     setBuild((prev) => ({
       ...prev,
       sorts: [
@@ -692,9 +644,38 @@ const Build = () => {
     if (!params.get("import")) return;
     setOpenModalImport(!openModalImport);
   }, [params]);
+  const variants = {
+    show: {
+      opacity: 0.5,
+      x: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 1,
+      },
+    },
+    hide: {
+      opacity: 0,
+      x: 500,
+      transition: {
+        ease: "easeInOut",
+        duration: 1,
+      },
+    },
+  };
 
   return (
-    <main className="h-screen flex flex-col justify-between gap-12">
+    <main className="h-screen flex flex-col justify-between gap-12 ">
+      {build.arme && (
+        <motion.div
+          key={build.arme.nom}
+          variants={variants}
+          animate={"show"}
+          initial="hide"
+          className="fixed bottom-0 right-0">
+          <Image src={`/img/splash/${build.arme.nom.replace(" ", "_")}.png`} width={400} height={400} alt="splash" />
+        </motion.div>
+      )}
+
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -925,7 +906,7 @@ const Build = () => {
                   height={200}
                   loading="eager"
                   onClick={onOpenModalArmes}
-                  className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out"
+                  className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"
                 />
               )}
             </div>

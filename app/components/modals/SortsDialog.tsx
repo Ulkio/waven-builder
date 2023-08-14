@@ -19,6 +19,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
   const earthVariants = `absolute top-2 left-4 font-bold text-xl text-outline`;
   const windVariants = `absolute top-3 left-4 font-bold text-xl text-outline`;
   const astralVariants = `absolute top-1 left-4 font-bold text-xl text-outline`;
+  const neutreVariants = `absolute top-2 left-4 font-bold text-xl text-outline`;
   const manaVariants = `absolute top-1 left-[0.6rem] font-bold text-xl text-outline`;
 
   const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
@@ -128,7 +129,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
         <div className="flex flex-col w-full items-center gap-8 py-4">
           {displayedSort && (
             <>
-              <div className="flex items-center relative">
+              <div className="flex flex-col items-center relative">
                 <Image
                   src={`${SORTS_BASE_URL}/${displayedSort.image}.png`}
                   width={120}
@@ -136,42 +137,48 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                   alt={displayedSort.nom}
                 />
                 <div className="flex flex-col gap-2 absolute -top-4 left-[2.8rem] ">
-                  <div key={displayedSort.patchs[0].cout} className="h-full w-full relative ">
+                  <div className="h-full w-full relative ">
                     <Image src={`/img/utils/mana.png`} width={30} height={30} alt="cout" />
                     <p className={manaVariants}>{displayedSort.patchs[0].cout}</p>
                   </div>
                 </div>
                 {displayedSort.patchs[0].gains && Object.keys(displayedSort.patchs[0].gains).length > 0 ? (
-                  <div className="flex flex-col gap-2 absolute -bottom-6 left-10 ">
-                    <div key={displayedSort.patchs[0].cout} className="h-full w-full relative ">
-                      <Image
-                        src={`/img/utils/${displayedSort.element.toLowerCase()}.png`}
-                        width={40}
-                        height={40}
-                        alt="cout"
-                      />
-                      <p
-                        className={
-                          displayedSort.element === "Feu"
-                            ? fireVariants
-                            : displayedSort.element === "Eau"
-                            ? waterVariants
-                            : displayedSort.element === "Terre"
-                            ? earthVariants
-                            : displayedSort.element === "Air"
-                            ? windVariants
-                            : astralVariants
-                        }>
-                        {displayedSort.element === "Feu"
-                          ? displayedSort.patchs[0].gains?.feu
-                          : displayedSort.element === "Eau"
-                          ? displayedSort.patchs[0].gains?.eau
-                          : displayedSort.element === "Terre"
-                          ? displayedSort.patchs[0].gains?.terre
-                          : displayedSort.element === "Air"
-                          ? displayedSort.patchs[0].gains?.air
-                          : displayedSort.patchs[0].gains?.astral}
-                      </p>
+                  <div className="flex flex-col gap-2 ">
+                    <div key={displayedSort.patchs[0].cout} className="relative flex ">
+                      {Object.entries(displayedSort.patchs[0].gains).map((gain, key) => {
+                        return (
+                          <div key={key} className="flex flex-row relative h-12 w-12">
+                            <Image
+                              src={`/img/utils/${gain[0]}.png`}
+                              width={40}
+                              height={40}
+                              alt="cout"
+                              className="object-cover"
+                            />
+                            <p
+                              className={
+                                gain[0] === "feu"
+                                  ? fireVariants
+                                  : gain[0] === "eau"
+                                  ? waterVariants
+                                  : gain[0] === "terre"
+                                  ? earthVariants
+                                  : gain[0] === "air"
+                                  ? windVariants
+                                  : gain[0] === "astral"
+                                  ? astralVariants
+                                  : neutreVariants
+                              }>
+                              {gain[0] === "feu" && gain[1]}
+                              {gain[0] === "eau" && gain[1]}
+                              {gain[0] === "terre" && gain[1]}
+                              {gain[0] === "air" && gain[1]}
+                              {gain[0] === "astral" && gain[1]}
+                              {gain[0] === "neutre" && gain[1]}
+                            </p>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : (
