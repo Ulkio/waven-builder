@@ -20,8 +20,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/background.jpg");
   color: white;
-  margin: auto;
-  width: auto;
+  width: 100%;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -41,6 +40,9 @@ body {
 /* Handle on hover */
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   /* border: dotted 1px white; */
 }
 
