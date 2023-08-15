@@ -528,14 +528,14 @@ const Build = () => {
               </div>
               <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Broche</p>
-                <div className="flex flex-col ">
+                <div className="flex flex-col" onClick={() => toast("Arrive bientôt !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
               </div>
               <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Familier</p>
-                <div className="flex flex-col ">
+                <div className="flex flex-col" onClick={() => toast("Arrive bientôt !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
@@ -568,20 +568,26 @@ const Build = () => {
             </div>
             <div className="flex flex-col gap-2 px-4 ">
               <p className={titleVariants}>Sorts</p>
-              <div className="flex flex-wrap gap-2 max-w-96">
-                {[...Array(15)].map((_, index) => {
-                  const sort = build.sorts[index];
-                  return (
-                    <SortItem
-                      key={index}
-                      index={index}
-                      item={sort}
-                      openModal={() => openModal(`openSort${index + 1}Modal`)}
-                      spellSquareVariants={spellSquareVariants}
-                    />
-                  );
-                })}
-              </div>
+              {!build.arme ? (
+                <p className="text-md italic opacity-50">Sélectionnez une arme !</p>
+              ) : (
+                <>
+                  <div className="flex flex-wrap gap-2 max-w-96">
+                    {[...Array(15)].map((_, index) => {
+                      const sort = build.sorts[index];
+                      return (
+                        <SortItem
+                          key={index}
+                          index={index}
+                          item={sort}
+                          openModal={() => openModal(`openSort${index + 1}Modal`)}
+                          spellSquareVariants={spellSquareVariants}
+                        />
+                      );
+                    })}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
