@@ -484,7 +484,7 @@ const Build = () => {
                   const anneau = build.anneaux[index];
 
                   return (
-                    <div className="flex flex-col">
+                    <div key={index} className="flex flex-col">
                       <div
                         className={`flex items-center justify-center relative ${
                           !build.anneaux[index] && squareVariants
