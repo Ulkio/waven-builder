@@ -528,14 +528,14 @@ const Build = () => {
               </div>
               <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Broche</p>
-                <div className="flex flex-col" onClick={() => toast("Arrive bientôt !")}>
+                <div className="flex flex-col" onClick={() => toast("À venir !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
               </div>
               <div className="flex flex-col xl:h-full justify-center  items-center">
                 <p className={titleVariants}>Familier</p>
-                <div className="flex flex-col" onClick={() => toast("Arrive bientôt !")}>
+                <div className="flex flex-col" onClick={() => toast("À venir !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
