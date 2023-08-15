@@ -10,7 +10,7 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   title: "Waven builder",
   description: "Créez votre build pour WAVEN et partagez-le !",
-  verification: { google: "google-site-verification=Qa6dWFg8cG-r4CJYc28a5IeHtH1fFAJAZ-_gGKK_yes" },
+  verification: { google: "Qa6dWFg8cG-r4CJYc28a5IeHtH1fFAJAZ-_gGKK_yes" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
