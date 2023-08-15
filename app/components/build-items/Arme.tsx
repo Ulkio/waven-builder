@@ -15,7 +15,7 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
             alt="classe"
             width={200}
             height={200}
-            onClick={() => openModal("openArmeModal")}
+            onClick={openModal}
             className="hover:cursor-pointer"
           />
           <p className="font-black text-3xl">{item?.nom}</p>
@@ -50,7 +50,7 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
           width={200}
           height={200}
           priority
-          onClick={() => openModal("openArmeModal")}
+          onClick={openModal}
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"
         />
       )}
