@@ -6,19 +6,19 @@ import { useSearchParams } from "next/navigation";
 import "react-responsive-modal/styles.css";
 import "../../styles/modal.css";
 import { Modal } from "react-responsive-modal";
-import AnneauxDialog from "@/components/modals/AnneauxDialog";
-import BrassardsDialog from "@/components/modals/BrassardsDialog";
-import CompagnonsDialog from "@/components/modals/CompagnonsDialog";
-import ArmesDialog from "@/components/modals/ArmesDialog";
+import AnneauxModalContent from "@/components/modals/AnneauxModalContent";
+import BrassardsModalContent from "@/components/modals/BrassardsModalContent";
+import CompagnonsModalContent from "@/components/modals/CompagnonsModalContent";
+import ArmesModalContent from "@/components/modals/ArmesModalContent";
+import StringBuildModalContent from "@/components/modals/StringBuildModalContent";
+import ImportModalContent from "@/components/modals/ImportModalContent";
+import SortsModalContent from "@/components/modals/SortsModalContent";
 import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Compagnons, Sorts, Armes, Anneaux } from "@/types";
 import { AES, enc } from "crypto-js";
 import { useMediaQuery } from "react-responsive";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import StringBuildDialog from "@/components/modals/StringBuildDialog";
-import ImportDialog from "@/components/modals/ImportDialog";
 import Link from "next/link";
-import SortsDialog from "@/components/modals/SortsDialog";
 import { Tooltip } from "react-tooltip";
 import "../../styles/tooltip.css";
 import { motion } from "framer-motion";
@@ -1336,7 +1336,7 @@ const Build = () => {
             modal: "customModalImport",
             root: "scrollbar-none",
           }}>
-          <StringBuildDialog stringBuild={encryptedBuild} />
+          <StringBuildModalContent stringBuild={encryptedBuild} />
         </Modal>
         <Modal
           open={!!openModalImport}
@@ -1350,7 +1350,7 @@ const Build = () => {
             modal: "customModalImport",
             root: "scrollbar-none",
           }}>
-          <ImportDialog onClickButton={handleImportButtonClick} />
+          <ImportModalContent onClickButton={handleImportButtonClick} />
         </Modal>
         <Modal
           open={openArmeModal}
@@ -1364,7 +1364,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <ArmesDialog onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
+          <ArmesModalContent onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
         </Modal>
         <Modal
           open={openAnneau1Modal}
@@ -1378,7 +1378,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
+          <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
         </Modal>
         <Modal
           open={openAnneau2Modal}
@@ -1392,7 +1392,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
+          <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
         </Modal>
         <Modal
           open={openAnneau3Modal}
@@ -1406,7 +1406,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
+          <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
         </Modal>
         <Modal
           open={openAnneau4Modal}
@@ -1420,7 +1420,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <AnneauxDialog onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
+          <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
         </Modal>
         <Modal
           open={openBrassardModal}
@@ -1434,7 +1434,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <BrassardsDialog
+          <BrassardsModalContent
             onClickBrassard={handleClickBrassard}
             onSelectedBrassardChange={handleSelectedBrassardChange}
           />
@@ -1451,7 +1451,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <CompagnonsDialog
+          <CompagnonsModalContent
             onClickCompagnon={handleClickCompagnon}
             onSelectedCompagnonChange={handleSelectedCompagnon1Change}
           />
@@ -1468,7 +1468,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <CompagnonsDialog
+          <CompagnonsModalContent
             onClickCompagnon={handleClickCompagnon}
             onSelectedCompagnonChange={handleSelectedCompagnon2Change}
           />
@@ -1485,7 +1485,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <CompagnonsDialog
+          <CompagnonsModalContent
             onClickCompagnon={handleClickCompagnon}
             onSelectedCompagnonChange={handleSelectedCompagnon3Change}
           />
@@ -1502,7 +1502,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <CompagnonsDialog
+          <CompagnonsModalContent
             onClickCompagnon={handleClickCompagnon}
             onSelectedCompagnonChange={handleSelectedCompagnon4Change}
           />
@@ -1519,7 +1519,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1538,7 +1538,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1558,7 +1558,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1578,7 +1578,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1598,7 +1598,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1618,7 +1618,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1638,7 +1638,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1658,7 +1658,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1678,7 +1678,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1698,7 +1698,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1718,7 +1718,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1738,7 +1738,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1758,7 +1758,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1778,7 +1778,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}
@@ -1798,7 +1798,7 @@ const Build = () => {
             modal: "customModal",
             root: "scrollbar-none",
           }}>
-          <SortsDialog
+          <SortsModalContent
             dieu={build.arme?.dieu}
             arme={build.arme?.nom}
             onClickSort={handleClickSort}

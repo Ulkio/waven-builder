@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 import Image from "next/image";
 import { Modal } from "react-responsive-modal";
 
-export const ModalComponent = ({ open, onClose, changeHandler, dialogComponent }: any) => {
+interface ModalComponentProps {
+  open: boolean;
+  onClose: () => void;
+  dialogComponent: ReactNode;
+}
+
+export const ModalComponent = ({ open, onClose, dialogComponent }: ModalComponentProps) => {
   return (
     <Modal
       open={open}

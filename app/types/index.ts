@@ -175,3 +175,26 @@ export interface PatchArmes {
   cc: number;
   pm: number;
 }
+
+export interface BuildItemProps {
+  item: Brassard | Anneau;
+  squareVariants: string;
+  openModal: () => void;
+}
+export interface BuildCompagnonProps {
+  item: Compagnon;
+  companionSquareVariants: string;
+  emptyCompanionVariants: string;
+  openModal: () => void;
+  index: number;
+}
+export interface BuildSortProps {
+  item: Sort;
+  spellSquareVariants: string;
+  openModal: () => void;
+  index: number;
+}
+export interface BuildArmeProps {
+  item: Arme;
+  openModal: () => void;
+}
