@@ -52,10 +52,11 @@ export interface DonCompagnons {
 }
 
 export interface Couts {
-  feu?: number;
-  air?: number;
-  terre?: number;
-  eau?: number;
+  [element: string]: number;
+  // feu?: number;
+  // air?: number;
+  // terre?: number;
+  // eau?: number;
 }
 
 export interface Anneau {

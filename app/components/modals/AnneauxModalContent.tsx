@@ -146,7 +146,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-md text-center">{don.effet}</p>
                     <div className="flex justify-center ">
-                      <Image src="/img/utils/rune_d_equipement.png" width={20} height={20} alt="cout_rune" />
+                      <Image src="/img/utils/rune_d_equipement.png" width={30} height={30} alt="cout_rune" />
                       <p className="text-sm text-center font-bold">{don.cout}</p>
                     </div>
                   </div>

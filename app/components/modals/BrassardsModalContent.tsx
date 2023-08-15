@@ -10,7 +10,7 @@ interface BrassardsDialogProps {
 }
 const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: BrassardsDialogProps) => {
   const brassards: Brassard[] = data.equipements.brassards;
-  const ARMBAND_BASE_URL = "/img/brassards";
+  const BRASSARD_BASE_URL = "/img/brassards";
 
   const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
   const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(null);
@@ -87,7 +87,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                   className="absolute hover:cursor-pointer"
                 />
                 <Image
-                  src={`${ARMBAND_BASE_URL}/${brassard.image}.png`}
+                  src={`${BRASSARD_BASE_URL}/${brassard.image}.png`}
                   alt={brassard.nom}
                   width={90}
                   height={90}
@@ -113,7 +113,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                   className="absolute hover:cursor-pointer"
                 />
                 <Image
-                  src={`${ARMBAND_BASE_URL}/${displayedBrassard.image}.png`}
+                  src={`${BRASSARD_BASE_URL}/${displayedBrassard.image}.png`}
                   alt={displayedBrassard.nom}
                   width={150}
                   height={150}
@@ -146,7 +146,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-md text-center">{don.effet}</p>
                     <div className="flex justify-center ">
-                      <Image src="/img/utils/rune_d_equipement.png" width={20} height={20} alt="cout_rune" />
+                      <Image src="/img/utils/rune_d_equipement.png" width={30} height={30} alt="cout_rune" />
                       <p className="text-sm text-center font-bold">{don.cout}</p>
                     </div>
                   </div>

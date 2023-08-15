@@ -144,11 +144,11 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                   </div>
                 </div>
                 {displayedSort.patchs[0].gains && Object.keys(displayedSort.patchs[0].gains).length > 0 ? (
-                  <div className="flex flex-col gap-2 ">
-                    <div key={displayedSort.patchs[0].cout} className="relative flex ">
+                  <div className="flex flex-col">
+                    <div key={displayedSort.patchs[0].cout} className="relative flex gap-2">
                       {Object.entries(displayedSort.patchs[0].gains).map((gain, key) => {
                         return (
-                          <div key={key} className="flex flex-row relative h-12 w-12">
+                          <div key={key} className="flex flex-row relative h-12 w-auto">
                             <Image
                               src={`/img/utils/${gain[0]}.png`}
                               width={40}
@@ -203,8 +203,8 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                     className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2 ">
                     <p className="text-sm text-center  font-black">{don.nom}</p>
                     <p className="text-md text-center">{don.effet}</p>
-                    <div className="flex justify-center ">
-                      <Image src="/img/utils/rune_de_sort.png" width={20} height={20} alt="cout_rune" />
+                    <div className="flex justify-center items-center">
+                      <Image src="/img/utils/rune_de_sort.png" width={30} height={30} alt="cout_rune" />
                       <p className="text-sm text-center font-bold">{don.cout}</p>
                     </div>
                   </div>
