@@ -69,6 +69,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
                         alt={sort.nom}
                         width={80}
                         height={80}
+                        priority
                         className="hover:cursor-pointer"
                       />
                       <p className="text-sm text-center font-bold ">{sort.nom}</p>

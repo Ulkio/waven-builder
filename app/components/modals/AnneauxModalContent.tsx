@@ -82,6 +82,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                   alt={ring.nom}
                   width={100}
                   height={100}
+                  priority
                   className="absolute hover:cursor-pointer"
                 />
                 <Image
@@ -89,6 +90,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
                   alt={ring.nom}
                   width={90}
                   height={90}
+                  priority
                   className="hover:cursor-pointer z-10"
                 />
                 <p className="text-center z-10 pt-4 font-bold">{ring.nom}</p>

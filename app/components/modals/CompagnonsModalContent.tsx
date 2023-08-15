@@ -89,6 +89,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                     alt={compagnon.nom}
                     width={100}
                     height={100}
+                    priority
                     className="absolute hover:cursor-pointer"
                   />
                   <Image
@@ -96,6 +97,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                     alt={compagnon.nom}
                     width={100}
                     height={100}
+                    priority
                   />
                   <div className="flex flex-col absolute -right-2">
                     {Object.entries(compagnon.patchs[0].couts).map((cout) => {
