@@ -40,8 +40,8 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
           </div>
           <p className="text-center">{item.patchs[0].effet}</p>
           <div className="flex flex-row items-center gap-8 pt-12">
-            <Hexagon content="(wip)" size={100} onClick={() => toast("À venir !")} />
-            <Hexagon content="(wip)" size={100} onClick={() => toast("À venir !")} />
+            <Hexagon content="Passif" size={100} onClick={() => toast("À venir !")} />
+            <Hexagon content="Passif" size={100} onClick={() => toast("À venir !")} />
           </div>
         </>
       ) : (
