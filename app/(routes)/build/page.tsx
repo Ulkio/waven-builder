@@ -55,14 +55,6 @@ const Build = () => {
   const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
-  //#region URLs
-  const ARME_BASE_URL = "/img/armes";
-  const ANNEAU_BASE_URL = "/img/anneaux";
-  const BRASSARD_BASE_URL = "/img/brassards";
-  const COMPAGNON_BASE_URL = "/img/compagnons";
-  const SORT_BASE_URL = "/img/sorts";
-  //#endregion
-
   //#region HANDLERS
   const handleSelectedArmeChange = (selectedArme: Arme) => {
     setBuild((prev) => ({ ...prev, arme: selectedArme }));
@@ -77,6 +69,7 @@ const Build = () => {
       return { ...prev, compagnons: newCompagnons };
     });
   };
+
   const handleSelectedCompagnon1Change = handleSelectedCompagnonChangeGenerator(0);
   const handleSelectedCompagnon2Change = handleSelectedCompagnonChangeGenerator(1);
   const handleSelectedCompagnon3Change = handleSelectedCompagnonChangeGenerator(2);
@@ -120,57 +113,17 @@ const Build = () => {
   //#endregion
 
   //#region MODAL
-  const onCloseModalArme = () => {
-    closeModal("openArmeModal");
-  };
-
-  const onCloseModalAnneau = () => {
-    closeModal("openAnneau1Modal");
-    closeModal("openAnneau2Modal");
-    closeModal("openAnneau3Modal");
-    closeModal("openAnneau4Modal");
-  };
-
-  const onCloseModalBrassard = () => {
-    closeModal("openBrassardModal");
-  };
-
-  const onCloseModalCompagnon = () => {
-    closeModal("openCompagnon1Modal");
-    closeModal("openCompagnon2Modal");
-    closeModal("openCompagnon3Modal");
-    closeModal("openCompagnon4Modal");
-  };
-
-  const onCloseModalSort = () => {
-    closeModal("openSort1Modal");
-    closeModal("openSort2Modal");
-    closeModal("openSort3Modal");
-    closeModal("openSort4Modal");
-    closeModal("openSort5Modal");
-    closeModal("openSort6Modal");
-    closeModal("openSort7Modal");
-    closeModal("openSort8Modal");
-    closeModal("openSort9Modal");
-    closeModal("openSort10Modal");
-    closeModal("openSort11Modal");
-    closeModal("openSort12Modal");
-    closeModal("openSort13Modal");
-    closeModal("openSort14Modal");
-    closeModal("openSort15Modal");
-  };
   const [openModalStringBuild, setOpenModalStringBuild] = useState<boolean>(false);
 
-  const handleCloseModalClick = (onCloseModal: () => void) => () => {
+  const handleModalToggle = (modalState: string) => {
     if (isTabletOrMobile) return;
-    onCloseModal();
+    if (modalStates[modalState]) {
+      closeModal(modalState);
+    } else {
+      openModal(modalState);
+    }
   };
 
-  const handleClickAnneau = handleCloseModalClick(onCloseModalAnneau);
-  const handleClickBrassard = handleCloseModalClick(onCloseModalBrassard);
-  const handleClickCompagnon = handleCloseModalClick(onCloseModalCompagnon);
-  const handleClickArme = handleCloseModalClick(onCloseModalArme);
-  const handleClickSort = handleCloseModalClick(onCloseModalSort);
   const closeModalStringBuild = () => setOpenModalStringBuild(false);
   const closeModalImport = () => setOpenModalImport(false);
 
@@ -178,38 +131,53 @@ const Build = () => {
     {
       stateName: "openArmeModal",
       dialogComponent: (
-        <ArmesModalContent onClickArme={handleClickArme} onSelectedArmeChange={handleSelectedArmeChange} />
+        <ArmesModalContent
+          onClickArme={() => handleModalToggle(`openArmeModal`)}
+          onSelectedArmeChange={handleSelectedArmeChange}
+        />
       ),
     },
     {
       stateName: "openAnneau1Modal",
       dialogComponent: (
-        <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau1Change} />
+        <AnneauxModalContent
+          onClickAnneau={() => handleModalToggle(`openAnneau1Modal`)}
+          onSelectedAnneauChange={handleSelectedAnneau1Change}
+        />
       ),
     },
     {
       stateName: "openAnneau2Modal",
       dialogComponent: (
-        <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau2Change} />
+        <AnneauxModalContent
+          onClickAnneau={() => handleModalToggle(`openAnneau2Modal`)}
+          onSelectedAnneauChange={handleSelectedAnneau2Change}
+        />
       ),
     },
     {
       stateName: "openAnneau3Modal",
       dialogComponent: (
-        <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau3Change} />
+        <AnneauxModalContent
+          onClickAnneau={() => handleModalToggle(`openAnneau3Modal`)}
+          onSelectedAnneauChange={handleSelectedAnneau3Change}
+        />
       ),
     },
     {
       stateName: "openAnneau4Modal",
       dialogComponent: (
-        <AnneauxModalContent onClickAnneau={handleClickAnneau} onSelectedAnneauChange={handleSelectedAnneau4Change} />
+        <AnneauxModalContent
+          onClickAnneau={() => handleModalToggle(`openAnneau4Modal`)}
+          onSelectedAnneauChange={handleSelectedAnneau4Change}
+        />
       ),
     },
     {
       stateName: "openBrassardModal",
       dialogComponent: (
         <BrassardsModalContent
-          onClickBrassard={handleClickBrassard}
+          onClickBrassard={() => handleModalToggle(`openBrassardModal`)}
           onSelectedBrassardChange={handleSelectedBrassardChange}
         />
       ),
@@ -218,7 +186,7 @@ const Build = () => {
       stateName: "openCompagnon1Modal",
       dialogComponent: (
         <CompagnonsModalContent
-          onClickCompagnon={handleClickCompagnon}
+          onClickCompagnon={() => handleModalToggle(`openCompagnon1Modal`)}
           onSelectedCompagnonChange={handleSelectedCompagnon1Change}
         />
       ),
@@ -227,7 +195,7 @@ const Build = () => {
       stateName: "openCompagnon2Modal",
       dialogComponent: (
         <CompagnonsModalContent
-          onClickCompagnon={handleClickCompagnon}
+          onClickCompagnon={() => handleModalToggle(`openCompagnon2Modal`)}
           onSelectedCompagnonChange={handleSelectedCompagnon2Change}
         />
       ),
@@ -236,7 +204,7 @@ const Build = () => {
       stateName: "openCompagnon3Modal",
       dialogComponent: (
         <CompagnonsModalContent
-          onClickCompagnon={handleClickCompagnon}
+          onClickCompagnon={() => handleModalToggle(`openCompagnon3Modal`)}
           onSelectedCompagnonChange={handleSelectedCompagnon3Change}
         />
       ),
@@ -245,7 +213,7 @@ const Build = () => {
       stateName: "openCompagnon4Modal",
       dialogComponent: (
         <CompagnonsModalContent
-          onClickCompagnon={handleClickCompagnon}
+          onClickCompagnon={() => handleModalToggle(`openCompagnon4Modal`)}
           onSelectedCompagnonChange={handleSelectedCompagnon4Change}
         />
       ),
@@ -254,7 +222,7 @@ const Build = () => {
       stateName: "openSort1Modal",
       dialogComponent: (
         <SortsModalContent
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort1Modal`)}
           onSelectedSortChange={handleSelectedSort1Change}
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
@@ -267,7 +235,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort2Modal`)}
           onSelectedSortChange={handleSelectedSort2Change}
         />
       ),
@@ -278,7 +246,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort3Modal`)}
           onSelectedSortChange={handleSelectedSort3Change}
         />
       ),
@@ -289,7 +257,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort4Modal`)}
           onSelectedSortChange={handleSelectedSort4Change}
         />
       ),
@@ -300,7 +268,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort5Modal`)}
           onSelectedSortChange={handleSelectedSort5Change}
         />
       ),
@@ -311,7 +279,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort6Modal`)}
           onSelectedSortChange={handleSelectedSort6Change}
         />
       ),
@@ -322,7 +290,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort7Modal`)}
           onSelectedSortChange={handleSelectedSort7Change}
         />
       ),
@@ -333,7 +301,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort8Modal`)}
           onSelectedSortChange={handleSelectedSort8Change}
         />
       ),
@@ -344,7 +312,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort9Modal`)}
           onSelectedSortChange={handleSelectedSort9Change}
         />
       ),
@@ -355,7 +323,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort10Modal`)}
           onSelectedSortChange={handleSelectedSort10Change}
         />
       ),
@@ -366,7 +334,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort11Modal`)}
           onSelectedSortChange={handleSelectedSort11Change}
         />
       ),
@@ -377,7 +345,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort12Modal`)}
           onSelectedSortChange={handleSelectedSort12Change}
         />
       ),
@@ -388,7 +356,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort13Modal`)}
           onSelectedSortChange={handleSelectedSort13Change}
         />
       ),
@@ -399,7 +367,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort14Modal`)}
           onSelectedSortChange={handleSelectedSort14Change}
         />
       ),
@@ -410,7 +378,7 @@ const Build = () => {
         <SortsModalContent
           dieu={build.arme?.dieu}
           arme={build.arme?.nom}
-          onClickSort={handleClickSort}
+          onClickSort={() => handleModalToggle(`openSort15Modal`)}
           onSelectedSortChange={handleSelectedSort15Change}
         />
       ),
@@ -420,7 +388,6 @@ const Build = () => {
   const [modalStates, setModalStates] = useState(
     Object.fromEntries(modalsConfig.map((config) => [config.stateName, false]))
   );
-  console.log(modalStates);
 
   const openModal = (modalState: any) => {
     setModalStates((prevState) => ({
