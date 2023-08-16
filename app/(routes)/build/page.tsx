@@ -499,7 +499,7 @@ const Build = () => {
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-0">
           <div className="flex   xl:flex-col xl:basis-1/6 xl:px-4">
-            <div className="flex  flex-col xl:h-full justify-center  items-center w-full">
+            <div className="flex  flex-col justify-center  items-center w-full">
               <p className={titleVariants}>Anneaux</p>
               <div className="flex flex-wrap justify-center gap-4 xl:gap-0  xl:flex-col ">
                 {[...Array(4)].map((_, index) => {
@@ -518,7 +518,7 @@ const Build = () => {
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
             <div className="flex flex-wrap xl:flex-nowrap gap-2 xl:gap-0 xl:flex-col">
-              <div className="flex flex-col xl:h-full justify-center  items-center ">
+              <div className="flex flex-col  justify-center  items-center ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
                   item={build.brassard!}
@@ -526,14 +526,14 @@ const Build = () => {
                   squareVariants={squareVariants}
                 />
               </div>
-              <div className="flex flex-col xl:h-full justify-center  items-center">
+              <div className="flex flex-col  justify-center  items-center">
                 <p className={titleVariants}>Broche</p>
                 <div className="flex flex-col" onClick={() => toast("À venir !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
                   <p className="text-center py-2"></p>
                 </div>
               </div>
-              <div className="flex flex-col xl:h-full justify-center  items-center">
+              <div className="flex flex-col  justify-center  items-center">
                 <p className={titleVariants}>Familier</p>
                 <div className="flex flex-col" onClick={() => toast("À venir !")}>
                   <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
@@ -543,11 +543,11 @@ const Build = () => {
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 xl:px-4 ">
-            <div className="flex flex-col xl:h-full  items-center gap-2">
+            <div className="flex flex-col   items-center gap-2">
               <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 xl:px-4  xl:h-full gap-16">
+          <div className="flex flex-col xl:basis-2/6 xl:px-4   gap-16">
             <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row flex-wrap gap-4 justify-center">
