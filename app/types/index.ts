@@ -181,6 +181,7 @@ export interface BuildItemProps {
   item: Brassard | Anneau;
   squareVariants: string;
   openModal: () => void;
+  size?: number;
 }
 export interface BuildCompagnonProps {
   item: Compagnon;
@@ -188,14 +189,17 @@ export interface BuildCompagnonProps {
   emptyCompanionVariants: string;
   openModal: () => void;
   index: number;
+  size?: number;
 }
 export interface BuildSortProps {
   item: Sort;
   spellSquareVariants: string;
   openModal: () => void;
   index: number;
+  size?: number;
 }
 export interface BuildArmeProps {
   item: Arme;
   openModal: () => void;
+  size?: number;
 }

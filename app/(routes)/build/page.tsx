@@ -547,7 +547,7 @@ const Build = () => {
               <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-8">
+          <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-16">
             <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row flex-wrap gap-4 justify-center">
@@ -629,7 +629,7 @@ const Build = () => {
             modal: "customModalImport",
             root: "scrollbar-none",
           }}>
-          <StringBuildModalContent stringBuild={encryptedBuild} />
+          <StringBuildModalContent stringBuild={encryptedBuild} build={build} />
         </Modal>
         <Modal
           open={!!openModalImport}

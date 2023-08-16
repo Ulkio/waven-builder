@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { BuildItemProps } from "@/types";
 
-const Anneau = ({ item, squareVariants, openModal }: BuildItemProps) => {
+const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps) => {
   const ANNEAU_BASE_URL = "/img/anneaux";
   return (
     <div className="flex flex-col">
@@ -21,15 +21,15 @@ const Anneau = ({ item, squareVariants, openModal }: BuildItemProps) => {
             <Image
               src={`/img/utils/bg_${item.rarete.toLowerCase()}.png`}
               alt={item.nom}
-              width={150}
-              height={150}
+              width={size}
+              height={size}
               className="absolute hover:cursor-pointer"
             />
             <Image
               src={`${ANNEAU_BASE_URL}/${item.image}.png`}
               alt={item.nom}
-              width={150}
-              height={150}
+              width={size}
+              height={size}
               className="hover:cursor-pointer z-10"
             />
           </div>
