@@ -465,7 +465,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex flex-col items-stretch justify-between xl:h-screen xl:p-6 gap-6 ">
+    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-6 gap-6 ">
       <Link href="/">
         <Image
           onClick={closeModalImport}

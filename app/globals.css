@@ -19,6 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/background.jpg");
+  background-size: cover;
   color: white;
   width: 100%;
 }
