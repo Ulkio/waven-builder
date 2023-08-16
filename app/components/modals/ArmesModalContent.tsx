@@ -30,7 +30,7 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
     onClickArme();
   };
   return (
-    <div className="flex flex-wrap justify-center h-full px-8 gap-4 py-4">
+    <div className="flex flex-wrap justify-center  px-8 gap-4 py-4">
       <h2 className="text-center w-full font-extrabold text-3xl">Arme</h2>
       {weaponCategories.map((weaponCategory) => (
         <div className="flex flex-col w-full gap-2" key={weaponCategory.category}>
