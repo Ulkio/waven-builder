@@ -23,7 +23,7 @@ const ImportDialog = ({ onClickButton }: ImportDialogProps) => {
         id="message"
         rows={16}
         className="resize-none block p-2.5 w-full text-sm text-gray-900 bg-overlaySide rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-overlaySide dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder={`Collez ici votre texte de build.\nExemple : U2FsdGVkX199cB0X5oSK1mhaDXf3vLwW63QL2X6PPpTlEoQcXTcUakV24eEzx9iw9i5TCTujAyEyE0 (...)`}
+        placeholder={`Collez la suite de caractères du build que vous souhaitez importer.\nExemple : U2FsdGVkX199cB0X5oSK1mhaDXf3vLwW63QL2X6PPpTlEoQcXTcUakV24eEzx9iw9i5TCTujAyEyE0 (...)`}
       />
       <button onClick={handleImportClick} className="border-2 border-white rounded-md p-2">
         Importer
