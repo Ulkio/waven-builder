@@ -123,7 +123,7 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                     data-tooltip-place="bottom"
                     className="flex items-center relative ">
                     <Image
-                      src={`/img/utils/bg_${compagnon.rarete.toLowerCase()}.png`}
+                      src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                       alt={compagnon.nom}
                       width={100}
                       height={100}
