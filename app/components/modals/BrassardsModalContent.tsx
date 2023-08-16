@@ -47,7 +47,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
   return (
     <div className="flex h-full">
       <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
-        <h2 className="text-center font-extrabold text-3xl">Brassard</h2>
+        <h2 className="text-center font-extrabold text-3xl">Brassards</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => handleFilterClick("commun")}
