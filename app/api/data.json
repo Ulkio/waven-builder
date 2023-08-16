@@ -14374,7 +14374,7 @@
               {
                 "nom": "EFFET CRITIQUE",
                 "cout": 80,
-                "effet": "CRITIQUE : Inflige 50 de l'attaque de votre Âmes Spectrales aux adversaires autour d'elle."
+                "effet": "CRITIQUE : Inflige 50% de l'attaque de votre Âmes Spectrales aux adversaires autour d'elle."
               },
               {
                 "nom": "BONUS COUP CRITIQUE",
@@ -17918,7 +17918,7 @@
           {
             "version": "0.11",
             "cout": 6,
-            "effet": "Confère 50 de l’armure de votre héros à vos compagnons.",
+            "effet": "Confère 50% de l’armure de votre héros à vos compagnons.",
             "gains": {
               "astral": 1
             }
@@ -18682,7 +18682,7 @@
           {
             "version": "0.11",
             "cout": 6,
-            "effet": "Libère vos AURAS TRAPPEUR. Inflige 50 de l’attaque de votre héros par AURA TRAPPER libérée.",
+            "effet": "Libère vos AURAS TRAPPEUR. Inflige 50% de l’attaque de votre héros par AURA TRAPPER libérée.",
             "gains": {
               "astral": 1
             }
@@ -19094,7 +19094,7 @@
           {
             "version": "0.11",
             "cout": 7,
-            "effet": "Inflige 50 de l'attaque de votre héros par AURA HIBOU qu'il possède. Libère ses AURAS HIBOU.",
+            "effet": "Inflige 50% de l'attaque de votre héros par AURA HIBOU qu'il possède. Libère ses AURAS HIBOU.",
             "gains": {
               "astral": 1
             }
