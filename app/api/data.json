@@ -27327,7 +27327,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Lorsque votre héros CHARGE : Inflige 50 de son attaque à la cible.",
+            "effet": "Lorsque votre héros CHARGE : Inflige 50% de son attaque à la cible.",
             "passifs": [],
             "pv": 401,
             "at": 30,
