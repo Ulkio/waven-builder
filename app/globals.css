@@ -23,12 +23,14 @@ body {
   width: 100%;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Handle */
