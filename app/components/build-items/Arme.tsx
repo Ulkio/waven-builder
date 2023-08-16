@@ -20,7 +20,7 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
             className="hover:cursor-pointer"
           />
           <p className="font-black text-3xl">{item?.nom}</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center">
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
               <p className="font-bold">{item.patchs[0].pv}</p>

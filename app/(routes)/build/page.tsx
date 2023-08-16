@@ -48,10 +48,10 @@ const Build = () => {
   //#endregion
 
   //#region STYLE VARIANTS
-  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-24 w-24 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer `;
+  const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-20 w-20 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer `;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm`;
   const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
@@ -465,7 +465,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex flex-col items-stretch justify-between xl:h-screen p-6 gap-6 ">
+    <main className=" flex flex-col items-stretch justify-between xl:h-screen xl:p-6 gap-6 ">
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -476,7 +476,7 @@ const Build = () => {
           className="fixed top-2 left-4 invert"
         />
       </Link>
-      {build.arme && (
+      {build.arme && !isTabletOrMobile && (
         <motion.div
           key={build.arme.nom}
           variants={variants}
@@ -517,7 +517,7 @@ const Build = () => {
             </div>
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
-            <div className="flex flex-wrap xl:flex-nowrap gap-4 xl:gap-0 xl:flex-col">
+            <div className="flex flex-wrap xl:flex-nowrap gap-2 xl:gap-0 xl:flex-col">
               <div className="flex flex-col xl:h-full justify-center  items-center ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
@@ -542,13 +542,13 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 px-4 ">
+          <div className="flex flex-col xl:basis-2/6 xl:px-4 ">
             <div className="flex flex-col xl:h-full  items-center gap-2">
               <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 px-4  xl:h-full gap-16">
-            <div className="flex flex-col gap-2 px-4 items-center xl:items-start">
+          <div className="flex flex-col xl:basis-2/6 xl:px-4  xl:h-full gap-16">
+            <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row flex-wrap gap-4 justify-center">
                 {[...Array(4)].map((_, index) => {
@@ -566,13 +566,13 @@ const Build = () => {
                 })}
               </div>
             </div>
-            <div className="flex flex-col gap-2 px-4 ">
+            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center ">
               <p className={titleVariants}>Sorts</p>
               {!build.arme ? (
                 <p className="text-md italic opacity-50">Sélectionnez une arme !</p>
               ) : (
                 <>
-                  <div className="flex flex-wrap gap-2 max-w-96">
+                  <div className="flex flex-wrap gap-2 max-w-96 justify-center xl:justify-start">
                     {[...Array(15)].map((_, index) => {
                       const sort = build.sorts[index];
                       return (
@@ -593,11 +593,9 @@ const Build = () => {
         </div>
       </div>
 
-      <div className="flex flex-col   xl:flex-row w-full xl:gap-20 xl:self-center justify-center">
+      <div className="flex flex-col   xl:flex-row w-full  gap-4 xl:gap-20 xl:self-center justify-center items-center">
         <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-full xl:w-48 text-center">
-            Sauvegarder
-          </p>
+          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
           <ToastContainer
             position="bottom-right"
             autoClose={2000}
@@ -611,7 +609,7 @@ const Build = () => {
           />
         </div>
         <div onClick={handleImportBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4  w-full xl:w-48  text-center">Importer</p>
+          <p className="font-bold text-2xl border border-white rounded-lg p-4  w-48  text-center">Importer</p>
         </div>
       </div>
 
