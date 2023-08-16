@@ -51,7 +51,7 @@ const Build = () => {
   const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-20 w-20 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer `;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm xl:text-lg`;
   const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
