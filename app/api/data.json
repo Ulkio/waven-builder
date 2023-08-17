@@ -45,7 +45,7 @@
               {
                 "nom": "Chercheur de compagnons",
                 "cout": 120,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS"
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS"
               },
               {
                 "nom": "Évolution du potentiel",
@@ -1210,7 +1210,7 @@
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
                 "cout": 120,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -2320,7 +2320,7 @@
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
                 "cout": 120,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -3495,7 +3495,7 @@
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
                 "cout": 120,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -6038,7 +6038,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat : +2 point d'action.",
+            "pouvoir": "DECK (12). Début du combat : +2 point d'action.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6072,21 +6072,21 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
           },
           {
             "version": "0.08",
-            "pouvoir": "GRIMOIRE(12): Confère 25% de PUISSANCE à votre héros.",
+            "pouvoir": "DECK(12): Confère 25% de PUISSANCE à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6189,7 +6189,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat : Piochez 2 sorts. Ils coûtent -1 point d'action.",
+            "pouvoir": "DECK (12). Début du combat : Piochez 2 sorts. Ils coûtent -1 point d'action.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6223,14 +6223,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -6381,7 +6381,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -6455,14 +6455,14 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
           },
           {
             "version": "0.08",
-            "pouvoir": "GRIMOIRE(15): Confère 50% de PUISSANCE à votre héros.",
+            "pouvoir": "DECK(15): Confère 50% de PUISSANCE à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6492,7 +6492,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "PREMIER TOUR: Confère à votre héros 50% de son attaque en armure.",
+            "pouvoir": "DÉBUT DU COMBAT: Confère à votre héros 50% de son attaque en armure.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6533,7 +6533,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -6556,6 +6556,71 @@
               }
             ],
             "dons": []
+          }
+        ]
+      },
+      {
+        "nom": "Anneau Massif",
+        "rarete": "Commun",
+        "image": "massif",
+        "iles": [
+          "Bateau Vampyre",
+          "Île des Craqueleurs"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "APPARITION D'UN DE VOS COMPAGNON : +10% d'attaque à vos compagnons",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% d'attaque à votre héros."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "EFFET AMELIORE",
+                "cout": 50,
+                "effet": "+5% d'attaque à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "CC COMPAGNONS",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS CRITIQUES COMPAGNONS",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ HÉROS",
+                "cout": 100,
+                "effet": "+1% de PV à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              }
+            ]
           }
         ]
       },
@@ -6611,14 +6676,14 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
           },
           {
             "version": "0.08",
-            "pouvoir": "GRIMOIRE(15): Confère 1 PM à votre héros.",
+            "pouvoir": "DECK(15): Confère 1 PM à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6693,7 +6758,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -6811,25 +6876,25 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -6904,7 +6969,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). Début du combat : +30% d'attaque à votre héros.",
+            "pouvoir": "DECK (15). Début du combat : +30% d'attaque à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -6932,14 +6997,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
@@ -6985,7 +7050,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE(15): +20% de DRAIN à votre héros.",
+            "pouvoir": "DECK(15): +20% de DRAIN à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7023,14 +7088,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -7048,7 +7113,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). FIN DU TOUR : Piochez 1 sort supplémentaire.",
+            "pouvoir": "DECK (15). FIN DU TOUR : Piochez 1 sort supplémentaire.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7083,7 +7148,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
@@ -7129,7 +7194,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). -1 point d'action au coût de vos sorts coûtant 7 point d'action ou plus.",
+            "pouvoir": "DECK (15). -1 point d'action au coût de vos sorts coûtant 7 point d'action ou plus.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7157,14 +7222,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
@@ -7207,7 +7272,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). +30% de DRAIN : à votre héros.",
+            "pouvoir": "DECK (15). +30% de DRAIN : à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7235,14 +7300,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 40,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
@@ -7255,7 +7320,7 @@
           },
           {
             "version": "0.08",
-            "pouvoir": "GRIMOIRE(15): PREMIER TOUR: Réduit de 1 PA le coût des sorts de votre main.",
+            "pouvoir": "DECK(15): PREMIER TOUR: Réduit de 1 PA le coût des sorts de votre main.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7303,60 +7368,112 @@
             "dons": [
               {
                 "nom": "PUISSANCE COMPAGNON",
-                "cout": 55,
-                "effet": "+10% d'ATTAQUE à ce personnage",
+                "cout": 100,
+                "effet": "+1% d'attaque à vos compagnons. 1% par niveau de l'équipement",
                 "sort": ""
               },
               {
                 "nom": "GAINS D'ARMURE",
-                "cout": 55,
+                "cout": 100,
                 "effet": "+10% à vos Gains d'armure",
                 "sort": ""
               },
               {
                 "nom": "CC COMPAGNONS",
-                "cout": 55,
-                "effet": "+5% aux chances de COUP CRITIQUE à ce personnage",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "DÉGÂTS CRITIQUES COMPAGNONS",
-                "cout": 55,
-                "effet": "+20 Dégâts critique",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "VITALITÉ COMPAGNONS",
-                "cout": 55,
-                "effet": "+10% de POINT DE VIE à ce personnage",
+                "cout": 80,
+                "effet": "+10% de POINT DE VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "nom": "Anneau Verbouké",
+        "rarete": "Commun",
+        "image": "verbouke",
+        "iles": [
+          "Bateau Vampyre",
+          "Île des Tofus"
+        ],
+        "patchs": [
           {
-            "version": "0.08",
-            "pouvoir": "-50% de PUISSANCE à votre héros; -50% à toutes vos AURAS; +25% de PUISSANCE à vos compagnons.",
+            "version": "0.10",
+            "pouvoir": "DÉBUT DU COMBAT : +10% aux DÉGÂTS de vos sorts",
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% de VITALITÉ à votre héros."
-              },
-              {
-                "taux": 1,
-                "effet": "% à toutes vos COLLISIONS."
-              },
-              {
-                "taux": 1,
-                "effet": "% de VITALITÉ à vos compagnons."
+                "effet": "% de VIE à votre héros."
               }
             ],
-            "dons": []
+            "dons": [
+              {
+                "nom": "MAGIES",
+                "cout": 100,
+                "effet": "+10% aux DÉGÂTS de vos sorts",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE DES SORTS",
+                "cout": 100,
+                "effet": "+3% chances de COUP CRITIQUE des sorts",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE DES SORTS",
+                "cout": 100,
+                "effet": "+3% chances de COUP CRITIQUE des sorts",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              }
+            ]
           }
         ]
       },
@@ -7411,8 +7528,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -7488,15 +7605,15 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
           },
           {
             "version": "0.08",
-            "pouvoir": "GRIMOIRE(15): Piochez 1 sort quand vous jouez un sort à 6 PA ou plus.",
+            "pouvoir": "DECK(15): Piochez 1 sort quand vous jouez un sort à 6 PA ou plus.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7512,6 +7629,70 @@
               }
             ],
             "dons": []
+          }
+        ]
+      },
+      {
+        "nom": "Anneau Siff",
+        "rarete": "Rare",
+        "image": "siff",
+        "iles": [
+          "Île des Cochons"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "DÉBUT DU COMBAT : +20% d'ATTAQUE -10% de VIE",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% d'attaque à votre héros."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE de votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS PHYSIQUES CRITIQUES",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS'",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              }
+            ]
           }
         ]
       },
@@ -7644,7 +7825,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -7725,7 +7906,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -7883,7 +8064,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -7968,7 +8149,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8053,7 +8234,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8138,7 +8319,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8219,7 +8400,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8260,65 +8441,56 @@
               {
                 "taux": 1,
                 "effet": "% DÉGÂTS à vos sorts Air."
+              },
+              {
+                "taux": 1,
+                "effet": "% DÉGÂTS à vos sorts Feu."
               }
             ],
             "dons": [
               {
                 "nom": "PROTECTION PHYSIQUE",
-                "cout": 55,
-                "effet": "+30% d'armure",
+                "cout": 50,
+                "effet": "+3% de chances de PROTECTION PHYSIQUE de votre héros",
                 "sort": ""
               },
               {
                 "nom": "PROTECTION MAGIQUE",
-                "cout": 55,
-                "effet": "+30% de protection magique",
+                "cout": 50,
+                "effet": "+3% de chances de PROTECTION MAGIQUE de votre héros",
                 "sort": ""
               },
               {
                 "nom": "TONNERRE",
-                "cout": 55,
+                "cout": 100,
                 "effet": "+50% à tous vos TONNERRES",
                 "sort": ""
               },
               {
                 "nom": "MAGIE AIR",
-                "cout": 55,
+                "cout": 100,
                 "effet": "+20% DEGATS à vos sorts AIR",
                 "sort": ""
               },
               {
                 "nom": "MAGIE FEU",
-                "cout": 55,
+                "cout": 100,
                 "effet": "+20% DEGATS à vos sorts FEU",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
-                "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "cout": 50,
+                "effet": "+5% aux gains de Kamas",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
-          },
-          {
-            "version": "0.08",
-            "pouvoir": "FOUDRE: Inflige 15 dégâts magiques autour de votre héros. Si 3 adversaires touchés: Un éclair infligeant 10 dégâts physiques s'abat sur les adversaires.",
-            "caracteristiques": [
-              {
-                "taux": 1,
-                "effet": "% de VITALITÉ à votre héros."
-              },
-              {
-                "taux": 1,
-                "effet": "% de MAGIE FEU."
-              },
-              {
-                "taux": 1,
-                "effet": "% de MAGIE AIR."
-              }
-            ],
-            "dons": []
           }
         ]
       },
@@ -8378,7 +8550,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8402,7 +8574,7 @@
       },
       {
         "nom": "Anneau Pulant",
-        "rarete": "Rare",
+        "rarete": "Commun",
         "image": "pulant",
         "iles": [
           "Île des Tofus"
@@ -8410,48 +8582,54 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat : -1 point d'action au coût des sorts de votre main.",
+            "pouvoir": "DECK (12). Début du combat : -1 point d'action au coût des sorts de votre main.",
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% de VIE à vos compagnons."
+                "effet": "% de VIE à votre héros."
               }
             ],
             "dons": [
               {
-                "nom": "RIPOSTE DE COMPAGNON",
-                "cout": 55,
-                "effet": "+5% de dégâts de RIPOSTE à ce personnage",
+                "nom": "PUISSANCE",
+                "cout": 80,
+                "effet": "+10% d'ATTAQUE à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "MAGIES",
+                "cout": 100,
+                "effet": "+10% aux DÉGÂTS de vos sorts",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ",
+                "cout": 80,
+                "effet": "+10% de VIE à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               },
               {
                 "nom": "VITALITÉ COMPAGNONS",
-                "cout": 55,
-                "effet": "+10% de POINT DE VIE à ce personnage",
-                "sort": ""
-              },
-              {
-                "nom": "VITALITÉ COMPAGNONS",
-                "cout": 55,
-                "effet": "+10% de POINT DE VIE à ce personnage",
-                "sort": ""
-              },
-              {
-                "nom": "VITALITÉ COMPAGNONS",
-                "cout": 55,
-                "effet": "+10% de POINT DE VIE à ce personnage",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
-                "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "cout": 50,
+                "effet": "+5% aux Gain de Kamas",
                 "sort": ""
               }
             ]
@@ -8474,6 +8652,140 @@
         ]
       },
       {
+        "nom": "Anneau Rible",
+        "rarete": "Commun",
+        "image": "rible",
+        "iles": [
+          "Île des Tofus"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "+5% aux chances de COUP CRITIQUE de votre héros",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% d'attaque à votre héros."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS PHYSIQUES CRITIQUES",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ",
+                "cout": 50,
+                "effet": "+5% de VIE à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ COMPAGNONS",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Anneau Rnitorin",
+        "rarete": "Commun",
+        "image": "rnitorin",
+        "iles": [
+          "Île des Tofus"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "+5% aux chances de COUP CRITIQUE de votre héros",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% de VIE à vos compagnons."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "VITALITÉ COMPAGNONS",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "CC COMPAGNONS",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS CRITIQUES COMPAGNONS",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à vos compagnons",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
         "nom": "Anneau Rajone",
         "rarete": "Rare",
         "image": "rajone",
@@ -8483,7 +8795,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). Début du combat : +1.",
+            "pouvoir": "DECK (12). Début du combat : +1.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -8517,14 +8829,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
-                "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "cout": 50,
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8610,7 +8922,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -8853,7 +9165,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -9088,8 +9400,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -9171,7 +9483,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -9248,7 +9560,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -9325,7 +9637,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -9566,7 +9878,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -10165,38 +10477,44 @@
             "dons": [
               {
                 "nom": "PUISSANCE COMPAGNON",
-                "cout": 55,
-                "effet": "+10% d'ATTAQUE à ce personnage",
+                "cout": 80,
+                "effet": "+10% d'ATTAQUE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "PROTECTION PHYSIQUE",
-                "cout": 55,
-                "effet": "+30% d'armure",
+                "cout": 50,
+                "effet": "+3% de chances de PROTECTION PHYSIQUE de votre héros",
                 "sort": ""
               },
               {
                 "nom": "CC COMPAGNONS",
-                "cout": 55,
-                "effet": "+5% aux chances de COUP CRITIQUE à ce personnage",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "DÉGÂTS CRITIQUES COMPAGNONS",
-                "cout": 55,
-                "effet": "+20 Dégâts critique",
+                "cout": 80,
+                "effet": "+20% de DÉGÂTS CRITIQUES à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "VITALITÉ COMPAGNONS",
-                "cout": 55,
-                "effet": "+10% de POINT DE VIE à ce personnage",
+                "cout": 80,
+                "effet": "+10% de POINT DE VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
@@ -10251,14 +10569,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -10275,7 +10593,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (15). Apparition d'un compagnon : +30% à sa Vie.",
+            "pouvoir": "DECK (15). Apparition d'un compagnon : +30% à sa Vie.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10303,14 +10621,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               },
               {
@@ -10374,7 +10692,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -10425,14 +10743,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -10489,8 +10807,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -10548,7 +10866,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -10565,48 +10883,54 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "Mort d'un compagnon : Déclenche FOUDRE (5) sur les adversaires adjacents.",
+            "pouvoir": "Tant que votre héros possède de l'ARMURE : +25% à l'ATTAQUE de votre héros",
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% DÉGÂTS à vos sorts Air."
+                "effet": "% de VIE à votre héros."
               }
             ],
             "dons": [
               {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 55,
-                "effet": "Mort d'un compagnon : -1 point d'action au coût de votre prochain sort AIR.",
+                "nom": "EFFET SUPPLÉMENTAIRE",
+                "cout": 50,
+                "effet": "+20% aux gains d'ARMURE de votre héros",
                 "sort": ""
               },
               {
-                "nom": "MAGIE AIR",
-                "cout": 55,
-                "effet": "+20% DEGATS à vos sorts AIR",
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+10% d'ATTAQUE à votre héros",
                 "sort": ""
               },
               {
-                "nom": "PROTECTION MAGIQUE",
-                "cout": 55,
-                "effet": "+30% de protection magique",
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+10% d'ATTAQUE à votre héros",
                 "sort": ""
               },
               {
-                "nom": "REBOND",
-                "cout": 55,
-                "effet": "+20% à toutes vos REBONDS",
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 50,
+                "effet": "+5% aux chances de COUP CRITIQUE de votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ COMPAGNONS",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "CHERCHEUR DE SORTS",
-                "cout": 55,
+                "cout": 50,
                 "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
                 "sort": ""
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -10663,8 +10987,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -10721,8 +11045,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -10779,8 +11103,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               }
             ]
@@ -10797,7 +11121,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "pouvoir": "GRIMOIRE (12). +20% de DRAIN : à vos compagnons.",
+            "pouvoir": "DECK (12). +20% de DRAIN : à vos compagnons.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -10831,14 +11155,14 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11187,7 +11511,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11246,7 +11570,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11305,7 +11629,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11364,7 +11688,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11540,7 +11864,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 50,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -11590,7 +11914,7 @@
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
                 "cout": 50,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -11780,7 +12104,136 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
+                "sort": ""
+              }
+            ]
+          },
+          {
+            "version": "0.08",
+            "caracteristiques": [],
+            "dons": []
+          }
+        ]
+      },
+      {
+        "nom": "Brassard Nakeuh",
+        "rarete": "Commun",
+        "image": "nakeuh",
+        "iles": [
+          "Île des Bworks",
+          "Île des Chuchoteurs"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "Attaque Touche les 2 cases devant votre héros. Début du combat : -25% d'attaque à votre héros.",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% d'AT à votre héros."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "DÉGÂTS CRITIQUES PHYSIQUES",
+                "cout": 50,
+                "effet": "+30 Dégâts critique",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS CRITIQUES PHYSIQUES",
+                "cout": 50,
+                "effet": "+30 Dégâts critique",
+                "sort": ""
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 55,
+                "effet": "+10% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 55,
+                "effet": "+10% d'ATTAQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE COMPAGNON",
+                "cout": 55,
+                "effet": "+10% d'ATTAQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "GAIN DE KAMAS",
+                "cout": 55,
+                "effet": "+5% aux gains de Kamas",
+                "sort": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nom": "Brassard Toung",
+        "rarete": "Commun",
+        "image": "toung",
+        "iles": [
+          "Île des Bworks",
+          "Île des Chuchoteurs"
+        ],
+        "patchs": [
+          {
+            "version": "0.10",
+            "pouvoir": "Attaque : +10% d'ATTAQUE à votre héros Limité à 10 fois par combat.",
+            "caracteristiques": [
+              {
+                "taux": 1,
+                "effet": "% d'attaque à votre héros."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS CRITIQUES PHYSIQUES",
+                "cout": 80,
+                "effet": "+30% de DÉGÂTS CRITIQUES à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "BONUS COUP CRITIQUE",
+                "cout": 80,
+                "effet": "+10% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE COMPAGNONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR DE SORTS",
+                "cout": 55,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE SORTS",
+                "sort": ""
+              },
+              {
+                "nom": "CHERCHEUR D'OBJETS",
+                "cout": 55,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE D'EQUIPEMENTS",
+                "sort": ""
+              },
+              {
+                "nom": "VITALITÉ HÉROS",
+                "cout": 10,
+                "effet": "+1% de PV à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
@@ -12086,8 +12539,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -12233,7 +12686,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -12295,7 +12748,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -12357,7 +12810,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -12419,7 +12872,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -12477,7 +12930,7 @@
               {
                 "nom": "GAIN DE KAMAS",
                 "cout": 55,
-                "effet": "+50% aux Gain de Kamas",
+                "effet": "+5% aux gains de Kamas",
                 "sort": ""
               }
             ]
@@ -12530,8 +12983,8 @@
               },
               {
                 "nom": "CHERCHEUR DE COMPAGNONS",
-                "cout": 55,
-                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGONS",
+                "cout": 50,
+                "effet": "+2% aux chances de trouver un SUPER COFFRE DE COMPAGNONS",
                 "sort": ""
               },
               {
@@ -20892,7 +21345,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU GRIMOIRE DES FLAMMES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES FLAMMES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -22568,7 +23021,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU GRIMOIRE DES VAGUES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES VAGUES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -24314,7 +24767,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU GRIMOIRE DES ROCHES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES ROCHES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -26056,7 +26509,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU GRIMOIRE DES VENTS aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES VENTS aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -27215,7 +27668,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Les gains d'AURA MIRE de votre héros augmentent de 1.",
+            "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA MIRE du même élément à votre héros.",
             "passifs": [],
             "pv": 385,
             "at": 24,
@@ -27279,7 +27732,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Lorsque votre héros est soigné : Inflige 50% de son attaque à l'adversaire ayant le plus de vies.",
+            "effet": "Lorsque votre héros est soigné : Inflige 35% de son attaque à l'adversaire ayant le plus de vie.",
             "passifs": [],
             "pv": 396,
             "at": 22,
@@ -27567,7 +28020,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Lorsque votre héros déclenche un piège SRAM allié : Inflige 50% de son attaque aux adversaires autour",
+            "effet": "Lorsque votre héros déclenche un piège SRAM allié : Inflige 75% de son attaque aux adversaires autour",
             "passifs": [],
             "pv": 392,
             "at": 22,
@@ -27615,7 +28068,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Lorsque vous déclenchez MACHINATION : Ajoute le sort Trappe Sourokan à votre main.",
+            "effet": "ATTAQUE : Ajoute le sort Trappe Sourokan à votre main.",
             "passifs": [],
             "pv": 398,
             "at": 28,
@@ -27663,7 +28116,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "FIN DU TOUR : Ajoute vos points d'action non consommés en réserve. Limité à 6|3 point d'action.",
+            "effet": "FIN DU TOUR : Ajoute vos points d'action non consommés en réserve. Limité à 3 point d'action.",
             "passifs": [],
             "pv": 391,
             "at": 24,
@@ -27695,7 +28148,7 @@
         "patchs": [
           {
             "version": "0.10",
-            "effet": "Lorsque votre héros se téléporte : Inflige 50% de son attaque à l'adversaire ayant le plus de VIE.",
+            "effet": "Lorsque votre héros se téléporte : Inflige 30% de son attaque à l'adversaire ayant le plus de VIE.",
             "passifs": [],
             "pv": 394,
             "at": 28,

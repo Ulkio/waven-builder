@@ -44,6 +44,7 @@ const Build = () => {
   });
   const [encryptedBuild, setEncryptedBuild] = useState("");
   const [openModalImport, setOpenModalImport] = useState<boolean | null>(false);
+  const [openModalAlert, setOpenModalAlert] = useState<boolean | null>(true);
 
   //#endregion
 
@@ -126,6 +127,7 @@ const Build = () => {
 
   const closeModalStringBuild = () => setOpenModalStringBuild(false);
   const closeModalImport = () => setOpenModalImport(false);
+  const closeModalAlert = () => setOpenModalAlert(false);
 
   const modalsConfig = [
     {
@@ -621,7 +623,7 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={50} height={50} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
@@ -635,13 +637,33 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
+          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={50} height={50} />}
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
             root: "scrollbar-none",
           }}>
           <ImportModalContent onClickButton={handleImportButtonClick} />
+        </Modal>
+        <Modal
+          open={!!openModalAlert}
+          onClose={closeModalAlert}
+          center
+          closeOnOverlayClick={true}
+          showCloseIcon={false}
+          classNames={{
+            overlay: "customOverlay",
+            modal: "customModalAlert",
+            root: "scrollbar-none",
+          }}>
+          <div className="flex flex-col justify-evenly items-center h-full ">
+            <p className="text-center text-lg px-16">
+              Les données sont celles de la démo. Une mise à jour arrive prochainement.
+            </p>
+            <button onClick={closeModalAlert} className="border-2 border-white rounded-lg p-2 w-24 text-lg font-bold">
+              OK
+            </button>
+          </div>
         </Modal>
         {modalsConfig.map((config, index) => (
           <ModalComponent
