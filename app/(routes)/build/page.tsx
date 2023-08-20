@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Modal } from "react-responsive-modal";
 import { AES, enc } from "crypto-js";
@@ -29,7 +28,6 @@ import SortItem from "@/components/build-items/Sort";
 
 const Build = () => {
   //#region CONSTANTS
-  const params = useSearchParams();
   const buildKey = "importKey";
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
   //#endregion
@@ -439,14 +437,6 @@ const Build = () => {
   };
   //#endregion
 
-  // USEEFFECTS
-  useEffect(() => {
-    if (!params.get("import")) return;
-    setOpenModalImport(!openModalImport);
-    return () => {
-      setOpenModalImport(!openModalImport);
-    };
-  }, [params]);
   const variants = {
     show: {
       opacity: 0.5,
@@ -500,10 +490,10 @@ const Build = () => {
 
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
         <div className="flex flex-col xl:flex-row w-full gap-8 xl:gap-0">
-          <div className="flex   xl:flex-col xl:basis-1/6 xl:px-4">
-            <div className="flex  flex-col justify-center  items-center w-full">
+          <div className="flex  xl:flex-col xl:basis-1/6 xl:px-4">
+            <div className="flex  flex-col justify-center items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex flex-wrap justify-center gap-4 xl:gap-0  xl:flex-col ">
+              <div className="flex flex-wrap justify-center gap-8 xl:gap-0  xl:flex-col ">
                 {[...Array(4)].map((_, index) => {
                   const anneau = build.anneaux[index];
                   return (
@@ -518,8 +508,8 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center xl:justify-start gap-12 xl:basis-1/6">
-            <div className="flex flex-wrap xl:flex-nowrap gap-2 xl:gap-0 xl:flex-col">
+          <div className="flex xl:flex-col justify-center  xl:basis-1/6">
+            <div className="flex flex-wrap xl:flex-nowrap gap-8 xl:gap-0 xl:flex-col">
               <div className="flex flex-col  justify-center  items-center ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
@@ -528,25 +518,11 @@ const Build = () => {
                   squareVariants={squareVariants}
                 />
               </div>
-              <div className="flex flex-col  justify-center  items-center">
-                <p className={titleVariants}>Broche</p>
-                <div className="flex flex-col" onClick={() => toast("À venir !")}>
-                  <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
-                  <p className="text-center py-2"></p>
-                </div>
-              </div>
-              <div className="flex flex-col  justify-center  items-center">
-                <p className={titleVariants}>Familier</p>
-                <div className="flex flex-col" onClick={() => toast("À venir !")}>
-                  <div className={`flex items-center justify-center relative ${squareVariants}`}></div>
-                  <p className="text-center py-2"></p>
-                </div>
-              </div>
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 xl:px-4 ">
-            <div className="flex flex-col   items-center gap-2">
-              <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
+            <div className="flex flex-col  items-center gap-2">
+              <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")}/>
             </div>
           </div>
           <div className="flex flex-col xl:basis-2/6 xl:px-4   gap-16">

@@ -199,7 +199,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                 return (
                   <div
                     key={key}
-                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-64 flex flex-col justify-between hover:cursor-pointer gap-2">
+                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-60 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
                     <p className="text-md text-center">{don.effet}</p>
                     <div className="flex justify-center ">

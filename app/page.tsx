@@ -17,19 +17,7 @@ export default function Home() {
           className="hover:cursor-pointer hover:-translate-y-4 hover:scale-105 transition duration-500 ease-in-out"
         />
       </Link>
-      <Link
-        href={{
-          pathname: "build",
-          query: { import: true },
-        }}>
-        <Image
-          src="/img/hexagon-import-build.png"
-          alt="importer un build"
-          width={300}
-          height={300}
-          className="hover:cursor-pointer hover:-translate-y-4 hover:scale-105 transition duration-500 ease-in-out"
-        />
-      </Link>
+
       <footer className="py-2 fixed flex text-center bottom-0 px-4">
         <p className="text-xs opacity-50 text-center w-full">
           © 2023 Waven est un jeu vidéo édité par Ankama. ce site est un site non-officiel sans affiliation avec Ankama.

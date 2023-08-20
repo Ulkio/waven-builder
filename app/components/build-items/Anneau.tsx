@@ -5,7 +5,7 @@ import { BuildItemProps } from "@/types";
 const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps) => {
   const ANNEAU_BASE_URL = "/img/anneaux";
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-6">
       <div className={`flex items-center justify-center relative ${!item && squareVariants}`} onClick={openModal}>
         {!item && (
           <Image
@@ -32,10 +32,10 @@ const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps)
               height={size}
               className="hover:cursor-pointer z-10"
             />
+            <p className="text-center">{item?.nom}</p>
           </div>
         )}
       </div>
-      <p className="text-center">{item?.nom}</p>
     </div>
   );
 };

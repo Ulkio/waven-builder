@@ -23,6 +23,11 @@ body {
   color: white;
   width: 100%;
 }
+@media (max-width: 1280px) {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/img/background-mobile.jpg");
+  }
+}
 ::-webkit-scrollbar {
   width: 14px;
 }

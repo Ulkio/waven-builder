@@ -48,8 +48,8 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
         <Image
           src="/img/hexagon-chose-arm.png"
           alt="choisis une arme"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           priority
           onClick={openModal}
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"
