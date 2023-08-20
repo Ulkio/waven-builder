@@ -22,7 +22,6 @@ export interface Compagnon {
   nom: string;
   rarete: string;
   image: string;
-  iles: string[];
   patchs: PatchCompagnon[];
 }
 
@@ -63,7 +62,6 @@ export interface Anneau {
   nom: string;
   rarete: string;
   image: string;
-  iles: string[];
   patchs: PatchAnneaux[];
 }
 export interface Anneaux {
@@ -98,7 +96,6 @@ export interface Brassard {
   nom: string;
   rarete: string;
   image: string;
-  iles: string[];
   patchs: PatchBrassards[];
 }
 
