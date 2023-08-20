@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Créez votre build pour WAVEN !",
   verification: { google: "Qqh2MHF-7nAiuFHhr_saiaNgOeej7YaC3LSQOb-vzro" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  keywords: ["Waven", "Builder", "Waven Builder", "Waven Builds"],
+  keywords: ["Waven", "Builder", "Waven Builder", "Waven Builds", "Waven Build"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
