@@ -5,7 +5,6 @@
         "nom": "Nugget",
         "rarete": "Commun",
         "image": "nugget",
-
         "patchs": [
           {
             "version": "0.12",
@@ -66,7 +65,6 @@
         "nom": "Championne Périmée",
         "rarete": "Commun",
         "image": "championne_perimee",
-
         "patchs": [
           {
             "version": "0.12",
@@ -127,7 +125,6 @@
         "nom": "Dargone",
         "rarete": "Commun",
         "image": "dargone",
-
         "patchs": [
           {
             "version": "0.12",
@@ -194,7 +191,6 @@
         "nom": "Hendo",
         "rarete": "Commun",
         "image": "hendo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -261,7 +257,6 @@
         "nom": "Maitre egreneur",
         "rarete": "Commun",
         "image": "maitre_egreneur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -328,7 +323,6 @@
         "nom": "Sentinelle affutée",
         "rarete": "Commun",
         "image": "sentinelle_affutee",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -395,7 +389,6 @@
         "nom": "Skhul",
         "rarete": "Commun",
         "image": "skhul",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -462,7 +455,6 @@
         "nom": "Championne Sanglante",
         "rarete": "Rare",
         "image": "championne_sanglante",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -529,7 +521,6 @@
         "nom": "Hilda",
         "rarete": "Rare",
         "image": "hilda",
-
         "patchs": [
           {
             "version": "0.12",
@@ -596,7 +587,6 @@
         "nom": "Igror",
         "rarete": "Rare",
         "image": "igror",
-
         "patchs": [
           {
             "version": "0.12",
@@ -663,7 +653,6 @@
         "nom": "Séraphin",
         "rarete": "Rare",
         "image": "seraphin",
-
         "patchs": [
           {
             "version": "0.12",
@@ -730,7 +719,6 @@
         "nom": "Shushette",
         "rarete": "Rare",
         "image": "shushette",
-
         "patchs": [
           {
             "version": "0.12",
@@ -797,7 +785,6 @@
         "nom": "Bakara",
         "rarete": "Krosmique",
         "image": "bakara",
-
         "patchs": [
           {
             "version": "0.12",
@@ -931,7 +918,6 @@
         "nom": "Elely",
         "rarete": "Krosmique",
         "image": "elely",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -1132,7 +1118,6 @@
         "nom": "Tika",
         "rarete": "Commun",
         "image": "tika",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1199,7 +1184,6 @@
         "nom": "Abigaïl",
         "rarete": "Commun",
         "image": "abigail",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1266,7 +1250,6 @@
         "nom": "Angèle",
         "rarete": "Commun",
         "image": "angele",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1399,7 +1382,6 @@
         "nom": "Flècheur",
         "rarete": "Commun",
         "image": "flecheur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1466,7 +1448,6 @@
         "nom": "Héros félin",
         "rarete": "Commun",
         "image": "heros_felin",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1599,7 +1580,6 @@
         "nom": "Assa",
         "rarete": "Rare",
         "image": "assa",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1666,7 +1646,6 @@
         "nom": "Duelliste spectral",
         "rarete": "Rare",
         "image": "duelliste_spectral",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1733,7 +1712,6 @@
         "nom": "Empaleur embusqué",
         "rarete": "Rare",
         "image": "empaleur_embusque",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1800,7 +1778,6 @@
         "nom": "Exécuteur endeuillé",
         "rarete": "Rare",
         "image": "executeur_endeuille",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1867,7 +1844,6 @@
         "nom": "Farnix",
         "rarete": "Rare",
         "image": "farnix",
-
         "patchs": [
           {
             "version": "0.12",
@@ -1934,7 +1910,6 @@
         "nom": "Atcham",
         "rarete": "Krosmique",
         "image": "atcham",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2001,7 +1976,6 @@
         "nom": "Coqueline",
         "rarete": "Krosmique",
         "image": "coqueline",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -2068,7 +2042,6 @@
         "nom": "Corbeau noir",
         "rarete": "Krosmique",
         "image": "corbeau_noir",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2135,7 +2108,6 @@
         "nom": "Évangelyne",
         "rarete": "Infinite",
         "image": "evangelyne",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -2202,7 +2174,6 @@
         "nom": "Delta",
         "rarete": "Commun",
         "image": "delta",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -2269,7 +2240,6 @@
         "nom": "Achméa",
         "rarete": "Commun",
         "image": "achmea",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -2336,7 +2306,6 @@
         "nom": "Argolio",
         "rarete": "Commun",
         "image": "argolio",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2403,7 +2372,6 @@
         "nom": "Ashmal",
         "rarete": "Commun",
         "image": "ashmal",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2470,7 +2438,6 @@
         "nom": "Kaotika",
         "rarete": "Commun",
         "image": "kaotika",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2537,7 +2504,6 @@
         "nom": "Soigneuse corrompue",
         "rarete": "Commun",
         "image": "soigneuse_corrompue",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2670,7 +2636,6 @@
         "nom": "Eclaireur d'élite",
         "rarete": "Rare",
         "image": "eclaireur_d_elite",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -2737,7 +2702,6 @@
         "nom": "Griffeur tonkino",
         "rarete": "Rare",
         "image": "griffeur_tonkino",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2804,7 +2768,6 @@
         "nom": "Héros châtaigner",
         "rarete": "Rare",
         "image": "heros_chataigner",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2871,7 +2834,6 @@
         "nom": "Héros endurci",
         "rarete": "Rare",
         "image": "heros_endurci",
-
         "patchs": [
           {
             "version": "0.12",
@@ -2938,7 +2900,6 @@
         "nom": "Marcus",
         "rarete": "Rare",
         "image": "marcus",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3005,7 +2966,6 @@
         "nom": "Amalia",
         "rarete": "Krosmique",
         "image": "amalia",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3139,7 +3099,6 @@
         "nom": "Lilotte",
         "rarete": "Krosmique",
         "image": "lilotte",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3206,7 +3165,6 @@
         "nom": "Toxine",
         "rarete": "Krosmique",
         "image": "toxine",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3340,7 +3298,6 @@
         "nom": "Yaki",
         "rarete": "Commun",
         "image": "yaki",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3407,7 +3364,6 @@
         "nom": "Initiée funèbre",
         "rarete": "Commun",
         "image": "initiee_funebre",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3474,7 +3430,6 @@
         "nom": "M. Looter King",
         "rarete": "Commun",
         "image": "m._looter_king",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3541,7 +3496,6 @@
         "nom": "Pacificatrice enjouée",
         "rarete": "Commun",
         "image": "pacificatrice_enjouee",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3674,7 +3628,6 @@
         "nom": "Shura",
         "rarete": "Commun",
         "image": "shura",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3741,7 +3694,6 @@
         "nom": "Synchroniseur minutieux",
         "rarete": "Commun",
         "image": "synchroniseur_minutieux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3808,7 +3760,6 @@
         "nom": "Baron sramedi",
         "rarete": "Rare",
         "image": "baron_sramedi",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3875,7 +3826,6 @@
         "nom": "Gardienne inflexible",
         "rarete": "Rare",
         "image": "gardienne_inflexible",
-
         "patchs": [
           {
             "version": "0.12",
@@ -3942,7 +3892,6 @@
         "nom": "Héroïne perfide",
         "rarete": "Rare",
         "image": "heroine_perfide",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4009,7 +3958,6 @@
         "nom": "Héros impartial",
         "rarete": "Rare",
         "image": "heros_impartial",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -4076,7 +4024,6 @@
         "nom": "Rémus",
         "rarete": "Rare",
         "image": "remus",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4143,7 +4090,6 @@
         "nom": "Alibert",
         "rarete": "Krosmique",
         "image": "alibert",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4211,7 +4157,6 @@
         "nom": "Bump",
         "rarete": "Krosmique",
         "image": "bump",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4278,7 +4223,6 @@
         "nom": "Comte Harebourg",
         "rarete": "Krosmique",
         "image": "comte_harebourg",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4411,7 +4355,6 @@
         "nom": "Phaeris",
         "rarete": "Infinite",
         "image": "phaeris",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4478,7 +4421,6 @@
         "nom": "Alchimiste armurée",
         "rarete": "Rare",
         "image": "alchimiste_armuree",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4546,7 +4488,6 @@
         "nom": "Brute Impie",
         "rarete": "Rare",
         "image": "brute_impie",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4614,7 +4555,6 @@
         "nom": "Grany smisse",
         "rarete": "Krosmique",
         "image": "grany_smisse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4682,7 +4622,6 @@
         "nom": "Disciple de l'agonie",
         "rarete": "Rare",
         "image": "disciple_de_l_agonie",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4750,7 +4689,6 @@
         "nom": "Grufon",
         "rarete": "Rare",
         "image": "grufon",
-
         "patchs": [
           {
             "version": "0.12",
@@ -4954,7 +4892,6 @@
         "nom": "Percimol",
         "rarete": "Krosmique",
         "image": "percimol",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5022,7 +4959,6 @@
         "nom": "Épinette",
         "rarete": "Commun",
         "image": "epinette",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5159,7 +5095,6 @@
         "nom": "Shani",
         "rarete": "Commun",
         "image": "shani",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5228,7 +5163,6 @@
         "nom": "Championne embrocheuse",
         "rarete": "Rare",
         "image": "championne_embrocheuse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5296,7 +5230,6 @@
         "nom": "Champion croulant",
         "rarete": "Rare",
         "image": "champion_croulant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5364,7 +5297,6 @@
         "nom": "Héros martyr",
         "rarete": "Commun",
         "image": "heros_martyr",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -5501,7 +5433,6 @@
         "nom": "Recrue indomptée",
         "rarete": "Commun",
         "image": "recrue_indomptee",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5780,7 +5711,6 @@
         "nom": "Ann'eau",
         "rarete": "Rare",
         "image": "eau",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5836,7 +5766,6 @@
         "nom": "Anneau Bstiné",
         "rarete": "Commun",
         "image": "bstine",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5892,7 +5821,6 @@
         "nom": "Anneau Carina",
         "rarete": "Rare",
         "image": "carina",
-
         "patchs": [
           {
             "version": "0.12",
@@ -5948,7 +5876,6 @@
         "nom": "Anneau Culaire",
         "rarete": "Commun",
         "image": "culaire",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6004,7 +5931,6 @@
         "nom": "Anneau Deter",
         "rarete": "Rare",
         "image": "deter",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6060,7 +5986,6 @@
         "nom": "Anneau Devy",
         "rarete": "Commun",
         "image": "devy",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -6117,7 +6042,6 @@
         "nom": "Anneau Fer",
         "rarete": "Commun",
         "image": "fer",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6173,7 +6097,6 @@
         "nom": "Anneau Gnon",
         "rarete": "Commun",
         "image": "gnon",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6229,7 +6152,6 @@
         "nom": "Anneau Massif",
         "rarete": "Commun",
         "image": "massif",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6291,7 +6213,6 @@
         "nom": "Anneau Greuh",
         "rarete": "Commun",
         "image": "greuh",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6347,7 +6268,6 @@
         "nom": "Anneau Lympique",
         "rarete": "Commun",
         "image": "lympique",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6403,7 +6323,6 @@
         "nom": "Anneau Mazo",
         "rarete": "Rare",
         "image": "mazo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6459,7 +6378,6 @@
         "nom": "Anneau Limit",
         "rarete": "Commun",
         "image": "limit",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6515,7 +6433,6 @@
         "nom": "Anneau Papyon",
         "rarete": "Rare",
         "image": "papyon",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6571,7 +6488,6 @@
         "nom": "Anneau Pignâtre",
         "rarete": "Commun",
         "image": "pignatre",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6627,7 +6543,6 @@
         "nom": "Anneau Spital",
         "rarete": "Commun",
         "image": "spital",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6687,7 +6602,6 @@
         "nom": "Anneau Problemo",
         "rarete": "Commun",
         "image": "problemo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6743,7 +6657,6 @@
         "nom": "Anneau Ptimâle",
         "rarete": "Commun",
         "image": "ptimale",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6799,7 +6712,6 @@
         "nom": "Anneau Rifique",
         "rarete": "Commun",
         "image": "rifique",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6855,7 +6767,6 @@
         "nom": "Anneau Stradamus",
         "rarete": "Commun",
         "image": "stradamus",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6917,7 +6828,6 @@
         "nom": "Anneau Verbouké",
         "rarete": "Commun",
         "image": "verbouke",
-
         "patchs": [
           {
             "version": "0.12",
@@ -6979,7 +6889,6 @@
         "nom": "Anneau Telo",
         "rarete": "Commun",
         "image": "telo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7035,7 +6944,6 @@
         "nom": "Anneau Tomatik",
         "rarete": "Commun",
         "image": "tomatik",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -7091,7 +6999,6 @@
         "nom": "Anneau Siff",
         "rarete": "Rare",
         "image": "siff",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7153,7 +7060,6 @@
         "nom": "Vulk'Anneau",
         "rarete": "Rare",
         "image": "vulk",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7209,7 +7115,6 @@
         "nom": "Anneau Bscur",
         "rarete": "Rare",
         "image": "bscur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7269,7 +7174,6 @@
         "nom": "Anneau Busier",
         "rarete": "Rare",
         "image": "busier",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7329,7 +7233,6 @@
         "nom": "Anneau Cultant",
         "rarete": "Rare",
         "image": "cultant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7385,7 +7288,6 @@
         "nom": "Anneau Dylderaie",
         "rarete": "Krosmique",
         "image": "dylderaie",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7441,7 +7343,6 @@
         "nom": "Anneau Fuego",
         "rarete": "Rare",
         "image": "fuego",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7501,7 +7402,6 @@
         "nom": "Anneau Hell",
         "rarete": "Rare",
         "image": "hell",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7565,7 +7465,6 @@
         "nom": "Anneau Klerdlalune",
         "rarete": "Rare",
         "image": "klerdelalune",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7625,7 +7524,6 @@
         "nom": "Anneau KLM",
         "rarete": "Rare",
         "image": "klm",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7685,7 +7583,6 @@
         "nom": "Anneau Lémain",
         "rarete": "Rare",
         "image": "lemain",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7751,7 +7648,6 @@
         "nom": "Anneau Nymousse",
         "rarete": "Rare",
         "image": "nymousse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7811,7 +7707,6 @@
         "nom": "Anneau Pulant",
         "rarete": "Commun",
         "image": "pulant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7873,7 +7768,6 @@
         "nom": "Anneau Rible",
         "rarete": "Commun",
         "image": "rible",
-
         "patchs": [
           {
             "version": "0.12",
@@ -7941,7 +7835,6 @@
         "nom": "Anneau Rnitorin",
         "rarete": "Commun",
         "image": "rnitorin",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8003,7 +7896,6 @@
         "nom": "Anneau Rajone",
         "rarete": "Rare",
         "image": "rajone",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8053,14 +7945,12 @@
               }
             ]
           }
-          
         ]
       },
       {
         "nom": "Anneau Réo",
         "rarete": "Rare",
         "image": "reo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8120,7 +8010,6 @@
         "nom": "Anneau Rizon",
         "rarete": "Krosmique",
         "image": "rizon",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8176,7 +8065,6 @@
         "nom": "Anneau Roscop",
         "rarete": "Rare",
         "image": "roscop",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8232,7 +8120,6 @@
         "nom": "Anneau Strogote",
         "rarete": "Rare",
         "image": "strogote",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8292,7 +8179,6 @@
         "nom": "Anneau Stromo",
         "rarete": "Rare",
         "image": "stromo",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -8348,7 +8234,6 @@
         "nom": "Anneau Taku",
         "rarete": "Krosmique",
         "image": "taku",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8398,14 +8283,12 @@
               }
             ]
           }
-          
         ]
       },
       {
         "nom": "Anneau Bélisk",
         "rarete": "Commun",
         "image": "belisk",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8461,7 +8344,6 @@
         "nom": "Anneau Céan",
         "rarete": "Krosmique",
         "image": "cean",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8517,7 +8399,6 @@
         "nom": "Anneau Ctane",
         "rarete": "Krosmique",
         "image": "ctane",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8573,7 +8454,6 @@
         "nom": "Anneau Cyprès",
         "rarete": "Krosmique",
         "image": "cypres",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -8629,7 +8509,6 @@
         "nom": "Anneau Kupant",
         "rarete": "Krosmique",
         "image": "kupant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8685,7 +8564,6 @@
         "nom": "Anneau Ragan",
         "rarete": "Krosmique",
         "image": "ragan",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8741,7 +8619,6 @@
         "nom": "Anneau Rak",
         "rarete": "Commun",
         "image": "rak",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8801,7 +8678,6 @@
         "nom": "Anneau Recrux",
         "rarete": "Krosmique",
         "image": "recrux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8857,7 +8733,6 @@
         "nom": "Anneau Tilus",
         "rarete": "Krosmique",
         "image": "tilus",
-
         "patchs": [
           {
             "version": "0.12",
@@ -8913,7 +8788,6 @@
         "nom": "Anneau Racle",
         "rarete": "Infinite",
         "image": "racle",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -8973,7 +8847,6 @@
         "nom": "Anneau Rouboros",
         "rarete": "Infinite",
         "image": "rouboros",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9033,7 +8906,6 @@
         "nom": "Le Friskouille",
         "rarete": "Infinite",
         "image": "friskouille",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9093,7 +8965,6 @@
         "nom": "Anneau Kralamourton",
         "rarete": "Infinite",
         "image": "kralamourton",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9153,7 +9024,6 @@
         "nom": "Anneau Ratisseur",
         "rarete": "Rare",
         "image": "ratisseur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9209,7 +9079,6 @@
         "nom": "Anneau Parleur",
         "rarete": "Commun",
         "image": "parleur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9271,7 +9140,6 @@
         "nom": "Anneau d'Acier",
         "rarete": "Commun",
         "image": "acier",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9331,7 +9199,6 @@
         "nom": "Anneau Phtalmo",
         "rarete": "Commun",
         "image": "phtalmo",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9387,7 +9254,6 @@
         "nom": "Anneau Rigan",
         "rarete": "Commun",
         "image": "rigan",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9443,7 +9309,6 @@
         "nom": "Anneau Rageux",
         "rarete": "Commun",
         "image": "rageux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9499,7 +9364,6 @@
         "nom": "Anneau Muscapol",
         "rarete": "Commun",
         "image": "muscapol",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9555,7 +9419,6 @@
         "nom": "Anneau Bli",
         "rarete": "Commun",
         "image": "bli",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9611,7 +9474,6 @@
         "nom": "Anneau Silassion",
         "rarete": "Commun",
         "image": "silassion",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9673,7 +9535,6 @@
         "nom": "Anneau Lélé",
         "rarete": "Commun",
         "image": "lele",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9729,7 +9590,6 @@
         "nom": "Anneau Rhomého",
         "rarete": "Commun",
         "image": "rhomeho",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9785,7 +9645,6 @@
         "nom": "Anneau Lyve",
         "rarete": "Commun",
         "image": "lyve",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9841,7 +9700,6 @@
         "nom": "Bague Hette",
         "rarete": "Commun",
         "image": "hette",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9897,7 +9755,6 @@
         "nom": "Anneau Pinel",
         "rarete": "Rare",
         "image": "pinel",
-
         "patchs": [
           {
             "version": "0.12",
@@ -9953,7 +9810,6 @@
         "nom": "Anneau Minairal",
         "rarete": "Rare",
         "image": "minairal",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10009,7 +9865,6 @@
         "nom": "Anneau Mali",
         "rarete": "Rare",
         "image": "mali",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10065,7 +9920,6 @@
         "nom": "Anneau Pération",
         "rarete": "Rare",
         "image": "peration",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10121,7 +9975,6 @@
         "nom": "Anneau d'Haim",
         "rarete": "Rare",
         "image": "haim",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10177,7 +10030,6 @@
         "nom": "Orbe de Terre",
         "rarete": "Krosmique",
         "image": "orbe_terre",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10234,7 +10086,6 @@
         "nom": "Orbe d'Eau",
         "rarete": "Krosmique",
         "image": "orbe_eau",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10291,7 +10142,6 @@
         "nom": "Orbe d'Air",
         "rarete": "Krosmique",
         "image": "orbe_air",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10348,7 +10198,6 @@
         "nom": "Orbe de Feu",
         "rarete": "Krosmique",
         "image": "orbe_feu",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10405,7 +10254,6 @@
         "nom": "Orbe de Mort",
         "rarete": "Krosmique",
         "image": "orbe_mort",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10462,7 +10310,6 @@
         "nom": "Orbe de Sang",
         "rarete": "Infinite",
         "image": "orbe_sang",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10519,7 +10366,6 @@
         "nom": "Anneau Kulte",
         "rarete": "Krosmique",
         "image": "kulte",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10575,7 +10421,6 @@
         "nom": "Anneau des Âmes",
         "rarete": "Infinite",
         "image": "ames",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10635,7 +10480,6 @@
         "nom": "Le Kamard",
         "rarete": "Infinite",
         "image": "kamard",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10692,7 +10536,6 @@
         "nom": "Cicatrisor",
         "rarete": "Infinite",
         "image": "cicatrisor",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10750,63 +10593,6 @@
         "nom": "Brassard Nakeuh",
         "rarete": "Commun",
         "image": "nakeuh",
-
-        "patchs": [
-          {
-            "version": "0.12",
-            "pouvoir": "Attaque Touche les 2 cases devant votre héros. Début du combat : -25% d'attaque à votre héros.",
-            "caracteristiques": [
-              {
-                "taux": 1,
-                "effet": "% d'AT à votre héros."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "DÉGÂTS CRITIQUES PHYSIQUES",
-                "cout": 80,
-                "effet": "+30% de DÉGÂTS CRITIQUES à votre héros",
-                "sort": ""
-              },
-              {
-                "nom": "DÉGÂTS CRITIQUES PHYSIQUES",
-                "cout": 80,
-                "effet": "+30% de DÉGÂTS CRITIQUES à votre héros",
-                "sort": ""
-              },
-              {
-                "nom": "BONUS COUP CRITIQUE",
-                "cout": 80,
-                "effet": "+10% aux chances de COUP CRITIQUE à votre héros",
-                "sort": ""
-              },
-              {
-                "nom": "PUISSANCE",
-                "cout": 80,
-                "effet": "+10% d'ATTAQUE à votre héros",
-                "sort": ""
-              },
-              {
-                "nom": "PUISSANCE COMPAGNON",
-                "cout": 80,
-                "effet": "+10% d'ATTAQUE à votre héros",
-                "sort": ""
-              },
-              {
-                "nom": "GAIN DE KAMAS",
-                "cout": 50,
-                "effet": "+5% aux gains de Kamas",
-                "sort": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "nom": "Brassard Nakeuh",
-        "rarete": "Commun",
-        "image": "nakeuh",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10862,7 +10648,6 @@
         "nom": "Brassard Toung",
         "rarete": "Commun",
         "image": "toung",
-
         "patchs": [
           {
             "version": "0.12",
@@ -10924,7 +10709,6 @@
         "nom": "Brassard Ogan",
         "rarete": "Krosmique",
         "image": "ogan",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -10986,7 +10770,6 @@
         "nom": "Brassard Osage",
         "rarete": "Krosmique",
         "image": "osage",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -11048,7 +10831,6 @@
         "nom": "Papy Brassard",
         "rarete": "Krosmique",
         "image": "papy",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11105,7 +10887,6 @@
         "nom": "Brassard Ticho",
         "rarete": "Krosmique",
         "image": "ticho",
-       
         "patchs": [
           {
             "version": "0.12",
@@ -11168,7 +10949,6 @@
         "nom": "Brassard Dine",
         "rarete": "Commun",
         "image": "dine",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11230,7 +11010,6 @@
         "nom": "Brassard Kantiel",
         "rarete": "Infinite",
         "image": "kantiel",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11290,7 +11069,6 @@
         "nom": "Brassard Boueux",
         "rarete": "Commun",
         "image": "boueux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11346,7 +11124,6 @@
         "nom": "Brassard Huilé",
         "rarete": "Commun",
         "image": "huile",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11408,7 +11185,6 @@
         "nom": "Brassard Mouillé",
         "rarete": "Commun",
         "image": "mouille",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11470,7 +11246,6 @@
         "nom": "Brassard Éventé",
         "rarete": "Commun",
         "image": "evente",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11532,7 +11307,6 @@
         "nom": "Brassard Lermite",
         "rarete": "Commun",
         "image": "lermite",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11594,7 +11368,6 @@
         "nom": "Brassard Kalibur",
         "rarete": "Commun",
         "image": "kalibur",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11656,7 +11429,6 @@
         "nom": "Brassard Bondissant",
         "rarete": "Commun",
         "image": "bondissant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11718,7 +11490,6 @@
         "nom": "Brassard Explosif",
         "rarete": "Commun",
         "image": "explosif",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11780,7 +11551,6 @@
         "nom": "Brassard Pluvieux",
         "rarete": "Commun",
         "image": "pluvieux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11842,7 +11612,6 @@
         "nom": "Brassard Grêleux",
         "rarete": "Commun",
         "image": "greleux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11904,7 +11673,6 @@
         "nom": "Brassard Foudroyant",
         "rarete": "Commun",
         "image": "foudroyant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -11960,7 +11728,6 @@
         "nom": "Brassard Enflammé",
         "rarete": "Commun",
         "image": "enflamme",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12022,7 +11789,6 @@
         "nom": "Brassard Tourbé",
         "rarete": "Commun",
         "image": "tourbe",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12084,7 +11850,6 @@
         "nom": "Brassard Rocheux",
         "rarete": "Commun",
         "image": "rocheux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12146,7 +11911,6 @@
         "nom": "Brassard Du Bouclier Pluvieux",
         "rarete": "Rare",
         "image": "bouclier_pluvieux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12208,7 +11972,6 @@
         "nom": "Brassard De Granit",
         "rarete": "Rare",
         "image": "granit",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12270,7 +12033,6 @@
         "nom": "Brassard De Blizzard",
         "rarete": "Rare",
         "image": "blizzard",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12332,7 +12094,6 @@
         "nom": "Brassard De Repousse Rocheuse",
         "rarete": "Rare",
         "image": "repousse_rocheuse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12394,7 +12155,6 @@
         "nom": "Brassard De Repousse Pluvieuse",
         "rarete": "Rare",
         "image": "repousse_pluvieuse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12456,7 +12216,6 @@
         "nom": "Brassard De Repousse Foudroyante",
         "rarete": "Rare",
         "image": "repousse_foudroyante",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12518,7 +12277,6 @@
         "nom": "Brassard De Repousse Enflammée",
         "rarete": "Rare",
         "image": "repousse_enflammee",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12580,7 +12338,6 @@
         "nom": "Brassard Du Bouclier Foudroyant",
         "rarete": "Rare",
         "image": "bouclier_foudroyant",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12642,7 +12399,6 @@
         "nom": "Brassard Du Bouclier Rocheux",
         "rarete": "Rare",
         "image": "bouclier_rocheux",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12704,7 +12460,6 @@
         "nom": "Brassard Du Bouclier Enflammé",
         "rarete": "Rare",
         "image": "bouclier_enflamme",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12766,7 +12521,6 @@
         "nom": "Brassard De Flot",
         "rarete": "Rare",
         "image": "flot",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12828,7 +12582,6 @@
         "nom": "Brassard De Brasier",
         "rarete": "Rare",
         "image": "brasier",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12890,7 +12643,6 @@
         "nom": "Brassard De Traversée Pluvieuse",
         "rarete": "Krosmique",
         "image": "traversee_pluvieuse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -12953,7 +12705,6 @@
         "nom": "Brassard De Traversée Rocheuse",
         "rarete": "Krosmique",
         "image": "traversee_rocheuse",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13020,7 +12771,6 @@
         "nom": "Brassard De Traversée Foudroyante",
         "rarete": "Krosmique",
         "image": "traversee_foudroyante",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13087,7 +12837,6 @@
         "nom": "Brassard De Traversée Enflammée",
         "rarete": "Krosmique",
         "image": "traversee_enflammee",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13154,7 +12903,6 @@
         "nom": "Brassard Serpento",
         "rarete": "Infinite",
         "image": "serpento",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13220,7 +12968,6 @@
         "nom": "Brassard Spirituel",
         "rarete": "Infinite",
         "image": "spirituel",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13280,7 +13027,6 @@
         "nom": "Brassard Licorno",
         "rarete": "Infinite",
         "image": "licorno",
-
         "patchs": [
           {
             "version": "0.12",
@@ -13340,7 +13086,6 @@
         "nom": "Brassard Tificiel",
         "rarete": "Infinite",
         "image": "tificiel",
-
         "patchs": [
           {
             "version": "0.12",
