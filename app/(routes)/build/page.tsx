@@ -44,7 +44,7 @@ const Build = () => {
   });
   const [encryptedBuild, setEncryptedBuild] = useState("");
   const [openModalImport, setOpenModalImport] = useState<boolean | null>(false);
-  const [openModalAlert, setOpenModalAlert] = useState<boolean | null>(true);
+  const [openModalAlert, setOpenModalAlert] = useState<boolean | null>(false);
 
   //#endregion
 
