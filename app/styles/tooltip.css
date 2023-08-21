@@ -1,6 +1,4 @@
 .tooltip {
-  width: auto !important;
-  border: solid white 1px;
+  background: rgb(19, 19, 19) !important;
   font-weight: bold;
-  opacity: 100% !important;
 }

@@ -167,11 +167,16 @@ export interface Arme {
 export interface PatchArmes {
   version: string;
   effet: string;
-  passifs: any[];
+  passifs: Passif[];
   pv: number;
   at: number;
   cc: number;
   pm: number;
+}
+export interface Passif {
+  nom: string;
+  image: string;
+  effet: string;
 }
 
 export interface BuildItemProps {

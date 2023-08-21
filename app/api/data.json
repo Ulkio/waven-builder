@@ -17261,7 +17261,7 @@
           {
             "version": "0.12",
             "cout": 3,
-            "effet": "Confère DÉPHASAGE et %25+ d'attaque à votre héros pour le tour.",
+            "effet": "Confère DÉPHASAGE et +25% d'attaque à votre héros pour le tour.",
             "gains": {
               "astral": 1
             }
@@ -18707,7 +18707,7 @@
           {
             "version": "0.12",
             "cout": 2,
-            "effet": "%50+ d'attaque à votre héros pour le tour.",
+            "effet": "+50% d'attaque à votre héros pour le tour.",
             "gains": {}
           }
         ]
@@ -19615,7 +19615,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "APPARITION : %50+ de BLINDAGE à votre Laboratoire de Flamme.",
+                "effet": "APPARITION : +50% de BLINDAGE à votre Laboratoire de Flamme.",
                 "cout": 120
               },
               {
@@ -19962,7 +19962,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une Poussette à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une Poussette à votre main.",
                 "cout": 80
               },
               {
@@ -20198,7 +20198,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "Apparition %50+ de BLINDAGE à votre Sinistro Feu ou Sinistro Hydruille.",
+                "effet": "Apparition +50% de BLINDAGE à votre Sinistro Feu ou Sinistro Hydruille.",
                 "cout": 120
               },
               {
@@ -20339,7 +20339,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES FLAMMES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une PAGE DU DECK DES FLAMMES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -20990,7 +20990,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1 eau.\r\n+500% aux DÉGÂTS CRITIQUES du prochain sort que vous jouez.",
+                "effet": "CRITIQUE : Piochez 1 eau.\r +500% aux DÉGÂTS CRITIQUES du prochain sort que vous jouez.",
                 "cout": 80
               },
               {
@@ -21292,7 +21292,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "APPARITION : %50+ de BLINDAGE à votre Laboratoire de Glace.",
+                "effet": "APPARITION : +50% de BLINDAGE à votre Laboratoire de Glace.",
                 "cout": 120
               },
               {
@@ -21331,7 +21331,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : +1.\r\nAjoute un Élixir de Glace à votre main.",
+                "effet": "CRITIQUE : +1.\r Ajoute un Élixir de Glace à votre main.",
                 "cout": 80
               },
               {
@@ -21673,7 +21673,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une Poussette à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une Poussette à votre main.",
                 "cout": 80
               },
               {
@@ -21908,7 +21908,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "Apparition %50+ de BLINDAGE à votre Sinistro Eau ou Sinistro Coucou.",
+                "effet": "Apparition +50% de BLINDAGE à votre Sinistro Eau ou Sinistro Coucou.",
                 "cout": 120
               },
               {
@@ -22015,7 +22015,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES VAGUES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une PAGE DU DECK DES VAGUES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -22357,7 +22357,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nConfère BOUCLIER à votre héros.",
+                "effet": "CRITIQUE : Piochez 1.\r Confère BOUCLIER à votre héros.",
                 "cout": 80
               },
               {
@@ -22837,7 +22837,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1 terre.\r\n+1000permil aux chances de COUP CRITIQUE du prochain sort que vous jouez.",
+                "effet": "CRITIQUE : Piochez 1 terre.\r +1000permil aux chances de COUP CRITIQUE du prochain sort que vous jouez.",
                 "cout": 80
               },
               {
@@ -23003,7 +23003,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "APPARITION : %50+ de BLINDAGE à votre Laboratoire de Pierre.",
+                "effet": "APPARITION : +50% de BLINDAGE à votre Laboratoire de Pierre.",
                 "cout": 120
               },
               {
@@ -23076,7 +23076,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : +1.\r\nAjoute le sort Élixir de Pierre à votre main.",
+                "effet": "CRITIQUE : +1.\r Ajoute le sort Élixir de Pierre à votre main.",
                 "cout": 80
               },
               {
@@ -23453,7 +23453,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une Poussette à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une Poussette à votre main.",
                 "cout": 80
               },
               {
@@ -23586,7 +23586,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "Apparition %50+ de BLINDAGE à votre Sinistro Terre ou Sinistro Cadran de Xélor.",
+                "effet": "Apparition +50% de BLINDAGE à votre Sinistro Terre ou Sinistro Cadran de Xélor.",
                 "cout": 120
               },
               {
@@ -23761,7 +23761,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES ROCHES aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une PAGE DU DECK DES ROCHES aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -24547,7 +24547,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1 Air. \r\nDéclenche REBOND (10).",
+                "effet": "CRITIQUE : Piochez 1 Air. \r Déclenche REBOND (10).",
                 "cout": 80
               },
               {
@@ -24781,7 +24781,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "APPARITION : %50+ de BLINDAGE à votre Laboratoire de Vent.",
+                "effet": "APPARITION : +50% de BLINDAGE à votre Laboratoire de Vent.",
                 "cout": 120
               },
               {
@@ -24820,7 +24820,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : +1.\r\nAjoute un Élixir de Vent à votre main.",
+                "effet": "CRITIQUE : +1.\r Ajoute un Élixir de Vent à votre main.",
                 "cout": 80
               },
               {
@@ -25265,7 +25265,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une Poussette à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une Poussette à votre main.",
                 "cout": 80
               },
               {
@@ -25328,7 +25328,7 @@
             "dons": [
               {
                 "nom": "EFFET AMELIORE",
-                "effet": "Apparition %50+ de BLINDAGE à votre Sinistro Air ou Sinistro Catalyseur Temporel.",
+                "effet": "Apparition +50% de BLINDAGE à votre Sinistro Air ou Sinistro Catalyseur Temporel.",
                 "cout": 120
               },
               {
@@ -25503,7 +25503,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1.\r\nAjoute une PAGE DU DECK DES VENTS aléatoire à votre main.",
+                "effet": "CRITIQUE : Piochez 1.\r Ajoute une PAGE DU DECK DES VENTS aléatoire à votre main.",
                 "cout": 80
               },
               {
@@ -25743,7 +25743,7 @@
           {
             "version": "0.12",
             "cout": 6,
-            "effet": "Inflige l’attaque de votre héros.Lorsque votre héros gagne une AURA EPEE : %5+ aux DÉGÂTS de ce sort.Compteur AURA EPEE : 0EPHEMERE",
+            "effet": "Inflige l’attaque de votre héros.Lorsque votre héros gagne une AURA EPEE : +5% aux DÉGÂTS de ce sort.Compteur AURA EPEE : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -25775,7 +25775,7 @@
           {
             "version": "0.12",
             "cout": 6,
-            "effet": "Inflige l’attaque de votre héros.Lorsque vous déclenchez MÊLÉE : %25+ aux DÉGÂTS de ce sort.Compteur MÊLÉE : 0EPHEMERE",
+            "effet": "Inflige l’attaque de votre héros.Lorsque vous déclenchez MÊLÉE : +25% aux DÉGÂTS de ce sort.Compteur MÊLÉE : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -26155,7 +26155,7 @@
           {
             "version": "0.12",
             "cout": 6,
-            "effet": "Inflige l'attaque de votre héros.Lorsque votre héros libère une AURA COEUR : %25+ aux DÉGÂTS de ce sort.Compteur AURAS LIBÉRÉES : 0EPHEMERE",
+            "effet": "Inflige l'attaque de votre héros.Lorsque votre héros libère une AURA COEUR : +25% aux DÉGÂTS de ce sort.Compteur AURAS LIBÉRÉES : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -26170,7 +26170,7 @@
           {
             "version": "0.12",
             "cout": 7,
-            "effet": "Inflige l'attaque de votre héros et soigne vos personnages d'autantLorsque vous déclenchez un SOIN : %5+ aux DÉGÂTS de ce sort.Compteur SOINS : 0EPHEMERE",
+            "effet": "Inflige l'attaque de votre héros et soigne vos personnages d'autantLorsque vous déclenchez un SOIN : +5% aux DÉGÂTS de ce sort.Compteur SOINS : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -26343,7 +26343,7 @@
           {
             "version": "0.12",
             "cout": 5,
-            "effet": "Inflige l'attaque de votre héros.Lorsque qu'un ASSEMBLAGE est déclenché : %50+ aux DÉGÂTS de ce sort.Compteur ASSEMBLAGE  : 0EPHEMERE",
+            "effet": "Inflige l'attaque de votre héros.Lorsque qu'un ASSEMBLAGE est déclenché : +50% aux DÉGÂTS de ce sort.Compteur ASSEMBLAGE  : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -26358,7 +26358,7 @@
           {
             "version": "0.12",
             "cout": 6,
-            "effet": "Inflige l'attaque de votre héros.Lorsque vous déclenchez MACHINATION : %30+ aux DÉGÂTS de ce sort.Compteur MACHINATION  : 0EPHEMERE",
+            "effet": "Inflige l'attaque de votre héros.Lorsque vous déclenchez MACHINATION : +30% aux DÉGÂTS de ce sort.Compteur MACHINATION  : 0EPHEMERE",
             "gains": {}
           }
         ]
@@ -26599,7 +26599,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros se téléporte : -1 point d'action au coût de votre prochain sort.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Concentration Shaden",
+                "effet": "Lorsque votre héros se téléporte : +10% aux dégâts des sorts de votre main",
+                "image": "shaden_concentration"
+              },
+              {
+                "nom": "Alignement Shaden",
+                "effet": "Lorsque votre héros se téléporte : Inflige 5% de sa Vie aux adversaires alignés avec lui",
+                "image": "shaden_alignement"
+              },
+              {
+                "nom": "Rétablissement Shaden",
+                "effet": "Lorsque votre héros se téléporte : Soigne les alliés alignés de 5% de sa Vie",
+                "image": "shaden_retablissement"
+              },
+              {
+                "nom": "Archer Shaden",
+                "effet": "Vos sorts Archer sont remplacés par les sorts Super Archer",
+                "image": "shaden_archer"
+              }
+            ],
             "pv": 383,
             "at": 22,
             "cc": 5,
@@ -26615,7 +26636,28 @@
           {
             "version": "0.12",
             "effet": "FIN DU TOUR : Piochez 1 sorts supplémentaire si vous avez 2 sorts ou moins en main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Puissance Bunelame",
+                "effet": "FIN DU TOUR : +20% d'attaque à votre héros par sort pioché ce tour jusqu'à la fin de son prochain tour.",
+                "image": "bunelame_puissance"
+              },
+              {
+                "nom": "Maître Bunelame",
+                "effet": "Lorsque vous jouez un sort coûtant 3 point d'action ou moins : +20% d'attaque à votre héros et +20% aux DÉGÂTS de vos sorts pour le tour.",
+                "image": "bunelame_maitre"
+              },
+              {
+                "nom": "Défausse Bunelame",
+                "effet": "25% aux DÉGÂTS de vos sorts. Lorsque vous jouez un sort, vous en défaussez un autre aléatoire.",
+                "image": "bunelame_defausse"
+              },
+              {
+                "nom": "Consécration Bunelame",
+                "effet": "FIN DU TOUR : +1 AURA Mire Motivante à votre héros si vous avez 2 sorts ou moins en main.",
+                "image": "bunelame_consecration"
+              }
+            ],
             "pv": 392,
             "at": 20,
             "cc": 5,
@@ -26631,7 +26673,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros libère une AURA MIRE : Inflige 50% de son attaque à la cible.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Maître Piven",
+                "effet": "Lorsque votre héros libère une AURA MIRE : Inflige 50% de son attaque à la cible en plus.",
+                "image": "piven_maitre"
+              },
+              {
+                "nom": "Ciblage Piven",
+                "effet": "Lorsque votre héros libère une AURA MIRE : Déclenche également son passif sur l’adversaire ayant le plus de VIE.",
+                "image": "piven_ciblage"
+              },
+              {
+                "nom": "Renforcement Piven",
+                "effet": "Lorsque votre héros libère une AURA MIRE : Il gagne 30% d'attaque pour le tour.",
+                "image": "piven_renforcement"
+              },
+              {
+                "nom": "Audace Piven",
+                "effet": "Lorsque votre héros libère une AURA MIRE : Déclenche son passif sur les adversaires alignés avec lui.",
+                "image": "piven_audace"
+              }
+            ],
             "pv": 385,
             "at": 20,
             "cc": 5,
@@ -26647,7 +26710,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous effectuez un Combo : +1 AURA Mire Puissante à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Maître Voldorak",
+                "effet": "Lorsque vous jouez un sort : +50% aux DÉGATS de vos prochains sorts joués ce tour. Limité à 1 fois par tour.",
+                "image": "voldorak_maitre"
+              },
+              {
+                "nom": "Précision Voldorak",
+                "effet": "+25% aux DÉGÂTS des AURAS MIRE de votre héros. Lorsque vous jouez un sort : +25% supplémentaires pour le tour.",
+                "image": "voldorak_precision"
+              },
+              {
+                "nom": "Repli Voldorak",
+                "effet": "Lorsque votre héros attaque : Se téléporte sur la case alignée la plus éloignée.",
+                "image": "voldorak_repli"
+              },
+              {
+                "nom": "Bombardement Voldorak",
+                "effet": "Lorsque vous libérez une AURA Mire Puissante : Inflige également 75% de ses DÉGÂTS aux adversaires alignés avec la cible.",
+                "image": "voldorak_bombardement"
+              }
+            ],
             "pv": 380,
             "at": 22,
             "cc": 5,
@@ -26663,7 +26747,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA MIRE du même élément à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Précision Expingole",
+                "effet": "Lorsqu'un de vos personnages gagne une AURA MIRE : applique l’effet PLUIE / ROCHER / FLAME / FOUDRE du même élément aux ennemis alignés avec lui. +100% aux DÉGÂTS des AURAS MIRE de votre héros.",
+                "image": "expingole_precision"
+              },
+              {
+                "nom": "Maître Expingole",
+                "effet": "Lorsque votre héros gagne AURA MIRE, vos compagnons gagnent la même. +100% aux DÉGÂTS des AURAS MIRE de votre héros.",
+                "image": "expingole_maitre"
+              },
+              {
+                "nom": "Feu Expingole",
+                "effet": "Toutes les libérations d'AURAS MIRE de votre héros sont augmentées de 1. +100% aux DÉGÂTS des AURAS MIRE de votre héros.",
+                "image": "expingole_feu"
+              },
+              {
+                "nom": "Renforcement Expingole",
+                "effet": "Lorsque vous jouez un sort qui coûte 5 point d'action ou plus : +1 AURA MIRE du même élément. +100% aux DÉGÂTS des AURAS MIRE de votre héros.",
+                "image": "expingole_renforcement"
+              }
+            ],
             "pv": 385,
             "at": 24,
             "cc": 5,
@@ -26679,7 +26784,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous appliquez un état élémentaire : Confère DÉPHASAGE et +1 point de mouvement à votre héros pour le tour. Limité à 1 fois par tour.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Cœur d'Esprit",
+                "effet": "Lorsque votre héros traverse un adversaire ayant un état élémentaire : Pose un Cœur D'Esprit jusqu'à 3 cases de l'adversaire traversé. L'état élémentaire n'est pas consommé.",
+                "image": "dephasante_coeuresprit"
+              },
+              {
+                "nom": "Esprits Déphasés",
+                "effet": "Lorsqu’un allié ou un adversaire meurt : Pose un Cœur D'Esprit autour de lui.",
+                "image": "dephasante_espritsdephases"
+              },
+              {
+                "nom": "Soin Déphasé",
+                "effet": "Lorsque votre héros est DÉPHASÉ : Se soigne de 50% de son attaque par adversaire traversé.",
+                "image": "dephasante_soindephase"
+              },
+              {
+                "nom": "Concentration Déphasante",
+                "effet": "Lorsque votre héros est DÉPHASÉ : +20% aux DÉGÂTS de votre prochain sort par adversaire traversé.",
+                "image": "dephasante_concentrationdephasante"
+              }
+            ],
             "pv": 401,
             "at": 30,
             "cc": 5,
@@ -26695,7 +26821,28 @@
           {
             "version": "0.12",
             "effet": "Apparition +50% DRAIN à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Botte Vorace",
+                "effet": "ATTAQUE : Inflige 50% de son attaque autour de lui.",
+                "image": "voracius_bottevorace"
+              },
+              {
+                "nom": "Maître Lame",
+                "effet": "Lorsque votre héros est soigné : Place un Cœur Voracius jusqu’à 3 cases autour de lui. Limité à 2 fois par tour.",
+                "image": "voracius_maitrelame"
+              },
+              {
+                "nom": "Vitalité Voracius",
+                "effet": "Début du combat Votre héros gagne 2% de sa Vie en attaque.",
+                "image": "voracius_vitalite"
+              },
+              {
+                "nom": "Puissance Voracius",
+                "effet": "Lorsqu'il est soigné : +30% d'attaque à votre héros jusqu’à la fin du tour.",
+                "image": "voracius_puissance"
+              }
+            ],
             "pv": 380,
             "at": 22,
             "cc": 5,
@@ -26711,7 +26858,28 @@
           {
             "version": "0.12",
             "effet": "Début du tour : Ajoute le sort Nocturien à votre main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Agonie Tamashi",
+                "effet": "Lorsqu’un de vos Nocturiens meurt : Votre héros inflige 75% de son attaque autour de celui-ci.",
+                "image": "tamashi_agonie"
+              },
+              {
+                "nom": "Apparition Tamashi",
+                "effet": "Lorsque vous invoquez un Nocturiens : Votre héros inflige 50% de son attaque autour de celui-ci.",
+                "image": "tamashi_apparition"
+              },
+              {
+                "nom": "Puissance Tamashi",
+                "effet": "Lorsque vous invoquez un Nocturiens : +50% d‘attaque à votre héros pour le tour.",
+                "image": "tamashi_puissance"
+              },
+              {
+                "nom": "Volonté Tamashi",
+                "effet": "Début du tour : +10% d'attaque par AURA COEUR sur vos personnages. Lorsqu'un Nocturiens est invoqué, il copie les AURAS COEUR de votre héros.",
+                "image": "tamashi_volonte"
+              }
+            ],
             "pv": 388,
             "at": 18,
             "cc": 5,
@@ -26727,7 +26895,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros est soigné : Inflige 35% de son attaque à l'adversaire ayant le plus de vie.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Apostrocius",
+                "effet": "Lorsqu'un de vos compagnons ATTAQUE : Soigne votre héros de 25% de son attaque.",
+                "image": "apostruker_apostrocius"
+              },
+              {
+                "nom": "Maîtrise Apostruker",
+                "effet": "Lorsque votre héros est soigné : Inflige 50% de son attaque à l’adversaire ayant le plus de VIE en plus.",
+                "image": "apostruker_maitrise"
+              },
+              {
+                "nom": "Puissance Apostruker",
+                "effet": "Lorsque votre héros est soigné : Inflige aussi les DÉGÂTS de son passif à l’adversaire ayant le moins de VIE.",
+                "image": "apostruker_puissance"
+              },
+              {
+                "nom": "Soin Apostruker",
+                "effet": "Lorsqu'il gagne de l'armure : Votre héros déclenche son passif. Lorsqu'il est soigné : Votre héros gagne 2% de sa Vie en armure.",
+                "image": "apostruker_soin"
+              }
+            ],
             "pv": 396,
             "at": 22,
             "cc": 5,
@@ -26743,7 +26932,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous déclenchez SOUTIEN : Votre héros gagne 50% de son attaque en armure.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Collectif Kokoro",
+                "effet": "Lorsque vous invoquez un compagnon : Confère 50% de l'attaque de votre héros en armure à vos compagnons.",
+                "image": "kokoro_collectif"
+              },
+              {
+                "nom": "Frappe Kokoro",
+                "effet": "Lorsque vous déclenchez SOUTIEN : Votre héros inflige 50% de son armure aux adversaires autour de lui.",
+                "image": "kokoro_frappe"
+              },
+              {
+                "nom": "Maîtrise Kokoro",
+                "effet": "Lorsque vous déclenchez SOUTIEN : Tous les alliés gagnent 20% de l'attaque de votre héros en armure.",
+                "image": "kokoro_maitrise"
+              },
+              {
+                "nom": "Recyclage Kokoro",
+                "effet": "Lorsque vous déclenchez SOUTIEN : +1 Jauge élémentaire du même élément que le sort joué.",
+                "image": "kokoro_recyclage"
+              }
+            ],
             "pv": 398,
             "at": 24,
             "cc": 5,
@@ -26759,7 +26969,28 @@
           {
             "version": "0.12",
             "effet": "Début du combat : Ajoute le sort Âme Spectrale à votre main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Armure Spectrale",
+                "effet": "Lorsqu’une Âmes Spectrales Attaque Confère son attaque en armure à vos personnages.",
+                "image": "spectral_armure"
+              },
+              {
+                "nom": "Lien de l'âme",
+                "effet": "Attaque Vos Âmes Spectrales gagnent 20% d'attaque et Infligent leur attaque autour d’elles.",
+                "image": "spectral_liename"
+              },
+              {
+                "nom": "Retour Spectral",
+                "effet": "Lorsqu’une Âme Spectrale meurt : Confère REINVOCABLE aléatoirement à l’un de vos compagnons morts.",
+                "image": "spectral_retour"
+              },
+              {
+                "nom": "Spectralisation",
+                "effet": "Lorsqu’un de vos compagnons meurt : Invoque une Âme Spectrale de compagnon sur sa case. Votre héros s'inflige 5% de sa Vie.",
+                "image": "spectral_spectralisation"
+              }
+            ],
             "pv": 396,
             "at": 26,
             "cc": 5,
@@ -26775,7 +27006,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros CHARGE : Inflige 50% de son attaque à la cible.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Maître Orok",
+                "effet": "Lorsque votre héros CHARGE : Inflige 50% de son attaque à la cible en plus.",
+                "image": "orok_maitre"
+              },
+              {
+                "nom": "Orok Choc",
+                "effet": "Lorsque votre héros CHARGE : Inflige 50 de son attaque aux adversaires autour de la cible.",
+                "image": "orok_choc"
+              },
+              {
+                "nom": "Renforcement Orok",
+                "effet": "Lorsque votre héros CHARGE : Il gagne 50 de son attaque en armure.",
+                "image": "orok_renforcement"
+              },
+              {
+                "nom": "Repousse Orok",
+                "effet": "Lorsque votre héros CHARGE : REPOUSSE la cible du nombre de cases parcourues. 25% de vos bonus d'attaque sont convertis en DÉGÂTS de COLLISION.",
+                "image": "orok_repousse"
+              }
+            ],
             "pv": 401,
             "at": 30,
             "cc": 5,
@@ -26791,7 +27043,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous appliquez un état élémentaire : +1 Aura épée du même élément à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Attaque Kasaï",
+                "effet": "Attaque Si la cible à un état élémentaire, le consomme pour déclencher une attaque supplémentaire infligeant 50% de DÉGÂTS. Limité à 1 fois par tour.",
+                "image": "kasai_attaque"
+              },
+              {
+                "nom": "Explosion Kasaï",
+                "effet": "Lorsque vous appliquez un état : Inflige 50 de l'attaque de votre héros autour de lui.",
+                "image": "kasai_explosion"
+              },
+              {
+                "nom": "Magie Kasaï",
+                "effet": "+10% à vos DÉGÂTS élémentaires par AURA EPEE que possède votre héros.",
+                "image": "kasai_magie"
+              },
+              {
+                "nom": "Puissance Kasaï",
+                "effet": "+25% d'attaque à votre héros par AURA EPEE qu’il possède.",
+                "image": "kasai_puissance"
+              }
+            ],
             "pv": 399,
             "at": 32,
             "cc": 5,
@@ -26807,7 +27080,28 @@
           {
             "version": "0.12",
             "effet": "FIN DU TOUR : Confère DÉPHASAGE à votre héros jusqu'à la fin de son prochain tour s'il a au moins 1 adversaire autour de lui.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Armure Stalaktoss",
+                "effet": "Lorsque votre héros est DÉPHASÉ : Il gagne 50 de son attaque en armure par adversaire traversé.",
+                "image": "stalak_armure"
+              },
+              {
+                "nom": "Communion Stalaktoss",
+                "effet": "Lorsque votre héros traverse l’un de vos compagnons en étant DÉPHASÉ : Lui confère DÉPHASAGE pour le tour sans réduire son attaque.",
+                "image": "stalak_communion"
+              },
+              {
+                "nom": "Esprit Stalaktoss",
+                "effet": "Lorsqu'un de vos personnages ATTAQUE en étant DÉPHASÉ : Déclenche FLUX SPIRITUEL sur la cible pour chaque adversaire traversé.",
+                "image": "stalak_esprit"
+              },
+              {
+                "nom": "Vigueur Stalaktoss",
+                "effet": "L’attaque de votre héros n’est pas réduite par le DÉPHASAGE.",
+                "image": "stalak_vigueur"
+              }
+            ],
             "pv": 401,
             "at": 32,
             "cc": 5,
@@ -26823,7 +27117,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous déclenchez MÊLÉE : Votre héros gagne 50% de son attaque en armures. Limité à 1 fois par tour.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Frappe Justelame",
+                "effet": "Attaque Inflige 50% de son armure en DÉGÂTS supplémentaires à la cible.",
+                "image": "justelame_frappe"
+              },
+              {
+                "nom": "Maître Justelame",
+                "effet": "Lorsque vous déclenchez MÊLÉE : Votre héros gagne 20 de son attaque en armure par adversaire autour de lui.",
+                "image": "justelame_maitre"
+              },
+              {
+                "nom": "Puissance Justelame",
+                "effet": "Lorsque votre héros perd de l’armure : +15% d'attaque jusqu’à la fin de son tour.",
+                "image": "justelame_puissance"
+              },
+              {
+                "nom": "Déchaînement Justelame",
+                "effet": "FIN DU TOUR : Inflige 25% de l'armure de votre héros aux adversaires autour de lui.",
+                "image": "justelame_dechainement"
+              }
+            ],
             "pv": 387,
             "at": 32,
             "cc": 5,
@@ -26839,7 +27154,28 @@
           {
             "version": "0.12",
             "effet": "Début du combat : Ajoute le sort oeuf de Craqueleur à votre main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 393,
             "at": 22,
             "cc": 5,
@@ -26855,7 +27191,28 @@
           {
             "version": "0.12",
             "effet": "FIN DU TOUR : Devient GARDE DU CORPS des invocations alliées autour  de lui.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 415,
             "at": 22,
             "cc": 5,
@@ -26871,7 +27228,28 @@
           {
             "version": "0.12",
             "effet": "ATTAQUE : Piochez votre prochain sort d'invocation de bête.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 388,
             "at": 25,
             "cc": 5,
@@ -26887,7 +27265,28 @@
           {
             "version": "0.12",
             "effet": "Elimination Piochez votre prochain sort d'invocation de bête. Votre héros gagne 1 AURA Pierre d'élevage.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 370,
             "at": 25,
             "cc": 5,
@@ -26903,7 +27302,28 @@
           {
             "version": "0.12",
             "effet": "MORT d'une Invocation alliée : Piochez 1 sorts.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 400,
             "at": 24,
             "cc": 5,
@@ -26919,7 +27339,28 @@
           {
             "version": "0.12",
             "effet": "AGONIE Lorsque vous infligez des dégâts à votre héros : Inflige 50% de son attaque à l'adversaire ayant le plus de points de vie.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 390,
             "at": 18,
             "cc": 5,
@@ -26935,7 +27376,28 @@
           {
             "version": "0.12",
             "effet": "AGONIE Lorsque vous invoquez un compagnon : Votre héros en devient GARDE DU CORPS pour le tour.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 420,
             "at": 23,
             "cc": 5,
@@ -26951,7 +27413,28 @@
           {
             "version": "0.12",
             "effet": "AGONIE ATTAQUE : Subit 1% de sa points de vie max et gagne 50% de son attaque en armures.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 405,
             "at": 26,
             "cc": 5,
@@ -26967,7 +27450,28 @@
           {
             "version": "0.12",
             "effet": "AGONIE FIN DU TOUR : Inflige 50% de son attaque aux adversaires autour  de lui s'il est mutilé",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 400,
             "at": 28,
             "cc": 5,
@@ -26983,7 +27487,28 @@
           {
             "version": "0.12",
             "effet": "AGONIE Lorsque vous déplacez votre héros avec un sort : +1 point d'action.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              },
+              {
+                "nom": "",
+                "effet": "",
+                "image": ""
+              }
+            ],
             "pv": 430,
             "at": 23,
             "cc": 5,
@@ -26999,7 +27524,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA TRAPPER du même élément à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Astral Shugen",
+                "effet": "Lorsque ASTRAL est appliqué : Inflige 75% de l'attaque de votre héros à la cible.",
+                "image": "shugen_astral"
+              },
+              {
+                "nom": "Magie Shugen",
+                "effet": "+10% aux DÉGÂTS de vos sorts ÉLÉMENTAIRES par adversaire ayant un état élémentaire. Elimination : +5% aux DÉGÂTS de vos sorts ÉLÉMENTAIRES.",
+                "image": "shugen_magie"
+              },
+              {
+                "nom": "Puissance Shugen",
+                "effet": "+15% d'attaque à votre héros par adversaire ayant un état élémentaire. Elimination : +10% d'attaque à votre héros.",
+                "image": "shugen_puissance"
+              },
+              {
+                "nom": "Stratégie Shugen",
+                "effet": "Lorsque vous consommez un état élémentaire : Ajoute le sort Poussette à votre main et +1 point d'action.",
+                "image": "shugen_strategie"
+              }
+            ],
             "pv": 397,
             "at": 30,
             "cc": 5,
@@ -27015,7 +27561,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros déclenche un piège SRAM allié : Inflige 75% de son attaque aux adversaires autour",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Politique Kartana",
+                "effet": "",
+                "image": "kartana_politique"
+              },
+              {
+                "nom": "Maîtrise Kartana",
+                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : Inflige 50% de son attaque en plus aux adversaires autour.",
+                "image": "kartana_maitrise"
+              },
+              {
+                "nom": "Repousse Kartana",
+                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : REPOUSSE les adversaires adjacents de 3 cases. 25% de vos bonus d'attaque sont convertis en DÉGÂTS de COLLISION.",
+                "image": "kartana_repousse"
+              },
+              {
+                "nom": "Retrait Kartana",
+                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : Rejoue son tour et le Désarme. Limité à 3 fois par tour.",
+                "image": "kartana_retrait"
+              }
+            ],
             "pv": 392,
             "at": 22,
             "cc": 5,
@@ -27031,7 +27598,28 @@
           {
             "version": "0.12",
             "effet": "Lorsqu'un adversaire déclenche un de vos ASSEMBLAGES : Lui inflige 100 de l'attaque de votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Stratégie Orishi",
+                "effet": "Attaque Ajoute le sort Poussette à votre main. +50% au DÉGÂTS de vos COLLISIONS.",
+                "image": "orishi_strategie"
+              },
+              {
+                "nom": "Puissance Orishi",
+                "effet": "+10% à l’attaque de votre héros pour chacun de vos pièges sur le terrain.",
+                "image": "orishi_puissance"
+              },
+              {
+                "nom": "Assemblage Orishi",
+                "effet": "Lorsqu'un adversaire déclenche un de vos ASSEMBLAGES : Lui inflige 50% de l'attaque de votre héros.",
+                "image": "orishi_assemblage"
+              },
+              {
+                "nom": "Tactique Orishi",
+                "effet": "Lorsqu’un de vos ASSEMBLAGES de 3 pièges ou plus est déclenché : -1 point d'action au coût des sorts de votre main.",
+                "image": "orishi_tactique"
+              }
+            ],
             "pv": 398,
             "at": 24,
             "cc": 5,
@@ -27047,7 +27635,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque l'un de vos pièges est déclenché : Votre héros se soigne de 50% de son attaque.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Survitalité Ouraï",
+                "effet": "Lorsque votre héros est soigné : Inflige 3% de sa VIE aux adversaires adjacents.",
+                "image": "ourai_survitalite"
+              },
+              {
+                "nom": "Déphasage Ouraï",
+                "effet": "Lorsqu’un de vos pièges est déclenché : Confère DÉPHASAGE à votre héros et +100% d'attaque jusqu'à la fin du tour.",
+                "image": "ourai_dephasage"
+              },
+              {
+                "nom": "Support Ouraï",
+                "effet": "Lorsqu’un de vos pièges est déclenché : Soigne les alliés autour de ce piège : de 50% de l’attaque de votre héros.",
+                "image": "ourai_support"
+              },
+              {
+                "nom": "Collectif Ouraï",
+                "effet": "Lorsque votre héros est soigné : +10% d'attaque à vos personnages et +5% de DÉGÂTS à vos sorts élémentaires pour le tour.",
+                "image": "ourai_collectif"
+              }
+            ],
             "pv": 374,
             "at": 24,
             "cc": 5,
@@ -27063,7 +27672,28 @@
           {
             "version": "0.12",
             "effet": "ATTAQUE : Ajoute le sort Trappe Sourokan à votre main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Ombre Sourokan",
+                "effet": "Lorsqu'un adversaire active un Trappe Sourokan : Votre héros se téléporte sur une case adjacente et lui inflige son attaque.",
+                "image": "sourokan_ombre"
+              },
+              {
+                "nom": "Efficacité Sourokan",
+                "effet": "Lorsque vous déclenchez MACHINATION : Inflige 25% de l'attaque de votre héros aux adversaires autour de vos pièges.",
+                "image": "sourokan_efficacite"
+              },
+              {
+                "nom": "Génération Sourokan",
+                "effet": "Lorsque vous déclenchez MACHINATION : Ajoute le sort Trappe Sourokan à votre main.",
+                "image": "sourokan_generation"
+              },
+              {
+                "nom": "Maîtrise Sourokan",
+                "effet": "Lorsque vous déclenchez MACHINATION : +25% aux DÉGÂTS de vos pièges pour le tour.",
+                "image": "sourokan_maitrise"
+              }
+            ],
             "pv": 398,
             "at": 28,
             "cc": 5,
@@ -27079,7 +27709,28 @@
           {
             "version": "0.12",
             "effet": "FIN DU TOUR : Inflige 50% de son attaque aux adversaires autour  de chacun de vos SINISTROS.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Puissance Gurpapa",
+                "effet": "FIN DU TOUR : +25% d'attaque à votre héros jusqu’à la fin de son prochain tour pour chacun de vos SINISTROS en jeu.",
+                "image": "gurpapa_puissance"
+              },
+              {
+                "nom": "Maîtrise Gurpapa",
+                "effet": "FIN DU TOUR : Inflige 50% de l’attaque de votre héros en plus aux adversaires autour de vos SINISTROS.",
+                "image": "gurpapa_maitrise"
+              },
+              {
+                "nom": "Soin Gurpapa",
+                "effet": "FIN DU TOUR : Soigne de 50% de l’attaque de votre héros vos personnages autour de vos SINISTROS.",
+                "image": "gurpapa_soin"
+              },
+              {
+                "nom": "Recharge Gurpapa",
+                "effet": "Lorsque l’un de vos SINISTROS est détruit : Inflige 100% de l’attaque de votre héros autour de lui.",
+                "image": "gurpapa_recharge"
+              }
+            ],
             "pv": 389,
             "at": 26,
             "cc": 5,
@@ -27095,7 +27746,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque vous appliquez un état élémentaire : +1 AURA HIBOU du même élément à votre héros.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Application Jikan",
+                "effet": "Attaque Si la cible a un état élémentaire, applique cet état élémentaire aux autres adversaires adjacent à votre héros.",
+                "image": "jikan_application"
+              },
+              {
+                "nom": "Puissance Jikan",
+                "effet": "Lorsque vous appliquez un état élémentaire : Applique l’effet PLUIE / ROCHER / FLAME / FOUDRE du même élément.",
+                "image": "jikan_puissance"
+              },
+              {
+                "nom": "Attaque Jikan",
+                "effet": "Quand vous consommez un état : Inflige 10 dégâts magiques. Les dégâts sont basés sur vos magies élémentaires.",
+                "image": "jikan_attaque"
+              },
+              {
+                "nom": "Magie Jikan",
+                "effet": "+10% à vos DÉGÂTS élémentaires par AURA HIBOU que possède votre héros.",
+                "image": "jikan_magie"
+              }
+            ],
             "pv": 392,
             "at": 28,
             "cc": 5,
@@ -27111,7 +27783,28 @@
           {
             "version": "0.12",
             "effet": "FIN DU TOUR : Ajoute vos points d'action non consommés en réserve. Limité à 3 point d'action.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Puissance Tako",
+                "effet": "Lorsqu'un de vos personnages ATTAQUE : Inflige +5% de DÉGÂTS par PA restant.",
+                "image": "tako_puissance"
+              },
+              {
+                "nom": "Concentration Tako",
+                "effet": "Lorsque vous utilisez votre réserve : +10% aux DÉGÂTS des sorts de votre main.",
+                "image": "tako_concentration"
+              },
+              {
+                "nom": "Destruction Tako",
+                "effet": "Lorsque vous lancez un sort qui coûte 5 points d'action ou plus : Inflige 15 dégâts magiques aux adversaires alignés avec votre héros. Les dégâts sont basés sur vos magies élémentaires.",
+                "image": "tako_destruction"
+              },
+              {
+                "nom": "Maîtrise Tako",
+                "effet": "La limite de votre passif est augmentée à {PAvalue:Weapon.490.6} non consommés.",
+                "image": "tako_maitrise"
+              }
+            ],
             "pv": 391,
             "at": 24,
             "cc": 5,
@@ -27127,7 +27820,28 @@
           {
             "version": "0.12",
             "effet": "ATTAQUE : Ajoute le sort Activation à votre main.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Vengeance Pramium",
+                "effet": "Lorsqu'un compagnon allié meurt : Transforme vos SINISTROS en jeu.",
+                "image": "pramium_vengeance"
+              },
+              {
+                "nom": "Recyclage Pramium",
+                "effet": "Lorsqu'un SINISTRO est détruit : +2 jauge du même élément que le SINISTRO.",
+                "image": "pramium_recyclage"
+              },
+              {
+                "nom": "Enchaînement Pramium",
+                "effet": "Lorsqu'un compagnon allié ATTAQUE : Déclenche l'effet de vos SINISTROS.",
+                "image": "pramium_enchainement"
+              },
+              {
+                "nom": "Motivation Pramium",
+                "effet": "Vous pouvez jouer le sort Activation sur un compagnon allié pour lui faire rejouer son tour.",
+                "image": "pramium_motivation"
+              }
+            ],
             "pv": 392,
             "at": 28,
             "cc": 5,
@@ -27143,7 +27857,28 @@
           {
             "version": "0.12",
             "effet": "Lorsque votre héros se téléporte : Inflige 30% de son attaque à l'adversaire ayant le plus de VIE.",
-            "passifs": [],
+            "passifs": [
+              {
+                "nom": "Instabilité Pikuxala",
+                "effet": "Lorsque votre héros se téléporte : Il gagne 10% d'attaque jusqu'à la fin du tour.",
+                "image": "pikuxala_instabilite"
+              },
+              {
+                "nom": "Efficacité Pikuxala",
+                "effet": "-1 point d'action au coût de vos sorts de téléportation.",
+                "image": "pikuxala_efficacite"
+              },
+              {
+                "nom": "Maîtrise Pikuxala",
+                "effet": "Lorsque votre héros se téléporte : Inflige 50% de son attaque en plus à l’adversaire ayant le plus de VIE.",
+                "image": "pikuxala_maitrise"
+              },
+              {
+                "nom": "Puissance Pikuxala",
+                "effet": "Lorsque votre héros se téléporte : Déclenche également son passif sur l’adversaire ayant le moins de VIE.",
+                "image": "pikuxala_puissance"
+              }
+            ],
             "pv": 394,
             "at": 28,
             "cc": 5,

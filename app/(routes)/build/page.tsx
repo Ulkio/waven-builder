@@ -11,6 +11,7 @@ import "react-responsive-modal/styles.css";
 import "../../styles/modal.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/tooltip.css";
+import "react-tooltip/dist/react-tooltip.css";
 import { Anneau, Arme, Brassard, Compagnon, Build, Sort } from "@/types";
 import { ModalComponent } from "@/components/modal-containers/ModalComponent";
 import AnneauxModalContent from "@/components/modals/AnneauxModalContent";
@@ -50,7 +51,7 @@ const Build = () => {
   const squareVariants = `bg-black bg-opacity-60  border-4 border-white border-solid h-20 w-20 lg:w-32 lg:h-32 rounded-xl hover:cursor-pointer `;
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
-  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm xl:text-lg`;
+  const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm xl:text-lg text-center w-full`;
   const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
@@ -490,7 +491,7 @@ const Build = () => {
 
       <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
         <div className="flex flex-col xl:flex-row w-full gap-8 xl:gap-0">
-          <div className="flex  xl:flex-col xl:basis-1/6 xl:px-4">
+          <div className="flex  xl:flex-col xl:basis-2/12 xl:px-4">
             <div className="flex  flex-col justify-center items-center w-full">
               <p className={titleVariants}>Anneaux</p>
               <div className="flex flex-wrap justify-center gap-8 xl:gap-0  xl:flex-col ">
@@ -508,9 +509,9 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center  xl:basis-1/6">
-            <div className="flex flex-wrap xl:flex-nowrap gap-8 xl:gap-0 xl:flex-col">
-              <div className="flex flex-col  justify-center  items-center ">
+          <div className="flex xl:flex-col justify-center  xl:basis-1/12">
+            <div className="flex flex-wrap xl:flex-nowrap xl:gap-0 xl:flex-col">
+              <div className="flex flex-col  justify-center  items-start ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
                   item={build.brassard!}
@@ -520,12 +521,12 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 xl:px-4 ">
+          <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
             <div className="flex flex-col  items-center gap-2">
-              <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")}/>
+              <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
             </div>
           </div>
-          <div className="flex flex-col xl:basis-2/6 xl:px-4   gap-16">
+          <div className="flex flex-col xl:basis-3/12 xl:px-4 gap-16 xl:gap-0">
             <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row flex-wrap gap-4 justify-center">

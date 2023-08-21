@@ -3,9 +3,10 @@ import Image from "next/image";
 import { BuildArmeProps } from "@/types";
 import Hexagon from "@/components/Hexagon";
 import { toast } from "react-toastify";
-
+import { Tooltip } from "react-tooltip";
 const Arme = ({ item, openModal }: BuildArmeProps) => {
   const ARME_BASE_URL = "/img/armes";
+  const PASSIFS_BASE_URL = "/img/passifs";
 
   return (
     <>
@@ -39,9 +40,39 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
             </div>
           </div>
           <p className="text-center">{item.patchs[0].effet}</p>
-          <div className="flex flex-row items-center gap-8 pt-12">
-            <Hexagon content="Passif" size={100} onClick={() => toast("À venir !")} />
-            <Hexagon content="Passif" size={100} onClick={() => toast("À venir !")} />
+          <div className="flex items-center">
+            {item.patchs[0].passifs.map((passif) => {
+              return (
+                <div
+                  className="flex flex-row xl:flex-col items-center  w-full hover:cursor-pointer transition-all duration-200 ease-in-out"
+                  key={passif.nom}>
+                  <div
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content={`${passif.effet}`}
+                    data-tooltip-place="bottom"
+                    data-tooltip-delay-show={100}
+                    data-tooltip-delay-hide={200}
+                    className="flex relative  items-center justify-center">
+                    <Image
+                      src={`${PASSIFS_BASE_URL}/${passif.image}.png`}
+                      width={100}
+                      height={100}
+                      alt="bg_passif"
+                      className="absolute opacity-30 object-scale-down"
+                    />
+                    <Image
+                      src="/img/passif_bg.png"
+                      width={150}
+                      height={150}
+                      alt="bg_passif"
+                      className="object-scale-down"
+                    />
+                    <p className=" absolute text-center text-sm px-8 font-bold">{passif.nom}</p>
+                  </div>
+                  <Tooltip id="my-tooltip" className="tooltip" />
+                </div>
+              );
+            })}
           </div>
         </>
       ) : (
