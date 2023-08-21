@@ -8260,25 +8260,25 @@
             "dons": [
               {
                 "nom": "VITALITÉ COMPAGNONS",
-                "cout": 50,
-                "effet": "+10% de VIE à ce personnage",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "VITALITÉ COMPAGNONS",
-                "cout": 50,
-                "effet": "+10% de VIE à ce personnage",
+                "cout": 80,
+                "effet": "+10% de VIE à vos compagnons",
                 "sort": ""
               },
               {
                 "nom": "MAGIE FEU",
-                "cout": 50,
+                "cout": 100,
                 "effet": "+10% DÉGÂTS à vos sorts FEU",
                 "sort": ""
               },
               {
                 "nom": "MAGIE FEU",
-                "cout": 50,
+                "cout": 100,
                 "effet": "+10% DÉGÂTS à vos sorts FEU",
                 "sort": ""
               },
@@ -8292,6 +8292,12 @@
                 "nom": "SAGESSE",
                 "cout": 50,
                 "effet": "+5% XP",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
