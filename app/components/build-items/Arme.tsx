@@ -4,10 +4,11 @@ import { BuildArmeProps } from "@/types";
 import Hexagon from "@/components/Hexagon";
 import { toast } from "react-toastify";
 import { Tooltip } from "react-tooltip";
+import { useMediaQuery } from "react-responsive";
 const Arme = ({ item, openModal }: BuildArmeProps) => {
   const ARME_BASE_URL = "/img/armes";
   const PASSIFS_BASE_URL = "/img/passifs";
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
   return (
     <>
       {item ? (
@@ -50,8 +51,6 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content={`${passif.effet}`}
                     data-tooltip-place="bottom"
-                    data-tooltip-delay-show={100}
-                    data-tooltip-delay-hide={200}
                     className="flex relative  items-center justify-center">
                     <Image
                       src={`${PASSIFS_BASE_URL}/${passif.image}.png`}
@@ -79,8 +78,8 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
         <Image
           src="/img/hexagon-chose-arm.png"
           alt="choisis une arme"
-          width={200}
-          height={200}
+          width={isTabletOrMobile ? 200 : 300}
+          height={isTabletOrMobile ? 200 : 300}
           priority
           onClick={openModal}
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"

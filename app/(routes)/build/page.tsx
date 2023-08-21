@@ -52,7 +52,7 @@ const Build = () => {
   const companionSquareVariants = `h-24 w-24  hover:cursor-pointer`;
   const spellSquareVariants = `bg-black opacity-60 border-2 border-white border-solid h-16 w-16 rounded-lg hover:cursor-pointer`;
   const titleVariants = `uppercase italic font-extrabold text-2xl opacity-80 text-white text-sm xl:text-lg text-center w-full`;
-  const emptyCompanionVariants = `h-24 bg-[url("/img/utils/cadre_commun.png")]`;
+  const emptyCompanionVariants = `h-24 w-24 bg-[url("/img/utils/cadre_commun.png")]`;
   //#endregion
 
   //#region HANDLERS
@@ -458,7 +458,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-6 gap-6 ">
+    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-2 gap-6 ">
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -509,7 +509,7 @@ const Build = () => {
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center  xl:basis-1/12">
+          <div className="flex xl:flex-col justify-center xl:justify-normal xl:basis-1/12">
             <div className="flex flex-wrap xl:flex-nowrap xl:gap-0 xl:flex-col">
               <div className="flex flex-col  justify-center  items-start ">
                 <p className={titleVariants}>Brassard</p>
@@ -522,14 +522,14 @@ const Build = () => {
             </div>
           </div>
           <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
-            <div className="flex flex-col  items-center gap-2">
+            <div className="flex flex-col  items-center gap-6 xl:gap-2">
               <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
             </div>
           </div>
           <div className="flex flex-col xl:basis-3/12 xl:px-4 gap-16 xl:gap-0">
             <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
-              <div className="flex flex-row flex-wrap gap-4 justify-center">
+              <div className="flex flex-row flex-wrap justify-center">
                 {[...Array(4)].map((_, index) => {
                   const compagnon = build.compagnons[index];
                   return (
@@ -545,13 +545,13 @@ const Build = () => {
                 })}
               </div>
             </div>
-            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center ">
+            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center pt-16">
               <p className={titleVariants}>Sorts</p>
               {!build.arme ? (
                 <p className="text-md italic opacity-50">Sélectionnez une arme !</p>
               ) : (
                 <>
-                  <div className="flex flex-wrap gap-2 max-w-96 justify-center xl:justify-start">
+                  <div className="flex flex-wrap gap-2 max-w-96 px-16 xl:px-0 justify-center w-full ">
                     {[...Array(15)].map((_, index) => {
                       const sort = build.sorts[index];
                       return (
@@ -572,7 +572,7 @@ const Build = () => {
         </div>
       </div>
 
-      <div className="flex flex-col   xl:flex-row w-full  gap-4 xl:gap-20 xl:self-center justify-center items-center">
+      <div className="flex flex-col xl:mt-0 mt-8  xl:flex-row w-full  gap-4 xl:gap-20 xl:self-center justify-center items-center">
         <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
           <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
           <ToastContainer

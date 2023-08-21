@@ -15,12 +15,15 @@ const Compagnon = ({
   return (
     <div
       onClick={openModal}
-      className={`bg-contain h-28 w-28 hover:cursor-pointer ${
+      className={`bg-contain bg-no-repeat h-24 w-24 hover:cursor-pointer ${
         item ? companionSquareVariants : emptyCompanionVariants
       }`}>
       {item && (
-        <div className="flex items-center relative">
+        <div className="flex flex-col relative">
           <Image
+            data-tooltip-content={item.nom}
+            data-tooltip-place="bottom"
+            data-tooltip-id={`tooltip-compagnon-${index}`}
             src={`/img/utils/cadre_${item.rarete.toLowerCase()}.png`}
             alt={item.nom}
             width={200}
@@ -28,7 +31,6 @@ const Compagnon = ({
             className="absolute"
           />
           <Image src={`${COMPAGNON_BASE_URL}/${item.image}.png`} width={200} height={200} alt={item.nom} />
-          <Tooltip id={`tooltip-compagnon-${index}`} className="tooltip z-10 " />
         </div>
       )}
       <p className="text-center">{item?.nom}</p>
