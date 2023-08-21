@@ -8,11 +8,20 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "Waven builder",
-  description: "Créez votre build pour WAVEN !",
+  title: "Waven deck builder",
+  description: "Créez votre deck pour WAVEN !",
   verification: { google: "Qqh2MHF-7nAiuFHhr_saiaNgOeej7YaC3LSQOb-vzro" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  keywords: ["Waven", "Builder", "Waven Builder", "Waven Builds", "Waven Build"],
+  keywords: [
+    "Waven",
+    "Builder",
+    "Waven Builder",
+    "Waven Builds",
+    "Waven Build",
+    "Waven Deck",
+    "Deck Waven",
+    "Waven Deck Builder",
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
