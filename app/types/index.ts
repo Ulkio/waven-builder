@@ -4,6 +4,7 @@ export interface Build {
   brassard: Brassard | null;
   sorts: Sort[] | [];
   arme: Arme | null;
+  passifs: Passif[] | [];
 }
 
 export interface Root {
@@ -204,4 +205,7 @@ export interface BuildArmeProps {
   item: Arme;
   openModal: () => void;
   size?: number;
+  onSelectedPassifChange: (passif: Passif) => void;
+  buildPassifs: Passif[];
+  isImported: boolean;
 }

@@ -60,3 +60,7 @@ body {
 #buildDiv {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background.jpg");
 }
+
+.passif-highlight {
+  background-image: url("/img/passif_bg_highlight.png");
+}

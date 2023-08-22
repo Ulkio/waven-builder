@@ -1,14 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { BuildArmeProps } from "@/types";
+import { BuildArmeProps, Passif } from "@/types";
 import Hexagon from "@/components/Hexagon";
 import { toast } from "react-toastify";
 import { Tooltip } from "react-tooltip";
 import { useMediaQuery } from "react-responsive";
-const Arme = ({ item, openModal }: BuildArmeProps) => {
+
+const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImported }: BuildArmeProps) => {
   const ARME_BASE_URL = "/img/armes";
   const PASSIFS_BASE_URL = "/img/passifs";
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
+
+  const [passifs, setPassifs] = useState<Passif[]>(buildPassifs);
+  const [selectedPassives, setSelectedPassives] = useState<Passif[]>([]);
+
+  const handleClickPassif = (passif: Passif) => {
+    if (selectedPassives.length <= 2) {
+      if (selectedPassives.some((p) => p.nom === passif.nom)) {
+        setSelectedPassives((prev) => prev.filter((selected) => selected.nom != passif.nom));
+        return;
+      }
+    }
+    if (selectedPassives.length === 2) return;
+    if (passifs.includes(passif)) {
+      setPassifs((prev) => prev.filter((selectedPassif) => selectedPassif.nom != passif.nom));
+    } else {
+      if (passifs.length < 2) {
+        setPassifs((prev) => [...passifs, passif]);
+        onSelectedPassifChange(passif);
+      }
+    }
+  };
+
+  useEffect(() => {
+    setSelectedPassives(buildPassifs);
+    return () => {
+      setSelectedPassives([]);
+    };
+  }, [isImported]);
+
+  useEffect(() => {
+    console.log(selectedPassives);
+  }, [selectedPassives]);
+
   return (
     <>
       {item ? (
@@ -45,8 +79,9 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
             {item.patchs[0].passifs.map((passif) => {
               return (
                 <div
-                  className="flex flex-row xl:flex-col items-center  w-full hover:cursor-pointer transition-all duration-200 ease-in-out"
-                  key={passif.nom}>
+                  className={`flex flex-row xl:flex-col items-center w-full hover:cursor-pointer transition-all duration-200 ease-in-out`}
+                  key={passif.nom}
+                  onClick={() => handleClickPassif(passif)}>
                   <div
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content={`${passif.effet}`}
@@ -66,6 +101,24 @@ const Arme = ({ item, openModal }: BuildArmeProps) => {
                       alt="bg_passif"
                       className="object-scale-down"
                     />
+                    {passifs.includes(passif) && (
+                      <Image
+                        src="/img/passif_bg_highlight.png"
+                        width={150}
+                        height={150}
+                        alt="passif sélectionné"
+                        className="absolute"
+                      />
+                    )}
+                    {selectedPassives.some((selectedPassif) => selectedPassif.nom === passif.nom) && (
+                      <Image
+                        src="/img/passif_bg_highlight.png"
+                        width={150}
+                        height={150}
+                        alt="passif sélectionné"
+                        className="absolute"
+                      />
+                    )}
                     <p className=" absolute text-center text-sm px-8 font-bold">{passif.nom}</p>
                   </div>
                   <Tooltip id="my-tooltip" className="tooltip" />

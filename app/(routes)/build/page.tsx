@@ -12,7 +12,7 @@ import "../../styles/modal.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/tooltip.css";
 import "react-tooltip/dist/react-tooltip.css";
-import { Anneau, Arme, Brassard, Compagnon, Build, Sort } from "@/types";
+import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Passif } from "@/types";
 import { ModalComponent } from "@/components/modal-containers/ModalComponent";
 import AnneauxModalContent from "@/components/modals/AnneauxModalContent";
 import BrassardsModalContent from "@/components/modals/BrassardsModalContent";
@@ -40,10 +40,12 @@ const Build = () => {
     brassard: null,
     sorts: [],
     arme: null,
+    passifs: [],
   });
   const [encryptedBuild, setEncryptedBuild] = useState("");
   const [openModalImport, setOpenModalImport] = useState<boolean | null>(false);
   const [openModalAlert, setOpenModalAlert] = useState<boolean | null>(false);
+  const [isHighlightPassif, setIsHighlightPassif] = useState(false);
 
   //#endregion
 
@@ -56,6 +58,30 @@ const Build = () => {
   //#endregion
 
   //#region HANDLERS
+  const handleSelectedPassifChange = (selectedPassif: Passif) => {
+    // if (passifs.includes(passif)) {
+    // setPassifs((prev) => prev.filter((selectedPassif) => selectedPassif != passif));
+    // } else {
+    // if (passifs.length < 2) {
+    // setPassifs((prev) => [...passifs, passif]);
+    // onSelectedPassifChange(passif);
+    // }
+    // }
+    if (build.passifs.some((passif) => passif === selectedPassif)) {
+      setBuild((prev) => ({
+        ...prev,
+        passifs: prev.passifs.filter((passif) => passif !== selectedPassif),
+      }));
+    } else {
+      if (build.passifs.length < 2) {
+        setBuild((prev) => ({
+          ...prev,
+          passifs: [...prev.passifs, selectedPassif],
+        }));
+      }
+    }
+  };
+
   const handleSelectedArmeChange = (selectedArme: Arme) => {
     setBuild((prev) => ({ ...prev, arme: selectedArme }));
   };
@@ -422,6 +448,7 @@ const Build = () => {
     } else if (!build.brassard) {
       toast("Veuillez sélectionner un brassard");
     } else {
+      console.log(build.passifs);
       setOpenModalStringBuild(true);
       const stringBuild = JSON.stringify(build);
       const encrypted = AES.encrypt(stringBuild, buildKey).toString();
@@ -435,6 +462,7 @@ const Build = () => {
     const JSONBuild = JSON.parse(decryptedJsonString);
     setBuild(JSONBuild);
     closeModalImport();
+    setIsHighlightPassif(true);
   };
   //#endregion
 
@@ -523,7 +551,13 @@ const Build = () => {
           </div>
           <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
             <div className="flex flex-col  items-center gap-6 xl:gap-2">
-              <ArmeItem item={build.arme!} openModal={() => openModal("openArmeModal")} />
+              <ArmeItem
+                item={build.arme!}
+                buildPassifs={build.passifs!}
+                openModal={() => openModal("openArmeModal")}
+                onSelectedPassifChange={handleSelectedPassifChange}
+                isImported={isHighlightPassif}
+              />
             </div>
           </div>
           <div className="flex flex-col xl:basis-3/12 xl:px-4 gap-16 xl:gap-0">
