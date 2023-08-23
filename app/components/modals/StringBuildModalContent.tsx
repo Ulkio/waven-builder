@@ -36,10 +36,8 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
 
   return (
     <div className="flex flex-col items-center justify-evenly h-fit gap-4 p-4 xl:px-32">
-      <p className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Votre build</p>
-      <p className="block mb-2 text-md font-medium text-gray-900 dark:text-white">
-        Vous pouvez enregistrer cette image en cliquant dessus !
-      </p>
+      <p className="block mb-2 text-md font-medium ">Votre build</p>
+      <p className="block mb-2 text-md font-medium ">Vous pouvez enregistrer cette image en cliquant dessus !</p>
       <div
         id="buildDiv"
         className="border border-white rounded-lg flex xl:flex-row flex-col gap-8 p-4 h-fit hover:cursor-pointer xl:hover:scale-105 duration-200 ease-linear "
@@ -168,9 +166,7 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           })}
         </div>
       </div>
-      <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-        Copiez cette suite de caractères pour partager votre build :
-      </p>
+      <p className="block mb-2 text-sm font-medium">Copiez cette suite de caractères pour partager votre build :</p>
 
       <Image
         data-tooltip-id="my-tooltip"

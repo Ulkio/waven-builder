@@ -2,3 +2,11 @@
   background: rgb(19, 19, 19) !important;
   font-weight: bold;
 }
+@media (max-width: 1280px) {
+  .tooltip {
+    background: rgb(19, 19, 19) !important;
+    font-weight: bold;
+    width: 50% !important;
+    z-index: 10;
+  }
+}
