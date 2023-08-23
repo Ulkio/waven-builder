@@ -448,7 +448,6 @@ const Build = () => {
     } else if (!build.brassard) {
       toast("Veuillez sélectionner un brassard");
     } else {
-      console.log(build.passifs);
       setOpenModalStringBuild(true);
       const stringBuild = JSON.stringify(build);
       const encrypted = AES.encrypt(stringBuild, buildKey).toString();
@@ -563,7 +562,7 @@ const Build = () => {
           <div className="flex flex-col xl:basis-3/12 xl:px-4 gap-16 xl:gap-0">
             <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
               <p className={titleVariants}>Compagnons</p>
-              <div className="flex flex-row flex-wrap justify-center">
+              <div className="flex flex-row flex-wrap justify-center gap-y-6">
                 {[...Array(4)].map((_, index) => {
                   const compagnon = build.compagnons[index];
                   return (
@@ -579,7 +578,7 @@ const Build = () => {
                 })}
               </div>
             </div>
-            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center pt-16">
+            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center xl:pt-16">
               <p className={titleVariants}>Sorts</p>
               {!build.arme ? (
                 <p className="text-md italic opacity-50">Sélectionnez une arme !</p>

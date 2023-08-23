@@ -39,10 +39,6 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
     };
   }, [isImported]);
 
-  useEffect(() => {
-    console.log(selectedPassives);
-  }, [selectedPassives]);
-
   return (
     <>
       {item ? (

@@ -35,14 +35,14 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-evenly h-fit gap-4 p-8 xl:px-32">
+    <div className="flex flex-col items-center justify-evenly h-fit gap-4 p-4 xl:px-32">
       <p className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Votre build</p>
       <p className="block mb-2 text-md font-medium text-gray-900 dark:text-white">
         Vous pouvez enregistrer cette image en cliquant dessus !
       </p>
       <div
         id="buildDiv"
-        className="border border-white rounded-lg flex xl:flex-row flex-col gap-8 p-4 h-fit hover:cursor-pointer hover:scale-105 duration-200 ease-linear "
+        className="border border-white rounded-lg flex xl:flex-row flex-col gap-8 p-4 h-fit hover:cursor-pointer xl:hover:scale-105 duration-200 ease-linear "
         onClick={onClickBuildDiv}>
         <div
           className="h-fit self-center"
@@ -52,13 +52,13 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           <Image
             src={`${ARME_BASE_URL}/${build.arme?.image}.png`}
             alt="arme"
-            width={150}
-            height={150}
+            width={120}
+            height={120}
             className=" object-cover"
           />
           <Tooltip id={`tooltip-arme`} className="tooltip z-20 " />
         </div>
-        <div className="grid grid-rows-2 grid-cols-2">
+        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-2">
           {[...Array(4)].map((_, index) => {
             const anneau = build.anneaux[index];
             return (
@@ -72,15 +72,15 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                     <Image
                       src={`/img/utils/bg_${anneau.rarete.toLowerCase()}.png`}
                       alt={anneau.nom}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       className="absolute  object-scale-down"
                     />
                     <Image
                       src={`${ANNEAU_BASE_URL}/${anneau.image}.png`}
                       alt={anneau.nom}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       className=" z-10 object-scale-down"
                     />
                     <Tooltip id={`tooltip-anneau-${index}`} className="tooltip z-20 " />
@@ -94,24 +94,24 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           data-tooltip-id={`tooltip-brassard`}
           data-tooltip-content={build.brassard?.nom}
           data-tooltip-place="bottom"
-          className="flex items-start relative h-fit">
+          className="flex items-center justify-center relative ">
           <Image
             src={`/img/utils/bg_${build.brassard?.rarete.toLowerCase()}.png`}
             alt={`bg`}
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             className="absolute object-scale-down"
           />
           <Image
             src={`${BRASSARD_BASE_URL}/${build.brassard?.image}.png`}
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             className="z-10 object-scale-down"
             alt={`${build.brassard?.nom}`}
           />
           <Tooltip id={`tooltip-brassard`} className="tooltip z-20 " />
         </div>
-        <div className="grid grid-rows-2 grid-cols-2">
+        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-2">
           {[...Array(4)].map((_, index) => {
             const compagnon = build.compagnons[index];
             return (
@@ -125,15 +125,15 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                     <Image
                       src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                       alt={compagnon.nom}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       className="absolute  object-scale-down"
                     />
                     <Image
                       src={`${COMPAGNON_BASE_URL}/${compagnon.image}.png`}
                       alt={compagnon.nom}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       className=" z-10 object-scale-down"
                     />
                     <Tooltip id={`tooltip-compagnon-${index}`} className="tooltip z-20 " />
@@ -143,7 +143,7 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
             );
           })}
         </div>
-        <div className="grid grid-cols-5 grid-rows-3">
+        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-5 xl:grid-rows-3">
           {[...Array(15)].map((_, index) => {
             const sort = build.sorts[index];
             return (

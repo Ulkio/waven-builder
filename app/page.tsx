@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Analytics } from "@vercel/analytics/react";
 import Header from "./layout/Header";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
           Certaines illustrations sont la propriété d&apos;Ankama Studio et de Waven - Tous droits réservés
         </p>
       </footer>
-      <Analytics />
     </main>
   );
 }
