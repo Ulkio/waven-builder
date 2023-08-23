@@ -28,7 +28,7 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
         height={100}
         className="hover:cursor-pointer "
       />
-      <Tooltip id="my-tooltip" className="tooltip" />
+      <Tooltip id="my-tooltip" className="tooltip w-1/2 xl:w-auto" />
       <p className="text-md text-center font-bold ">{arme.nom}</p>
     </div>
   );

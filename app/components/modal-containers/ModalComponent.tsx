@@ -17,7 +17,7 @@ export const ModalComponent = ({ open, onClose, dialogComponent }: ModalComponen
       center
       closeOnOverlayClick={true}
       showCloseIcon={true}
-      closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} />}
+      closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={30} height={30} className="z-20" />}
       classNames={{
         overlay: "customOverlay",
         modal: "customModal",

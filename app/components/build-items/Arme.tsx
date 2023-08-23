@@ -121,7 +121,7 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
                     )}
                     <p className=" absolute text-center text-sm px-8 font-bold">{passif.nom}</p>
                   </div>
-                  <Tooltip id="my-tooltip" className="tooltip" />
+                  <Tooltip id="my-tooltip" className="tooltip w-1/2 xl:w-auto" />
                 </div>
               );
             })}
