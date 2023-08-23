@@ -82,6 +82,10 @@ const Build = () => {
     }
   };
 
+  const handleLevelChange = (level: number) => {
+    // console.log(level);
+  };
+
   const handleSelectedArmeChange = (selectedArme: Arme) => {
     setBuild((prev) => ({ ...prev, arme: selectedArme }));
   };
@@ -485,7 +489,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-2 gap-6 ">
+    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-2 gap-6">
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -507,6 +511,8 @@ const Build = () => {
             src={`/img/splash/${build.arme.nom
               .toLowerCase()
               .replace(" ", "_")
+              .replace(" ", "_")
+              .replace("'", "_")
               .replace("é", "e")
               .replace("ï", "i")}.png`}
             width={400}
@@ -550,11 +556,15 @@ const Build = () => {
           </div>
           <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
             <div className="flex flex-col  items-center gap-6 xl:gap-2">
+              {build.arme && <p className="absolute text-sm opacity-50 italic">Passifs HP et ATK à venir</p>}
+
               <ArmeItem
                 item={build.arme!}
                 buildPassifs={build.passifs!}
+                build={build}
                 openModal={() => openModal("openArmeModal")}
                 onSelectedPassifChange={handleSelectedPassifChange}
+                onLevelChange={handleLevelChange}
                 isImported={isHighlightPassif}
               />
             </div>

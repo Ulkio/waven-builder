@@ -20,7 +20,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -80,7 +80,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -140,7 +140,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -206,7 +206,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -272,7 +272,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -338,7 +338,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -396,7 +396,7 @@
             "at": 10,
             "cc": 5,
             "pm": 3,
-            "effet": "ATTAQUE: -25% d'AT à la cible pour le tour.",
+            "effet": "ATTAQUE: -25% d'ATTAQUE à la cible pour le tour.",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -404,7 +404,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -470,7 +470,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -536,7 +536,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -602,7 +602,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -668,7 +668,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -734,7 +734,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -800,7 +800,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -859,7 +859,7 @@
             "at": 20,
             "cc": 5,
             "pm": 3,
-            "effet": "ATTAQUE: +25% d'AT pour le reste du combat.",
+            "effet": "ATTAQUE: +25% d'ATTAQUE pour le reste du combat.",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -867,7 +867,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -925,7 +925,7 @@
             "at": 16,
             "cc": 5,
             "pm": 4,
-            "effet": "Si elle est l'unique allié en jeu: +100% d'AT.",
+            "effet": "Si elle est l'unique allié en jeu: +100% d'ATTAQUE.",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -933,7 +933,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1000,7 +1000,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1067,7 +1067,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1133,7 +1133,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1199,7 +1199,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1265,7 +1265,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1331,7 +1331,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1397,7 +1397,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1463,7 +1463,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1529,7 +1529,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1595,7 +1595,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1661,7 +1661,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1727,7 +1727,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1793,7 +1793,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1859,7 +1859,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1925,7 +1925,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -1991,7 +1991,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2057,7 +2057,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2123,7 +2123,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2189,7 +2189,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2255,7 +2255,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2321,7 +2321,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2387,7 +2387,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2453,7 +2453,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2519,7 +2519,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2585,7 +2585,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2651,7 +2651,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2717,7 +2717,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2783,7 +2783,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2849,7 +2849,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2915,7 +2915,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -2981,7 +2981,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3048,7 +3048,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3114,7 +3114,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3180,7 +3180,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3247,7 +3247,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3313,7 +3313,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3379,7 +3379,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3445,7 +3445,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3511,7 +3511,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3577,7 +3577,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3643,7 +3643,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3709,7 +3709,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3775,7 +3775,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3841,7 +3841,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3907,7 +3907,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -3973,7 +3973,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4039,7 +4039,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4106,7 +4106,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4172,7 +4172,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4238,7 +4238,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4304,7 +4304,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4370,7 +4370,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4436,7 +4436,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4495,7 +4495,7 @@
             "at": 17,
             "cc": 5,
             "pm": 3,
-            "effet": "APPARITION: Sacrifie le compagnon allié ayant le moins de PV pour gagner 100% d'AT.",
+            "effet": "APPARITION: Sacrifie le compagnon allié ayant le moins de PV pour gagner 100% d'ATTAQUE.",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -4503,7 +4503,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4570,7 +4570,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4637,7 +4637,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4704,7 +4704,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4772,7 +4772,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4840,7 +4840,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4907,7 +4907,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -4974,7 +4974,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5043,7 +5043,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5111,7 +5111,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5178,7 +5178,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5245,7 +5245,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5312,7 +5312,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5381,7 +5381,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5448,7 +5448,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5516,7 +5516,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5585,7 +5585,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -5654,7 +5654,7 @@
               },
               {
                 "taux": 5,
-                "effet": "% d'AT à ce personnage."
+                "effet": "% d'ATTAQUE à ce personnage."
               }
             ],
             "dons": [
@@ -11012,7 +11012,7 @@
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% d'AT à votre héros."
+                "effet": "% d'ATTAQUE à votre héros."
               }
             ],
             "dons": [
@@ -11189,7 +11189,7 @@
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% d'AT à votre héros."
+                "effet": "% d'ATTAQUE à votre héros."
               }
             ],
             "dons": [
@@ -11307,7 +11307,7 @@
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% d'AT à votre héros."
+                "effet": "% d'ATTAQUE à votre héros."
               }
             ],
             "dons": [
@@ -11368,7 +11368,7 @@
             "caracteristiques": [
               {
                 "taux": 1,
-                "effet": "% d'AT à votre héros."
+                "effet": "% d'ATTAQUE à votre héros."
               }
             ],
             "dons": [
@@ -11433,7 +11433,7 @@
               },
               {
                 "taux": 1,
-                "effet": "% d'AT à votre héros."
+                "effet": "% d'ATTAQUE à votre héros."
               }
             ],
             "dons": [
@@ -27570,22 +27570,22 @@
             "passifs": [
               {
                 "nom": "Politique Kartana",
-                "effet": "",
+                "effet": "Lorsque votre héros déclenche un PIEGE SRAM allié : Vous piochez votre prochain sort de piège.",
                 "image": "kartana_politique"
               },
               {
                 "nom": "Maîtrise Kartana",
-                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : Inflige 50% de son attaque en plus aux adversaires autour.",
+                "effet": "Lorsque votre héros déclenche un PIEGE SRAM allié : Inflige 50% de son attaque en plus aux adversaires autour.",
                 "image": "kartana_maitrise"
               },
               {
                 "nom": "Repousse Kartana",
-                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : REPOUSSE les adversaires adjacents de 3 cases. 25% de vos bonus d'attaque sont convertis en DÉGÂTS de COLLISION.",
+                "effet": "Lorsque votre héros déclenche un PIEGE SRAM allié : REPOUSSE les adversaires adjacents de 3 cases. 25% de vos bonus d'attaque sont convertis en DÉGÂTS de COLLISION.",
                 "image": "kartana_repousse"
               },
               {
                 "nom": "Retrait Kartana",
-                "effet": "Lorsque votre héros déclenche un PIEGE : SRAM allié : Rejoue son tour et le Désarme. Limité à 3 fois par tour.",
+                "effet": "Lorsque votre héros déclenche un PIEGE SRAM allié : Rejoue son tour et le Désarme. Limité à 3 fois par tour.",
                 "image": "kartana_retrait"
               }
             ],

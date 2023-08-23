@@ -6,13 +6,39 @@ import { toast } from "react-toastify";
 import { Tooltip } from "react-tooltip";
 import { useMediaQuery } from "react-responsive";
 
-const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImported }: BuildArmeProps) => {
+const Arme = ({
+  item,
+  openModal,
+  onSelectedPassifChange,
+  buildPassifs,
+  isImported,
+  onLevelChange,
+  build,
+}: BuildArmeProps) => {
   const ARME_BASE_URL = "/img/armes";
   const PASSIFS_BASE_URL = "/img/passifs";
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
 
   const [passifs, setPassifs] = useState<Passif[]>(buildPassifs);
   const [selectedPassives, setSelectedPassives] = useState<Passif[]>([]);
+  const [passifAtk_50, setPassifAtk_50] = useState(0);
+  const [passifAtk_20, setPassifAtk_20] = useState(0);
+  const [passifAtk_7, setPassifAtk_7] = useState(0);
+  const [passifAtk_3, setPassifAtk_3] = useState(0);
+  const [passifPv_50, setPassifPv_50] = useState(0);
+  const [passifPv_25, setPassifPv_25] = useState(0);
+  const [passifPv_12, setPassifPv_12] = useState(0);
+  const [passifPv_5, setPassifPv_5] = useState(0);
+  const [level, setLevel] = useState(1);
+  const [scaledBuildStats, setScaledBuildStats] = useState({
+    at: 0,
+    pv: 0,
+    cc: 0,
+  });
+  const [itemsStats, setItemsStats] = useState({
+    totalAt: 0,
+    totalPv: 0,
+  });
 
   const handleClickPassif = (passif: Passif) => {
     if (selectedPassives.length <= 2) {
@@ -32,6 +58,11 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
     }
   };
 
+  const handleLevelChange = (level: number) => {
+    setLevel(level);
+    onLevelChange(level);
+  };
+
   useEffect(() => {
     setSelectedPassives(buildPassifs);
     return () => {
@@ -39,31 +70,304 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
     };
   }, [isImported]);
 
+  useEffect(() => {
+    if (item?.patchs && item.patchs[0]) {
+      setScaledBuildStats({
+        at: item.patchs[0].at || 0,
+        pv: item.patchs[0].pv || 0,
+        cc: item.patchs[0].cc || 0,
+      });
+    }
+  }, [item]);
+
+  useEffect(() => {
+    const rings = build.anneaux;
+    const brassard = build.brassard;
+    let totalAttaque = 0;
+    let totalPv = 0;
+
+    rings.forEach((ring) => {
+      const ringStat1 = ring?.patchs[0].caracteristiques[0];
+      if (ringStat1?.effet.toLowerCase().includes("attaque")) {
+        totalAttaque += ring?.patchs[0].caracteristiques[0].taux;
+      }
+      if (ringStat1?.effet.toLowerCase().includes("vie")) {
+        totalPv += ring?.patchs[0].caracteristiques[0].taux;
+      }
+    });
+    rings.forEach((ring) => {
+      const ringStat2 = ring?.patchs[0].caracteristiques[1];
+      if (ringStat2?.effet.toLowerCase().includes("attaque")) {
+        totalAttaque += ring?.patchs[0].caracteristiques[1].taux;
+      }
+      if (ringStat2?.effet.toLowerCase().includes("vie")) {
+        totalPv += ring?.patchs[0].caracteristiques[1].taux;
+      }
+    });
+
+    const brassardStat1 = brassard?.patchs[0].caracteristiques[0];
+    if (brassardStat1?.effet.toLowerCase().includes("vie")) {
+      totalPv += 1;
+    }
+    const brassardStat2 = brassard?.patchs[0].caracteristiques[0];
+    if (brassardStat2?.effet.toLowerCase().includes("attaque")) {
+      totalAttaque += 1;
+    }
+
+    const scaledTotalPv = totalPv * level;
+    const scaledTotalAt = totalAttaque * level;
+    setItemsStats(() => ({
+      totalPv: scaledTotalPv,
+      totalAt: scaledTotalAt,
+    }));
+  }, [build.anneaux, build.brassard, level]);
+
+  //#region increment, decrement passives
+  const decrementPassifPv_50 = () => {
+    if (passifPv_50 === 0) return;
+    setPassifPv_50(Math.max(passifPv_50 - 1, 0));
+  };
+  const incrementPassifPv_50 = () => {
+    if (passifPv_50 === 1) return;
+    setPassifPv_50(passifPv_50 + 1);
+  };
+  const decrementPassifPv_25 = () => {
+    if (passifPv_25 === 0) return;
+    setPassifPv_25(Math.max(passifPv_25 - 1, 0));
+  };
+  const incrementPassifPv_25 = () => {
+    if (passifPv_25 === 3) return;
+    setPassifPv_25(passifPv_25 + 1);
+  };
+  const decrementPassifPv_12 = () => {
+    if (passifPv_12 === 0) return;
+    setPassifPv_12(Math.max(passifPv_12 - 1, 0));
+  };
+  const incrementPassifPv_12 = () => {
+    if (passifPv_12 === 10) return;
+    setPassifPv_12(passifPv_12 + 1);
+  };
+  const decrementPassifPv_5 = () => {
+    if (passifPv_5 === 0) return;
+    setPassifPv_5(Math.max(passifPv_5 - 1, 0));
+  };
+  const incrementPassifPv_5 = () => {
+    if (passifPv_5 === 15) return;
+    setPassifPv_5(passifPv_5 + 1);
+  };
+  const decrementPassifAtk_50 = () => {
+    if (passifAtk_50 === 0) return;
+    setPassifAtk_50(Math.max(passifAtk_50 - 1, 0));
+  };
+  const incrementPassifAtk_50 = () => {
+    if (passifAtk_50 === 1) return;
+    setPassifAtk_50(passifAtk_50 + 1);
+  };
+  const decrementPassifAtk_20 = () => {
+    if (passifAtk_20 === 0) return;
+    setPassifAtk_20(Math.max(passifAtk_20 - 1, 0));
+  };
+  const incrementPassifAtk_20 = () => {
+    if (passifAtk_20 === 3) return;
+    setPassifAtk_20(passifAtk_20 + 1);
+  };
+  const decrementPassifAtk_7 = () => {
+    if (passifAtk_7 === 0) return;
+    setPassifAtk_7(Math.max(passifAtk_7 - 1, 0));
+  };
+  const incrementPassifAtk_7 = () => {
+    if (passifAtk_7 === 10) return;
+    setPassifAtk_7(passifAtk_7 + 1);
+  };
+  const decrementPassifAtk_3 = () => {
+    if (passifAtk_3 === 0) return;
+    setPassifAtk_3(Math.max(passifAtk_3 - 1, 0));
+  };
+  const incrementPassifAtk_3 = () => {
+    if (passifAtk_3 === 15) return;
+    setPassifAtk_3(passifAtk_3 + 1);
+  };
+
+  //#endregion
   return (
     <>
       {item ? (
         <>
-          <Image
-            src={`${ARME_BASE_URL}/${item?.image}.png`}
-            alt="classe"
-            width={200}
-            height={200}
-            onClick={openModal}
-            className="hover:cursor-pointer"
-          />
+          {isTabletOrMobile && (
+            <Image
+              src={`${ARME_BASE_URL}/${item?.image}.png`}
+              alt="classe"
+              width={200}
+              height={200}
+              onClick={openModal}
+              className="hover:cursor-pointer"
+            />
+          )}
+          <div className="relative w-full flex items-center justify-evenly">
+            <div className="flex flex-col flex-wrap xl:grid xl:grid-cols-2 xl:gap-x-6">
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifPv_50}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <p
+                    onClick={incrementPassifPv_50}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_50}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifPv_25}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <p
+                    onClick={incrementPassifPv_25}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_25}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">25%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifPv_12}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <p
+                    onClick={incrementPassifPv_12}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_12}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">12%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p onClick={decrementPassifPv_5} className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <p onClick={incrementPassifPv_5} className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_5}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">5%</p>
+                </div>
+              </div>
+            </div>
+            {!isTabletOrMobile && (
+              <Image
+                src={`${ARME_BASE_URL}/${item?.image}.png`}
+                alt="classe"
+                width={200}
+                height={200}
+                onClick={openModal}
+                className="hover:cursor-pointer"
+              />
+            )}
+            <div className="flex flex-col flex-wrap xl:grid xl:grid-cols-2 xl:gap-x-6 ">
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifAtk_50}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <p
+                    onClick={incrementPassifAtk_50}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_50}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifAtk_20}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <p
+                    onClick={incrementPassifAtk_20}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_20}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">20%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifAtk_7}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <p
+                    onClick={incrementPassifAtk_7}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_7}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">7%</p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex justify-between items-center">
+                  <p
+                    onClick={decrementPassifAtk_3}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    -
+                  </p>
+                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <p
+                    onClick={incrementPassifAtk_3}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    +
+                  </p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_3}</p>
+                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">3%</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <p className="font-black text-3xl">{item?.nom}</p>
           <div className="flex flex-wrap gap-2 justify-center">
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
-              <p className="font-bold">{item.patchs[0].pv}</p>
+              <p className="font-bold">
+                {Math.round(scaledBuildStats.pv + (scaledBuildStats.pv * itemsStats.totalPv) / 100)}
+              </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
-              <p className="font-bold">{item.patchs[0].at}</p>
+              <p className="font-bold">
+                {Math.round(scaledBuildStats.at + (scaledBuildStats.at * itemsStats.totalAt) / 100)}
+              </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/cc.png" width={30} height={30} alt="crit" />
-              <p className="font-bold">{item.patchs[0].cc}</p>
+              <p className="font-bold">{scaledBuildStats.cc}</p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pm.png" width={30} height={30} alt="pm" />
@@ -88,7 +392,7 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
                       width={100}
                       height={100}
                       alt="bg_passif"
-                      className="absolute opacity-30 object-scale-down"
+                      className="absolute opacity-30 object-scale-down h-1/2"
                     />
                     <Image
                       src="/img/passif_bg.png"
@@ -103,7 +407,7 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
                         width={150}
                         height={150}
                         alt="passif sélectionné"
-                        className="absolute"
+                        className="absolute object-scale-down"
                       />
                     )}
                     {selectedPassives.some((selectedPassif) => selectedPassif.nom === passif.nom) && (
@@ -112,7 +416,7 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
                         width={150}
                         height={150}
                         alt="passif sélectionné"
-                        className="absolute"
+                        className="absolute object-scale-down"
                       />
                     )}
                     <p className=" absolute text-center text-sm px-8 font-bold">{passif.nom}</p>
@@ -122,13 +426,27 @@ const Arme = ({ item, openModal, onSelectedPassifChange, buildPassifs, isImporte
               );
             })}
           </div>
+
+          <div className="flex flex-col items-center gap-4 w-full px-16">
+            <input
+              type="range"
+              id="volume"
+              name="volume"
+              min="1"
+              max="50"
+              value={level}
+              onChange={(e) => handleLevelChange(parseInt(e.target.value))}
+              className=" w-1/2"
+            />
+            <label htmlFor="volume">Niveaux d'objets : {level}</label>
+          </div>
         </>
       ) : (
         <Image
           src="/img/hexagon-chose-arm.png"
           alt="choisis une arme"
-          width={isTabletOrMobile ? 200 : 300}
-          height={isTabletOrMobile ? 200 : 300}
+          width={300}
+          height={300}
           priority
           onClick={openModal}
           className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"

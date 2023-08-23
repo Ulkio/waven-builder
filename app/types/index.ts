@@ -202,10 +202,12 @@ export interface BuildSortProps {
   size?: number;
 }
 export interface BuildArmeProps {
+  build: Build;
   item: Arme;
   openModal: () => void;
   size?: number;
   onSelectedPassifChange: (passif: Passif) => void;
+  onLevelChange: (level: number) => void;
   buildPassifs: Passif[];
   isImported: boolean;
 }

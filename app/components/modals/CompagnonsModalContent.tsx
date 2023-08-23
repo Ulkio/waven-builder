@@ -201,8 +201,8 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                     key={key}
                     className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-60 flex flex-col justify-between hover:cursor-pointer gap-2">
                     <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
-                    <p className="text-md text-center">{don.effet}</p>
-                    <div className="flex justify-center ">
+                    <p className="text-sm text-center">{don.effet}</p>
+                    <div className="flex justify-center items-center">
                       <Image src="/img/utils/rune_de_compagnon.png" width={30} height={30} alt="cout_rune" />
                       <p className="text-sm text-center font-bold">{don.cout}</p>
                     </div>
