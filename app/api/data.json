@@ -13474,7 +13474,7 @@
               },
               {
                 "nom": "MAGIES",
-                "cout": 55,
+                "cout": 100,
                 "effet": "+10% DÉGÂTS à tous vos sorts",
                 "sort": ""
               },
@@ -13488,6 +13488,12 @@
                 "nom": "PUISSANCE",
                 "cout": 80,
                 "effet": "+10% d'ATTAQUE à votre héros",
+                "sort": ""
+              },
+              {
+                "nom": "PUISSANCE",
+                "cout": 100,
+                "effet": "+1% d'attaque à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               }
             ]
