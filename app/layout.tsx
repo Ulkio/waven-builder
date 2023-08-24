@@ -10,7 +10,7 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   title: "Waven deck builder",
   description: "Créez votre deck pour WAVEN !",
-  verification: { google: "Qqh2MHF-7nAiuFHhr_saiaNgOeej7YaC3LSQOb-vzro" },
+  verification: { google: "fAWanhT_6jv4qsBUras4Yfm4Ynnf4XEQG50AkNaLy8c" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   keywords: [
     "Waven",
