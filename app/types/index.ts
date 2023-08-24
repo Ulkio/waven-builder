@@ -179,7 +179,16 @@ export interface Passif {
   image: string;
   effet: string;
 }
-
+export interface PassifValues {
+  pv_50: number;
+  pv_25: number;
+  pv_12: number;
+  pv_5: number;
+  at_50: number;
+  at_20: number;
+  at_7: number;
+  at_3: number;
+}
 export interface BuildItemProps {
   item: Brassard | Anneau;
   squareVariants: string;

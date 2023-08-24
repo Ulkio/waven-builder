@@ -1,22 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { BuildArmeProps, Passif } from "@/types";
-import Hexagon from "@/components/Hexagon";
-import { toast } from "react-toastify";
 import { Tooltip } from "react-tooltip";
 import { useMediaQuery } from "react-responsive";
+import { BuildArmeProps, Passif, PassifValues } from "@/types";
+
+const ARME_BASE_URL = "/img/armes";
+const PASSIFS_BASE_URL = "/img/passifs";
+
+type PassifType = "pv_50" | "pv_25" | "pv_12" | "pv_5" | "at_50" | "at_20" | "at_7" | "at_3";
+const passifValuesInitialState: PassifValues = {
+  pv_50: 0,
+  pv_25: 0,
+  pv_12: 0,
+  pv_5: 0,
+  at_50: 0,
+  at_20: 0,
+  at_7: 0,
+  at_3: 0,
+};
 
 const Arme = ({
   item,
   openModal,
   onSelectedPassifChange,
+  onLevelChange,
   buildPassifs,
   isImported,
-  onLevelChange,
   build,
 }: BuildArmeProps) => {
-  const ARME_BASE_URL = "/img/armes";
-  const PASSIFS_BASE_URL = "/img/passifs";
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
 
   const [passifs, setPassifs] = useState<Passif[]>(buildPassifs);
@@ -39,6 +50,9 @@ const Arme = ({
     totalAt: 0,
     totalPv: 0,
   });
+  const [totalPvPercentage, setTotalPvPercentage] = useState(100); // Initialize to 100%
+  const [totalAtPercentage, setTotalAtPercentage] = useState(100); // Initialize to 100%
+  const [passifValues, setPassifValues] = useState<PassifValues>(passifValuesInitialState);
 
   const handleClickPassif = (passif: Passif) => {
     if (selectedPassives.length <= 2) {
@@ -68,7 +82,7 @@ const Arme = ({
     return () => {
       setSelectedPassives([]);
     };
-  }, [isImported]);
+  }, [isImported, buildPassifs]);
 
   useEffect(() => {
     if (item?.patchs && item.patchs[0]) {
@@ -123,9 +137,68 @@ const Arme = ({
   }, [build.anneaux, build.brassard, level]);
 
   //#region increment, decrement passives
+
+  const maxPassifCounts = {
+    pv_50: 1,
+    pv_25: 3,
+    pv_12: 10,
+    pv_5: 15,
+    at_50: 1,
+    at_20: 3,
+    at_7: 10,
+    at_3: 15,
+  };
+  const handlePvPercentageChange = (operation: "decrement" | "increment", percentage: number, type: PassifType) => {
+    const updatedPvPercentage =
+      operation === "decrement" ? totalPvPercentage - percentage : totalPvPercentage + percentage;
+
+    const passifCount = passifValues[type];
+    const maxCount = maxPassifCounts[type];
+
+    if ((operation === "decrement" && passifCount > 0) || (operation === "increment" && passifCount < maxCount)) {
+      setTotalPvPercentage(updatedPvPercentage);
+      setPassifValues((prev) => ({
+        ...prev,
+        [type]: operation === "decrement" ? prev[type] - 1 : prev[type] + 1,
+      }));
+    }
+  };
+
+  const handleAtPercentageChange = (operation: "decrement" | "increment", percentage: number, type: PassifType) => {
+    const updatedAtPercentage =
+      operation === "decrement" ? totalAtPercentage - percentage : totalAtPercentage + percentage;
+
+    const passifCount = passifValues[type];
+    const maxCount = maxPassifCounts[type];
+
+    if ((operation === "decrement" && passifCount > 0) || (operation === "increment" && passifCount < maxCount)) {
+      setTotalAtPercentage(updatedAtPercentage);
+      setPassifValues((prev) => ({
+        ...prev,
+        [type]: operation === "decrement" ? prev[type] - 1 : prev[type] + 1,
+      }));
+    }
+  };
+
+  useEffect(() => {
+    const adjustedPvPercentage = totalPvPercentage / 100;
+    setScaledBuildStats((prev) => ({
+      ...prev,
+      pv: build.arme?.patchs[0].pv! * adjustedPvPercentage,
+    }));
+  }, [totalPvPercentage, build.arme]);
+
+  useEffect(() => {
+    const adjustedAtPercentage = totalAtPercentage / 100;
+    setScaledBuildStats((prev) => ({
+      ...prev,
+      at: build.arme?.patchs[0].at! * adjustedAtPercentage,
+    }));
+  }, [totalAtPercentage, build.arme]);
+
   const decrementPassifPv_50 = () => {
     if (passifPv_50 === 0) return;
-    setPassifPv_50(Math.max(passifPv_50 - 1, 0));
+    setPassifPv_50(passifPv_50 - 1);
   };
   const incrementPassifPv_50 = () => {
     if (passifPv_50 === 1) return;
@@ -133,7 +206,7 @@ const Arme = ({
   };
   const decrementPassifPv_25 = () => {
     if (passifPv_25 === 0) return;
-    setPassifPv_25(Math.max(passifPv_25 - 1, 0));
+    setPassifPv_25(passifPv_25 - 1);
   };
   const incrementPassifPv_25 = () => {
     if (passifPv_25 === 3) return;
@@ -141,7 +214,7 @@ const Arme = ({
   };
   const decrementPassifPv_12 = () => {
     if (passifPv_12 === 0) return;
-    setPassifPv_12(Math.max(passifPv_12 - 1, 0));
+    setPassifPv_12(passifPv_12 - 1);
   };
   const incrementPassifPv_12 = () => {
     if (passifPv_12 === 10) return;
@@ -149,7 +222,7 @@ const Arme = ({
   };
   const decrementPassifPv_5 = () => {
     if (passifPv_5 === 0) return;
-    setPassifPv_5(Math.max(passifPv_5 - 1, 0));
+    setPassifPv_5(passifPv_5 - 1);
   };
   const incrementPassifPv_5 = () => {
     if (passifPv_5 === 15) return;
@@ -157,7 +230,7 @@ const Arme = ({
   };
   const decrementPassifAtk_50 = () => {
     if (passifAtk_50 === 0) return;
-    setPassifAtk_50(Math.max(passifAtk_50 - 1, 0));
+    setPassifAtk_50(passifAtk_50 - 1);
   };
   const incrementPassifAtk_50 = () => {
     if (passifAtk_50 === 1) return;
@@ -165,7 +238,7 @@ const Arme = ({
   };
   const decrementPassifAtk_20 = () => {
     if (passifAtk_20 === 0) return;
-    setPassifAtk_20(Math.max(passifAtk_20 - 1, 0));
+    setPassifAtk_20(passifAtk_20 - 1);
   };
   const incrementPassifAtk_20 = () => {
     if (passifAtk_20 === 3) return;
@@ -173,7 +246,7 @@ const Arme = ({
   };
   const decrementPassifAtk_7 = () => {
     if (passifAtk_7 === 0) return;
-    setPassifAtk_7(Math.max(passifAtk_7 - 1, 0));
+    setPassifAtk_7(passifAtk_7 - 1);
   };
   const incrementPassifAtk_7 = () => {
     if (passifAtk_7 === 10) return;
@@ -181,7 +254,7 @@ const Arme = ({
   };
   const decrementPassifAtk_3 = () => {
     if (passifAtk_3 === 0) return;
-    setPassifAtk_3(Math.max(passifAtk_3 - 1, 0));
+    setPassifAtk_3(passifAtk_3 - 1);
   };
   const incrementPassifAtk_3 = () => {
     if (passifAtk_3 === 15) return;
@@ -208,64 +281,92 @@ const Arme = ({
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifPv_50}
+                    onClick={() => {
+                      handlePvPercentageChange("decrement", 50, "pv_50");
+                      decrementPassifPv_50();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
                   <p
-                    onClick={incrementPassifPv_50}
+                    onClick={() => {
+                      handlePvPercentageChange("increment", 50, "pv_50");
+                      incrementPassifPv_50();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_50}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_50 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifPv_25}
+                    onClick={() => {
+                      handlePvPercentageChange("decrement", 25, "pv_25");
+                      decrementPassifPv_25();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
                   <p
-                    onClick={incrementPassifPv_25}
+                    onClick={() => {
+                      handlePvPercentageChange("increment", 25, "pv_25");
+                      incrementPassifPv_25();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_25}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_25 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">25%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifPv_12}
+                    onClick={() => {
+                      handlePvPercentageChange("decrement", 12, "pv_12");
+                      decrementPassifPv_12();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
                   <p
-                    onClick={incrementPassifPv_12}
+                    onClick={() => {
+                      handlePvPercentageChange("increment", 12, "pv_12");
+                      incrementPassifPv_12();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_12}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_12 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">12%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
-                  <p onClick={decrementPassifPv_5} className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                  <p
+                    onClick={() => {
+                      handlePvPercentageChange("decrement", 5, "pv_5");
+                      decrementPassifPv_5();
+                    }}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
-                  <p onClick={incrementPassifPv_5} className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                  <p
+                    onClick={() => {
+                      handlePvPercentageChange("increment", 5, "pv_5");
+                      incrementPassifPv_5();
+                    }}
+                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_5}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_5 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">5%</p>
                 </div>
               </div>
@@ -284,68 +385,92 @@ const Arme = ({
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifAtk_50}
+                    onClick={() => {
+                      handleAtPercentageChange("decrement", 50, "at_50");
+                      decrementPassifAtk_50();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
                   <p
-                    onClick={incrementPassifAtk_50}
+                    onClick={() => {
+                      handleAtPercentageChange("increment", 50, "at_50");
+                      incrementPassifAtk_50();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_50}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_50 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifAtk_20}
+                    onClick={() => {
+                      handleAtPercentageChange("decrement", 20, "at_20");
+                      decrementPassifAtk_20();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
                   <p
-                    onClick={incrementPassifAtk_20}
+                    onClick={() => {
+                      handleAtPercentageChange("increment", 20, "at_20");
+                      incrementPassifAtk_20();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_20}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_20 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">20%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifAtk_7}
+                    onClick={() => {
+                      handleAtPercentageChange("decrement", 7, "at_7");
+                      decrementPassifAtk_7();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
                   <p
-                    onClick={incrementPassifAtk_7}
+                    onClick={() => {
+                      handleAtPercentageChange("increment", 7, "at_7");
+                      incrementPassifAtk_7();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_7}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_7 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">7%</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="flex justify-between items-center">
                   <p
-                    onClick={decrementPassifAtk_3}
+                    onClick={() => {
+                      handleAtPercentageChange("decrement", 3, "at_3");
+                      decrementPassifAtk_3();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     -
                   </p>
                   <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
                   <p
-                    onClick={incrementPassifAtk_3}
+                    onClick={() => {
+                      handleAtPercentageChange("increment", 3, "at_3");
+                      incrementPassifAtk_3();
+                    }}
                     className="border border-white rounded-lg px-2 hover:cursor-pointer">
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_3}</p>
+                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_3 || 0}</p>
                   <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">3%</p>
                 </div>
               </div>
@@ -356,18 +481,18 @@ const Arme = ({
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
               <p className="font-bold">
-                {Math.round(scaledBuildStats.pv + (scaledBuildStats.pv * itemsStats.totalPv) / 100)}
+                {Math.round(scaledBuildStats.pv + (scaledBuildStats.pv * itemsStats.totalPv) / 100) || 0}
               </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
               <p className="font-bold">
-                {Math.round(scaledBuildStats.at + (scaledBuildStats.at * itemsStats.totalAt) / 100)}
+                {Math.round(scaledBuildStats.at + (scaledBuildStats.at * itemsStats.totalAt) / 100) || 0}
               </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/cc.png" width={30} height={30} alt="crit" />
-              <p className="font-bold">{scaledBuildStats.cc}</p>
+              <p className="font-bold">{scaledBuildStats.cc}%</p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pm.png" width={30} height={30} alt="pm" />
@@ -438,7 +563,7 @@ const Arme = ({
               onChange={(e) => handleLevelChange(parseInt(e.target.value))}
               className=" w-1/2"
             />
-            <label htmlFor="volume">Niveaux d'objets : {level}</label>
+            <label htmlFor="volume">Niveaux d&apos;objets : {level}</label>
           </div>
         </>
       ) : (
