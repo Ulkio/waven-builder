@@ -556,8 +556,6 @@ const Build = () => {
           </div>
           <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
             <div className="flex flex-col  items-center gap-6 xl:gap-2">
-              {build.arme && <p className="absolute text-sm opacity-50 italic">Passifs HP et ATK à venir</p>}
-
               <ArmeItem
                 item={build.arme!}
                 buildPassifs={build.passifs!}
