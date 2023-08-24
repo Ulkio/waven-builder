@@ -42,8 +42,8 @@ const Arme = ({
   const [passifPv_5, setPassifPv_5] = useState(0);
   const [level, setLevel] = useState(1);
   const [scaledBuildStats, setScaledBuildStats] = useState({
-    at: 0,
-    pv: 0,
+    at: build?.arme?.patchs[0].at || 0,
+    pv: build?.arme?.patchs[0].pv || 0,
     cc: 0,
   });
   const [itemsStats, setItemsStats] = useState({
@@ -128,8 +128,8 @@ const Arme = ({
       totalAttaque += 1;
     }
 
-    const scaledTotalPv = totalPv * level;
-    const scaledTotalAt = totalAttaque * level;
+    const scaledTotalPv = (totalPv * level) / 100;
+    const scaledTotalAt = (totalAttaque * level) / 100;
     setItemsStats(() => ({
       totalPv: scaledTotalPv,
       totalAt: scaledTotalAt,
@@ -180,21 +180,23 @@ const Arme = ({
     }
   };
 
-  useEffect(() => {
-    const adjustedPvPercentage = totalPvPercentage / 100;
-    setScaledBuildStats((prev) => ({
-      ...prev,
-      pv: build.arme?.patchs[0].pv! * adjustedPvPercentage,
-    }));
-  }, [totalPvPercentage, build.arme]);
+  // useEffect(() => {
+  //   const adjustedPvPercentage = totalPvPercentage / 100;
+  //   setScaledBuildStats((prev) => ({
+  //     ...prev,
+  //     pv: build.arme?.patchs[0].pv! * adjustedPvPercentage,
+  //   }));
+  // }, [totalPvPercentage]);
 
-  useEffect(() => {
-    const adjustedAtPercentage = totalAtPercentage / 100;
-    setScaledBuildStats((prev) => ({
-      ...prev,
-      at: build.arme?.patchs[0].at! * adjustedAtPercentage,
-    }));
-  }, [totalAtPercentage, build.arme]);
+  // useEffect(() => {
+  //   const adjustedAtPercentage = totalAtPercentage / 100;
+  //   setScaledBuildStats((prev) => ({
+  //     ...prev,
+  //     at: build.arme?.patchs[0].at! * adjustedAtPercentage,
+  //   }));
+  // }, [totalAtPercentage]);
+
+  useEffect(() => {}, [level]);
 
   const decrementPassifPv_50 = () => {
     if (passifPv_50 === 0) return;
@@ -481,13 +483,13 @@ const Arme = ({
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
               <p className="font-bold">
-                {Math.round(scaledBuildStats.pv + (scaledBuildStats.pv * itemsStats.totalPv) / 100) || 0}
+                {Math.floor(scaledBuildStats.pv * (itemsStats.totalPv + totalPvPercentage / 100))}
               </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
               <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
               <p className="font-bold">
-                {Math.round(scaledBuildStats.at + (scaledBuildStats.at * itemsStats.totalAt) / 100) || 0}
+                {Math.round(scaledBuildStats.at * (itemsStats.totalAt + totalAtPercentage / 100))}
               </p>
             </div>
             <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
