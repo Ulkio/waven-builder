@@ -892,7 +892,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE",
                 "cout": 50,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -1086,7 +1086,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
                 "cout": 70,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -1944,7 +1944,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE",
                 "cout": 50,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -3073,7 +3073,7 @@
               {
                 "nom": "PROTECTION MAGIQUE",
                 "cout": 120,
-                "effet": "+750% de protection magique",
+                "effet": "+75% de protection magique",
                 "sort": ""
               },
               {
@@ -3272,7 +3272,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE",
                 "cout": 70,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -4185,7 +4185,7 @@
               {
                 "nom": "PROTECTION MAGIQUE",
                 "cout": 80,
-                "effet": "+750% de protection magique",
+                "effet": "+75% de protection magique",
                 "sort": ""
               },
               {
@@ -4455,7 +4455,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE",
                 "cout": 80,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -5679,7 +5679,7 @@
               {
                 "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
                 "cout": 50,
-                "effet": "+500% d'armure",
+                "effet": "+50% d'armure",
                 "sort": ""
               },
               {
@@ -21002,7 +21002,7 @@
               },
               {
                 "nom": "EFFET CRITIQUE",
-                "effet": "CRITIQUE : Piochez 1 eau.\r +500% aux DÉGÂTS CRITIQUES du prochain sort que vous jouez.",
+                "effet": "CRITIQUE : Piochez 1 eau.\r +50% aux DÉGÂTS CRITIQUES du prochain sort que vous jouez.",
                 "cout": 80
               },
               {
