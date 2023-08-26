@@ -4562,7 +4562,7 @@
             "at": 17,
             "cc": 5,
             "pm": 4,
-            "effet": "APPARITION: -1 Jauge au coût de REMINGTON SMISSE (106 PV, 17 AT, 3 PM). ATTAQUE: +1 PM à votre héros pour le jour.",
+            "effet": "APPARITION: -1 Jauge au coût de REMINGTON SMISSE (106 PV, 17 AT, 3 PM). ATTAQUE: +1 PM à votre héros pour le tour.",
             "caracteristiques": [
               {
                 "taux": 5,
