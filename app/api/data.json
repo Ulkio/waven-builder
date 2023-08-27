@@ -1048,73 +1048,6 @@
         ]
       },
       {
-        "nom": "Goultard",
-        "rarete": "Infinite",
-        "image": "goultard",
-        "iles": [],
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 169,
-            "at": 30,
-            "cc": 5,
-            "pm": 4,
-            "effet": "ATTAQUE: Déclenche 2 foix EXPLOSION(6).",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "SAUT DE GOULTARD",
-                "cout": 50,
-                "effet": "APPARITION : Ajoute le sort Saut de Goultard à votre main.",
-                "sort": "Saut de Goultard"
-              },
-              {
-                "nom": "CONFRÉRIE DU TOFU",
-                "cout": 50,
-                "effet": "APPARITION : +1 si vous avez un autre compagnon de la Confrérie du Tofu d'équipé.",
-                "sort": ""
-              },
-              {
-                "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
-                "cout": 70,
-                "effet": "+50% d'armure",
-                "sort": ""
-              },
-              {
-                "nom": "FRAYEUR",
-                "cout": 90,
-                "effet": "+30% chances de Frayeur",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 50,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 80,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "feu": 9
-            }
-          }
-        ]
-      },
-      {
         "nom": "Tika",
         "rarete": "Commun",
         "image": "tika",
@@ -2100,72 +2033,6 @@
             ],
             "couts": {
               "air": 5
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Évangelyne",
-        "rarete": "Infinite",
-        "image": "evangelyne",
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 118,
-            "at": 22,
-            "cc": 5,
-            "pm": 3,
-            "effet": "FIN DU TOUR: Inflige son AT aux adversaires alignés avec elle à plus de 1 case.",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "TRAIT D'EVANGELYNE",
-                "cout": 120,
-                "effet": "APPARITION : Ajoute le sort Trait d'Évangelyne à votre main.",
-                "sort": "Trait d'Évangelyne"
-              },
-              {
-                "nom": "CONFRÉRIE DU TOFU",
-                "cout": 120,
-                "effet": "APPARITION : +1 si vous avez un autre compagnon de la Confrérie du Tofu d'équipé.",
-                "sort": ""
-              },
-              {
-                "nom": "DÉGÂTS DE RIPOSTE",
-                "cout": 120,
-                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
-                "sort": ""
-              },
-              {
-                "nom": "SPÉCIALITÉ CRÂ",
-                "cout": 120,
-                "effet": "Apparition +3 AURA Mire Rebond.",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 120,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 120,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "air": 6
             }
           }
         ]
@@ -3228,73 +3095,6 @@
         ]
       },
       {
-        "nom": "Ruel",
-        "rarete": "Infinite",
-        "image": "ruel",
-        "iles": [],
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 120,
-            "at": 24,
-            "cc": 5,
-            "pm": 3,
-            "effet": "ATTAQUE: Inflige son AT aux adversaires autour.",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "PELLE DE RUEL",
-                "cout": 50,
-                "effet": "APPARITION : Ajoute le sort Pelle de Ruel à votre main.",
-                "sort": "Pelle de Ruel"
-              },
-              {
-                "nom": "RÉANIMATION",
-                "cout": 50,
-                "effet": "REINVOCABLE Limité à une fois par combat.",
-                "sort": ""
-              },
-              {
-                "nom": "CONFRÉRIE DU TOFU",
-                "cout": 50,
-                "effet": "APPARITION : +1 si vous avez un autre compagnon de la Confrérie du Tofu d'équipé.",
-                "sort": ""
-              },
-              {
-                "nom": "PROTECTION PHYSIQUE",
-                "cout": 70,
-                "effet": "+50% d'armure",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 90,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 80,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "terre": 6
-            }
-          }
-        ]
-      },
-      {
         "nom": "Yaki",
         "rarete": "Commun",
         "image": "yaki",
@@ -4310,37 +4110,37 @@
             "dons": [
               {
                 "nom": "ÉLIACUBE DE NOX",
-                "cout": 50,
+                "cout": 100,
                 "effet": "APPARITION : Ajoute le sort Éliacube de Nox à votre main.",
                 "sort": "Éliacube de Nox"
               },
               {
                 "nom": "SPÉCIALITÉ XÉLOR",
-                "cout": 90,
+                "cout": 120,
                 "effet": "Apparition +3 AURA Hibou de Glace.",
                 "sort": ""
               },
               {
                 "nom": "NOUVELLE COMPETENCE",
-                "cout": 50,
-                "effet": "Lorsqu'une Noxines est détruite : Nox gagne 50% d'attaque en armure.",
+                "cout": 80,
+                "effet": "Lorsqu'une Noxine est détruite : Nox gagne 50% d'attaque en armure.",
                 "sort": ""
               },
               {
                 "nom": "NOUVELLE COMPETENCE",
-                "cout": 80,
+                "cout": 120,
                 "effet": "REINVOCABLE : -2 au coût de ce compagnon. Limité à une fois par combat.",
                 "sort": ""
               },
               {
                 "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 90,
+                "cout": 100,
                 "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
                 "sort": ""
               },
               {
                 "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 70,
+                "cout": 100,
                 "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
                 "sort": ""
               }
@@ -4376,37 +4176,37 @@
             "dons": [
               {
                 "nom": "SOUFFLE DE PHAERIS",
-                "cout": 50,
+                "cout": 100,
                 "effet": "APPARITION : Ajoute le sort Souffle de Phaeris à votre main.",
                 "sort": "Souffle de Phaeris"
               },
               {
                 "nom": "ÉCAILLE DE PHAERIS",
-                "cout": 50,
+                "cout": 100,
                 "effet": "MORT : Ajoute une Écaille de Phaeris à votre main.",
                 "sort": ""
               },
               {
                 "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
-                "cout": 50,
-                "effet": "+300% d'armure",
+                "cout": 80,
+                "effet": "+30% d'armure",
                 "sort": ""
               },
               {
-                "nom": "FRAYEUR",
+                "nom": "DÉGÂTS DE RIPOSTE",
                 "cout": 90,
                 "effet": "+30% chances de Frayeur",
                 "sort": ""
               },
               {
                 "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 70,
+                "cout": 100,
                 "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
                 "sort": ""
               },
               {
                 "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 90,
+                "cout": 100,
                 "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
                 "sort": ""
               }
@@ -4417,6 +4217,1082 @@
           }
         ]
       },
+      {
+        "nom": "Oropo",
+        "rarete": "Infinite",
+        "image": "oropo",
+        "patchs": [
+          {
+            "version": "0.12",
+            "pv": 120,
+            "at": 25,
+            "cc": 5,
+            "pm": 3,
+            "effet": "APPARITION : Réduit de 3 jauges le coût de vos autres compagnons de la Fratrie des oubliés.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Plans d'Oropo à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 80,
+                "effet": "Apparition d'un autre membre de la Fratrie des oubliés : Lui confère BOUCLIER.",
+                "sort": ""
+              },
+              {
+                "nom": "FRATRIE DES OUBLIÉS",
+                "cout": 100,
+                "effet": "APPARITION : -2 PA au coût du premier sort de votre main si vous avez un autre compagnon de la Fratrie des oubliés équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
+                "cout": 80,
+                "effet": "+30% d'armure",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "feu": 2,
+              "air": 3,
+              "eau": 4
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Adamaï",
+        "rarete": "Infinite",
+        "image": "adamai",
+        "patchs": [
+          {
+            "version": "0.12",
+            "pv": 128,
+            "at": 22,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Touche les adversaires dans la ligne devant lui.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "SOUFFLE D'ADAMAÏ",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Souffle d'Adamaï à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "CONFRÉRIE DU TOFU",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "PROTECTION PHYSIQUE",
+                "cout": 80,
+                "effet": "+50% d'armure.",
+                "sort": ""
+              },
+              {
+                "nom": "PROTECTION MAGIQUE",
+                "cout": 80,
+                "effet": "+50% de protection magique.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "feu": 2,
+              "air": 3,
+              "eau": 4
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Ruel",
+        "rarete": "Infinite",
+        "image": "ruel",
+        "patchs": [
+          {
+            "version": "0.12",
+            "pv": 120,
+            "at": 24,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Touche les adversaires autour.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Pelle de Ruel",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Pelle de Ruel à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Réanimation",
+                "cout": 100,
+                "effet": "REINVOCABLE Limité à une fois par combat.",
+                "sort": ""
+              },
+              {
+                "nom": "CONFRÉRIE DU TOFU",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "PROTECTION PHYSIQUE",
+                "cout": 80,
+                "effet": "+50% d'armure.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "terre": 6
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Goultard",
+        "rarete": "Infinite",
+        "image": "goultard",
+        "patchs": [
+          {
+            "version": "0.12",
+            "pv": 169,
+            "at": 30,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Déclenche 2 fois explosion (11).",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Saut de Goultard",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Saut de Goultard à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "CONFRÉRIE DU TOFU",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
+                "cout": 100,
+                "effet": "+50% d'armure.",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS DE RIPOSTE",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "feu": 9
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Yugo",
+        "rarete": "Infinite",
+        "image": "yugo",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 144,
+            "at": 30,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Attaque Échange sa position avec celle de votre héros.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "PORTAIL DE YUGO",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Portail de Yugo à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "CONFRÉRIE DU TOFU",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE",
+                "cout": 80,
+                "effet": "+15% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "RÉCUPÉRATION",
+                "cout": 80,
+                "effet": "Lorsque Yugo se téléporte : il se soigne de son attaque.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "air": 7
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Kérubim",
+        "rarete": "Infinite",
+        "image": "kerubim",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 150,
+            "at": 22,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Gagne son attaque en armure.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "ARMURE DE KÉRUBIM",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Armure de Kérubim à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "RÉANIMATION",
+                "cout": 120,
+                "effet": "REINVOCABLE : -2 au coût de ce compagnon. Limité à une fois par combat.",
+                "sort": ""
+              },
+              {
+                "nom": "LA BANDE À JORIS",
+                "cout": 80,
+                "effet": "APPARITION : +30% de sa vies max en armure si vous avez un autre compagnon de La Bande à Joris équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS DE RIPOSTE",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "terre": 8
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Justice",
+        "rarete": "Infinite",
+        "image": "justice",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 158,
+            "at": 28,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Apparition Devient GARDE DU CORPS de l'allié ayant le moins de POINTS DE VIE pour le tour et gagne 75% de Protection physique et Protection magique.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Orbe de Justice à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Effet Critique",
+                "cout": 100,
+                "effet": "CRITIQUE : Confère BOUCLIER à vos alliés.",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE",
+                "cout": 80,
+                "effet": "+15% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS DE RIPOSTE",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "eau": 3,
+              "terre": 2,
+              "feu": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Julith",
+        "rarete": "Infinite",
+        "image": "julith",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 140,
+            "at": 27,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Lorsqu'un adversaire meurt : Piochez 2 sorts. -1 PA au coût de ce sorts. La bande à Joris",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Cape de Julith",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Cape de Julith à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Réanimation",
+                "cout": 120,
+                "effet": "REINVOCABLE : +-2 au coût de ce compagnon. Limité à une fois par combat.",
+                "sort": ""
+              },
+              {
+                "nom": "La Bande à Joris",
+                "cout": 80,
+                "effet": "APPARITION : +30% de sa vie max en armure si vous avez un autre compagnon de La Bande à Joris équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "DÉGÂTS DE RIPOSTE",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "feu": 7
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Khan Karkass",
+        "rarete": "Infinite",
+        "image": "khan_karkass",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 140,
+            "at": 32,
+            "cc": 5,
+            "pm": 4,
+            "effet": "Peut être invoqué sur une case libre du terrain. Tant qu'il est en jeu : +1 PM à vos personnages. La bande à Joris",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Essai de Khan Karkass à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 80,
+                "effet": "APPARITION : -1 PM aux adversaires adjacents jusqu'à la fin de leur prochain tour.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 80,
+                "effet": "CRITIQUE : IMMOBILISE la cible jusqu'à la fin de son prochain tour.",
+                "sort": ""
+              },
+              {
+                "nom": "COUP CRITIQUE",
+                "cout": 80,
+                "effet": "+15% aux chances de COUP CRITIQUE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "terre": 3,
+              "feu": 2,
+              "air": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Tristepin",
+        "rarete": "Infinite",
+        "image": "tristepin",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 148,
+            "at": 42,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Il est costaud. C'est tout. Confrérie du Tofu",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Fureur de Tristepin",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Fureur de Tristepin à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Dégâts de Riposte",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "Confrérie du Tofu",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "Effet Critique",
+                "cout": 120,
+                "effet": "CRITIQUE : +100% attaque jusqu'à sa prochaine attaque.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "terre": 7
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Qilby",
+        "rarete": "Infinite",
+        "image": "qilby",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 172,
+            "at": 36,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Peut être invoqué sur une case libre du terrain. Apparition +2 JAUGE ETHER. ATTAQUE : Se téléporte dans le dos de la cible. REMINGTON SMISSE",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Folie de Qilby à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Super Vilain",
+                "cout": 80,
+                "effet": "APPARITION : Inflige son attaque aux adversaires autour <img class=\"text-icon\" src=\"/img/cell_around.png\"> de lui si vous avez un autre compagnon Super Vilain équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "protection magique",
+                "cout": 80,
+                "effet": "+50% de protection magique",
+                "sort": ""
+              },
+              {
+                "nom": "Dégâts de Riposte",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "feu": 4,
+              "air": 3,
+              "eau": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Grougaloragran",
+        "rarete": "Infinite",
+        "image": "grougaloragran",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 171,
+            "at": 36,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Piochez 1 sorts. Il coûte -1 PA.",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Souffle de Grougaloragran",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Souffle de Grougaloragran à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Écaille de Grougaloragran",
+                "cout": 100,
+                "effet": "MORT : Ajoute une Écaille de Grougaloragran à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "protection physique et protection magique",
+                "cout": 100,
+                "effet": "+50% d'armure",
+                "sort": ""
+              },
+              {
+                "nom": "Dégâts de Riposte",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "air": 9
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Écho",
+        "rarete": "Infinite",
+        "image": "echo",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 116,
+            "at": 20,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Soigne votre héros de son attaque. Fratrie des oubliés",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Espoir d'Echo",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Espoir d'Écho à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Spécialité Eniripsa",
+                "cout": 120,
+                "effet": "Apparition +3 AURA Cœur de Glace.",
+                "sort": ""
+              },
+              {
+                "nom": "protection physique et protection magique",
+                "cout": 80,
+                "effet": "+30% d'armure",
+                "sort": ""
+              },
+              {
+                "nom": "Fratrie des oubliés",
+                "cout": 100,
+                "effet": "APPARITION : -2 PA au coût du premier sort de votre main si vous avez un autre compagnon de la Fratrie des oubliés équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "eau": 6
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Katar",
+        "rarete": "Infinite",
+        "image": "katar",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 134,
+            "at": 28,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Touche les adversaires autour. REMINGTON SMISSE",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Vengeance de Katar à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Super Vilain",
+                "cout": 80,
+                "effet": "APPARITION : Inflige son attaque aux adversaires autour de lui si vous avez un autre compagnon Super Vilain équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 120,
+                "effet": "Lorsque ce compagnon subit des dégâts : +10% attaque pour le reste du combat.",
+                "sort": ""
+              },
+              {
+                "nom": "protection physique et protection magique",
+                "cout": 100,
+                "effet": "+50% d'armure",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "air": 3,
+              "terre": 2,
+              "eau": 2
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Évangelyne",
+        "rarete": "Infinite",
+        "image": "evangelyne",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 118,
+            "at": 22,
+            "cc": 5,
+            "pm": 3,
+            "effet": "FIN DU TOUR : Inflige son attaque aux adversaires alignés avec elle. Confrérie du Tofu",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Trait d'Evangelyne",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Trait d'Évangelyne à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Confrérie du Tofu",
+                "cout": 100,
+                "effet": "APPARITION : +1 JAUGE ETHER si vous avez un autre compagnon de la Confrérie du Tofu équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "Dégâts de Riposte",
+                "cout": 80,
+                "effet": "+50% de dégâts de RIPOSTE à ce personnage",
+                "sort": ""
+              },
+              {
+                "nom": "Spécialité Crâ",
+                "cout": 100,
+                "effet": "Apparition +3 AURA Mire Rebond.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "air": 6
+            }
+          }
+        ]
+      },
+      {
+        "nom": "Nox",
+        "rarete": "Infinite",
+        "image": "nox",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 162,
+            "at": 30,
+            "cc": 5,
+            "pm": 3,
+            "effet": "ATTAQUE : Invoque une Noxine derrière la cible. MORT : Détruit les Noxines alliées en jeu. REMINGTON SMISSE",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Éliacube de Nox",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Éliacube de Nox à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Spécialité Xélor",
+                "cout": 120,
+                "effet": "Apparition +3 AURA Hibou de Glace.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 80,
+                "effet": "Lorsqu'une Noxines est détruite : Nox gagne 50% d'attaque en armure.",
+                "sort": ""
+              },
+              {
+                "nom": "NOUVELLE COMPETENCE",
+                "cout": 120,
+                "effet": "REINVOCABLE : -2 au coût de ce compagnon. Limité à une fois par combat.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "eau": 8
+            }
+          }
+        ]
+      }
+      
+      
+      
+      
+      
+      
+      
+      
       {
         "nom": "Alchimiste armurée",
         "rarete": "Rare",
@@ -5491,213 +6367,6 @@
             ],
             "couts": {
               "terre": 3,
-              "eau": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Khan Karkass",
-        "rarete": "Infinite",
-        "image": "khan_karkass",
-        "iles": [],
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 140,
-            "at": 32,
-            "cc": 5,
-            "pm": 4,
-            "effet": "Tant qu'il est en jeu: +1 PM à vos personnages. Peut être invoqué sur une case libre du terrain. La bande à Joris.",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 50,
-                "effet": "APPARITION : Ajoute le sort Essai de Khan Karkass à votre main.",
-                "sort": "Essai de Khan Karkass"
-              },
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 70,
-                "effet": "APPARITION : -1 point de mouvement aux adversaires adjacents  jusqu'à la fin de leur prochain tour.",
-                "sort": ""
-              },
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 90,
-                "effet": "CRITIQUE : IMMOBILISE la cible jusqu'à la fin de son prochain tour.",
-                "sort": ""
-              },
-              {
-                "nom": "COUP CRITIQUE",
-                "cout": 50,
-                "effet": "+15% aux chances de COUP CRITIQUE à ce personnage",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 80,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 50,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "feu": 2,
-              "air": 2,
-              "terre": 3
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Qilby",
-        "rarete": "Infinite",
-        "image": "qilby",
-        "iles": [],
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 172,
-            "at": 36,
-            "cc": 5,
-            "pm": 4,
-            "effet": "APPARITION: +2 Jauges ÉTHER. ATTAQUE: Se téléporte dans le dos de la cible. Peut être invoqué sur une case libre du terrain.",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 50,
-                "effet": "APPARITION : Ajoute le sort Folie de Qilby à votre main.",
-                "sort": "Folie de Qilby"
-              },
-              {
-                "nom": "SUPER VILAIN",
-                "cout": 70,
-                "effet": "APPARITION : Inflige son attaque aux adversaires autour  de lui si vous avez un autre compagnon Super Vilain d'équipé.",
-                "sort": ""
-              },
-              {
-                "nom": "PROTECTION MAGIQUE",
-                "cout": 90,
-                "effet": "+50% de protection magique",
-                "sort": ""
-              },
-              {
-                "nom": "FRAYEUR",
-                "cout": 80,
-                "effet": "+50% chances de Frayeur",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 80,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 50,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "feu": 4,
-              "air": 3,
-              "eau": 2
-            }
-          }
-        ]
-      },
-      {
-        "nom": "Katar",
-        "rarete": "Infinite",
-        "image": "katar",
-        "iles": [],
-        "patchs": [
-          {
-            "version": "0.12",
-            "pv": 134,
-            "at": 28,
-            "cc": 5,
-            "pm": 3,
-            "effet": "ATTAQUE: Inflige son AT aux adversaires autour.",
-            "caracteristiques": [
-              {
-                "taux": 5,
-                "effet": "% de VIE à ce personnage."
-              },
-              {
-                "taux": 5,
-                "effet": "% d'ATTAQUE à ce personnage."
-              }
-            ],
-            "dons": [
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 50,
-                "effet": "APPARITION : Ajoute le sort Vengeance de Katar à votre main.",
-                "sort": "Vengeance de Katar"
-              },
-              {
-                "nom": "SUPER VILAIN",
-                "cout": 70,
-                "effet": "APPARITION : Inflige son attaque aux adversaires autour  de lui si vous avez un autre compagnon Super Vilain d'équipé.",
-                "sort": ""
-              },
-              {
-                "nom": "NOUVELLE COMPETENCE",
-                "cout": 90,
-                "effet": "Lorsque ce compagnon subit des dégâts : +10% d'attaque pour le reste du combat.",
-                "sort": ""
-              },
-              {
-                "nom": "PROTECTION PHYSIQUE ET PROTECTION MAGIQUE",
-                "cout": 50,
-                "effet": "+50% d'armure",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 80,
-                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              },
-              {
-                "nom": "ÉVOLUTION DU POTENTIEL",
-                "cout": 50,
-                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
-                "sort": ""
-              }
-            ],
-            "couts": {
-              "air": 3,
-              "terre": 2,
               "eau": 2
             }
           }
