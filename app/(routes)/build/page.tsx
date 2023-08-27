@@ -551,7 +551,7 @@ const Build = () => {
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-normal xl:basis-1/12">
             <div className="flex flex-wrap xl:flex-nowrap xl:gap-0 xl:flex-col">
-              <div className="flex flex-col justify-center items-start ">
+              <div className="flex flex-col justify-center items-center ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
                   item={build.brassard!}
