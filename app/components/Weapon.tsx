@@ -14,7 +14,7 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
   const ARME_BASE_URL = "/img/armes";
   return (
     <div
-      data-tooltip-id="my-tooltip"
+      data-tooltip-id={`my-tooltip-${arme.nom}`}
       data-tooltip-content={`${arme.patchs[0].effet}`}
       data-tooltip-place="bottom"
       className="flex flex-col justify-center items-center p-2 "
@@ -28,7 +28,7 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
         height={100}
         className="hover:cursor-pointer "
       />
-      <Tooltip id="my-tooltip" className="tooltip w-1/2 xl:w-auto" />
+      <Tooltip id={`my-tooltip-${arme.nom}`} className="tooltip " />
       <p className="text-md text-center font-bold ">{arme.nom}</p>
     </div>
   );

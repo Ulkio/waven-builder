@@ -17,6 +17,7 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   const earthVariants = `absolute top-2 left-4 font-bold text-xl text-outline`;
   const windVariants = `absolute top-3 left-4 font-bold text-xl text-outline`;
 
+  const [searchInput, setsearchInput] = useState("");
   const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
   const [displayedCompagnon, setDisplayedCompagnon] = useState<Compagnon | null>(null);
   const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
@@ -45,6 +46,17 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   const filteredCompagnons = selectedRarityFilter
     ? sortedCompagnonsRarity.filter((compagnon) => compagnon.rarete.toLowerCase() === selectedRarityFilter)
     : sortedCompagnonsRarity;
+
+  const filteredByName = filteredCompagnons.filter((compagnon) => {
+    if (searchInput === "") {
+      return true;
+    }
+    return compagnon.nom.toLowerCase().includes(searchInput.toLowerCase());
+  });
+
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setsearchInput(e.target.value);
+  };
 
   const handleFilterClick = (rarity: string) => {
     setSelectedRarityFilter(rarity);
@@ -75,8 +87,15 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
             Infinite
           </button>
         </div>
+        <input
+          type="text"
+          placeholder="Rechercher"
+          value={searchInput}
+          onChange={(e) => handleSearchInputChange(e)}
+          className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
+        />
         <div className="flex flex-wrap gap-2 justify-center">
-          {filteredCompagnons.map((compagnon) => {
+          {filteredByName.map((compagnon) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedCompagnon(compagnon)}

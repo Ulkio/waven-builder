@@ -26,6 +26,7 @@ import AnneauItem from "@/components/build-items/Anneau";
 import CompagnonItem from "@/components/build-items/Compagnon";
 import ArmeItem from "@/components/build-items/Arme";
 import SortItem from "@/components/build-items/Sort";
+import { Tooltip } from "react-tooltip";
 
 const Build = () => {
   //#region CONSTANTS
@@ -527,16 +528,22 @@ const Build = () => {
           <div className="flex  xl:flex-col xl:basis-2/12 xl:px-4">
             <div className="flex  flex-col justify-center items-center w-full">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex flex-wrap justify-center gap-8 xl:gap-0  xl:flex-col ">
+              <div className="flex flex-wrap justify-center gap-8 xl:gap-0 xl:flex-col ">
                 {[...Array(4)].map((_, index) => {
                   const anneau = build.anneaux[index];
                   return (
-                    <AnneauItem
-                      key={index}
-                      item={anneau}
-                      openModal={() => openModal(`openAnneau${index + 1}Modal`)}
-                      squareVariants={squareVariants}
-                    />
+                    <div
+                      data-tooltip-id={`anneau-tooltip-${index}`}
+                      data-tooltip-content={`${anneau?.patchs[0].pouvoir}`}
+                      data-tooltip-place="right"
+                      key={index}>
+                      <AnneauItem
+                        item={anneau}
+                        openModal={() => openModal(`openAnneau${index + 1}Modal`)}
+                        squareVariants={squareVariants}
+                      />
+                      {anneau && <Tooltip id={`anneau-tooltip-${index}`} className="tooltip z-10 " />}
+                    </div>
                   );
                 })}
               </div>
@@ -544,7 +551,7 @@ const Build = () => {
           </div>
           <div className="flex xl:flex-col justify-center xl:justify-normal xl:basis-1/12">
             <div className="flex flex-wrap xl:flex-nowrap xl:gap-0 xl:flex-col">
-              <div className="flex flex-col  justify-center  items-start ">
+              <div className="flex flex-col justify-center items-start ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
                   item={build.brassard!}
@@ -555,7 +562,7 @@ const Build = () => {
             </div>
           </div>
           <div className="flex flex-col xl:basis-6/12 xl:px-4 ">
-            <div className="flex flex-col  items-center gap-6 xl:gap-2">
+            <div className="flex flex-col items-center gap-6 xl:gap-2">
               <ArmeItem
                 item={build.arme!}
                 buildPassifs={build.passifs!}

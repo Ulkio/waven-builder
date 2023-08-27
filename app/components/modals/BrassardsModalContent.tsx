@@ -12,6 +12,7 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
   const brassards: Brassard[] = data.equipements.brassards;
   const BRASSARD_BASE_URL = "/img/brassards";
 
+  const [searchInput, setsearchInput] = useState("");
   const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
   const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(null);
   const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
@@ -41,6 +42,15 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
     ? sortedBrassardsRarity.filter((brassard) => brassard.rarete.toLowerCase() === selectedRarityFilter)
     : sortedBrassardsRarity;
 
+  const filteredByName = filteredBrassards.filter((brassard) => {
+    if (searchInput === "") {
+      return true;
+    }
+    return brassard.nom.toLowerCase().includes(searchInput.toLowerCase());
+  });
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setsearchInput(e.target.value);
+  };
   const handleFilterClick = (rarity: string) => {
     setSelectedRarityFilter(rarity);
   };
@@ -70,8 +80,15 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
             Infinite
           </button>
         </div>
+        <input
+          type="text"
+          placeholder="Rechercher"
+          value={searchInput}
+          onChange={(e) => handleSearchInputChange(e)}
+          className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
+        />
         <div className="flex flex-wrap gap-8 justify-center">
-          {filteredBrassards.map((brassard) => {
+          {filteredByName.map((brassard) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedBrassard(brassard)}

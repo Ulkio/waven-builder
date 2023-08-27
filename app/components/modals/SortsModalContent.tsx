@@ -22,6 +22,7 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
   const neutreVariants = `absolute top-2 left-4 font-bold text-xl text-outline`;
   const manaVariants = `absolute top-1 left-[0.6rem] font-bold text-xl text-outline`;
 
+  const [searchInput, setsearchInput] = useState("");
   const [selectedSort, setSelectedSort] = useState<Sort | null>(null);
   const [displayedSort, setDisplayedSort] = useState<Sort | null>(null);
 
@@ -45,6 +46,24 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
 
     return orderA - orderB;
   });
+
+  const filteredSortsCommunsByName = filteredSortsCommuns.filter((sort) => {
+    if (searchInput === "") {
+      return true;
+    }
+    return sort.nom.toLowerCase().includes(searchInput.toLowerCase());
+  });
+  const filteredSortsArmeByName = filteredSortsArme.filter((sort) => {
+    if (searchInput === "") {
+      return true;
+    }
+    return sort.nom.toLowerCase().includes(searchInput.toLowerCase());
+  });
+
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setsearchInput(e.target.value);
+  };
+
   const handleSortClick = (sort: Sort) => {
     setSelectedSort(sort);
     onSelectedSortChange(sort);
@@ -57,11 +76,18 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
         {arme ? (
           <>
             <div className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="Rechercher"
+                value={searchInput}
+                onChange={(e) => handleSearchInputChange(e)}
+                className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-4 px-2"
+              />
               <p className="ml-4 p-2 rounded-md bg-overlaySide w-fit">Sorts {arme}</p>
-              <div className="flex flex-wrap gap-2 justify-start">
-                {filteredSortsArme.map((sort) => {
+              <div className="flex flex-wrap gap-2 justify-center">
+                {filteredSortsArmeByName.map((sort) => {
                   return (
-                    <div className="flex flex-col  items-center w-36 h-36" key={sort.nom}>
+                    <div className="flex flex-col items-center w-28 h-28" key={sort.nom}>
                       <Image
                         onMouseEnter={() => setDisplayedSort(sort)}
                         onClick={() => handleSortClick(sort)}
@@ -80,10 +106,10 @@ const SortsDialog = ({ onSelectedSortChange, onClickSort, dieu, arme }: SortsDia
             </div>
             <div className="flex flex-col gap-4">
               <p className="ml-4 p-2 rounded-md bg-overlaySide w-fit">Sorts Communs {dieu}</p>
-              <div className="flex flex-wrap gap-2 justify-start">
-                {filteredSortsCommuns.map((sort) => {
+              <div className="flex flex-wrap gap-2 justify-center">
+                {filteredSortsCommunsByName.map((sort) => {
                   return (
-                    <div className="flex flex-col  items-center w-36 h-36 " key={sort.nom}>
+                    <div className="flex flex-col  items-center w-28 h-28 " key={sort.nom}>
                       <Image
                         onMouseEnter={() => setDisplayedSort(sort)}
                         onClick={() => handleSortClick(sort)}

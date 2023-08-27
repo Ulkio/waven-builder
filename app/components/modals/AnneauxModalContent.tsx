@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, HTMLProps } from "react";
 import Image from "next/image";
 import data from "@/api/data.json";
 import { Anneau, CaracteristiqueAnneaux, DonAnneaux } from "@/types/index.ts";
@@ -12,6 +12,7 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
   const rings: Anneau[] = data.equipements.anneaux;
   const RING_BASE_URL = "/img/anneaux";
 
+  const [searchInput, setsearchInput] = useState("");
   const [selectedAnneau, setSelectedAnneau] = useState<Anneau | null>(null);
   const [displayedAnneau, setDisplayedAnneau] = useState<Anneau | null>(null);
   const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
@@ -36,13 +37,25 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
 
     return orderA - orderB;
   });
+
   const filteredAnneaux = selectedRarityFilter
     ? sortedAnneauxRarity.filter((anneau) => anneau.rarete.toLowerCase() === selectedRarityFilter)
     : sortedAnneauxRarity;
 
+  const filteredByName = filteredAnneaux.filter((anneau) => {
+    if (searchInput === "") {
+      return true;
+    }
+    return anneau.nom.toLowerCase().includes(searchInput.toLowerCase());
+  });
+
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setsearchInput(e.target.value);
+  };
   const handleFilterClick = (rarity: string) => {
     setSelectedRarityFilter(rarity);
   };
+
   return (
     <div className="flex h-full">
       <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
@@ -69,8 +82,15 @@ const AnneauxDialog = ({ onSelectedAnneauChange, onClickAnneau }: AnneauxDialogP
             Infinite
           </button>
         </div>
+        <input
+          type="text"
+          placeholder="Rechercher"
+          value={searchInput}
+          onChange={(e) => handleSearchInputChange(e)}
+          className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
+        />
         <div className=" flex flex-wrap gap-8 justify-center">
-          {filteredAnneaux.map((ring) => {
+          {filteredByName.map((ring) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedAnneau(ring)}
