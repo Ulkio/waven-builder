@@ -95,13 +95,13 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
         />
         <div className="flex flex-wrap gap-2 justify-center">
-          {filteredByName.map((compagnon) => {
+          {filteredByName.map((compagnon, index) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedCompagnon(compagnon)}
                 onClick={() => handleCompagnonClick(compagnon)}
                 className={`flex flex-col  items-center w-36 h-36 relative`}
-                key={compagnon.nom}>
+                key={compagnon.nom + index}>
                 <div className="flex items-center relative ">
                   <Image
                     src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
