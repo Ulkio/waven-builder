@@ -848,6 +848,72 @@
         ]
       },
       {
+        "nom": "Ush",
+        "rarete": "Krosmique",
+        "image": "ush",
+        "patchs": [
+          {
+            "version": "0.13",
+            "pv": 106,
+            "at": 18,
+            "cc": 5,
+            "pm": 3,
+            "effet": "Tant qu'il est en jeu : -1 PA au coût de vos sorts Air.\nFratrie des oubliés",
+            "caracteristiques": [
+              {
+                "taux": 5,
+                "effet": "% d'ATTAQUE à ce personnage."
+              },
+              {
+                "taux": 5,
+                "effet": "% de VIE à ce personnage."
+              }
+            ],
+            "dons": [
+              {
+                "nom": "Ush le tricheur",
+                "cout": 100,
+                "effet": "APPARITION : Ajoute le sort Ush le Tricheur à votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Fratrie des oubliés",
+                "cout": 100,
+                "effet": "APPARITION : -2 PA au coût du premier sort de votre main si vous avez un autre compagnon de la Fratrie des oubliés équipé.",
+                "sort": ""
+              },
+              {
+                "nom": "Maitrîse de Ush",
+                "cout": 120,
+                "effet": "ATTAQUE : -1 PA au coût des sorts Air de votre main.",
+                "sort": ""
+              },
+              {
+                "nom": "Spécialité Écaflip",
+                "cout": 80,
+                "effet": "Apparition +3 AURA Griffes Joueuses.",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% d'ATTAQUE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              },
+              {
+                "nom": "ÉVOLUTION DU POTENTIEL",
+                "cout": 100,
+                "effet": "+1% de VIE à ce personnage 1% par niveau du compagnon",
+                "sort": ""
+              }
+            ],
+            "couts": {
+              "air": 5
+            }
+          }
+        ]
+      },
+      {
         "nom": "Dark Vlad",
         "rarete": "Krosmique",
         "image": "dark_vlad",
