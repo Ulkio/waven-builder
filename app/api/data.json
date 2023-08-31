@@ -853,7 +853,7 @@
         "image": "ush",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 106,
             "at": 18,
             "cc": 5,
@@ -4491,7 +4491,7 @@
         "image": "yugo",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 144,
             "at": 30,
             "cc": 5,
@@ -4557,7 +4557,7 @@
         "image": "kerubim",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 150,
             "at": 22,
             "cc": 5,
@@ -4623,7 +4623,7 @@
         "image": "justice",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 158,
             "at": 28,
             "cc": 5,
@@ -4691,7 +4691,7 @@
         "image": "julith",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 140,
             "at": 27,
             "cc": 5,
@@ -4757,7 +4757,7 @@
         "image": "khan_karkass",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 140,
             "at": 32,
             "cc": 5,
@@ -4825,7 +4825,7 @@
         "image": "tristepin",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 148,
             "at": 42,
             "cc": 5,
@@ -4891,7 +4891,7 @@
         "image": "qilby",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 172,
             "at": 36,
             "cc": 5,
@@ -4959,7 +4959,7 @@
         "image": "grougaloragran",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 171,
             "at": 36,
             "cc": 5,
@@ -5025,7 +5025,7 @@
         "image": "echo",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 116,
             "at": 20,
             "cc": 5,
@@ -5091,7 +5091,7 @@
         "image": "katar",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 134,
             "at": 28,
             "cc": 5,
@@ -5159,7 +5159,7 @@
         "image": "evangelyne",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 118,
             "at": 22,
             "cc": 5,
@@ -5225,7 +5225,7 @@
         "image": "nox",
         "patchs": [
           {
-            "version": "0.13",
+            "version": "0.12",
             "pv": 162,
             "at": 30,
             "cc": 5,
@@ -5700,7 +5700,7 @@
             "at": 14,
             "cc": 5,
             "pm": 3,
-            "effet": "APPARITION : Piochez tous vos sorts coûtant 3 point d'action.",
+            "effet": "APPARITION : Piochez 3 sorts coûtant 3 POINTS D'ACTION.",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -6558,7 +6558,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "DECK (12). Début du combat : Piochez 2 sorts. Ils coûtent -1 point d'action.",
+            "pouvoir": "DECK (12). DEBUT DU COMBAT : Piochez 2 sorts.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -7655,7 +7655,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "Apparition d'un de vos compagnons : Piochez 1 sort.",
+            "pouvoir": "APPARITION D'UN DE VOS COMPAGNONS : Piochez un sort. Limité à 4 fois par tour.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -8541,7 +8541,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "DECK (12). Début du combat : -1 point d'action au coût des sorts de votre main.",
+            "pouvoir": "DECK (12). DÉBUT DU COMBAT : -2 POINTS D'ACTION au coût du premier sorts que vous jouez.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -9403,7 +9403,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "Vos sorts coûtant 3 et 4 point d'action sont placés dans votre main de départ.",
+            "pouvoir": "DECK (15) DÉBUT DU COMBAT : +30% de VIE à votre héros.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -9580,7 +9580,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "Vos sorts coûtant 5 et 6 point d'action sont placés dans votre main de départ.",
+            "pouvoir": "APPARITION DE VOTRE PREMIER COMPAGNON : +50% à sa VIE MAX.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -9641,7 +9641,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "Vos sorts coûtant 1 et 2 point d'action sont placés dans votre main de départ.",
+            "pouvoir": "APPARITION D'UN COMPAGNON COÛTANT AU MOINS 5 : Augmente son ATTAQUE de +15% et sa VIE de +30%.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -12987,7 +12987,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "ATTAQUE: Confère Bouclier Pluvieux à votre héros.",
+            "pouvoir": "ATTAQUE: +1 Jauge Eau",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -13414,7 +13414,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "ATTAQUE: Confère Bouclier Foudroyant à votre héros.",
+            "pouvoir": "ATTAQUE: +1 Jauge Air.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -13475,7 +13475,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "ATTAQUE: Confère Bouclier Rocheux à votre héros.",
+            "pouvoir": "ATTAQUE: +1 Jauge Terre.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -13536,7 +13536,7 @@
         "patchs": [
           {
             "version": "0.12",
-            "pouvoir": "ATTAQUE: Confère Bouclier Enflammé à votre héros.",
+            "pouvoir": "ATTAQUE: +1 Jauge Feu.",
             "caracteristiques": [
               {
                 "taux": 1,
@@ -27253,7 +27253,7 @@
           {
             "version": "0.12",
             "cout": 8,
-            "effet": "+1 point d'action par sort dans votre main.Confère BOUCLIER à votre héros.",
+            "effet": "+1 point d'action par sort dans votre main. Confère BOUCLIER à votre héros.",
             "gains": {
               "astral": 1
             }
@@ -27502,17 +27502,17 @@
               },
               {
                 "nom": "Maître Lame",
-                "effet": "Lorsque votre héros est soigné : Place un Cœur Voracius jusqu’à 3 cases autour de lui. Limité à 2 fois par tour.",
+                "effet": "Lorsque votre héros est soigné : Place un Coeur Voracius jusqu’à 3 cases autour de lui. Limité à 2 fois par tour.",
                 "image": "voracius_maitrelame"
               },
               {
                 "nom": "Vitalité Voracius",
-                "effet": "Début du combat Votre héros gagne 2% de sa Vie en attaque.",
+                "effet": "DÉBUT DU COMBAT : Votre héros gagne 1% de sa VIE MAX en ATTAQUE.",
                 "image": "voracius_vitalite"
               },
               {
                 "nom": "Puissance Voracius",
-                "effet": "Lorsqu'il est soigné : +30% d'attaque à votre héros jusqu’à la fin du tour.",
+                "effet": "Lorsqu'il est soigné : +20% d'ATTAQUE à votre héros jusqu'à la fin du tour.",
                 "image": "voracius_puissance"
               }
             ],
@@ -27645,7 +27645,7 @@
             "passifs": [
               {
                 "nom": "Armure Spectrale",
-                "effet": "Lorsqu’une Âmes Spectrales Attaque Confère son attaque en armure à vos personnages.",
+                "effet": "Lorsqu'une ÂME SPECTRALE ATTAQUE : Confère 100% de son ATTAQUE en ARMURE à vos personnages. Limité à 2 fois par tour.",
                 "image": "spectral_armure"
               },
               {
