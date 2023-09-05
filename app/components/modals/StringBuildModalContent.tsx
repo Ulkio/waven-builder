@@ -35,18 +35,22 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-evenly h-fit gap-4 p-4 xl:px-32">
-      <p className="block mb-2 text-md font-medium ">Votre build</p>
-      <p className="block mb-2 text-md font-medium ">Vous pouvez enregistrer cette image en cliquant dessus !</p>
+    <div className="flex h-fit flex-col items-center justify-evenly gap-4 p-4 xl:px-32">
+      <p className="text-md mb-2 block font-medium ">Votre build</p>
+      <p className="text-md mb-2 block font-medium ">
+        Vous pouvez enregistrer cette image en cliquant dessus !
+      </p>
       <div
         id="buildDiv"
-        className="border border-white rounded-lg flex xl:flex-row flex-col gap-8 p-4 h-fit hover:cursor-pointer xl:hover:scale-105 duration-200 ease-linear "
-        onClick={onClickBuildDiv}>
+        className="flex h-fit flex-col gap-8 rounded-lg border border-white p-4 duration-200 ease-linear hover:cursor-pointer xl:flex-row xl:hover:scale-105 "
+        onClick={onClickBuildDiv}
+      >
         <div
           className="h-fit self-center"
           data-tooltip-id={`tooltip-arme`}
           data-tooltip-content={build.arme?.nom}
-          data-tooltip-place="bottom">
+          data-tooltip-place="bottom"
+        >
           <Image
             src={`${ARME_BASE_URL}/${build.arme?.image}.png`}
             alt="arme"
@@ -56,7 +60,7 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           />
           <Tooltip id={`tooltip-arme`} className="tooltip z-20 " />
         </div>
-        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-2">
+        <div className="flex flex-wrap justify-center gap-2 xl:grid xl:grid-cols-2">
           {[...Array(4)].map((_, index) => {
             const anneau = build.anneaux[index];
             return (
@@ -66,7 +70,8 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                     data-tooltip-id={`tooltip-anneau-${index}`}
                     data-tooltip-content={anneau.nom}
                     data-tooltip-place="bottom"
-                    className="flex items-center relative ">
+                    className="relative flex items-center "
+                  >
                     <Image
                       src={`/img/utils/bg_${anneau.rarete.toLowerCase()}.png`}
                       alt={anneau.nom}
@@ -81,7 +86,10 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                       height={80}
                       className=" z-10 object-scale-down"
                     />
-                    <Tooltip id={`tooltip-anneau-${index}`} className="tooltip z-20 " />
+                    <Tooltip
+                      id={`tooltip-anneau-${index}`}
+                      className="tooltip z-20 "
+                    />
                   </div>
                 )}
               </React.Fragment>
@@ -92,7 +100,8 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           data-tooltip-id={`tooltip-brassard`}
           data-tooltip-content={build.brassard?.nom}
           data-tooltip-place="bottom"
-          className="flex items-center justify-center relative ">
+          className="relative flex items-center justify-center "
+        >
           <Image
             src={`/img/utils/bg_${build.brassard?.rarete.toLowerCase()}.png`}
             alt={`bg`}
@@ -109,7 +118,7 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           />
           <Tooltip id={`tooltip-brassard`} className="tooltip z-20 " />
         </div>
-        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-2">
+        <div className="flex flex-wrap justify-center gap-2 xl:grid xl:grid-cols-2">
           {[...Array(4)].map((_, index) => {
             const compagnon = build.compagnons[index];
             return (
@@ -119,7 +128,8 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                     data-tooltip-id={`tooltip-compagnon-${index}`}
                     data-tooltip-content={compagnon.nom}
                     data-tooltip-place="bottom"
-                    className="flex items-center relative ">
+                    className="relative flex items-center "
+                  >
                     <Image
                       src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                       alt={compagnon.nom}
@@ -134,14 +144,17 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                       height={80}
                       className=" z-10 object-scale-down"
                     />
-                    <Tooltip id={`tooltip-compagnon-${index}`} className="tooltip z-20 " />
+                    <Tooltip
+                      id={`tooltip-compagnon-${index}`}
+                      className="tooltip z-20 "
+                    />
                   </div>
                 )}
               </React.Fragment>
             );
           })}
         </div>
-        <div className="flex justify-center flex-wrap gap-2 xl:grid xl:grid-cols-5 xl:grid-rows-3">
+        <div className="flex flex-wrap justify-center gap-2 xl:grid xl:grid-cols-5 xl:grid-rows-3">
           {[...Array(15)].map((_, index) => {
             const sort = build.sorts[index];
             return (
@@ -150,7 +163,8 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                   <div
                     data-tooltip-id={`tooltip-sort-${index}`}
                     data-tooltip-content={sort.nom}
-                    data-tooltip-place="bottom">
+                    data-tooltip-place="bottom"
+                  >
                     <Image
                       src={`${SORT_BASE_URL}/${sort.image}.png`}
                       width={60}
@@ -158,7 +172,10 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
                       alt={sort.nom}
                       className="object-scale-down"
                     />
-                    <Tooltip id={`tooltip-sort-${index}`} className="tooltip z-10 " />
+                    <Tooltip
+                      id={`tooltip-sort-${index}`}
+                      className="tooltip z-10 "
+                    />
                   </div>
                 )}
               </React.Fragment>
@@ -166,7 +183,9 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
           })}
         </div>
       </div>
-      <p className="block mb-2 text-sm font-medium">Copiez cette suite de caractères pour partager votre build :</p>
+      <p className="mb-2 block text-sm font-medium">
+        Copiez cette suite de caractères pour partager votre build :
+      </p>
 
       <Image
         data-tooltip-id="my-tooltip"
@@ -177,11 +196,13 @@ const StringBuildDialog = ({ stringBuild, build }: StringBuildDialogProps) => {
         height={32}
         src="/img/copy.png"
         alt="copy"
-        className=" rounded-lg invert hover:cursor-pointer self-start"
+        className=" self-start rounded-lg invert hover:cursor-pointer"
       />
       <Tooltip id="my-tooltip" />
 
-      <p className="bg-overlaySide overflow-y-auto w-full break-words p-2 rounded-lg border">{stringBuild}</p>
+      <p className="w-full overflow-y-auto break-words rounded-lg border bg-overlaySide p-2">
+        {stringBuild}
+      </p>
     </div>
   );
 };

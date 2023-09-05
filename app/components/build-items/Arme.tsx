@@ -7,7 +7,15 @@ import { BuildArmeProps, Passif, PassifValues } from "@/types";
 const ARME_BASE_URL = "/img/armes";
 const PASSIFS_BASE_URL = "/img/passifs";
 
-type PassifType = "pv_50" | "pv_25" | "pv_12" | "pv_5" | "at_50" | "at_20" | "at_7" | "at_3";
+type PassifType =
+  | "pv_50"
+  | "pv_25"
+  | "pv_12"
+  | "pv_5"
+  | "at_50"
+  | "at_20"
+  | "at_7"
+  | "at_3";
 const passifValuesInitialState: PassifValues = {
   pv_50: 0,
   pv_25: 0,
@@ -52,18 +60,24 @@ const Arme = ({
   });
   const [totalPvPercentage, setTotalPvPercentage] = useState(100); // Initialize to 100%
   const [totalAtPercentage, setTotalAtPercentage] = useState(100); // Initialize to 100%
-  const [passifValues, setPassifValues] = useState<PassifValues>(passifValuesInitialState);
+  const [passifValues, setPassifValues] = useState<PassifValues>(
+    passifValuesInitialState,
+  );
 
   const handleClickPassif = (passif: Passif) => {
     if (selectedPassives.length <= 2) {
       if (selectedPassives.some((p) => p.nom === passif.nom)) {
-        setSelectedPassives((prev) => prev.filter((selected) => selected.nom != passif.nom));
+        setSelectedPassives((prev) =>
+          prev.filter((selected) => selected.nom != passif.nom),
+        );
         return;
       }
     }
     if (selectedPassives.length === 2) return;
     if (passifs.includes(passif)) {
-      setPassifs((prev) => prev.filter((selectedPassif) => selectedPassif.nom != passif.nom));
+      setPassifs((prev) =>
+        prev.filter((selectedPassif) => selectedPassif.nom != passif.nom),
+      );
     } else {
       if (passifs.length < 2) {
         setPassifs((prev) => [...passifs, passif]);
@@ -148,14 +162,23 @@ const Arme = ({
     at_7: 10,
     at_3: 15,
   };
-  const handlePvPercentageChange = (operation: "decrement" | "increment", percentage: number, type: PassifType) => {
+  const handlePvPercentageChange = (
+    operation: "decrement" | "increment",
+    percentage: number,
+    type: PassifType,
+  ) => {
     const updatedPvPercentage =
-      operation === "decrement" ? totalPvPercentage - percentage : totalPvPercentage + percentage;
+      operation === "decrement"
+        ? totalPvPercentage - percentage
+        : totalPvPercentage + percentage;
 
     const passifCount = passifValues[type];
     const maxCount = maxPassifCounts[type];
 
-    if ((operation === "decrement" && passifCount > 0) || (operation === "increment" && passifCount < maxCount)) {
+    if (
+      (operation === "decrement" && passifCount > 0) ||
+      (operation === "increment" && passifCount < maxCount)
+    ) {
       setTotalPvPercentage(updatedPvPercentage);
       setPassifValues((prev) => ({
         ...prev,
@@ -164,14 +187,23 @@ const Arme = ({
     }
   };
 
-  const handleAtPercentageChange = (operation: "decrement" | "increment", percentage: number, type: PassifType) => {
+  const handleAtPercentageChange = (
+    operation: "decrement" | "increment",
+    percentage: number,
+    type: PassifType,
+  ) => {
     const updatedAtPercentage =
-      operation === "decrement" ? totalAtPercentage - percentage : totalAtPercentage + percentage;
+      operation === "decrement"
+        ? totalAtPercentage - percentage
+        : totalAtPercentage + percentage;
 
     const passifCount = passifValues[type];
     const maxCount = maxPassifCounts[type];
 
-    if ((operation === "decrement" && passifCount > 0) || (operation === "increment" && passifCount < maxCount)) {
+    if (
+      (operation === "decrement" && passifCount > 0) ||
+      (operation === "increment" && passifCount < maxCount)
+    ) {
       setTotalAtPercentage(updatedAtPercentage);
       setPassifValues((prev) => ({
         ...prev,
@@ -278,98 +310,146 @@ const Arme = ({
               className="hover:cursor-pointer"
             />
           )}
-          <div className="relative w-full flex items-center justify-evenly">
+          <div className="relative flex w-full items-center justify-evenly">
             <div className="flex flex-col flex-wrap xl:grid xl:grid-cols-2 xl:gap-x-6">
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handlePvPercentageChange("decrement", 50, "pv_50");
                       decrementPassifPv_50();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="pv passif"
+                    src="/img/passif_bg_pv.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handlePvPercentageChange("increment", 50, "pv_50");
                       incrementPassifPv_50();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_50 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifPv_50 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    50%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handlePvPercentageChange("decrement", 25, "pv_25");
                       decrementPassifPv_25();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="pv passif"
+                    src="/img/passif_bg_pv.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handlePvPercentageChange("increment", 25, "pv_25");
                       incrementPassifPv_25();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_25 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">25%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifPv_25 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    25%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handlePvPercentageChange("decrement", 12, "pv_12");
                       decrementPassifPv_12();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="pv passif"
+                    src="/img/passif_bg_pv.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handlePvPercentageChange("increment", 12, "pv_12");
                       incrementPassifPv_12();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_12 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">12%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifPv_12 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    12%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handlePvPercentageChange("decrement", 5, "pv_5");
                       decrementPassifPv_5();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="pv passif" src="/img/passif_bg_pv.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="pv passif"
+                    src="/img/passif_bg_pv.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handlePvPercentageChange("increment", 5, "pv_5");
                       incrementPassifPv_5();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifPv_5 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">5%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifPv_5 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    5%
+                  </p>
                 </div>
               </div>
             </div>
@@ -385,118 +465,177 @@ const Arme = ({
             )}
             <div className="flex flex-col flex-wrap xl:grid xl:grid-cols-2 xl:gap-x-6 ">
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handleAtPercentageChange("decrement", 50, "at_50");
                       decrementPassifAtk_50();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="atk passif"
+                    src="/img/passif_bg_atk.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handleAtPercentageChange("increment", 50, "at_50");
                       incrementPassifAtk_50();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_50 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">50%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifAtk_50 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    50%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handleAtPercentageChange("decrement", 20, "at_20");
                       decrementPassifAtk_20();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="atk passif"
+                    src="/img/passif_bg_atk.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handleAtPercentageChange("increment", 20, "at_20");
                       incrementPassifAtk_20();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_20 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">20%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifAtk_20 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    20%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handleAtPercentageChange("decrement", 7, "at_7");
                       decrementPassifAtk_7();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="atk passif"
+                    src="/img/passif_bg_atk.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handleAtPercentageChange("increment", 7, "at_7");
                       incrementPassifAtk_7();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_7 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">7%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifAtk_7 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    7%
+                  </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <p
                     onClick={() => {
                       handleAtPercentageChange("decrement", 3, "at_3");
                       decrementPassifAtk_3();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     -
                   </p>
-                  <Image width={60} height={60} alt="atk passif" src="/img/passif_bg_atk.png" className="" />
+                  <Image
+                    width={60}
+                    height={60}
+                    alt="atk passif"
+                    src="/img/passif_bg_atk.png"
+                    className=""
+                  />
                   <p
                     onClick={() => {
                       handleAtPercentageChange("increment", 3, "at_3");
                       incrementPassifAtk_3();
                     }}
-                    className="border border-white rounded-lg px-2 hover:cursor-pointer">
+                    className="rounded-lg border border-white px-2 hover:cursor-pointer"
+                  >
                     +
                   </p>
-                  <p className="absolute top-2 left-[3.2rem] text-xs opacity-50 font-bold">{passifAtk_3 || 0}</p>
-                  <p className="absolute top-[1.50rem] left-[2.75rem] text-sm font-bold">3%</p>
+                  <p className="absolute left-[3.2rem] top-2 text-xs font-bold opacity-50">
+                    {passifAtk_3 || 0}
+                  </p>
+                  <p className="absolute left-[2.75rem] top-[1.50rem] text-sm font-bold">
+                    3%
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <p className="font-black text-3xl">{item?.nom}</p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+          <p className="text-3xl font-black">{item?.nom}</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex items-center gap-2 rounded-lg bg-attributeSelected px-4 py-2">
               <Image src="/img/utils/pv.png" width={30} height={30} alt="pv" />
               <p className="font-bold">
-                {Math.floor(scaledBuildStats.pv * (itemsStats.totalPv + totalPvPercentage / 100))}
+                {Math.floor(
+                  scaledBuildStats.pv *
+                    (itemsStats.totalPv + totalPvPercentage / 100),
+                )}
               </p>
             </div>
-            <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+            <div className="flex items-center gap-2 rounded-lg bg-attributeSelected px-4 py-2">
               <Image src="/img/utils/at.png" width={30} height={30} alt="atk" />
               <p className="font-bold">
-                {Math.round(scaledBuildStats.at * (itemsStats.totalAt + totalAtPercentage / 100))}
+                {Math.round(
+                  scaledBuildStats.at *
+                    (itemsStats.totalAt + totalAtPercentage / 100),
+                )}
               </p>
             </div>
-            <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
-              <Image src="/img/utils/cc.png" width={30} height={30} alt="crit" />
+            <div className="flex items-center gap-2 rounded-lg bg-attributeSelected px-4 py-2">
+              <Image
+                src="/img/utils/cc.png"
+                width={30}
+                height={30}
+                alt="crit"
+              />
               <p className="font-bold">{scaledBuildStats.cc}%</p>
             </div>
-            <div className="flex items-center bg-attributeSelected rounded-lg px-4 py-2 gap-2">
+            <div className="flex items-center gap-2 rounded-lg bg-attributeSelected px-4 py-2">
               <Image src="/img/utils/pm.png" width={30} height={30} alt="pm" />
               <p className="font-bold">{item.patchs[0].pm}</p>
             </div>
@@ -506,20 +645,22 @@ const Arme = ({
             {item.patchs[0].passifs.map((passif) => {
               return (
                 <div
-                  className={`flex flex-row xl:flex-col items-center w-full hover:cursor-pointer transition-all duration-200 ease-in-out`}
+                  className={`flex w-full flex-row items-center transition-all duration-200 ease-in-out hover:cursor-pointer xl:flex-col`}
                   key={passif.nom}
-                  onClick={() => handleClickPassif(passif)}>
+                  onClick={() => handleClickPassif(passif)}
+                >
                   <div
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content={`${passif.effet}`}
                     data-tooltip-place="bottom"
-                    className="flex relative  items-center justify-center">
+                    className="relative flex  items-center justify-center"
+                  >
                     <Image
                       src={`${PASSIFS_BASE_URL}/${passif.image}.png`}
                       width={100}
                       height={100}
                       alt="bg_passif"
-                      className="absolute opacity-30 object-scale-down h-1/2"
+                      className="absolute h-1/2 object-scale-down opacity-30"
                     />
                     <Image
                       src="/img/passif_bg.png"
@@ -537,7 +678,9 @@ const Arme = ({
                         className="absolute object-scale-down"
                       />
                     )}
-                    {selectedPassives.some((selectedPassif) => selectedPassif.nom === passif.nom) && (
+                    {selectedPassives.some(
+                      (selectedPassif) => selectedPassif.nom === passif.nom,
+                    ) && (
                       <Image
                         src="/img/passif_bg_highlight.png"
                         width={150}
@@ -546,7 +689,9 @@ const Arme = ({
                         className="absolute object-scale-down"
                       />
                     )}
-                    <p className=" absolute text-center text-sm px-8 font-bold">{passif.nom}</p>
+                    <p className=" absolute px-8 text-center text-sm font-bold">
+                      {passif.nom}
+                    </p>
                   </div>
                   <Tooltip id="my-tooltip" className="tooltip " />
                 </div>
@@ -554,7 +699,7 @@ const Arme = ({
             })}
           </div>
 
-          <div className="flex flex-col items-center gap-4 w-full px-16">
+          <div className="flex w-full flex-col items-center gap-4 px-16">
             <input
               type="range"
               id="volume"
@@ -576,7 +721,7 @@ const Arme = ({
           height={300}
           priority
           onClick={openModal}
-          className="hover:cursor-pointer hover:-translate-y-4 transition duration-200 ease-in-out animate-pulse"
+          className="animate-pulse transition duration-200 ease-in-out hover:-translate-y-4 hover:cursor-pointer"
         />
       )}
     </>

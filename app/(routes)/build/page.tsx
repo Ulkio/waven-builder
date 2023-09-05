@@ -12,7 +12,15 @@ import "../../styles/modal.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/tooltip.css";
 import "react-tooltip/dist/react-tooltip.css";
-import { Anneau, Arme, Brassard, Compagnon, Build, Sort, Passif } from "@/types";
+import {
+  Anneau,
+  Arme,
+  Brassard,
+  Compagnon,
+  Build,
+  Sort,
+  Passif,
+} from "@/types";
 import { ModalComponent } from "@/components/modal-containers/ModalComponent";
 import AnneauxModalContent from "@/components/modals/AnneauxModalContent";
 import BrassardsModalContent from "@/components/modals/BrassardsModalContent";
@@ -93,39 +101,46 @@ const Build = () => {
   const handleSelectedBrassardChange = (selectedBrassard: Brassard) => {
     setBuild((prev) => ({ ...prev, brassard: selectedBrassard }));
   };
-  const handleSelectedCompagnonChangeGenerator = (index: number) => (selected: Compagnon) => {
-    setBuild((prev) => {
-      const newCompagnons = [...prev.compagnons];
-      newCompagnons[index] = selected;
-      return { ...prev, compagnons: newCompagnons };
-    });
-  };
+  const handleSelectedCompagnonChangeGenerator =
+    (index: number) => (selected: Compagnon) => {
+      setBuild((prev) => {
+        const newCompagnons = [...prev.compagnons];
+        newCompagnons[index] = selected;
+        return { ...prev, compagnons: newCompagnons };
+      });
+    };
 
-  const handleSelectedCompagnon1Change = handleSelectedCompagnonChangeGenerator(0);
-  const handleSelectedCompagnon2Change = handleSelectedCompagnonChangeGenerator(1);
-  const handleSelectedCompagnon3Change = handleSelectedCompagnonChangeGenerator(2);
-  const handleSelectedCompagnon4Change = handleSelectedCompagnonChangeGenerator(3);
+  const handleSelectedCompagnon1Change =
+    handleSelectedCompagnonChangeGenerator(0);
+  const handleSelectedCompagnon2Change =
+    handleSelectedCompagnonChangeGenerator(1);
+  const handleSelectedCompagnon3Change =
+    handleSelectedCompagnonChangeGenerator(2);
+  const handleSelectedCompagnon4Change =
+    handleSelectedCompagnonChangeGenerator(3);
 
-  const handleSelectedAnneauChangeGenerator = (index: number) => (selected: Anneau) => {
-    setBuild((prev) => {
-      const newAnneaux = [...prev.anneaux];
-      newAnneaux[index] = selected;
-      return { ...prev, anneaux: newAnneaux };
-    });
-  };
+  const handleSelectedAnneauChangeGenerator =
+    (index: number) => (selected: Anneau) => {
+      setBuild((prev) => {
+        const newAnneaux = [...prev.anneaux];
+        newAnneaux[index] = selected;
+        return { ...prev, anneaux: newAnneaux };
+      });
+    };
 
   const handleSelectedAnneau1Change = handleSelectedAnneauChangeGenerator(0);
   const handleSelectedAnneau2Change = handleSelectedAnneauChangeGenerator(1);
   const handleSelectedAnneau3Change = handleSelectedAnneauChangeGenerator(2);
   const handleSelectedAnneau4Change = handleSelectedAnneauChangeGenerator(3);
 
-  const handleSelectedSortChangeGenerator = (index: number) => (selected: Sort) => {
-    setBuild((prev) => {
-      const newSorts = [...prev.sorts];
-      newSorts[index] = selected;
-      return { ...prev, sorts: newSorts };
-    });
-  };
+  const handleSelectedSortChangeGenerator =
+    (index: number) => (selected: Sort) => {
+      setBuild((prev) => {
+        const newSorts = [...prev.sorts];
+        newSorts[index] = selected;
+        return { ...prev, sorts: newSorts };
+      });
+    };
   const handleSelectedSort1Change = handleSelectedSortChangeGenerator(0);
   const handleSelectedSort2Change = handleSelectedSortChangeGenerator(1);
   const handleSelectedSort3Change = handleSelectedSortChangeGenerator(2);
@@ -144,7 +159,8 @@ const Build = () => {
   //#endregion
 
   //#region MODAL
-  const [openModalStringBuild, setOpenModalStringBuild] = useState<boolean>(false);
+  const [openModalStringBuild, setOpenModalStringBuild] =
+    useState<boolean>(false);
 
   const handleModalToggle = (modalState: string) => {
     if (isTabletOrMobile) return;
@@ -418,7 +434,7 @@ const Build = () => {
     // Add more entries for other modals
   ];
   const [modalStates, setModalStates] = useState(
-    Object.fromEntries(modalsConfig.map((config) => [config.stateName, false]))
+    Object.fromEntries(modalsConfig.map((config) => [config.stateName, false])),
   );
 
   const openModal = (modalState: any) => {
@@ -490,7 +506,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex flex-col items-stretch justify-between h-screen xl:p-2 gap-6">
+    <main className=" flex h-screen flex-col items-stretch justify-between gap-6 xl:p-2">
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -498,7 +514,7 @@ const Build = () => {
           height={40}
           src="/img/left-arrow.png"
           alt="long-arrow-left"
-          className="fixed top-2 left-4 invert"
+          className="fixed left-4 top-2 invert"
         />
       </Link>
       {build.arme && !isTabletOrMobile && (
@@ -507,7 +523,8 @@ const Build = () => {
           variants={variants}
           animate={"show"}
           initial="hide"
-          className="fixed bottom-0 right-0">
+          className="fixed bottom-0 right-0"
+        >
           <Image
             src={`/img/splash/${build.arme.nom
               .toLowerCase()
@@ -523,12 +540,12 @@ const Build = () => {
         </motion.div>
       )}
 
-      <div className="flex  xl:flex-col xl:px-12 gap-4 justify-between xl:h-full pt-16 xl:pt-24">
-        <div className="flex flex-col xl:flex-row w-full gap-8 xl:gap-0">
-          <div className="flex  xl:flex-col xl:basis-2/12 xl:px-4">
-            <div className="flex  flex-col justify-center items-center w-full">
+      <div className="flex  justify-between gap-4 pt-16 xl:h-full xl:flex-col xl:px-12 xl:pt-24">
+        <div className="flex w-full flex-col gap-8 xl:flex-row xl:gap-0">
+          <div className="flex  xl:basis-2/12 xl:flex-col xl:px-4">
+            <div className="flex  w-full flex-col items-center justify-center">
               <p className={titleVariants}>Anneaux</p>
-              <div className="flex flex-wrap justify-center gap-8 xl:gap-0 xl:flex-col ">
+              <div className="flex flex-wrap justify-center gap-8 xl:flex-col xl:gap-0 ">
                 {[...Array(4)].map((_, index) => {
                   const anneau = build.anneaux[index];
                   return (
@@ -536,22 +553,30 @@ const Build = () => {
                       data-tooltip-id={`anneau-tooltip-${index}`}
                       data-tooltip-content={`${anneau?.patchs[0].pouvoir}`}
                       data-tooltip-place="right"
-                      key={index}>
+                      key={index}
+                    >
                       <AnneauItem
                         item={anneau}
-                        openModal={() => openModal(`openAnneau${index + 1}Modal`)}
+                        openModal={() =>
+                          openModal(`openAnneau${index + 1}Modal`)
+                        }
                         squareVariants={squareVariants}
                       />
-                      {anneau && <Tooltip id={`anneau-tooltip-${index}`} className="tooltip z-10 " />}
+                      {anneau && (
+                        <Tooltip
+                          id={`anneau-tooltip-${index}`}
+                          className="tooltip z-10 "
+                        />
+                      )}
                     </div>
                   );
                 })}
               </div>
             </div>
           </div>
-          <div className="flex xl:flex-col justify-center xl:justify-normal xl:basis-1/12">
-            <div className="flex flex-wrap xl:flex-nowrap xl:gap-0 xl:flex-col">
-              <div className="flex flex-col justify-center items-center ">
+          <div className="flex justify-center xl:basis-1/12 xl:flex-col xl:justify-normal">
+            <div className="flex flex-wrap xl:flex-col xl:flex-nowrap xl:gap-0">
+              <div className="flex flex-col items-center justify-center ">
                 <p className={titleVariants}>Brassard</p>
                 <BrassardItem
                   item={build.brassard!}
@@ -574,8 +599,8 @@ const Build = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col xl:basis-3/12 xl:px-4 gap-16 xl:gap-0">
-            <div className="flex flex-col gap-2 xl:px-4 items-center xl:items-start">
+          <div className="flex flex-col gap-16 xl:basis-3/12 xl:gap-0 xl:px-4">
+            <div className="flex flex-col items-center gap-2 xl:items-start xl:px-4">
               <p className={titleVariants}>Compagnons</p>
               <div className="flex flex-row flex-wrap justify-center gap-y-12">
                 {[...Array(4)].map((_, index) => {
@@ -587,19 +612,23 @@ const Build = () => {
                       companionSquareVariants={companionSquareVariants}
                       emptyCompanionVariants={emptyCompanionVariants}
                       item={compagnon}
-                      openModal={() => openModal(`openCompagnon${index + 1}Modal`)}
+                      openModal={() =>
+                        openModal(`openCompagnon${index + 1}Modal`)
+                      }
                     />
                   );
                 })}
               </div>
             </div>
-            <div className="flex flex-col gap-2 xl:px-4 xl:items-start items-center xl:pt-16">
+            <div className="flex flex-col items-center gap-2 xl:items-start xl:px-4 xl:pt-16">
               <p className={titleVariants}>Sorts</p>
               {!build.arme ? (
-                <p className="text-md italic opacity-50">Sélectionnez une arme !</p>
+                <p className="text-md italic opacity-50">
+                  Sélectionnez une arme !
+                </p>
               ) : (
                 <>
-                  <div className="flex flex-wrap gap-2 max-w-96 px-16 xl:px-0 justify-center w-full ">
+                  <div className="max-w-96 flex w-full flex-wrap justify-center gap-2 px-16 xl:px-0 ">
                     {[...Array(15)].map((_, index) => {
                       const sort = build.sorts[index];
                       return (
@@ -607,7 +636,9 @@ const Build = () => {
                           key={index}
                           index={index}
                           item={sort}
-                          openModal={() => openModal(`openSort${index + 1}Modal`)}
+                          openModal={() =>
+                            openModal(`openSort${index + 1}Modal`)
+                          }
                           spellSquareVariants={spellSquareVariants}
                         />
                       );
@@ -620,9 +651,11 @@ const Build = () => {
         </div>
       </div>
 
-      <div className="flex flex-col xl:mt-0 mt-8  xl:flex-row w-full  gap-4 xl:gap-20 xl:self-center justify-center items-center">
+      <div className="mt-8 flex w-full flex-col  items-center justify-center  gap-4 xl:mt-0 xl:flex-row xl:gap-20 xl:self-center">
         <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4 w-48 text-center">Sauvegarder</p>
+          <p className="w-48 rounded-lg border border-white p-4 text-center text-2xl font-bold">
+            Sauvegarder
+          </p>
           <ToastContainer
             position="bottom-right"
             autoClose={2000}
@@ -636,7 +669,9 @@ const Build = () => {
           />
         </div>
         <div onClick={handleImportBuild} className="hover:cursor-pointer">
-          <p className="font-bold text-2xl border border-white rounded-lg p-4  w-48  text-center">Importer</p>
+          <p className="w-48 rounded-lg border border-white p-4 text-center  text-2xl  font-bold">
+            Importer
+          </p>
         </div>
       </div>
 
@@ -648,12 +683,20 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={50} height={50} />}
+          closeIcon={
+            <Image
+              src={"/img/close-icon.png"}
+              alt="close"
+              width={50}
+              height={50}
+            />
+          }
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
             root: "scrollbar-none",
-          }}>
+          }}
+        >
           <StringBuildModalContent stringBuild={encryptedBuild} build={build} />
         </Modal>
         <Modal
@@ -662,12 +705,20 @@ const Build = () => {
           center
           closeOnOverlayClick={true}
           showCloseIcon={true}
-          closeIcon={<Image src={"/img/close-icon.png"} alt="close" width={50} height={50} />}
+          closeIcon={
+            <Image
+              src={"/img/close-icon.png"}
+              alt="close"
+              width={50}
+              height={50}
+            />
+          }
           classNames={{
             overlay: "customOverlay",
             modal: "customModalImport",
             root: "scrollbar-none",
-          }}>
+          }}
+        >
           <ImportModalContent onClickButton={handleImportButtonClick} />
         </Modal>
         <Modal
@@ -680,12 +731,17 @@ const Build = () => {
             overlay: "customOverlay",
             modal: "customModalAlert",
             root: "scrollbar-none",
-          }}>
-          <div className="flex flex-col justify-evenly items-center h-full ">
-            <p className="text-center text-lg px-16">
-              Les données sont celles de la démo. Une mise à jour arrive prochainement.
+          }}
+        >
+          <div className="flex h-full flex-col items-center justify-evenly ">
+            <p className="px-16 text-center text-lg">
+              Les données sont celles de la démo. Une mise à jour arrive
+              prochainement.
             </p>
-            <button onClick={closeModalAlert} className="border-2 border-white rounded-lg p-2 w-24 text-lg font-bold">
+            <button
+              onClick={closeModalAlert}
+              className="w-24 rounded-lg border-2 border-white p-2 text-lg font-bold"
+            >
               OK
             </button>
           </div>

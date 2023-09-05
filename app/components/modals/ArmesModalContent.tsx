@@ -9,7 +9,10 @@ interface ArmesDialogProps {
   onClickArme: () => void;
 }
 
-const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) => {
+const ArmesDialog = ({
+  onSelectedArmeChange,
+  onClickArme,
+}: ArmesDialogProps) => {
   const armes: Arme[] = data.armes.armes;
   const weaponCategories = [
     { category: "Crâ", filter: "crâ" },
@@ -30,12 +33,17 @@ const ArmesDialog = ({ onSelectedArmeChange, onClickArme }: ArmesDialogProps) =>
     onClickArme();
   };
   return (
-    <div className="flex flex-wrap justify-center  px-8 gap-4 py-4">
-      <h2 className="text-center w-full font-extrabold text-3xl">Armes</h2>
+    <div className="flex flex-wrap justify-center  gap-4 px-8 py-4">
+      <h2 className="w-full text-center text-3xl font-extrabold">Armes</h2>
       {weaponCategories.map((weaponCategory) => (
-        <div className="flex flex-col w-full gap-2" key={weaponCategory.category}>
-          <p className="text-2xl font-extrabold italic text-center">{weaponCategory.category}</p>
-          <div className="flex flex-wrap justify-evenly bg-overlaySide rounded-lg p-8">
+        <div
+          className="flex w-full flex-col gap-2"
+          key={weaponCategory.category}
+        >
+          <p className="text-center text-2xl font-extrabold italic">
+            {weaponCategory.category}
+          </p>
+          <div className="flex flex-wrap justify-evenly rounded-lg bg-overlaySide p-8">
             {armes
               .filter((arme) => arme.dieu === weaponCategory.filter)
               .map((arme) => (

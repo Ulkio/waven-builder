@@ -4,7 +4,7 @@ import Header from "./layout/Header";
 
 export default function Home() {
   return (
-    <main className="flex justify-center items-center h-screen p-16 gap-16 ">
+    <main className="flex h-screen items-center justify-center gap-16 p-16 ">
       <Header />
 
       <Link href="build">
@@ -13,14 +13,16 @@ export default function Home() {
           alt="créer un build"
           width={300}
           height={300}
-          className="hover:cursor-pointer hover:-translate-y-4 hover:scale-105 transition duration-500 ease-in-out"
+          className="transition duration-500 ease-in-out hover:-translate-y-4 hover:scale-105 hover:cursor-pointer"
         />
       </Link>
 
-      <footer className="py-2 fixed flex text-center bottom-0 px-4">
-        <p className="text-xs opacity-50 text-center w-full">
-          © 2023 Waven est un jeu vidéo édité par Ankama. ce site est un site non-officiel sans affiliation avec Ankama.
-          Certaines illustrations sont la propriété d&apos;Ankama Studio et de Waven - Tous droits réservés
+      <footer className="fixed bottom-0 flex px-4 py-2 text-center">
+        <p className="w-full text-center text-xs opacity-50">
+          © 2023 Waven est un jeu vidéo édité par Ankama. ce site est un site
+          non-officiel sans affiliation avec Ankama. Certaines illustrations
+          sont la propriété d&apos;Ankama Studio et de Waven - Tous droits
+          réservés
         </p>
       </footer>
     </main>

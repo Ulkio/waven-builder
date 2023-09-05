@@ -17,8 +17,9 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
       data-tooltip-id={`my-tooltip-${arme.nom.replace("'", "_")}`}
       data-tooltip-content={`${arme.patchs[0].effet}`}
       data-tooltip-place="bottom"
-      className="flex flex-col justify-center items-center p-2 "
-      key={arme.nom}>
+      className="flex flex-col items-center justify-center p-2 "
+      key={arme.nom}
+    >
       <Image
         onMouseEnter={onMouseEnter}
         onClick={onClick}
@@ -28,7 +29,10 @@ const Weapon = ({ arme, onClick, onMouseEnter }: WeaponProps) => {
         height={100}
         className="hover:cursor-pointer "
       />
-      <Tooltip id={`my-tooltip-${arme.nom.replace("'", "_")}`} className="tooltip " />
+      <Tooltip
+        id={`my-tooltip-${arme.nom.replace("'", "_")}`}
+        className="tooltip "
+      />
       <p className="text-md text-center font-bold ">{arme.nom}</p>
     </div>
   );

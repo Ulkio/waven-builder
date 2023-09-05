@@ -6,7 +6,12 @@ const Brassard = ({ item, squareVariants, openModal }: BuildItemProps) => {
   const BRASSARD_BASE_URL = "/img/brassards";
   return (
     <div className="flex flex-col ">
-      <div className={`flex items-center justify-center relative ${!item && squareVariants}`} onClick={openModal}>
+      <div
+        className={`relative flex items-center justify-center ${
+          !item && squareVariants
+        }`}
+        onClick={openModal}
+      >
         {!item && (
           <Image
             src={`/img/utils/generic_armband.png`}
@@ -17,7 +22,7 @@ const Brassard = ({ item, squareVariants, openModal }: BuildItemProps) => {
           />
         )}
         {item && (
-          <div className={`flex flex-col  items-center w-32 h-32 relative`}>
+          <div className={`relative flex  h-32 w-32 flex-col items-center`}>
             <Image
               src={`/img/utils/bg_${item.rarete.toLowerCase()}.png`}
               alt={item.nom}
@@ -30,12 +35,12 @@ const Brassard = ({ item, squareVariants, openModal }: BuildItemProps) => {
               alt={item.nom}
               width={150}
               height={150}
-              className="hover:cursor-pointer z-10"
+              className="z-10 hover:cursor-pointer"
             />
           </div>
         )}
       </div>
-      <p className="text-center py-2">{item?.nom}</p>
+      <p className="py-2 text-center">{item?.nom}</p>
     </div>
   );
 };

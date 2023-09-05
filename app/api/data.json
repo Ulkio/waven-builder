@@ -858,7 +858,7 @@
             "at": 18,
             "cc": 5,
             "pm": 3,
-            "effet": "Tant qu'il est en jeu : -1 PA au coût de vos sorts Air.\nFratrie des oubliés",
+            "effet": "Tant qu'il est en jeu : -1 PA au coût de vos sorts Air. Fratrie des oubliés",
             "caracteristiques": [
               {
                 "taux": 5,
@@ -8629,9 +8629,9 @@
                 "sort": ""
               },
               {
-                "nom": "VITALITÉ COMPAGNONS",
-                "cout": 80,
-                "effet": "+10% de VIE à vos compagnons",
+                "nom": "VITALITÉ HÉROS",
+                "cout": 100,
+                "effet": "+1% de PV à votre héros. 1% par niveau de l'équipement",
                 "sort": ""
               },
               {

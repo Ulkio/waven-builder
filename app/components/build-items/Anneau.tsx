@@ -2,11 +2,21 @@ import React from "react";
 import Image from "next/image";
 import { BuildItemProps } from "@/types";
 
-const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps) => {
+const Anneau = ({
+  item,
+  squareVariants,
+  openModal,
+  size = 150,
+}: BuildItemProps) => {
   const ANNEAU_BASE_URL = "/img/anneaux";
   return (
-    <div className="flex flex-col mb-6">
-      <div className={`flex items-center justify-center relative ${!item && squareVariants}`} onClick={openModal}>
+    <div className="mb-6 flex flex-col">
+      <div
+        className={`relative flex items-center justify-center ${
+          !item && squareVariants
+        }`}
+        onClick={openModal}
+      >
         {!item && (
           <Image
             src={`/img/utils/generic_ring.png`}
@@ -17,7 +27,10 @@ const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps)
           />
         )}
         {item && (
-          <div onClick={openModal} className={`flex flex-col  items-center w-32 h-32 relative`}>
+          <div
+            onClick={openModal}
+            className={`relative flex  h-32 w-32 flex-col items-center`}
+          >
             <Image
               src={`/img/utils/bg_${item.rarete.toLowerCase()}.png`}
               alt={item.nom}
@@ -30,7 +43,7 @@ const Anneau = ({ item, squareVariants, openModal, size = 150 }: BuildItemProps)
               alt={item.nom}
               width={size}
               height={size}
-              className="hover:cursor-pointer z-10"
+              className="z-10 hover:cursor-pointer"
             />
             <p className="text-center">{item?.nom}</p>
           </div>

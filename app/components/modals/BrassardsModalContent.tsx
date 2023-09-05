@@ -2,20 +2,33 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import data from "@/api/data.json";
-import { Brassard, CaracteristiqueBrassards, DonBrassards } from "@/types/index.ts";
+import {
+  Brassard,
+  CaracteristiqueBrassards,
+  DonBrassards,
+} from "@/types/index.ts";
 
 interface BrassardsDialogProps {
   onSelectedBrassardChange: (selectedBrassard: Brassard) => void;
   onClickBrassard: () => void;
 }
-const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: BrassardsDialogProps) => {
+const BrassardsDialog = ({
+  onSelectedBrassardChange,
+  onClickBrassard,
+}: BrassardsDialogProps) => {
   const brassards: Brassard[] = data.equipements.brassards;
   const BRASSARD_BASE_URL = "/img/brassards";
 
   const [searchInput, setsearchInput] = useState("");
-  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(null);
-  const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(null);
-  const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
+  const [selectedBrassard, setSelectedBrassard] = useState<Brassard | null>(
+    null,
+  );
+  const [displayedBrassard, setDisplayedBrassard] = useState<Brassard | null>(
+    null,
+  );
+  const [selectedRarityFilter, setSelectedRarityFilter] = useState<
+    string | null
+  >("commun");
 
   const handleBrassardClick = (brassard: Brassard) => {
     setSelectedBrassard(brassard);
@@ -39,7 +52,9 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
   });
 
   const filteredBrassards = selectedRarityFilter
-    ? sortedBrassardsRarity.filter((brassard) => brassard.rarete.toLowerCase() === selectedRarityFilter)
+    ? sortedBrassardsRarity.filter(
+        (brassard) => brassard.rarete.toLowerCase() === selectedRarityFilter,
+      )
     : sortedBrassardsRarity;
 
   const filteredByName = filteredBrassards.filter((brassard) => {
@@ -56,27 +71,31 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
   };
   return (
     <div className="flex h-full">
-      <div className="flex flex-col gap-4 basis-1/2 overflow-y-auto py-4">
-        <h2 className="text-center font-extrabold text-3xl">Brassards</h2>
+      <div className="flex basis-1/2 flex-col gap-4 overflow-y-auto py-4">
+        <h2 className="text-center text-3xl font-extrabold">Brassards</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => handleFilterClick("commun")}
-            className="btn-filter text-commun border border-commun px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-commun px-2 font-bold text-commun"
+          >
             Commun
           </button>
           <button
             onClick={() => handleFilterClick("rare")}
-            className="btn-filter text-rare border border-rare  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-rare  px-2 font-bold text-rare"
+          >
             Rare
           </button>
           <button
             onClick={() => handleFilterClick("krosmique")}
-            className="btn-filter text-krosmique border border-krosmique  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-krosmique  px-2 font-bold text-krosmique"
+          >
             Krosmique
           </button>
           <button
             onClick={() => handleFilterClick("infinite")}
-            className="btn-filter text-infinite border border-infinite  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-infinite  px-2 font-bold text-infinite"
+          >
             Infinite
           </button>
         </div>
@@ -85,16 +104,17 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
           placeholder="Rechercher"
           value={searchInput}
           onChange={(e) => handleSearchInputChange(e)}
-          className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
+          className="ml-8 w-40 rounded-md border-2 border-white bg-overlay px-2 opacity-50"
         />
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="flex flex-wrap justify-center gap-8">
           {filteredByName.map((brassard) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedBrassard(brassard)}
                 onClick={() => handleBrassardClick(brassard)}
                 key={brassard.nom}
-                className={`flex flex-col  items-center w-36 h-36 relative`}>
+                className={`relative flex  h-36 w-36 flex-col items-center`}
+              >
                 <Image
                   src={`/img/utils/bg_${brassard.rarete.toLowerCase()}.png`}
                   alt={brassard.nom}
@@ -109,19 +129,21 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                   width={90}
                   height={90}
                   priority
-                  className="hover:cursor-pointer z-10"
+                  className="z-10 hover:cursor-pointer"
                 />
-                <p className="text-center z-10 pt-4 font-bold">{brassard.nom}</p>
+                <p className="z-10 pt-4 text-center font-bold">
+                  {brassard.nom}
+                </p>
               </div>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2  ">
-        <div className="flex flex-col w-full items-center gap-2">
+      <div className="flex basis-1/2 flex-col gap-4 border-l-2 bg-overlaySide py-4  ">
+        <div className="flex w-full flex-col items-center gap-2">
           {displayedBrassard && (
             <>
-              <div className={`flex flex-col  items-center w-36 h-36 relative`}>
+              <div className={`relative flex  h-36 w-36 flex-col items-center`}>
                 <Image
                   src={`/img/utils/bg_${displayedBrassard.rarete.toLowerCase()}.png`}
                   alt={displayedBrassard.nom}
@@ -134,41 +156,62 @@ const BrassardsDialog = ({ onSelectedBrassardChange, onClickBrassard }: Brassard
                   alt={displayedBrassard.nom}
                   width={150}
                   height={150}
-                  className="hover:cursor-pointer z-10"
+                  className="z-10 hover:cursor-pointer"
                 />
               </div>
-              <p className="font-black text-2xl text-center">{displayedBrassard.nom}</p>
-              <p className="text-center">{displayedBrassard.patchs[0].pouvoir}</p>
+              <p className="text-center text-2xl font-black">
+                {displayedBrassard.nom}
+              </p>
+              <p className="text-center">
+                {displayedBrassard.patchs[0].pouvoir}
+              </p>
               <div className="flex flex-wrap justify-center gap-2 text-center">
-                {displayedBrassard.patchs[0].caracteristiques.map((carac: CaracteristiqueBrassards) => {
-                  return (
-                    <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
-                      {carac.taux + carac.effet}
-                    </p>
-                  );
-                })}
+                {displayedBrassard.patchs[0].caracteristiques.map(
+                  (carac: CaracteristiqueBrassards) => {
+                    return (
+                      <p
+                        key={carac.effet}
+                        className="rounded-lg bg-attribute px-4 py-2"
+                      >
+                        {carac.taux + carac.effet}
+                      </p>
+                    );
+                  },
+                )}
               </div>
             </>
           )}
         </div>
 
-        <div className="flex flex-col xl:justify-center px-4 xl:px-0 xl:flex-row xl:flex-wrap w-full  gap-4 overflow-y-scroll xl:overflow-y-visible xl:pt-8 h-full">
+        <div className="flex h-full w-full flex-col gap-4 overflow-y-scroll px-4 xl:flex-row  xl:flex-wrap xl:justify-center xl:overflow-y-visible xl:px-0 xl:pt-8">
           {displayedBrassard && (
             <>
-              {displayedBrassard.patchs[0].dons.map((don: DonBrassards, key) => {
-                return (
-                  <div
-                    key={key}
-                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-60 flex flex-col justify-between hover:cursor-pointer gap-2">
-                    <p className="text-sm text-center  font-black">{don.nom}</p>
-                    <p className="text-sm text-center">{don.effet}</p>
-                    <div className="flex justify-center items-center">
-                      <Image src="/img/utils/rune_d_equipement.png" width={30} height={30} alt="cout_rune" />
-                      <p className="text-sm text-center font-bold">{don.cout}</p>
+              {displayedBrassard.patchs[0].dons.map(
+                (don: DonBrassards, key) => {
+                  return (
+                    <div
+                      key={key}
+                      className="flex h-auto max-h-60 w-full flex-col justify-between gap-2 rounded-lg bg-attribute px-2 py-2 hover:cursor-pointer xl:w-1/4"
+                    >
+                      <p className="text-center text-sm  font-black">
+                        {don.nom}
+                      </p>
+                      <p className="text-center text-sm">{don.effet}</p>
+                      <div className="flex items-center justify-center">
+                        <Image
+                          src="/img/utils/rune_d_equipement.png"
+                          width={30}
+                          height={30}
+                          alt="cout_rune"
+                        />
+                        <p className="text-center text-sm font-bold">
+                          {don.cout}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                },
+              )}
             </>
           )}
         </div>

@@ -2,13 +2,20 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import data from "@/api/data.json";
-import { Compagnon, CaracteristiqueCompagnons, DonCompagnons } from "@/types/index.ts";
+import {
+  Compagnon,
+  CaracteristiqueCompagnons,
+  DonCompagnons,
+} from "@/types/index.ts";
 
 interface CompagnonsDialogProps {
   onSelectedCompagnonChange: (selectedCompagnon: Compagnon) => void;
   onClickCompagnon: () => void;
 }
-const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: CompagnonsDialogProps) => {
+const CompagnonsDialog = ({
+  onSelectedCompagnonChange,
+  onClickCompagnon,
+}: CompagnonsDialogProps) => {
   const compagnons: Compagnon[] = data.compagnons.compagnons;
   const COMPAGNON_BASE_URL = "/img/compagnons";
 
@@ -18,9 +25,14 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   const windVariants = `absolute top-3 left-4 font-bold text-xl text-outline`;
 
   const [searchInput, setsearchInput] = useState("");
-  const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(null);
-  const [displayedCompagnon, setDisplayedCompagnon] = useState<Compagnon | null>(null);
-  const [selectedRarityFilter, setSelectedRarityFilter] = useState<string | null>("commun");
+  const [selectedCompagnon, setSelectedCompagnon] = useState<Compagnon | null>(
+    null,
+  );
+  const [displayedCompagnon, setDisplayedCompagnon] =
+    useState<Compagnon | null>(null);
+  const [selectedRarityFilter, setSelectedRarityFilter] = useState<
+    string | null
+  >("commun");
 
   const handleCompagnonClick = (compagnon: Compagnon) => {
     setSelectedCompagnon(compagnon);
@@ -44,7 +56,9 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   });
 
   const filteredCompagnons = selectedRarityFilter
-    ? sortedCompagnonsRarity.filter((compagnon) => compagnon.rarete.toLowerCase() === selectedRarityFilter)
+    ? sortedCompagnonsRarity.filter(
+        (compagnon) => compagnon.rarete.toLowerCase() === selectedRarityFilter,
+      )
     : sortedCompagnonsRarity;
 
   const filteredByName = filteredCompagnons.filter((compagnon) => {
@@ -63,27 +77,31 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
   };
   return (
     <div className="flex  h-full ">
-      <div className="flex flex-col  gap-4 basis-1/2 overflow-y-auto py-4">
-        <h2 className="text-center font-extrabold text-3xl">Compagnons</h2>
+      <div className="flex basis-1/2  flex-col gap-4 overflow-y-auto py-4">
+        <h2 className="text-center text-3xl font-extrabold">Compagnons</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => handleFilterClick("commun")}
-            className="btn-filter text-commun border border-commun  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-commun  px-2 font-bold text-commun"
+          >
             Commun
           </button>
           <button
             onClick={() => handleFilterClick("rare")}
-            className="btn-filter text-rare border border-rare  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-rare  px-2 font-bold text-rare"
+          >
             Rare
           </button>
           <button
             onClick={() => handleFilterClick("krosmique")}
-            className="btn-filter text-krosmique border border-krosmique  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-krosmique  px-2 font-bold text-krosmique"
+          >
             Krosmique
           </button>
           <button
             onClick={() => handleFilterClick("infinite")}
-            className="btn-filter text-infinite border border-infinite  px-2 rounded-md font-bold">
+            className="btn-filter rounded-md border border-infinite  px-2 font-bold text-infinite"
+          >
             Infinite
           </button>
         </div>
@@ -92,17 +110,18 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
           placeholder="Rechercher"
           value={searchInput}
           onChange={(e) => handleSearchInputChange(e)}
-          className="w-40 bg-overlay opacity-50 border-2 border-white rounded-md ml-8 px-2"
+          className="ml-8 w-40 rounded-md border-2 border-white bg-overlay px-2 opacity-50"
         />
-        <div className="flex flex-wrap gap-2 justify-center">
+        <div className="flex flex-wrap justify-center gap-2">
           {filteredByName.map((compagnon, index) => {
             return (
               <div
                 onMouseEnter={() => setDisplayedCompagnon(compagnon)}
                 onClick={() => handleCompagnonClick(compagnon)}
-                className={`flex flex-col  items-center w-36 h-36 relative`}
-                key={compagnon.nom + index}>
-                <div className="flex items-center relative ">
+                className={`relative flex  h-36 w-36 flex-col items-center`}
+                key={compagnon.nom + index}
+              >
+                <div className="relative flex items-center ">
                   <Image
                     src={`/img/utils/cadre_${compagnon.rarete.toLowerCase()}.png`}
                     alt={compagnon.nom}
@@ -118,30 +137,38 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                     height={100}
                     priority
                   />
-                  <div className="flex flex-col absolute -right-2">
+                  <div className="absolute -right-2 flex flex-col">
                     {Object.entries(compagnon.patchs[0].couts).map((cout) => {
                       return (
                         <div key={cout[0] + cout[1]} className="flex flex-col">
                           <div className="relative flex flex-row  ">
-                            <Image src={`/img/utils/${cout[0]}.png`} width={30} height={30} alt="cout" className="" />
-                            <p className="absolute text-lg left-[0.7rem] top-1 font-bold text-outline ">{cout[1]}</p>
+                            <Image
+                              src={`/img/utils/${cout[0]}.png`}
+                              width={30}
+                              height={30}
+                              alt="cout"
+                              className=""
+                            />
+                            <p className="text-outline absolute left-[0.7rem] top-1 text-lg font-bold ">
+                              {cout[1]}
+                            </p>
                           </div>
                         </div>
                       );
                     })}
                   </div>
                 </div>
-                <p className="text-sm text-center font-bold">{compagnon.nom}</p>
+                <p className="text-center text-sm font-bold">{compagnon.nom}</p>
               </div>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-4 border-l-2 py-4 bg-overlaySide basis-1/2 ">
-        <div className="flex flex-col w-full items-center gap-2">
+      <div className="flex basis-1/2 flex-col gap-4 border-l-2 bg-overlaySide py-4 ">
+        <div className="flex w-full flex-col items-center gap-2">
           {displayedCompagnon && (
             <>
-              <div className="flex items-center relative">
+              <div className="relative flex items-center">
                 <Image
                   src={`/img/utils/cadre_${displayedCompagnon.rarete.toLowerCase()}.png`}
                   alt={displayedCompagnon.nom}
@@ -155,79 +182,129 @@ const CompagnonsDialog = ({ onSelectedCompagnonChange, onClickCompagnon }: Compa
                   height={150}
                   alt={displayedCompagnon.nom}
                 />
-                <div className="flex flex-col gap-2 absolute -right-6">
-                  {Object.entries(displayedCompagnon.patchs[0].couts).map((cout) => {
-                    return (
-                      <div key={cout[0] + cout[1]} className="h-full w-full relative">
-                        <Image src={`/img/utils/${cout[0]}.png`} width={40} height={40} alt="cout" />
-                        <p
-                          className={
-                            cout[0] === "feu"
-                              ? fireVariants
-                              : cout[0] === "eau"
-                              ? waterVariants
-                              : cout[0] === "terre"
-                              ? earthVariants
-                              : windVariants
-                          }>
-                          {cout[1]}
-                        </p>
-                      </div>
-                    );
-                  })}
+                <div className="absolute -right-6 flex flex-col gap-2">
+                  {Object.entries(displayedCompagnon.patchs[0].couts).map(
+                    (cout) => {
+                      return (
+                        <div
+                          key={cout[0] + cout[1]}
+                          className="relative h-full w-full"
+                        >
+                          <Image
+                            src={`/img/utils/${cout[0]}.png`}
+                            width={40}
+                            height={40}
+                            alt="cout"
+                          />
+                          <p
+                            className={
+                              cout[0] === "feu"
+                                ? fireVariants
+                                : cout[0] === "eau"
+                                ? waterVariants
+                                : cout[0] === "terre"
+                                ? earthVariants
+                                : windVariants
+                            }
+                          >
+                            {cout[1]}
+                          </p>
+                        </div>
+                      );
+                    },
+                  )}
                 </div>
               </div>
-              <p className="font-black text-2xl">{displayedCompagnon.nom}</p>
+              <p className="text-2xl font-black">{displayedCompagnon.nom}</p>
 
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
-                  <Image src="/img/utils/pv.png" width={25} height={25} alt="pv" />
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex gap-2 rounded-lg bg-attribute p-2 ">
+                  <Image
+                    src="/img/utils/pv.png"
+                    width={25}
+                    height={25}
+                    alt="pv"
+                  />
                   <p className="font-bold">{displayedCompagnon.patchs[0].pv}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
-                  <Image src="/img/utils/at.png" width={25} height={25} alt="pv" />
+                <div className="flex gap-2 rounded-lg bg-attribute p-2 ">
+                  <Image
+                    src="/img/utils/at.png"
+                    width={25}
+                    height={25}
+                    alt="pv"
+                  />
                   <p className="font-bold">{displayedCompagnon.patchs[0].at}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
-                  <Image src="/img/utils/cc.png" width={25} height={25} alt="pv" />
+                <div className="flex gap-2 rounded-lg bg-attribute p-2 ">
+                  <Image
+                    src="/img/utils/cc.png"
+                    width={25}
+                    height={25}
+                    alt="pv"
+                  />
                   <p className="font-bold">{displayedCompagnon.patchs[0].cc}</p>
                 </div>
-                <div className="flex bg-attribute rounded-lg p-2 gap-2 ">
-                  <Image src="/img/utils/pm.png" width={25} height={25} alt="pv" />
+                <div className="flex gap-2 rounded-lg bg-attribute p-2 ">
+                  <Image
+                    src="/img/utils/pm.png"
+                    width={25}
+                    height={25}
+                    alt="pv"
+                  />
                   <p className="font-bold">{displayedCompagnon.patchs[0].pm}</p>
                 </div>
               </div>
-              <p className="text-center">{displayedCompagnon.patchs[0].effet}</p>
+              <p className="text-center">
+                {displayedCompagnon.patchs[0].effet}
+              </p>
               <div className="flex flex-wrap justify-center gap-2">
-                {displayedCompagnon.patchs[0].caracteristiques.map((carac: CaracteristiqueCompagnons) => {
-                  return (
-                    <p key={carac.effet} className="bg-attribute rounded-lg px-4 py-2">
-                      {carac.taux + carac.effet}
-                    </p>
-                  );
-                })}
+                {displayedCompagnon.patchs[0].caracteristiques.map(
+                  (carac: CaracteristiqueCompagnons) => {
+                    return (
+                      <p
+                        key={carac.effet}
+                        className="rounded-lg bg-attribute px-4 py-2"
+                      >
+                        {carac.taux + carac.effet}
+                      </p>
+                    );
+                  },
+                )}
               </div>
             </>
           )}
         </div>
 
-        <div className="flex flex-wrap px-4 xl:px-0 w-full xl:justify-center gap-4 overflow-y-scroll xl:overflow-y-visible  pt-8 h-full">
+        <div className="flex h-full w-full flex-wrap gap-4 overflow-y-scroll px-4 pt-8 xl:justify-center  xl:overflow-y-visible xl:px-0">
           {displayedCompagnon && (
             <>
-              {displayedCompagnon.patchs[0].dons.map((don: DonCompagnons, key) => {
-                return (
-                  <div
-                    key={key}
-                    className="bg-attribute rounded-lg py-2 w-full xl:w-1/4 px-2 h-auto max-h-60 flex flex-col justify-between hover:cursor-pointer gap-2">
-                    <p className="text-sm text-center  font-black">{don.nom.toUpperCase()}</p>
-                    <p className="text-sm text-center">{don.effet}</p>
-                    <div className="flex justify-center items-center">
-                      <Image src="/img/utils/rune_de_compagnon.png" width={30} height={30} alt="cout_rune" />
-                      <p className="text-sm text-center font-bold">{don.cout}</p>
+              {displayedCompagnon.patchs[0].dons.map(
+                (don: DonCompagnons, key) => {
+                  return (
+                    <div
+                      key={key}
+                      className="flex h-auto max-h-60 w-full flex-col justify-between gap-2 rounded-lg bg-attribute px-2 py-2 hover:cursor-pointer xl:w-1/4"
+                    >
+                      <p className="text-center text-sm  font-black">
+                        {don.nom.toUpperCase()}
+                      </p>
+                      <p className="text-center text-sm">{don.effet}</p>
+                      <div className="flex items-center justify-center">
+                        <Image
+                          src="/img/utils/rune_de_compagnon.png"
+                          width={30}
+                          height={30}
+                          alt="cout_rune"
+                        />
+                        <p className="text-center text-sm font-bold">
+                          {don.cout}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                },
+              )}
             </>
           )}
         </div>
