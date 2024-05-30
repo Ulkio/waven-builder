@@ -52,8 +52,8 @@ const Build = () => {
     passifs: [],
   });
   const [encryptedBuild, setEncryptedBuild] = useState("");
-  const [openModalImport, setOpenModalImport] = useState<boolean | null>(false);
-  const [openModalAlert, setOpenModalAlert] = useState<boolean | null>(false);
+  const [openModalImport, setOpenModalImport] = useState<boolean>(false);
+  const [openModalAlert, setOpenModalAlert] = useState<boolean>(true);
   const [isHighlightPassif, setIsHighlightPassif] = useState(false);
 
   //#endregion
@@ -68,14 +68,7 @@ const Build = () => {
 
   //#region HANDLERS
   const handleSelectedPassifChange = (selectedPassif: Passif) => {
-    // if (passifs.includes(passif)) {
-    // setPassifs((prev) => prev.filter((selectedPassif) => selectedPassif != passif));
-    // } else {
-    // if (passifs.length < 2) {
-    // setPassifs((prev) => [...passifs, passif]);
-    // onSelectedPassifChange(passif);
-    // }
-    // }
+
     if (build.passifs.some((passif) => passif === selectedPassif)) {
       setBuild((prev) => ({
         ...prev,
@@ -92,7 +85,6 @@ const Build = () => {
   };
 
   const handleLevelChange = (level: number) => {
-    // console.log(level);
   };
 
   const handleSelectedArmeChange = (selectedArme: Arme) => {
@@ -506,7 +498,7 @@ const Build = () => {
   };
 
   return (
-    <main className=" flex h-screen flex-col items-stretch justify-between gap-6 xl:p-2">
+    <main className="flex flex-col items-stretch justify-between h-screen gap-6 xl:p-2">
       <Link href="/">
         <Image
           onClick={closeModalImport}
@@ -540,10 +532,10 @@ const Build = () => {
         </motion.div>
       )}
 
-      <div className="flex  justify-between gap-4 pt-16 xl:h-full xl:flex-col xl:px-12 xl:pt-24">
-        <div className="flex w-full flex-col gap-8 xl:flex-row xl:gap-0">
-          <div className="flex  xl:basis-2/12 xl:flex-col xl:px-4">
-            <div className="flex  w-full flex-col items-center justify-center">
+      <div className="flex justify-between gap-4 pt-16 xl:h-full xl:flex-col xl:px-12 xl:pt-24">
+        <div className="flex flex-col w-full gap-8 xl:flex-row xl:gap-0">
+          <div className="flex xl:basis-2/12 xl:flex-col xl:px-4">
+            <div className="flex flex-col items-center justify-center w-full">
               <p className={titleVariants}>Anneaux</p>
               <div className="flex flex-wrap justify-center gap-8 xl:flex-col xl:gap-0 ">
                 {[...Array(4)].map((_, index) => {
@@ -565,7 +557,7 @@ const Build = () => {
                       {anneau && (
                         <Tooltip
                           id={`anneau-tooltip-${index}`}
-                          className="tooltip z-10 "
+                          className="z-10 tooltip "
                         />
                       )}
                     </div>
@@ -623,12 +615,12 @@ const Build = () => {
             <div className="flex flex-col items-center gap-2 xl:items-start xl:px-4 xl:pt-16">
               <p className={titleVariants}>Sorts</p>
               {!build.arme ? (
-                <p className="text-md italic opacity-50">
+                <p className="italic opacity-50 text-md">
                   Sélectionnez une arme !
                 </p>
               ) : (
                 <>
-                  <div className="max-w-96 flex w-full flex-wrap justify-center gap-2 px-16 xl:px-0 ">
+                  <div className="flex flex-wrap justify-center w-full gap-2 px-16 max-w-96 xl:px-0 ">
                     {[...Array(15)].map((_, index) => {
                       const sort = build.sorts[index];
                       return (
@@ -651,9 +643,9 @@ const Build = () => {
         </div>
       </div>
 
-      <div className="mt-8 flex w-full flex-col  items-center justify-center  gap-4 xl:mt-0 xl:flex-row xl:gap-20 xl:self-center">
+      <div className="flex flex-col items-center justify-center w-full gap-4 mt-8 xl:mt-0 xl:flex-row xl:gap-20 xl:self-center">
         <div onClick={handleClickSaveBuild} className="hover:cursor-pointer">
-          <p className="w-48 rounded-lg border border-white p-4 text-center text-2xl font-bold">
+          <p className="w-48 p-4 text-2xl font-bold text-center border border-white rounded-lg">
             Sauvegarder
           </p>
           <ToastContainer
@@ -669,7 +661,7 @@ const Build = () => {
           />
         </div>
         <div onClick={handleImportBuild} className="hover:cursor-pointer">
-          <p className="w-48 rounded-lg border border-white p-4 text-center  text-2xl  font-bold">
+          <p className="w-48 p-4 text-2xl font-bold text-center border border-white rounded-lg">
             Importer
           </p>
         </div>
@@ -722,10 +714,10 @@ const Build = () => {
           <ImportModalContent onClickButton={handleImportButtonClick} />
         </Modal>
         <Modal
-          open={!!openModalAlert}
+          open={openModalAlert}
           onClose={closeModalAlert}
           center
-          closeOnOverlayClick={true}
+          closeOnOverlayClick={false}
           showCloseIcon={false}
           classNames={{
             overlay: "customOverlay",
@@ -733,14 +725,13 @@ const Build = () => {
             root: "scrollbar-none",
           }}
         >
-          <div className="flex h-full flex-col items-center justify-evenly ">
-            <p className="px-16 text-center text-lg">
-              Les données sont celles de la démo. Une mise à jour arrive
-              prochainement.
+          <div className="flex flex-col items-center h-full justify-evenly ">
+            <p className="px-16 text-lg text-center">
+              Les données ne sont plus à jour. Le site n'est plus maintenu, c'était juste un petit projet perso !
             </p>
             <button
               onClick={closeModalAlert}
-              className="w-24 rounded-lg border-2 border-white p-2 text-lg font-bold"
+              className="w-24 p-2 text-lg font-bold border-2 border-white rounded-lg"
             >
               OK
             </button>
